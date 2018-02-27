@@ -1,0 +1,40 @@
+.progress-bar {
+    width: 100%;
+    height: 25px;
+}
+
+.content--progress {
+    background: $palette-color-lightens; // background: $palette-color-accent; 
+    // background: $color-grass;
+    margin: 0 0 1em 0;
+    overflow: hidden;
+    height: 25px;
+    position: relative;
+    .progress-bar {
+            display: flex;
+            align-items: center;
+        left: 0;
+        background: $palette-color-darken;
+        position: absolute;
+        top: 0; // width: 30%;
+        .progress-bar-number {
+            color: $palette-color-lightens;
+            margin: 0 0 0 1em;
+            font-size: 80%;
+        }
+    }
+}
+
+// .content--progress {
+//     width: 100%;
+//     background: $palette-color-lightens;
+// }
+// .progress-bar {
+//     width: 1%;
+//     height: 25px;
+//     background: $palette-color-darken;
+//     .progress-bar-number {
+//         color: $palette-color-darken;
+//         margin-left: 1.5em;
+//     }
+// }

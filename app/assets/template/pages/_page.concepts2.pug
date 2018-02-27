@@ -1,0 +1,62 @@
+include /template/variables/_mixins
+include /template/components/_prompt.pug
+.panel--center-container.grid-y.medium-grid-frame
+    .grid-x
+            
+            .panel--center-column.small-2.medium-2.large-2.cell.cell-block-y
+                .content--panel
+                        .grid-x
+                            //- column header
+                            .panel--center-column-type.small-1.medium-1.large-1.cell
+                                    i.material-icons.md-18 lightbulb_outline
+                            .panel--center-column-title.small-10.medium-9.large-9.cell
+                                    h6.panel--center-column-title-text Concepts
+                            .panel--center-column-options.small-1.medium-2.large-2.cell
+                                    a.panel--center-column-option-link.button
+                                        i.material-icons.md-18 add_box
+
+                            .panel--center-column-features.cell
+                                    input.feature--filter-input
+                            //- column conten
+                            .panel--center-column-content.cell
+                                    include /template/components/_data.list.elements.pug
+                            //- column footer
+                            .panel--center-column-footer.footer.cell
+                                    p.feature--visible_count.text-right 
+                                        i.material-icons.md-18 remove_red_eye
+                                        | 3/33
+
+            
+
+            .panel--center-column.small-2.medium-2.large-2.cell  
+                .content--panel
+                
+                        .grid-x
+                            //- column header
+                            .panel--center-column-type.small-1.medium-1.large-1.cell
+                                    i.material-icons.md-18 change_history
+                            .panel--center-column-title.small-10.medium-9.large-9.cell
+                                    h6.panel--center-column-title-text Elements
+                            .panel--center-column-options.small-1.medium-1.large-2.cell
+                                    a.panel--center-column-option-link.button
+                                        i.material-icons.md-18 add_box
+
+                            .panel--center-column-features.cell
+                                    input.feature--filter-input
+                            //- column conten
+                            .panel--center-column-content.cell
+                                    include /template/components/_data.list.elements.pug
+                            //- column footer
+                            .panel--center-column-footer.footer.cell
+                                    p.feature--visible_count.text-right 
+                                        i.material-icons.md-18 remove_red_eye
+                                        | 3/33
+                //- workspace
+            .panel--center-column.small-2.medium-2.large-8.cell  
+                .content--panel
+                        .grid-x
+                            .cell
+                                    include ../components/_tabs
+                                    block contentPanelC
+//- footer include
+include /template/layout/_panel.center.footer.pug 

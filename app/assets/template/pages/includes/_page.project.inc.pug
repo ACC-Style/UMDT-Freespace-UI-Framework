@@ -1,0 +1,306 @@
+.feature--tabs.grid.collapse
+    .feature--tabs-list.medium-3.cell
+        ul#example-tabs.tabs(data-tabs="",data-deep-link="true")
+            li.tabs-title.-is-editable.is-active
+                .icon.-is-lock
+                    i.material-icons.md-16(aria-hidden='true') mode_edit 
+                .icon.-is-unlock
+                    i.material-icons.md-16(aria-hidden='true') mode_edit 
+                a(href="#panel1", aria-selected="true") 
+                    | Profile
+
+            li.tabs-title
+                a(href="#panel2") CDD
+
+            li.tabs-title
+                a(href="#panel3") TDD
+
+            li.tabs-title
+                a(href="#panel4") Publish
+
+            li.tabs-title
+                a(href="#panel5") Scratch Pad
+
+            li.tabs-title
+                a(href="#panel6") Users
+
+
+
+        .tabs-content(data-tabs-content="example-tabs").-is-editable
+            #panel1.tabs-panel.is-active
+                .content--tab
+                    .grid-x
+                        .cell.feature--edit-mode
+                            .switch-input-spacedata-micro-interaction-type
+                                .switch.tiny
+                                    label.switch-value(for='swtich-edit-mode')
+                                        //- | Edit Mode:
+                                    input#swtich-edit-mode.switch-input(type='checkbox', name='exampleSwitch')
+                                    label.switch-paddle(for='swtich-edit-mode', data-micro-interaction-type="edit-mode",data-micro-interaction-subject=".dashboard---panel-project")
+                                        span.show-for-sr Edit Mode
+                                        span.switch-active(aria-hidden='true')
+                                            i.material-icons.md-16(aria-hidden='true') mode_edit
+                                        span.switch-inactive(aria-hidden='true')
+                                            i.material-icons.md-16(aria-hidden='true') lock 
+                        .cell
+
+                            form(data-abide='7v3wyo-abide', novalidate='')
+                                .grid-x.grid-padding-x
+
+                                    .cell.small-6
+                                        .grid-y
+                                            .cell
+
+                                                .form--input-text.-is-required
+
+                                                    label
+                                                        | Name:
+                                                    span.text-mirror.-is-hidden(data-micro-interaction-type="mirror")
+                                                        | *Black Hole Is a Hole That Is Black and Possessive abuot Light
+                                                    input(type='text', placeholder='1234', aria-describedby='exampleHelpText', required='', disabled, pattern='number', value="Black Hole Is a Hole That Is Black and Possessive abuot Light")
+                                                    span.form-error
+                                                        | A name of the new create is required.
+                                                    //- p#exampleHelpText.help-text.-has-error Any help information (what is restricted or allow with name input)
+                                            .cell
+                                                .form--input-select
+                                                    label
+                                                        | Status:
+                                                    select(required='', disabled)
+                                                        option(value='option1') Draft
+                                                        option(value='option2') option 2
+                                                        option(value='option3') option 3
+                                                        option(value='option4') option 4
+                                            .cell.small-4
+
+                                                .grid-x.grid-padding-x       
+                                                    .cell.small-6                                
+                                                        .form--input-select
+                                                            label
+                                                                | Registery:
+                                                            select(required='')
+                                                                option(value='option1') option 1
+                                                                option(value='option2') option 2
+                                                                option(value='option3') option 3
+                                                                option(value='option4') option 4
+
+                                                    .cell.small-6
+
+                                                        .form--input-select
+                                                            label
+                                                                | Verison:
+                                                            select(required='')
+                                                                option(value='option1') option 1
+                                                                option(value='option2') option 2
+                                                                option(value='option3') option 3
+                                                                option(value='option4') option 4
+
+                                            .cell
+                                                .form--input-text
+                                                    label
+                                                        | Start Date:
+                                                    input(type='text', disabled, placeholder='phrase', aria-describedby='exampleHelpText', required='', pattern='date', value="10/5/2017").disabled
+                                                    span.form-error
+                                                        | Date is required
+
+
+
+
+                                    .cell.small-6
+                                        .grid-y
+                                            .cell
+                                                .form--input-text.-is-required
+                                                    label
+                                                        | Description:
+                                                    textarea(rows='4', cols='50').taller
+                                                        | A black hole is a region of spacetime exhibiting such strong gravitational effects that nothing—not even particles and electromagnetic radiation such as light—can escape from inside it. The theory of general relativity predicts that a sufficiently compact mass can deform spacetime to form a black hole.")
+                                                    span.form-error
+                                                        | A description of the new create is required.
+                                                    //- p#exampleHelpText.help-text.-has-error Any help information (what is restricted or allow with description input)
+
+                                            .cell
+                                                .form--input-text
+                                                    label
+                                                        | Tags:
+                                                    input(type='text', placeholder='phrase', aria-describedby='exampleHelpText', value="nasa space blackhole")
+                                                    span.form-error
+                                                        | Tags are useful for stuff
+
+                                    .cell
+                                        .form--input-text
+                                            label Users:
+
+                                            //- button.button.button--users(data-tooltip="gdfnq7-tooltip", aria-haspopup="true", data-disable-hover="false", tabindex="1", title="", aria-describedby="hikmyv-tooltip", data-yeti-box="hikmyv-tooltip", data-toggle="hikmyv-tooltip", data-resize="hikmyv-tooltip", data-events="resize")
+                                                i.material-icons.md-18(aria-hidden='true') settings				
+
+                                            ul.list--users
+                                                li.list--user-item
+                                                    span.user-badge.small.has-tip.top(data-tooltip="gdfnq7-tooltip", aria-haspopup="true", data-disable-hover="false", tabindex="1", title="", aria-describedby="hikmyv-tooltip", data-yeti-box="hikmyv-tooltip", data-toggle="hikmyv-tooltip", data-resize="hikmyv-tooltip", data-events="resize")
+                                                        span.user-name S. Fulllastname
+                                                        i.material-icons.md-18(aria-hidden='true', data-open='modal--users-deletion') delete				
+                                                li.list--user-item
+                                                    span.user-badge.small.has-tip.top(data-tooltip="gdfnq7-tooltip", aria-haspopup="true", data-disable-hover="false", tabindex="1", title="", aria-describedby="hikmyv-tooltip", data-yeti-box="hikmyv-tooltip", data-toggle="hikmyv-tooltip", data-resize="hikmyv-tooltip", data-events="resize")
+                                                        //- i.material-icons.md-18(aria-hidden='true') account_box				
+                                                        span.user-name J. Brown
+                                                        i.material-icons.md-18(aria-hidden='true', data-open='modal--users-deletion') delete	
+                                                li.list--user-item
+                                                    a.button.button--label(data-tooltip="gdfnq7-tooltip", aria-haspopup="true", data-disable-hover="false", tabindex="1", title="", aria-describedby="hikmyv-tooltip", data-yeti-box="hikmyv-tooltip", data-toggle="hikmyv-tooltip", data-resize="hikmyv-tooltip", data-events="resize")
+                                                        i.material-icons.md-18(aria-hidden='true',data-open='modal--users-addition') add_box	
+                                    .cell
+                                        .grid-x.grid-padding-x
+                                            .panel--center-bottom-controls.small-12.cell
+
+                                                button.button.success.float-right(data-micro-interaction="toggle")
+                                                    | Save
+                                                button.button.alert.float-right(data-micro-interaction="toggle")
+                                                    | Cancel
+            #panel2.tabs-panel
+                .content--tab 
+                    //- h2 Databases
+                    .grid-x.grid-padding-x
+                        .small-2.text-center
+                            a.button.button--database.small(href="#")
+                                i.material-icons.md-24 view_module
+                                .txt Concepts & Data Elements
+                        .small-2.text-center
+                            a.button.button--database.small(href="#")
+                                i.material-icons.md-24 line_style
+                                .txt Value Sets
+            #panel3.tabs-panel
+                .content--tab 
+                    //- h2 Databases
+                    .grid-x.grid-padding-x
+                        .small-2.text-center
+                            a.button.button--database.small(href="#")
+                                i.material-icons.md-24 view_module
+                                .txt Registries
+                        .small-2.text-center
+                            a.button.button--database.small(href="#")
+                                i.material-icons.md-24 line_style
+                                .txt Registries Elements
+                        .small-2.text-center
+                            a.button.button--database.small(href="#")
+                                i.material-icons.md-24 line_style
+                                .txt Registries Constraints
+            #panel4.tabs-panel
+                .content--tab 
+                    //- h2 Databases
+                    .grid-x.grid-padding-x
+                        .small-2.text-center
+                            a.button.button--database.small(href="#")
+                                i.material-icons.md-24 view_module
+                                .txt Registries
+                        .small-2.text-center
+                            a.button.button--database.small(href="#")
+                                i.material-icons.md-24 line_style
+                                .txt Registries Elements
+                        .small-2.text-center
+                            a.button.button--database.small(href="#")
+                                i.material-icons.md-24 line_style
+                                .txt Registries Constraints
+            #panel5.tabs-panel
+                .content--tab 
+                    //- h2 Databases
+                    .grid-x.grid-padding-x
+                        .small-2.text-center
+                            a.button.button--database.small(href="#")
+                                i.material-icons.md-24 view_module
+                                .txt Registries
+                        .small-2.text-center
+                            a.button.button--database.small(href="#")
+                                i.material-icons.md-24 line_style
+                                .txt Registries Elements
+                        .small-2.text-center
+                            a.button.button--database.small(href="#")
+                                i.material-icons.md-24 line_style
+                                .txt Registries Constraints
+            #panel6.tabs-panel-users
+                .content--tab 
+                    .grid-x.grid-padding-x
+                        .cell
+                            br
+                        .panel--center-column-content.cell.small-4
+                            h3 Current Users
+                            .list--project-users
+                                .project-user
+                                    .grid-x
+                                        .cell.small-2.icon
+                                            i.material-icons.md-18(aria-hidden='true') account_box
+                                        .cell.small-2.user A. Lastname
+                                        .cell.small-4.user-role Reviewer
+                                        .cell.small-2.actionable
+                                            button.button.alert(type='reset', value='Reset', data-tooltip, aria-haspopup='true', data-disable-hover='false', tabindex='1', title='delete this user')
+                                                    i.material-icons.md-16(aria-hidden='true') delete
+
+                            //- table#data--table-users-participants.data--table.display(cellspacing='0', width='100%').table-transparent
+                                thead
+                                    tr
+                                    th User
+                                    th Role
+                                    th -action-
+                                tbody
+                                    tr
+                                        td 
+                                            .icon
+                                                i.material-icons.md-24(aria-hidden='true') account_box
+                                            .user
+                                                | Quib
+                                        td Leader
+                                        td.actionable 
+                                            button.button.alert(type='reset', value='Reset', data-tooltip, aria-haspopup='true', data-disable-hover='false', tabindex='1', title='delete this user')
+                                                .icon
+                                                    i.material-icons.md-16(aria-hidden='true') delete
+                                    tr
+                                        td Dude
+                                        td Leader
+                                        td.actionable 
+                                            button.button.alert(type='reset', value='Reset') 
+                                                .icon
+                                                    i.material-icons.md-16(aria-hidden='true') delete
+                        .panel--center-column-content.cell.small-8
+                            h3 Add User(s):
+                            //- p.tiny Search are add users
+                            table#data--table-users.data--table.display(cellspacing='0', width='100%')
+                                thead
+                                    tr
+                                        th First Name
+                                        th Last Name
+                                        th Username
+                                        th Role
+                                        th -action-
+                                tbody
+                                    tr
+                                        td FistNameHere
+                                        td LastNameHere
+                                        th Username
+                                        td Role Here
+                                        td.actionable 
+                                            button.button.success(type='reset', value='Reset') 
+                                                .icon
+                                                    i.material-icons.md-16(aria-hidden='true') person_add
+                                    tr
+                                        td FistNameHere
+                                        td LastNameHere
+                                        th Username
+                                        td Role Here
+                                        td.actionable 
+                                            button.button.success(type='reset', value='Reset') 
+                                                .icon
+                                                    i.material-icons.md-16(aria-hidden='true') person_add
+                                    tr
+                                        td FistNameHere
+                                        td LastNameHere
+                                        th Username
+                                        td Role Here
+                                        td.actionable 
+                                            button.button.success(type='reset', value='Reset') 
+                                                .icon
+                                                    i.material-icons.md-16(aria-hidden='true') person_add
+                                    tr
+                                        td You
+                                        td Me
+                                        th youme
+                                        td Together
+                                        td.actionable 
+                                            button.button.success.has-tip(type='reset', value='Reset', data-tooltip, aria-haspopup='true', data-disable-hover='false', tabindex='1', title='Add this user')
+                                                .icon
+                                                    i.material-icons.md-16(aria-hidden='true') person_add

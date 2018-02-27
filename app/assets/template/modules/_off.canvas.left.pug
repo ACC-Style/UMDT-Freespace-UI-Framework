@@ -1,0 +1,32 @@
+#content--offcanvas-left.off-canvas.position-left(data-off-canvas,data-transition="push",data-content-overlay="false")
+            .grid-container
+                .grid-y
+                    .small-1
+                                h2 Filter
+                                button.close-button(aria-label='Close menu', type='button', data-close).button
+                                    span.icon
+                                        i.material-icons.md-18 close
+                    .small-2
+                        .form--input-checkbox
+
+
+                            fieldset
+                                legend Please filter status:
+                                .grid-y
+                                    .small-1
+                                        input#checkbox1(type='checkbox')
+                                        label(for='checkbox1') Approved For Publish
+                                    .small-1
+                                        input#checkbox2(type='checkbox', required='')
+                                        label(for='checkbox2') In Progress
+                                    .small-1
+                                        input#checkbox3(type='checkbox')
+                                        label(for='checkbox3') In Review
+                                    .small-1
+                                        input#checkbox4(type='checkbox')
+                                        label(for='checkbox4') On Hold
+                                    .small-1
+                                        input#checkbox5(type='checkbox')
+                                        label(for='checkbox5') Registery Creation
+                    //- .small-2
+                        include /template/variables/_kitchen.sink.pug

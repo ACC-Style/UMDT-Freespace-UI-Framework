@@ -1,0 +1,42 @@
+// A generic style ot test KSS.
+//
+// :hover             - Quib hover highlight.
+// .stars-given       - A highlight indicating you’ve already given a star.
+// .stars-given:hover - Quib hover highlight on top of stars-given styling.
+// .disabled          - Dims the button to indicate it cannot be used.
+//
+// Styleguide 1.1.1.
+.quib-quib-quib {
+    display: block;
+}
+
+a.code-link {
+    color: lightgrey;
+    font-size: small;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+#page--templates {
+    ul li p i {
+        position: absolute;
+        margin-top: .5em;
+        color: lightgrey;
+        font-size: small;
+    }
+}
+
+.sample--code {
+    font-size: small;
+    width: 80%;
+    pre {
+        padding: 1em;
+        background-color: #e6e6e6;
+        overflow-x: scroll;
+    }
+    code {
+        background: none;
+        border: none; // border: 1px solid #cacaca;
+    }
+}

@@ -1,0 +1,39 @@
+.panel--center.cell.small-10.medium-10.large-10
+    .content--page
+        .grid-x
+            .content--login.grid-y.medium-grid-frame
+                    form
+                        .grid-x.grid-padding-x
+
+                            .cell.medium-5
+                            
+                            .cell.medium-4
+                                .grid-x.grid-padding-x.grid-margin-y
+                                    .cell.validation--summary.callout.alert 
+                                        ul
+                                            li This is broken
+                                            li This also is broken
+                                            li This is broken
+                                            li This is broken too!
+                                    .cell
+                                        .form--input-text.-is-required
+                                            label
+                                                | User Name
+                                            input(type='text', placeholder='email address', aria-describedby='exampleHelpText', required='', pattern='number')
+                                            span.form-error
+                                                | Yo, you had better fill this out, it's required.
+                                            //- p#exampleHelpText.help-text.-has-error Here's how you use this input field!
+                                    .cell
+                                        .form--input-text
+                                            label
+                                                | Password Required
+                                            input#password(type='password', placeholder='yeti4preZ', aria-describedby='exampleHelpText', required='')
+                                            span.form-error
+                                                | I'm required!
+                                            //- p#exampleHelpText.help-text Enter a password please.
+                                    .cell
+                                        a.button.success(href='index.html') Login
+                                        a.button.alert Clear
+                                    .cell
+                                        a(href="#") Forgot your password?
+                            .cell.medium-4

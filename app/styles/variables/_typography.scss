@@ -1,0 +1,50 @@
+// Typography
+//
+// There are variable for setting the color
+//
+// $font-headings            - Subtle hover highlight.
+// .stars-given       - A highlight indicating you’ve already given a star.
+// .stars-given:hover - Subtle hover highlight on top of stars-given styling.
+// .disabled          - Dims the button to indicate it cannot be used.
+//
+// Styleguide 1.2.1.
+// Google Fonts
+@import url(https://fonts.googleapis.com/css?family=Lato|Maven+Pro|Open+Sans|Roboto);
+// Theme's Typeface
+$typeface-heading:'Maven Pro',
+sans-serif;
+// $typeface-copy:'Open Sans',
+// sans-serif;
+$typeface-banner:'Roboto',
+sans-serif;
+// Theme's Font
+// TODO: Create mixin for making font bold
+$typeface-copy:'Lato',
+sans-serif;
+a,
+li,
+p,
+{
+    // letter-spacing: .0025em;
+}
+
+a {
+    // TODO: remove imporant call here
+    color: $palette-color-median; // color: $palette-color-median !important;
+     :hover {
+        color: $palette-color-darken;
+        text-decoration: underline; // background: $palette-color-lightens;
+    }
+     :focus {
+        color: $palette-color-median;
+    }
+     :active {
+        color: $palette-color-median;
+        text-decoration: underline;
+    }
+     :visited {
+        color: $palette-color-median;
+    }
+}
+
+// TODO: add style for <hr>

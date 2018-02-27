@@ -1,0 +1,141 @@
+.feature--tabs.grid.collapse
+  .feature--tabs-list.medium-3.cell
+    ul#example-tabs.tabs(data-tabs='').expanded
+      li.tabs-title.is-active
+        a(href='#panel1', aria-selected='true') Concept
+      li.tabs-title
+        a(href='#panel2') Definitions
+      li.tabs-title
+        a(href='#panel3') Code System Binding
+      li.tabs-title
+        a(href='#panel4') Tables
+
+
+    .tabs-content(data-tabs-content="example-tabs")
+      #panel1.tabs-panel.is-active
+        .content--tab
+          p quib
+          ul.accordion(data-accordion='')
+            li.accordion-item.is-active(data-accordion-item='')
+              a.accordion-title(href='#') Accordion 1
+              .accordion-content(data-tab-content='')
+                p Panel 1. Lorem ipsum dolor
+                a(href='#') Nowhere to Go
+            li.accordion-item(data-accordion-item='')
+              a.accordion-title(href='#') Accordion 2
+              .accordion-content(data-tab-content='')
+                textarea
+                button.button I do nothing!
+            li.accordion-item(data-accordion-item='')
+              a.accordion-title(href='#') Accordion 3
+              .accordion-content(data-tab-content='')
+                | Type your name!
+                input(type='text') 
+      #panel2.tabs-panel
+        .content--tab 
+
+          .grid-x.grid-padding-x
+              //- column header
+              .panel--center-column-features.cell
+                .grid-x
+                    .panel--center-column-type.small-1.medium-1.large-1.cell
+                          i.material-icons.md-24 lightbulb_outline
+                    .panel--center-column-title.small-10.medium-10.large-10.cell
+                          h6.panel--center-column-title-text elements
+                    .panel--center-column-options.small-1.medium-1.large-1.cell
+                          a.panel--center-column-option-link
+                                i.material-icons.md-24 add_box
+              //- column content
+              .panel--center-column-content.cell
+                p ipsum dolor sit amet, consectetur adipiscing elit. Sed velit felis, condimentum eget interdum eu, iaculis vitae metus. Donec condimentum id lacus et fringilla. Donec vehicula posuere mauris, maximus vestibulum nibh dignissim ac. Nam massa magna, sagittis id sem nec, scelerisque accumsan enim. Proin sed neque at erat sagittis vulputate. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque id vestibulum mi. Cras eget vulputate lorem. Maecenas consectetur, nulla quis sollicitudin varius, quam velit tincidunt enim, et placerat purus lorem et lacus. In eu massa libero. In tincidunt diam lorem, et gravida arcu laoreet ac. Vivamus ut mi non orci viverra dictum. Fusce eget arcu sapien.
+
+                p consequat, lorem in lobortis ullamcorper, turpis ex porta lacus, vitae cursus magna quam in neque. Fusce tincidunt augue quis metus auctor, a congue mi hendrerit. Praesent malesuada, elit a tincidunt dapibus, sapien arcu volutpat augue, nec dignissim augue dolor vitae sapien. Vivamus ac semper lorem. Aenean vitae hendrerit dolor. Nunc semper, leo non bibendum rhoncus, risus odio blandit orci, id pulvinar dui sem sit amet augue. Nam vitae nunc quis massa euismod fermentum. Integer porta feugiat ligula, eu congue ligula mattis et. Sed dapibus pretium pharetra. Nulla euismod sit amet leo sed porta. Vestibulum fermentum, erat eu ultrices lacinia, dolor leo finibus leo, blandit dapibus nisl enim ac massa. Pellentesque sed est vehicula, pellentesque libero et, consequat dui. Nunc volutpat eget magna ac imperdiet.
+
+                p viverra magna nec justo iaculis, non convallis est fermentum. Aenean sagittis, felis a bibendum fermentum, mauris mi dignissim arcu, a fringilla arcu ipsum a sem. Integer euismod urna nec ligula accumsan, id commodo nibh tempus. Proin eu velit sit amet libero suscipit semper. Donec finibus erat nulla, et dictum nisi aliquam at. Aliquam pretium fringilla nisl sit amet iaculis. Praesent eu nunc feugiat, tristique leo vitae, auctor tortor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus pellentesque sem vitae velit eleifend placerat. Donec nec felis at felis dictum egestas eu a enim. Vivamus id sem odio. Donec interdum augue interdum ante auctor ultrices. Etiam tincidunt vulputate nibh in semper. In hac habitasse platea dictumst. Donec quis orci efficitur, aliquam lectus viverra, commodo dolor.
+
+                p condimentum, tellus sit amet ultrices ultrices, risus nisi venenatis est, nec iaculis diam ipsum id odio. Sed quis commodo sem. Aenean condimentum turpis sapien, in efficitur nulla tincidunt nec. Nam ornare urna mauris, at commodo felis sollicitudin a. Fusce interdum gravida facilisis. Curabitur sapien augue, rhoncus nec pulvinar eu, euismod tempus mauris. Aliquam mollis varius odio, ut faucibus tortor sagittis sed. Donec purus eros, aliquam at tempus quis, sagittis nec tellus. Aliquam tortor ligula, sollicitudin quis consectetur ut, malesuada sit amet sem. Aliquam orci nisl, ullamcorper quis feugiat non, mattis eu quam. Nullam rhoncus quam iaculis ornare auctor. Pellentesque id leo lacinia, tempor nulla a, mollis libero. Aliquam nibh mauris, scelerisque blandit bibendum ac, fermentum eget nunc. Morbi porta magna id elit posuere, eu tristique massa accumsan. Quisque pretium, libero id vulputate pellentesque, tortor neque efficitur odio, vitae efficitur sem nulla in dui.
+
+                p vel porttitor magna. In efficitur accumsan turpis ut scelerisque. Aenean id leo sed est euismod interdum gravida id eros. Donec id enim imperdiet, congue arcu vitae, sagittis nisl. Pellentesque sem quam, lobortis eu nunc ac, porta tincidunt turpis. Suspendisse pharetra eget quam nec bibendum. Mauris scelerisque venenatis risus, eu laoreet justo dapibus non.
+              //- column footer
+      #panel3.tabs-panel
+        .content--tab 
+          .grid-x.grid-padding-x
+              //- column header
+              .panel--center-column-features.cell
+                .grid-x
+                    .panel--center-column-type.small-1.medium-1.large-1.cell
+                          i.material-icons.md-24 lightbulb_outline
+                    .panel--center-column-title.small-10.medium-10.large-10.cell
+                          h6.panel--center-column-title-text elements
+                    .panel--center-column-options.small-1.medium-1.large-1.cell
+                          a.panel--center-column-option-link
+                                i.material-icons.md-24 add_box
+              //- column content
+              .panel--center-column-content.cell
+                
+                table
+                  thead
+                    tr
+                      th(width='200') Table Header 3
+                      th Table Header
+                      th(width='150') Table Header
+                      th(width='150') Table Header
+                  tbody
+                    tr
+                      td Content Goes Here
+                      td This is longer content Donec id elit non mi porta gravida at eget metus.
+                      td Content Goes Here
+                      td Content Goes Here
+                    tr
+                      td Content Goes Here
+                      td
+                        | This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.
+                      td Content Goes Here
+                      td Content Goes Here
+                    tr
+                      td Content Goes Here
+                      td
+                        | This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.
+                      td Content Goes Here
+                      td Content Goes Here
+      #panel4.tabs-panel
+        .content--tab 
+          .grid-x.grid-padding-x
+              //- column header
+              .panel--center-column-features.cell
+                .grid-x
+                    .panel--center-column-type.small-1.medium-1.large-1.cell
+                          i.material-icons.md-24 lightbulb_outline
+                    .panel--center-column-title.small-10.medium-10.large-10.cell
+                          h6.panel--center-column-title-text elements
+                    .panel--center-column-options.small-1.medium-1.large-1.cell
+                          a.panel--center-column-option-link
+                                i.material-icons.md-24 add_box
+              //- column content
+              .panel--center-column-content.cell
+                
+                table
+                  thead
+                    tr
+                      th(width='200') Table Header 3
+                      th Table Header
+                      th(width='150') Table Header
+                      th(width='150') Table Header
+                  tbody
+                    tr
+                      td Content Goes Here
+                      td This is longer content Donec id elit non mi porta gravida at eget metus.
+                      td Content Goes Here
+                      td Content Goes Here
+                    tr
+                      td Content Goes Here
+                      td
+                        | This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.
+                      td Content Goes Here
+                      td Content Goes Here
+                    tr
+                      td Content Goes Here
+                      td
+                        | This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.
+                      td Content Goes Here
+                      td Content Goes Here

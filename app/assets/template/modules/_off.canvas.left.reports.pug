@@ -1,0 +1,84 @@
+#content--offcanvas-left-reports.off-canvas.position-left(data-off-canvas,data-transition="push",data-content-overlay="false")
+            .grid-container
+                .grid-y
+                    .small-1.cell
+                                h2 Reports
+                                button.close-button(aria-label='Close menu', type='button', data-close).button
+                                    span.icon
+                                        i.material-icons.md-18 close
+                    .small-1.cell
+                        .form--input-dropdown
+                        label
+                            | Chose report type
+                        select(required='')
+                            option(value='type1') Concepts
+                            option(value='type2') Data Elements
+                            option(value='type3') Value Sets
+                            option(value='type4') Parent Child
+
+                    .small-1.cell
+                        .form--input-dropdown
+                        label
+                            | Registry
+                        select(required='')
+                            option(value='reg1') Reg1
+                            option(value='reg2') Reg2
+                            option(value='reg3') Reg2
+                            option(value='reg4') Reg4
+                    .small-1.cell
+                        .form--input-dropdown
+                        label
+                            | Registery Verison
+                        select(required='')
+                            option(value='v1') v1
+                            option(value='v2') v2
+                            option(value='v3') v3
+                            option(value='v4') v4
+                    .cell
+                        .switch-input-space
+                            .switch.expanded
+                                label.switch-value(for='yes-no-1') Show Hidden Objects
+                                input#yes-no-1.switch-input(type='checkbox', name='exampleSwitch')
+                                label.switch-paddle(for='yes-no-1')
+                                    span.show-for-sr Show Hidden Objects
+                                    span.switch-active(aria-hidden='true') Show
+                                    span.switch-inactive(aria-hidden='true') Hide
+                    br 
+
+                    //- .small-2
+                    //-     .form--input-checkbox
+
+
+                    //-         fieldset
+                    //-             legend Please filter status:
+                    //-             .grid-y
+                    //-                 .small-1
+                    //-                     input#checkbox1(type='checkbox')
+                    //-                     label(for='checkbox1') Approved For Publish
+                    //-                 .small-1
+                    //-                     input#checkbox2(type='checkbox', required='')
+                    //-                     label(for='checkbox2') In Progress
+                    //-                 .small-1
+                    //-                     input#checkbox3(type='checkbox')
+                    //-                     label(for='checkbox3') In Review
+                    //-                 .small-1
+                    //-                     input#checkbox4(type='checkbox')
+                    //-                     label(for='checkbox4') On Hold
+                    //-                 .small-1
+                    //-                     input#checkbox5(type='checkbox')
+                    //-                     label(for='checkbox5') Registery Creation
+
+                    .small-1
+                        button.button.button-off-canvas.expanded.success(type='submit', value='Submit') Generate Report
+                            span.icon
+                              i.material-icons.md-18(aria-hidden='true') file_download
+                    .small-1
+                        button.button.button-off-canvas.expanded.success(type='reset', value='Reset') Export Excel
+                            span.icon
+                              i.material-icons.md-18(aria-hidden='true') insert_drive_file
+                    .small-1
+                        button.button.button-off-canvas.expanded.success(type='reset', value='Reset') Export PDF
+                            span.icon
+                              i.material-icons.md-18(aria-hidden='true') insert_drive_file
+                    //- .small-2
+                        include /template/variables/_kitchen.sink.pug

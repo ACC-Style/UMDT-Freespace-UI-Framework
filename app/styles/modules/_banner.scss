@@ -1,0 +1,52 @@
+// .banner
+//
+// .banner--header-text - Quib hover highlight.
+// .banner--header-hook       - A highlight indicating you’ve already given a star.
+//
+// Styleguide 1.1.1.
+.banner {
+    &--title {
+        // border-left: 1px solid #ececec;
+        padding-top: 1.25em;
+        &-text {
+            font-family: $typeface-heading;
+            text-transform: uppercase;
+            font-size: 1.5em;
+            color: $palette-color-darken;
+        }
+    }
+    &--logo {
+        // border-left: 1px solid #ececec;
+        &-acc {
+            display: block;
+            margin: auto;
+            height: 3.5em;
+            vertical-align: middle;
+            margin-top: .5em;
+        }
+    }
+    &--users {
+        // border-left: 1px solid #ececec;
+        text-transform: uppercase;
+        padding-top: 1.5em;
+    }
+}
+
+@media screen and (max-width: 614px) {
+    .banner,
+    .content--billboard {
+        height: auto;
+    }
+}
+
+@media screen and (max-width:320px) {
+    .banner {
+        &--logo {
+            height: auto;
+        }
+        &--users {
+            padding-top: 0;
+            text-align: center
+        }
+    }
+}

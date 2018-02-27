@@ -1,0 +1,111 @@
+mixin orlist
+  ol
+    li foo
+    li bar
+    li baz
+    li foo
+    li bar
+    li baz
+
+mixin accordion
+        ul.accordion(data-accordion='')
+                li.accordion-item.is-active(data-accordion-item='')
+                // Accordion tab title
+                a.accordion-title(href='#') Accordion 1
+                // Accordion tab content: it would start in the open state due to using the `is-active` state class.
+                .accordion-content(data-tab-content='')
+                        p Panel 1. Lorem ipsum dolor
+                        a(href='#') Nowhere to Go
+
+mixin myform
+        | p
+
+mixin elementlist
+    ul.feature--draggable_items.menu.vertical
+        li.feature--draggable_items-item
+                a.feature--draggable_items-link
+                    span.icon-l
+                            i.material-icons.md-24 link
+                    span.text Test Link
+                    span.icon-r
+                            i.material-icons.md-24 drag_handle
+                    span.arrow-r.is-hidden
+                            i.material-icons.md-24 play_arrow
+                    
+        li.feature--draggable_items-item
+                a.feature--draggable_items-link
+                    span.icon-l
+                            i.material-icons.md-24 link
+                    span.text Test Link
+                    span.icon-r
+                            i.material-icons.md-24 drag_handle
+        li.feature--draggable_items-item
+                a.feature--draggable_items-link
+                    span.icon-l
+                            i.material-icons.md-24 link
+                    span.text Test Link
+                    span.icon-r
+                            i.material-icons.md-24 drag_handle
+        li.feature--draggable_items-item
+                a.feature--draggable_items-link
+                    span.icon-l
+                            i.material-icons.md-24 link
+                    span.text Test Link
+                    span.icon-r
+                            i.material-icons.md-24 drag_handle
+        li.feature--draggable_items-item
+                a.feature--draggable_items-link
+                    span.icon-l
+                            i.material-icons.md-24 link
+                    span.text Test Link
+                    span.icon-r
+                            i.material-icons.md-24 drag_handle
+        li.feature--draggable_items-item
+                a.feature--draggable_items-link
+                    span.icon-l
+                            i.material-icons.md-24 link
+                    span.text Test Link
+                    span.icon-r
+                            i.material-icons.md-24 drag_handle
+                    span.arrow-r.is-hidden
+                            i.material-icons.md-24 play_arrow
+                    
+        li.feature--draggable_items-item
+                a.feature--draggable_items-link
+                    span.icon-l
+                            i.material-icons.md-24 link
+                    span.text Test Link
+                    span.icon-r
+                            i.material-icons.md-24 drag_handle
+        li.feature--draggable_items-item
+                a.feature--draggable_items-link
+                    span.icon-l
+                            i.material-icons.md-24 link
+                    span.text Test Link
+                    span.icon-r
+                            i.material-icons.md-24 drag_handle
+        li.feature--draggable_items-item
+                a.feature--draggable_items-link
+                    span.icon-l
+                            i.material-icons.md-24 link
+                    span.text Test Link
+                    span.icon-r
+                            i.material-icons.md-24 drag_handle
+        li.feature--draggable_items-item
+                a.feature--draggable_items-link
+                    span.icon-l
+                            i.material-icons.md-24 link
+                    span.text Test Link
+                    span.icon-r
+                            i.material-icons.md-24 drag_handle
+mixin lipsum
+
+        p ipsum dolor sit amet, consectetur adipiscing elit. Sed velit felis, condimentum eget interdum eu, iaculis vitae metus. Donec condimentum id lacus et fringilla. Donec vehicula posuere mauris, maximus vestibulum nibh dignissim ac. Nam massa magna, sagittis id sem nec, scelerisque accumsan enim. Proin sed neque at erat sagittis vulputate. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque id vestibulum mi. Cras eget vulputate lorem. Maecenas consectetur, nulla quis sollicitudin varius, quam velit tincidunt enim, et placerat purus lorem et lacus. In eu massa libero. In tincidunt diam lorem, et gravida arcu laoreet ac. Vivamus ut mi non orci viverra dictum. Fusce eget arcu sapien.
+
+        p consequat, lorem in lobortis ullamcorper, turpis ex porta lacus, vitae cursus magna quam in neque. Fusce tincidunt augue quis metus auctor, a congue mi hendrerit. Praesent malesuada, elit a tincidunt dapibus, sapien arcu volutpat augue, nec dignissim augue dolor vitae sapien. Vivamus ac semper lorem. Aenean vitae hendrerit dolor. Nunc semper, leo non bibendum rhoncus, risus odio blandit orci, id pulvinar dui sem sit amet augue. Nam vitae nunc quis massa euismod fermentum. Integer porta feugiat ligula, eu congue ligula mattis et. Sed dapibus pretium pharetra. Nulla euismod sit amet leo sed porta. Vestibulum fermentum, erat eu ultrices lacinia, dolor leo finibus leo, blandit dapibus nisl enim ac massa. Pellentesque sed est vehicula, pellentesque libero et, consequat dui. Nunc volutpat eget magna ac imperdiet.
+
+        p viverra magna nec justo iaculis, non convallis est fermentum. Aenean sagittis, felis a bibendum fermentum, mauris mi dignissim arcu, a fringilla arcu ipsum a sem. Integer euismod urna nec ligula accumsan, id commodo nibh tempus. Proin eu velit sit amet libero suscipit semper. Donec finibus erat nulla, et dictum nisi aliquam at. Aliquam pretium fringilla nisl sit amet iaculis. Praesent eu nunc feugiat, tristique leo vitae, auctor tortor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus pellentesque sem vitae velit eleifend placerat. Donec nec felis at felis dictum egestas eu a enim. Vivamus id sem odio. Donec interdum augue interdum ante auctor ultrices. Etiam tincidunt vulputate nibh in semper. In hac habitasse platea dictumst. Donec quis orci efficitur, aliquam lectus viverra, commodo dolor.
+
+        p condimentum, tellus sit amet ultrices ultrices, risus nisi venenatis est, nec iaculis diam ipsum id odio. Sed quis commodo sem. Aenean condimentum turpis sapien, in efficitur nulla tincidunt nec. Nam ornare urna mauris, at commodo felis sollicitudin a. Fusce interdum gravida facilisis. Curabitur sapien augue, rhoncus nec pulvinar eu, euismod tempus mauris. Aliquam mollis varius odio, ut faucibus tortor sagittis sed. Donec purus eros, aliquam at tempus quis, sagittis nec tellus. Aliquam tortor ligula, sollicitudin quis consectetur ut, malesuada sit amet sem. Aliquam orci nisl, ullamcorper quis feugiat non, mattis eu quam. Nullam rhoncus quam iaculis ornare auctor. Pellentesque id leo lacinia, tempor nulla a, mollis libero. Aliquam nibh mauris, scelerisque blandit bibendum ac, fermentum eget nunc. Morbi porta magna id elit posuere, eu tristique massa accumsan. Quisque pretium, libero id vulputate pellentesque, tortor neque efficitur odio, vitae efficitur sem nulla in dui.
+
+        p vel porttitor magna. In efficitur accumsan turpis ut scelerisque. Aenean id leo sed est euismod interdum gravida id eros. Donec id enim imperdiet, congue arcu vitae, sagittis nisl. Pellentesque sem quam, lobortis eu nunc ac, porta tincidunt turpis. Suspendisse pharetra eget quam nec bibendum. Mauris scelerisque venenatis risus, eu laoreet justo dapibus non.

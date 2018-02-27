@@ -1,0 +1,26 @@
+.panel--right {
+    display: block; // border-left: 1px solid #ececec;
+    .button.alert {
+        background: $palette-color-accent;
+        color: $palette-color-lightens;
+        border: none;
+        color: #fff;
+    }
+    text-align: right;
+}
+
+#content--offcanvas-right {
+    background: $palette-color-darken;
+    color: $palette-color-lightens;
+    padding: 2em;
+}
+
+#content--page.is-open-right {
+    // margin-right: 11.25em;
+    top: 0px; // width: 100%;
+    position: absolute;
+}
+
+.js-off-canvas-overlay.is-overlay-fixed.is-visible.is-closable {
+    opacity: .0;
+}

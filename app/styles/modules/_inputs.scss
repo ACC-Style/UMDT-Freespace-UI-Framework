@@ -1,0 +1,334 @@
+.form--input-radio {
+    width: 100%;
+    label {
+        color: $palette-color-median; // margin-left: 0px;
+        margin-right: 3em;
+        margin-left: 2em;
+    }
+    input[type="radio"] {
+        font-size: 1.5em;
+        display: none;
+        &:checked+label {
+            font-weight: 900;
+            color: $palette-color-darken; // font-weight: bolder;
+        }
+        &+label:before {
+            // display: inline-block;
+            // animation: ripple 0.2s linear forwards;
+            display: block;
+            position: absolute;
+            margin-left: -1.25em;
+            margin-top: -.45em;
+            font-family: 'Material Icons';
+            font-size: 1.5em;
+            content: "radio_button_unchecked";
+            color: $palette-color-median;
+            -webkit-font-feature-settings: 'liga';
+            margin-right: .25em; // margin-top: .25em;
+        }
+        &+label:after {
+            transform: scale(1);
+        }
+        &:checked+label:before {
+            // border-color: $md-radio-checked-color;
+            // animation: ripple 0.2s linear forwards;
+            font-family: 'Material Icons';
+            font-size: 1.5em;
+            content: "radio_button_checked";
+            color: $palette-color-darken;
+            -webkit-font-feature-settings: 'liga';
+        }
+        &:checked+label:after {
+            transform: scale(1);
+        }
+    }
+}
+
+.form--input-checkbox {
+    // width: 100%;
+    label {
+        // margin-left: 0px;
+        color: $palette-color-median;
+        margin-right: 3em;
+        margin-left: 2em;
+    }
+    input[type="checkbox"] {
+        display: none;
+        padding-right: 5em;
+        &:checked+label {
+            color: $palette-color-darken;
+            font-weight: 900;
+        }
+        &+label:before {
+            display: block;
+            position: absolute;
+            margin-left: -1.25em;
+            margin-top: -.45em;
+            animation: ripple 0.2s linear forwards;
+            font-family: 'Material Icons';
+            font-size: 1.5em;
+            content: "check_box_outline_blank";
+            -webkit-font-feature-settings: 'liga';
+        }
+        &+label:after {
+            transform: scale(1);
+        }
+        &:checked+label:before {
+            animation: ripple 0.2s linear forwards;
+            font-family: 'Material Icons';
+            font-size: 1.5em;
+            content: "check_box";
+            -webkit-font-feature-settings: 'liga';
+        }
+        &:checked+label:after {
+            transform: scale(1);
+        }
+    }
+}
+
+[type='text'],
+[type='password'],
+[type='date'],
+[type='datetime'],
+[type='datetime-local'],
+[type='month'],
+[type='week'],
+[type='email'],
+[type='number'],
+[type='search'],
+[type='tel'],
+[type='time'],
+[type='url'],
+[type='color'],
+textarea {
+    font-size: 140%;
+    border: none;
+    border-bottom: 1px solid $color-neutral-light;
+    box-shadow: none;
+    &:focus {
+        border: none;
+        border-bottom: 1px solid $color-light; // border-bottom: 1px solid $palette-color-darken;
+        &:focus:after {
+            font-family: 'Material Icons';
+            font-size: 1.25em;
+            margin-top: -.5em;
+            content: "close";
+            color: $palette-color-median;
+            -webkit-font-feature-settings: 'liga';
+        }
+    }
+    &:focus {
+        border-bottom: 1px solid $palette-color-darken;
+    }
+}
+
+textarea {
+    border-right: 1px solid $color-neutral-light;
+}
+
+input[disabled] {
+    background: transparent;
+    border-bottom: none;
+    &+label:before {
+        animation: ripple 0.2s linear forwards;
+        font-family: 'Material Icons';
+        font-size: 1.5em;
+        content: "lock_outline";
+        -webkit-font-feature-settings: 'liga';
+    }
+}
+
+.form--input-text,
+.form--input-select,
+    {
+    .help-text {
+        color: $palette-color-lightens;
+        &:hover {
+            color: $palette-color-median;
+        }
+    }
+    .text-mirror {
+        // display: block;
+        margin-left: .5em;
+        font-size: 140%;
+    }
+}
+
+.form--input-select {
+    width: 100%; // display: inline-block;
+    position: relative; // border: 1px solid red;
+    font-size: 1.35em; // &:after {
+    //     font-family: 'Material Icons';
+    //     font-size: 2em;
+    //     margin-top: -.5em;
+    //     content: "arrow_drop_down_circle";
+    //     color: $palette-color-darken;
+    //     -webkit-font-feature-settings: 'liga';
+    //     position: absolute;
+    //     top: 2.85rem;
+    //     right: 1rem;
+    //     z-index: 5;
+    // }
+    &:hover {
+        &:after {
+            // color: $palette-color-darken;
+        }
+    }
+    select {
+        // padding: 10px 40px 10px 10px;
+        // -webkit-appearance: none;
+        // -ms-appearance: none;
+        // -moz-appearance: none;
+        // appearance: none;
+        background-image: none; // border: 1px solid $palette-color-lightens;
+        // background-color: transparent;
+        // border-radius: 0;
+        // position: relative;
+        // cursor: pointer;
+        // z-index: 10;
+        // option {
+        //     color: $palette-color-median;
+        //     background: $color-light;
+        //     border: none;
+        //     &:hover {
+        //         color: $palette-color-lightens;
+        //         background: $palette-color-darken;
+        //     }
+        // }
+    }
+}
+
+.feature--filter-input {
+    // margin-left: 1em;
+    color: $color-neutral-light;
+    font-size: 80%;
+    width: 81%;
+    height: 2em;
+    padding: .25em 0 .25em 0;
+    margin: 0 0 0 2em;
+    border: none;
+    border-bottom: 1px solid $color-neutral-light;
+    background: transparent;
+    &:focus {
+        color: $color-grass;
+        border-bottom: 1px solid $color-grass;
+        background: transparent;
+    }
+}
+
+.feature--filter-input,
+.form--input-select,
+.form--input-text textarea {
+    label {
+        margin-left: 0px;
+        color: $color-neutral;
+    }
+}
+
+#content--offcanvas-left,
+.off-canvas {
+    label,
+    legend {
+        // color: $color-light;
+        color: $palette-color-median;
+    }
+    .feature--filter-input,
+    .form--input-text input,
+    .form--input-text textarea {
+        background: $palette-color-darken;
+        &:focus {
+            color: $palette-color-lightens;
+            background: $palette-color-darken;
+            &:focus:after {}
+        }
+    }
+}
+
+.form--input-radio,
+.form--input-select,
+.form--input-checkbox,
+.form--input-text {
+    margin-bottom: 1em;
+    margin-top: 1em;
+    label,
+    legend {
+        color: $color-neutral;
+    }
+    fieldset label {
+        color: $palette-color-median;
+    }
+}
+
+.form--input-checkbox label {
+    // color: $palette-color-lightens !important;
+}
+
+.form--input-text input::placeholder {
+    color: $palette-color-lightens;
+}
+
+div[id*='content--offcanvas-'] {
+    .form--input-text input::placeholder {
+        color: $palette-color-median;
+    }
+}
+
+span.form-error.is-visible {
+    display: block;
+}
+
+.is-invalid-input:not(:focus) {
+    border-color: $palette-color-accent;
+    border-bottom-color: $palette-color-accent;
+    background-color: $color-light;
+    color: $palette-color-accent;
+}
+
+.content--login {
+    .button {
+        margin-right: 2em;
+    }
+}
+
+#datatable--select-custom {
+    width: 16em;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0; // border: 1px solid red;
+    float: left;
+    select {
+        width: 8em;
+    }
+}
+
+.form--input-text {
+    input.disabled {
+        // width: 12em; 
+        border: none;
+        color: $color-neutral;
+        background-color: $color-light;
+        &:after {
+            animation: ripple 0.2s linear forwards;
+            font-family: 'Material Icons';
+            font-size: 1.5em;
+            content: "lock";
+            -webkit-font-feature-settings: 'liga';
+        }
+    }
+}
+
+.form--input-select select {
+    font-size: 100%;
+}
+
+#datatable--select-custom {
+    font-size: 1rem;
+}
+
+.switch {
+    .switch-active,
+    .switch-inactive {
+        i {
+            padding-top: 8px;
+        }
+    }
+}

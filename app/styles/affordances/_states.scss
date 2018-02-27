@@ -1,0 +1,230 @@
+.-is-hidden {
+    display: none;
+}
+
+.-is-off .button {
+    background-color: $palette-color-base;
+}
+
+.-is-on .button {
+    background-color: $palette-color-accent;
+}
+
+.is-similar {
+    color: $palette-color-accent;
+}
+
+.-is-not-selected {}
+
+.-is-selected {
+    color: $palette-color-darken;
+    a {
+        color: $palette-color-darken;
+        background-color: $palette-color-lightens;
+    }
+    a.feature--draggable_items-item:hover {
+        color: $color-twinkle !important;
+    }
+    &.panel--side-button button {
+        color: #fff;
+        .text {
+            display: block;
+        }
+    }
+}
+
+.column--list-elements-data {
+    .-is-selected {
+        a {
+            color: $palette-color-lightens;
+            background-color: $palette-color-median;
+        }
+    }
+}
+
+.-is-bookmarked {
+    a .icon-l i {
+        // display: none;
+        color: $color-grass;
+    }
+}
+
+.-is-bookmarked.-is-selected {
+    a .icon-l i {
+        // display: none;
+        color: $color-twinkle;
+    }
+}
+
+.-is-masked {
+    color: $color-neutral;
+}
+
+.-is-clicked {
+    color: $palette-color-darken;
+}
+
+.-is-read {
+    .icon,
+    .text,
+    .btn,
+    .title,
+    .counter {
+        color: $palette-color-median;
+    }
+}
+
+.-is-unread {
+    .icon,
+    .text,
+    .btn,
+    .title,
+    .counter {
+        color: $palette-color-base;
+    }
+}
+
+// TODO: refractor is-required styles
+.form--input-text.-is-required {
+    label:after {
+        position: absolute;
+        font-family: 'Material Icons';
+        font-size: 1.25em;
+        margin-top: -.25em;
+        margin-left: .25em;
+        content: "star";
+        color: $palette-color-accent;
+        -webkit-font-feature-settings: 'liga';
+    }
+}
+
+.form--input-checkbox.-is-required,
+.form--input-radio.-is-required {
+    legend:after {
+        position: absolute;
+        font-family: 'Material Icons';
+        font-size: 1.25em;
+        margin-top: -.25em;
+        margin-left: .25em;
+        content: "star";
+        color: $palette-color-accent;
+        -webkit-font-feature-settings: 'liga';
+    }
+} // TODO: had class added to parent
+.-is-filled {
+    border-bottom: none !important;
+    &:focus {
+        border-bottom: 1px solid red !important;
+    }
+}
+
+.help-text.-has-error {
+    p:after {
+        font-family: 'Material Icons';
+        font-size: 1.25em;
+        margin-top: -.5em;
+        content: "error";
+        color: $palette-color-accent;
+        -webkit-font-feature-settings: 'liga';
+    }
+}
+
+.-edit-mode-off {
+    [disabled] {
+        // display: none;
+        cursor: auto;
+    }
+    select {
+        border: 1px transparent solid;
+    }
+    select:disabled {
+        background-color: transparent;
+        appearance: none;
+    }
+    textarea {
+        border: none;
+    }
+    li.tabs-title {
+        // border-bottom-color: $color-grass;
+        .icon {
+            display: none;
+        }
+    }
+}
+
+.-edit-mode-on {
+    &.dashboard---panel-project {
+        border-color: $color-grass;
+        border-right: none;
+    }
+    .tabs-content {
+        border-right: 1px solid $color-grass;
+    }
+    .feature--tabs-list ul li:last-child {
+        border-right: 1px solid $palette-color-median !important;
+    }
+    .tabs-content,
+    label,
+    .tabs-title.is-active,
+    .tabs-title.is-active a {
+        // background-color: $color-twinkle;
+        // background-color: $palette-color-lightens; 
+        // background-color: $palette-color-median;
+        // color: $palette-color-lightens;
+    }
+    [type='text'],
+    [type='password'],
+    [type='date'],
+    [type='datetime'],
+    [type='datetime-local'],
+    [type='month'],
+    [type='week'],
+    [type='email'],
+    [type='number'],
+    [type='search'],
+    [type='tel'],
+    [type='time'],
+    [type='url'],
+    [type='color'],
+    textarea {
+        // background-color: $-copalettelor-lightens;
+        border-bottom: 1px solid $color-grass !important;
+    }
+    textarea {
+        // background-color: $-copalettelor-lightens;
+        border-right: 1px solid $color-grass;
+    }
+    select {
+        border: 1px solid $color-grass;
+    }
+    li.tabs-title.-is-editable {
+        border-top-color: $color-grass;
+        border-right-color: $color-grass;
+        *[data-micro-interaction="mode"] {
+            display: none;
+        }
+    }
+    li.tabs-title {
+        border-bottom-color: $color-grass;
+        .icon {
+            // display: block;
+            position: absolute; // float: right;
+            background: #3adb76;
+            padding: .025em .25em .025em .25em;
+            color: $palette-color-base;
+        }
+    }
+    li.tabs-title:last-child {
+        // border-right-color: $palette-color-darken !important;
+    }
+    li.tabs-title.is-active {
+        *[data-micro-interaction] {
+            display: block;
+        }
+    }
+    input:checked~.switch-paddle {
+        background: $color-grass;
+    }
+}
+
+.-is-in-inverse-mode {}

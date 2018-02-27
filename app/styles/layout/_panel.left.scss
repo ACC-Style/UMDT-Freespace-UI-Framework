@@ -1,0 +1,26 @@
+.panel--left {
+    display: block; // border-right: 1px solid #ececec;
+    &-colmun {
+        height: 10em;
+    }
+    .button.alert {
+        background: $palette-color-accent;
+        color: $palette-color-lightens;
+        border: none;
+        color: #fff;
+    }
+}
+
+#content--page.is-open-left {
+    // margin-left: 11.25em;
+    top: 0px; // width: 100%; 
+    // position: absolute;
+}
+
+.panel--right,
+.panel--left {
+    hr {
+        margin: .5em 0 1em 0;
+        width: 3.25em; // border: $color-twinkle 1px solid;
+    }
+}

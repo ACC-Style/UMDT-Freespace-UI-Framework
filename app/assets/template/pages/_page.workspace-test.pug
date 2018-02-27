@@ -1,0 +1,71 @@
+include /template/variables/_mixins
+//- include /template/components/_prompt.pug
+
+#page--worspace.panel--center-container.grid-y.medium-grid-frame
+    #list--headers.cell.shrink.header.medium-cell-block-container
+        //- column header
+        .grid-x
+            .column--list-concepts.cell.medium-3
+                .grid-x
+                    //- .panel--center-column-type.small-1.medium-1.large-1.cell
+                            i.material-icons.md-18 lightbulb_outline
+                    .panel--center-column-title.small-8.medium-8.large-8.cell
+                            h6.panel--center-column-title-text.h7 Concepts
+                    .panel--center-column-options.small-1.medium-2.large-1.cell
+                            button.option-button.button
+                                i.material-icons.md-18 add_box
+                    .panel--center-column-options.small-1.medium-2.large-1.cell
+                            button.option-button.button
+                                i.material-icons.md-18 power_settings_new
+                    .panel--center-column-options.small-1.medium-2.large-1.cell
+                            button.option-button.button
+                                i.material-icons.md-18 lightbulb_outline
+                    .panel--center-column-options.small-1.medium-2.large-1.cell
+                            button.option-button.button
+                                i.material-icons.md-18 settings
+                    .panel--center-column-features.cell
+                            input.feature--filter-input(type='text')
+                .column--list-concepts-data.cell.medium-cell-block-y
+                    //- h2 1
+                    include /template/components/_data.list.elements.pug 
+                .column--list-concepts-counter.cell
+                            span.text
+                                | Viewing  
+                            span.total
+                                | 1/2        
+            .column--list-elements.cell.medium-3
+                .grid-x
+                    //- .panel--center-column-type.small-1.medium-1.large-1.cell
+                            i.material-icons.md-18 change_history
+                    .panel--center-column-title.small-8.medium-8.large-8.cell
+                            h6.panel--center-column-title-text.h7 Data Elements
+                    .panel--center-column-options.small-1.medium-2.large-1.cell
+                            button.option-button.button
+                                i.material-icons.md-18 add_box
+                    .panel--center-column-options.small-1.medium-2.large-1.cell
+                            button.option-button.button
+                                i.material-icons.md-18 power_settings_new
+                    .panel--center-column-options.small-1.medium-2.large-1.cell
+                            button.option-button.button
+                                i.material-icons.md-18 lightbulb_outline
+                    .panel--center-column-options.small-1.medium-2.large-1.cell
+                            button.option-button.button
+                                i.material-icons.md-18 settings
+                    .panel--center-column-features.cell
+                            input.feature--filter-input(type='text')
+                .column--list-elements-data.cell.medium-cell-block-y
+                    //- h2 2
+                    include /template/components/_data.list.elements.pug
+                .column--list-elements-counter.cell
+                            span.text
+                                | Viewing 
+                            span.total
+                                | 1/2      
+            .column--list-workspace.cell.medium-auto.medium-cell-block-container
+                //- .grid-x
+                    //- .cell.medium-12.medium-cell-block-y
+                include /template/pages/includes/_page.workspace.inc.pug 
+                //- include /template/pages/includes/_page.workspace.inc.pug 
+.cell.shrink.footer
+    //- footer include
+    //- include /template/layout/_panel.center.footer.pug 

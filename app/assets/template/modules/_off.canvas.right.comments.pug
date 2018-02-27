@@ -1,0 +1,91 @@
+#content--offcanvas-right-comments.off-canvas.position-right(data-off-canvas,data-transition="push", data-content-overlay="false")
+            .grid-container
+                .grid-y("data-sticky-container")
+                    .small-1
+                        .sticky(data-sticky)
+                                h2 Comments
+                                button.close-button(aria-label='Close menu', type='button', data-close).button
+                                    span.icon
+                                        i.material-icons.md-18 close
+
+                    .cell
+                        .comment---project
+                            .form--input-text
+                                label
+                                    | comments
+                                input(type='text', placeholder='add comments', pattern='url')    
+                                button.button.button-reply
+                                    i.material-icons.md-18(aria-hidden='true') send
+                                    
+                        
+                        .comment---project
+                                small
+                                    span.date #/##/#### 
+                                    span.time ##:##PM
+                                blockquote.text--comment
+                                    | Logic will get you from A to Z. Imagination will get you everywhere.
+                                    cite Albert Eintens 
+
+                                    button.button.button-off-canvas.expanded.success.button-show(type='submit', value='Submit') 
+                                        span.text View 
+                                        span.counter 4 
+                                        span.text Replies 
+
+                                    .comment---reply
+
+                                        small
+                                            span.date #/##/#### 
+                                            span.time ##:##PM
+                                        blockquote.text--comment
+                                            | If you cannot measure it, you cannot improve it.
+                                            cite Lord Kelvin
+
+                                    .comment---reply
+
+                                        small
+                                            span.date #/##/#### 
+                                            span.time ##:##PM
+                                        blockquote.text--comment
+                                            | If you want things to be different, perhaps the answer is to become different yourself.
+                                            cite Norman Peale
+
+                                    .comment---reply
+
+                                        small
+                                            span.date #/##/#### 
+                                            span.time ##:##PM
+                                        blockquote.text--comment
+                                            | Pay attention to what users do, not what they say
+                                            cite Jakob Nielsen
+                                            
+                                    .form--input-text
+                                        label
+                                            | reply
+                                        input(type='text', placeholder='reply here', pattern='url')    
+                                        button.button.button-reply
+                                            i.material-icons.md-18(aria-hidden='true') reply
+
+                        .comment---project
+                            blockquote.text--comment
+                                | Usability testing shows you if something is usable. Beta testing shows you if people will actually use it.
+                                cite  Rachel Decker
+                            .form--input-text
+                                label
+                                    | reply
+                                input(type='text', value="test value" placeholder='reply here', pattern='url')    
+                                button.button.button-reply
+                                    i.material-icons.md-18(aria-hidden='true') reply
+
+                        .comment---project
+                            blockquote.text--comment
+                                | It always seems impossible until its done.
+                                cite Nelson Mandela
+                            .form--input-text
+                                label
+                                    | reply
+                                input(type='text', placeholder='reply here', pattern='url')    
+                                button.button.button-reply
+                                    i.material-icons.md-18(aria-hidden='true') reply
+
+                    //- .small-2
+                        include /template/variables/_kitchen.sink.pug

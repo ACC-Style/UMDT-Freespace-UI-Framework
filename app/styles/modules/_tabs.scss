@@ -1,0 +1,76 @@
+.feature--tabs {
+    .tabs-title {
+        color: $palette-color-darken !important;
+        border-top: $border-thick-top solid $palette-color-median; // border-left: 1px solid $palette-color-lightens;
+        border-right: 1px solid $palette-color-median;
+        border-bottom: 1px solid $palette-color-median;
+        background-color: $palette-color-lightens;
+        padding-top: 1px;
+        box-shadow: 11px -2px 31px -17px rgba(0, 0, 0, 0.39);
+        a {
+            padding: 1.25em 0 0 0;
+            height: 3.75em;
+            font-weight: bold;
+        }
+        a:focus {
+            -webkit-appearance: none;
+            border: none;
+        }
+    }
+    .tabs-title>a:focus,
+    .tabs-title>a[aria-selected='true'] {
+        background-color: $color-light; // border-top: $border-thick-top solid;
+        // border-left: 1px solid;
+        // border-right: 1px solid;
+        // border-top: $border-thick-top solid;
+        // margin-top: -.35em;
+        // height: 4.5em;
+        color: $palette-color-darken; // border: 1px solid red;
+    }
+    .tabs-title.is-active {
+        border-left: 1px solid;
+        border-right: 1px solid;
+        border-top-color: $palette-color-darken;
+        background-color: #fff;
+        height: 3.52em;
+        border-bottom: none;
+        &:first-child,
+        &:last-child {
+            border-left: none;
+        }
+    }
+    .tabs-title a {
+        color: $palette-color-darken;
+    }
+    li.tabs-title {
+        // width: 25%;
+        padding: 0 2em 0 2em;
+        text-align: center;
+    }
+}
+
+.content--tab {
+    // border-top: $border-thin-top solid; 
+    // background-color: red;
+}
+
+.tabs-title>a[aria-selected='true'] {
+    background: none !important;
+}
+
+.tabs-panel-users {
+    .list--project-users {
+        .project-user {
+            background: #F0F3F8;
+            color: #002B59 !important;
+            border-radius: 2px 2px 2px;
+            display: flex;
+            .actionable {
+                button {
+                    padding: 0 0 0 0;
+                    margin: 0 0 0 0;
+                }
+            }
+        }
+    }
+}

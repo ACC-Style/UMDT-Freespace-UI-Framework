@@ -1,0 +1,172 @@
+.panel--center {
+    &-container {
+        // border-top: $border-thick-top solid $palette-color-lightens;
+        // border-top: none;
+        // border-left: 1px solid $palette-color-lightens;
+        // border-right: 1px solid $palette-color-lightens; 
+        // border-bottom: $border-thick-top solid $palette-color-lightens; 
+        // background-color: #ececec;
+        .grid-x {
+            // height: 50em;
+        }
+    }
+    &-bottom {
+        margin-top: 1em;
+    }
+    &-top {
+        // border-bottom: 1px solid #ececec;
+    }
+    &-column-project {
+        // border: none; 
+        border: 1px solid $palette-color-lightens;
+    }
+    &-column-workspace {
+        border-top: 1px solid $palette-color-lightens;
+        border-bottom: $border-thick-top solid $palette-color-darken;
+        border-left: $border-thin-top solid;
+        border-right: $border-thin-top solid;
+    }
+    &-column {
+        border-top: $border-thick-top solid $palette-color-lightens;
+        border-bottom: $border-thick-top solid $palette-color-lightens;
+        border-right: $border-skinny-bottom solid $palette-color-lightens;
+        border-left: $border-skinny-bottom solid $palette-color-lightens;
+        background-color: #fff;
+        .grid-y {
+            // height: 2em;
+        }
+        &-options {
+            color: $palette-color-median;
+            &-link:hover {
+                i {
+                    color: $palette-color-darken;
+                }
+            }
+            .button {
+                // background: $color-light;
+                border: none !important;
+            }
+        }
+        &-content {
+            // overflow-y: scroll;
+            height: 41em;
+        }
+        &-type {
+            i {
+                padding-left: .75em;
+                padding-top: .5em;
+            } // border-bottom: 1px solid #ececec;
+        } // text-align: center;
+        &-title {
+            text-transform: uppercase;
+            padding-left: 1.5em;
+            padding-top: .5em;
+        }
+    }
+    &-options,
+    &-features {
+        border-bottom: 1px solid #ececec;
+    }
+    &-column:last-child {
+        // border-right: none;
+    }
+    &-column-footer {
+        border-top: 1px solid #ececec;
+        font-size: .75em;
+        color: $color-neutral-light;
+        .feature--visible_count {
+            .material-icons {
+                position: absolute;
+                margin-top: .055em;
+                margin-left: -2em;
+            }
+        }
+        p {
+            margin: .25em 1em .25em 0;
+        }
+    }
+}
+
+.tabs-content {
+    color: $palette-color-darken;
+    padding: 0 1.5em 1.5em 1.5em;
+}
+
+.panel--center-container.grid-y.medium-grid-frame {
+    height: 40em;
+}
+
+.content--panel {
+    // padding: 1.25em;
+}
+
+.dashboard---panel-project {
+    border: 1px solid $palette-color-median;
+    border-top: none;
+}
+
+.column--list {
+    &-concepts {
+        border: 0.5em solid $palette-color-lightens;
+        border-left: 1px solid $palette-color-lightens;
+        border-right: none;
+        &-data {
+            height: 33.5em;
+        }
+        &-counter {
+            color: $color-neutral-light;
+            padding-right: 1em;
+            text-align: right;
+            .icon {
+                padding: 1em .25em 0 .5em;
+            }
+            .total {
+                font-size: 75%;
+            }
+            .total-selected {
+                font-size: 75%;
+            }
+            .counter-selected {
+                padding-left: 1em;
+                text-align: left;
+            }
+        }
+    }
+    &-elements {
+        border: 0.5em solid $palette-color-lightens;
+        border-left: 1px solid $palette-color-lightens;
+        border-right: none;
+        background-color: $palette-color-lightens;
+        &-data {
+            height: 33.5em;
+        }
+        &-counter {
+            color: $color-morning;
+            padding-right: 1em;
+            text-align: right;
+            .icon {
+                padding: 1em .25em 0 .5em;
+            }
+            .total {
+                font-size: 75%;
+            }
+            .total-selected {
+                font-size: 75%;
+            }
+            .counter-selected {
+                padding-left: 1em;
+                text-align: left;
+            }
+        }
+    }
+    &-workspace {
+        border: 1px solid $palette-color-median;
+        border-bottom: 0.5em solid $palette-color-median;
+        .tabs-content {
+            padding: 0 0 0 0;
+            .accordion {
+                width: 100%;
+            }
+        }
+    }
+}

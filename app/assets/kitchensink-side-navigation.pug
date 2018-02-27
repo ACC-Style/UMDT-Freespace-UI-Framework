@@ -1,0 +1,81 @@
+doctype html
+html.no-js(lang='en')
+
+    //- head
+    include /template/layout/_head.pug
+
+    body
+        //- off canvas menus
+        include /template/modules/_off.canvas.left.reports.pug 
+        include /template/modules/_off.canvas.left.filter.pug 
+        include /template/modules/_off.canvas.left.search.pug 
+        include /template/modules/_off.canvas.right.updates.pug 
+        include /template/modules/_off.canvas.right.comments.pug 
+        include /template/modules/_off.canvas.right.references.pug 
+        //- include /template/modules/_off.canvas.left.pug 
+        //- include /template/modules/_off.canvas.right.pug
+
+        //- page body
+        #content--page.off-canvas-content(data-off-canvas-content)
+            //- include /template/layout/_header.pug 
+
+            
+            //- billboard - content(editable)            
+            //- include /template/components/_billboard.pug
+            
+            //- breadcrumbs
+            //- include /template/components/_breadcrumb.pug 
+                //- breadcrumbs - content(editable)
+                block contentBreadcrumb
+                    nav(aria-label='You are here:', role='navigation')
+                        ul.breadcrumbs--nav-list.breadcrumbs
+                            li.breadcrumbs--nav-item
+                                a(href='index.html').breadcrumbs--nav-link
+                                    span.icon
+                                        i.material-icons.md-18 crop
+                                    span.text
+                                        | UMDT
+                            li.breadcrumbs--nav-item
+                                a(href='dashboard.html').breadcrumbs--nav-link
+                                    span.icon
+                                        i.material-icons.md-18 list
+                                    span.text
+                                        | Projects
+                            li.breadcrumbs--nav-item
+                                span.icon
+                                    i.material-icons.md-18 folder
+                                span.text
+                                    strong
+                                        | Project Name
+
+            //- page content(edtiable)            
+            .content--page
+                .grid-x
+
+                    //- panel left
+                    include /template/layout/_panel.left.pug 
+                    //- include /template/layout/_panel.left.empty.pug 
+
+                    //- pages content(edtiable)            
+                    .panel--center.cell.small-8.medium-8.large-8
+                        //- include /template/pages/_page.concepts2.pug
+                        //- include /template/variables/_kitchen.sink.pug
+                        //- include /template/pages/_page.workspace.pug
+                        //- include /template/pages/_page.grid.pug
+                        //- include /template/pages/_page.login.pug
+                        //- include /template/pages/_page.elements.pug
+                        //- include /template/pages/_page.registery.pug
+                        //- include /template/pages/_page.home.pug
+                        //- include /template/pages/_page.search.pug
+                        //- include /template/pages/_page.create.project.pug
+                        //- include /template/pages/_page.dashboard.pug
+                        //- include /template/pages/_page.project.pug
+                        //- include /template/pages/_page.TOC.pug  
+                            
+                    //- panel left
+                    include /template/layout/_panel.right.pug 
+                    //- include /template/layout/_panel.right.empty.pug 
+
+            //- footer
+            //- include /template/layout/_footer.pug
+            //- include /template/layout/_footer.blank.pug

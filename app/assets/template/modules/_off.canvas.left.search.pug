@@ -1,0 +1,48 @@
+#content--offcanvas-left-search.off-canvas.position-left(data-off-canvas,data-transition="push",data-content-overlay="false")
+            .grid-container
+                .grid-y
+                    .small-1
+                        h2 Search: Projects
+                        button.close-button(aria-label='Close menu', type='button', data-close).button
+                            span.icon
+                                i.material-icons.md-18 close
+                    .small-1
+                        .form--input-text
+                            label
+                                | search term
+                            input(type='text', placeholder='1234', aria-describedby='text-search', required='', pattern='number')
+                            span.form-error
+                                | enter search term
+                            p#text-search.help-text.-has-error Here's how you use this input field!
+                
+                    .small-8
+                        .form--input-text
+                            label
+                                | tags
+                            input(type='text', placeholder="Use me, or don't", aria-describedby='tag-search', data-abide-ignore='')
+                            p#tag-search.help-text This input is ignored by Abide using `data-abide-ignore`
+                    
+                    .cell
+                        .form--input-checkbox
+                            fieldset
+                                legend Project status:
+                                .grid-y
+                                    .small-1
+                                        input#checkbox1a(type='checkbox')
+                                        label(for='checkbox1a') Approved For Publish
+                                    .small-1
+                                        input#checkbox2a(type='checkbox', required='')
+                                        label(for='checkbox2a') In Progress
+                                    .small-1
+                                        input#checkbox3a(type='checkbox')
+                                        label(for='checkbox3a') In Review
+                                    .small-1
+                                        input#checkbox4a(type='checkbox')
+                                        label(for='checkbox4a') On Hold
+                                    .small-1
+                                        input#checkbox5a(type='checkbox')
+                                        label(for='checkbox5a') Registery Creation
+                    .small-1
+                        button.button.button-off-canvas.expanded.success(type='submit', value='Submit') Search
+                            span.icon
+                              i.material-icons.md-18(aria-hidden='true') youtube_searched_for

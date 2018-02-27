@@ -1,0 +1,99 @@
+include /template/variables/_mixins
+include /template/components/_prompt.pug
+#page--create-project.panel--center-container.medium-grid-frame
+    .grid-x
+        //- workspace
+        .panel--center-column.small-2.medium-2.large-12.cell  
+            .content--panel
+                .grid-x
+                    .cell
+
+                        form(data-abide='7v3wyo-abide', novalidate='')
+                            .grid-x.grid-padding-x
+
+                                .cell.small-6
+                                    .grid-y
+                                        .cell
+
+                                            .form--input-text.-is-required
+                                                label
+                                                    | Name:
+                                                input(type='text', placeholder='1234', aria-describedby='exampleHelpText', required='', pattern='number')
+                                                span.form-error
+                                                    | A name of the new create is required.
+                                                p#exampleHelpText.help-text.-has-error Any help information (what is restricted or allow with name input)
+
+                                        .cell
+                                            .form--input-text.-is-required
+                                                label
+                                                    | Description:
+                                                input(type='text', placeholder='1234', aria-describedby='exampleHelpText', required='', pattern='number')
+                                                span.form-error
+                                                    | A description of the new create is required.
+                                                p#exampleHelpText.help-text.-has-error Any help information (what is restricted or allow with description input)
+
+                                        .cell
+                                            .form--input-text
+                                                label
+                                                    | Tags:
+                                                input(type='text', placeholder='phrase', aria-describedby='exampleHelpText')
+                                                span.form-error
+                                                    | Tags are useful for stuff
+
+
+
+                                .cell.small-6
+                                    .grid-y
+                                        .cell
+
+                                            .form--input-select
+                                                label
+                                                    | Status:
+                                                select(required='')
+                                                    option(value='option1') Draft
+                                                    option(value='option2') option 2
+                                                    option(value='option3') option 3
+                                                    option(value='option4') option 4
+                                        .cell.small-4
+
+                                            .grid-x.grid-padding-x       
+                                                .cell.small-6                                
+                                                    .form--input-select
+                                                        label
+                                                            | Registery:
+                                                        select(required='')
+                                                            option(value='option1') option 1
+                                                            option(value='option2') option 2
+                                                            option(value='option3') option 3
+                                                            option(value='option4') option 4
+
+                                                .cell.small-6
+
+                                                    .form--input-select
+                                                        label
+                                                            | Verison:
+                                                        select(required='')
+                                                            option(value='option1') option 1
+                                                            option(value='option2') option 2
+                                                            option(value='option3') option 3
+                                                            option(value='option4') option 4
+
+                                        .cell
+                                            .form--input-text
+                                                label
+                                                    | Start Date:
+                                                input(type='text', disabled, placeholder='phrase', aria-describedby='exampleHelpText', required='', pattern='date', value="10/5/2017").disabled
+                                                span.form-error
+                                                    | Date is required
+
+
+
+.panel--center-bottom.cell
+    .grid-x.grid-padding-x
+        .panel--center-bottom-controls.small-12.medium-4.large-3.cell
+            button.button.success.float-right
+                | Save
+            button.button.alert.float-right
+                | Reset
+            //- button.button.float-right.secondary
+                | Reset

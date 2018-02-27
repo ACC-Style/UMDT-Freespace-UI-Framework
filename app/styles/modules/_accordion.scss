@@ -1,0 +1,20 @@
+.accordion-item {
+    .accordion-title {
+        border-top: $border-thick-top solid $palette-color-darken;
+        font-weight: bold;
+        .text {
+            text-transform: uppercase;
+        }
+        &::before {
+            font-family: 'Material Icons';
+            font-size: 2em;
+            content: "arrow_drop_down";
+            -webkit-font-feature-settings: 'liga';
+            margin-top: -0.95rem;
+        }
+    }
+}
+
+.is-active>.accordion-title::before {
+    content: 'arrow_drop_up';
+}

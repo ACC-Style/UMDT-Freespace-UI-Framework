@@ -1,0 +1,73 @@
+.off-canvas {
+    // width: 21em;
+    padding: 2em 1em 1em 1em;
+    background: $palette-color-darken;
+    color: $palette-color-lightens;
+    .close-button {
+        height: 1em;
+        width: 1em;
+        padding: 0 0 0 0;
+        border: none;
+        color: $palette-color-lightens;
+        &:hover {
+            color: $palette-color-darken;
+            background-color: $palette-color-lightens;
+        }
+    }
+    .button-off-canvas {
+        span.icon {
+            margin-top: -.15em;
+            margin-left: .5em;
+            position: absolute;
+            display: inline-block; // float: right;
+        }
+    }
+    .form--input-checkbox {
+        input {
+            &:checked+label,
+            &:checked+label:before {
+                color: $palette-color-lightens !important;
+            }
+        }
+    }
+    label {
+        width: 100%;
+    }
+    .notification---project {
+        .list--notification-items {
+            a {
+                &:hover {
+                    color: $palette-color-lightens;
+                }
+            }
+        }
+    }
+    [type='text'],
+    [type='password'],
+    [type='date'],
+    [type='datetime'],
+    [type='datetime-local'],
+    [type='month'],
+    [type='week'],
+    [type='email'],
+    [type='number'],
+    [type='search'],
+    [type='tel'],
+    [type='time'],
+    [type='url'],
+    [type='color'],
+    textarea {
+        color: $palette-color-lightens;
+        &:focus {
+            border-bottom: $color-grass 1px solid !important;
+            &+.button {
+                border-bottom: $color-grass 1px solid !important;
+                i.material-icons {
+                    color: $color-grass;
+                }
+            }
+        }
+    }
+}
+
+// $offcanvas-sizes: ( small: 250px, medium: 350px, );

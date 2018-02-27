@@ -1,0 +1,295 @@
+    .button,
+        {
+        border: 1px solid;
+        &:hover {
+            background: $palette-color-darken;
+            color: $color-light;
+        }
+    }
+
+    .button.primary,
+    .button.success,
+    .button.secondary,
+    .button.alert,
+    .button.warning,
+        {
+        border: none;
+    }
+
+    .button.primary,
+        {
+        border: 1px solid;
+        &:hover {
+            background: $palette-color-median;
+            color: $color-light;
+        }
+    }
+
+    .button.warning,
+        {
+        background: transparent; // color: $color-light;
+        border: 1px solid $color-heat;
+        color: $color-heat;
+        &:hover {
+            background: $color-heat;
+            color: $color-light;
+        }
+    }
+
+    .button.alert,
+        {
+        background: transparent; // color: $color-light;
+        border: 1px solid $palette-color-accent;
+        color: $palette-color-accent;
+        &:hover {
+            // background: transparent;
+            color: $color-light;
+        }
+    }
+
+    .button.success,
+        {
+        background: transparent; // color: $color-light;
+        color: $color-grass;
+        border: 1px solid $color-grass;
+        &:hover {
+            // background: transparent;
+            color: $color-light;
+        }
+    }
+
+    .menu--nav {
+        text-align: right;
+        &-link {
+            background-color: $palette-color-base;
+            padding: .5em .25em .25em .25em;
+            color: $palette-color-median;
+            display: inline-block;
+            margin: 0 1em 0 0;
+            .icon {
+                float: left;
+                margin-right: .25em;
+                margin-top: -.1em;
+            }
+            .text {
+                display: none;
+                float: left;
+                margin-top: .15em;
+                margin-left: 1.25em;
+                font-weight: bold;
+                font-size: .85em;
+            }
+        }
+        &-link:hover {
+            background: $palette-color-darken;
+            color: $palette-color-lightens;
+            border: none;
+            text-decoration: none;
+            .text {
+                // position: absolute;
+                padding-right: 1em;
+                color: $palette-color-lightens;
+                display: block;
+                text-decoration: none;
+            }
+            i {
+                color: $palette-color-lightens !important;
+                text-decoration: none !important;
+                ;
+            }
+        }
+        &-link.button {
+            // background-color: transparent;
+            border-radius: .15em;
+            border: none;
+        }
+    }
+
+    .panel--navigation {
+        &-link {
+            padding: .75em;
+            margin-bottom: .15em
+        }
+    } // TODO: add mixin for button class
+    .panel--left,
+    .panel--right {
+        button {
+            -webkit-appearance: none;
+            color: $palette-color-median; // background-color: $palette-color-median;
+            // border: 1px solid $palette-color-base;
+            border: none;
+            margin: 0 0 .025em 0;
+            padding: 1em;
+        }
+    }
+
+    button.option-button {
+        // height: 100%;
+        // width: 100%;
+        height: 1.25em !important;
+        width: 1.25em !important;
+        text-align: center;
+        /* float: left; */
+        padding: 0 0 0 0 !important;
+        background: none;
+        margin: 0 0 0 0;
+        &:hover {
+            background: none;
+            i {
+                color: $palette-color-darken;
+            }
+        }
+        i {
+            color: $palette-color-median; // margin-top: .35em
+        }
+    }
+
+    a.button.panel--side-button.button {
+        margin: 0 0 0 0;
+        padding: 1em 1em 1em 1em;
+        appearance: none;
+        color: $palette-color-base;
+        background-color: $palette-color-median;
+        border-color: $palette-color-lightens;
+        &:hover {
+            background-color: $palette-color-darken;
+        }
+        &:hover .text,
+        &:hover .icon {
+            text-decoration: none;
+            color: $color-white;
+            i {
+                color: $color-white;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .panel--side-button,
+    a.panel--side-button {
+        .icon {
+            margin-right: .25em;
+            margin-top: -.1em;
+        }
+        .text {
+            display: none;
+            float: left;
+            margin-top: .15em;
+            font-weight: bold;
+            font-size: .85em;
+        }
+        .counter {
+            position: absolute;
+            display: block;
+            /* border-radius: 0 0 01em; */
+            padding: .25em;
+            color: #fff; // margin-left: -19px;
+            // margin-top: -10px;
+            // background: $palette-color-accent;
+            color: $palette-color-accent;
+            font-weight: bold;
+            font-size: 12px;
+        }
+        &:hover {
+            // position: absolute;
+            z-index: 99999;
+            .text {
+                display: block;
+            }
+            .icon {
+                margin-right: .25em;
+            }
+            .counter {
+                background: transparent;
+                color: $color-heat;
+            }
+        }
+        .fa {
+            width: 1.34em;
+            height: 1.25em;
+        }
+    }
+
+    a.panel--side-button {
+        .counter {
+            color: $color-grass;
+        }
+    }
+
+    .panel--right {
+        .panel--side-button {
+            .text {
+                margin-right: .5em;
+            }
+            .counter {
+                margin-left: -12px;
+                margin-top: -14px;
+            }
+        }
+    }
+
+    .panel--left {
+        .panel--side-button {
+            .icon {
+                float: left;
+            }
+            .counter {
+                margin-top: -14px;
+                margin-left: 22px;
+            }
+            &:hover {
+                .text {
+                    margin-left: .5em;
+                }
+            }
+        }
+    }
+
+    button.panel--side-button[aria-expanded="true"] {
+        background-color: $palette-color-darken;
+    }
+
+    .button+.button {
+        margin-left: 2em;
+    }
+
+    .notification---project {
+        .close-button {
+            height: .25em;
+            width: .25em;
+            padding: 0 0 0 0;
+            margin-right: .25em;
+            border: none; // color: $palette-color-lightens;
+            &:hover {
+                color: $palette-color-darken;
+                background-color: $palette-color-lightens;
+            }
+        }
+    }
+
+    .button--label {
+        padding: 1.5em 0 0 0;
+        display: inline-block; // float: left;
+        border: none;
+        color: $palette-color-median;
+    }
+
+    .button--database {
+        // display: flex;
+        // align-items: center;
+        height: 9em;
+        margin: 2em; // padding: 1.5em 2em 2em 2em;
+        &:hover {
+            i,
+            .txt {
+                color: $palette-color-base;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .button-view-comments {
+        i {
+            float: right;
+        }
+    }

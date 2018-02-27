@@ -1,0 +1,59 @@
+.feature--draggable_items {
+    margin: 0 0 0 0;
+    li {
+        list-style: none;
+    }
+    .menu a {
+        display: flex !important;
+    }
+    &-item:hover {
+        background-color: $palette-color-lightens;
+        a {
+            color: $palette-color-darken;
+        }
+    }
+    &-item.-is-selected:hover {
+        a {
+            color: $color-twinkle;
+        }
+    }
+    &-link {
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+        justify-content: center; // font-weight: bold;
+        font-size: small;
+        padding: .5em;
+        color: $palette-color-median;
+        .icon-r {
+            // border: 1px solid red;
+            text-align: center;
+            width: 20%;
+            align-self: center;
+        }
+        .icon-l {
+            width: 20%; // border: 1px solid red;
+            text-align: center;
+            align-self: center;
+        }
+        .arrow-r {
+            text-align: center; // border: 1px solid red;
+            align-self: center;
+            width: 15%;
+        }
+        .text {
+            // border: 1px solid red;
+            align-self: center;
+            width: 60%;
+        }
+    }
+    .context {
+        display: none;
+        align-self: center; // border: 1px solid red;
+        padding: 0 1em 1em 1em;
+        margin-top: 1em;
+        font-size: xx-small;
+        color: lightgray;
+        width: 100%;
+    }
+}

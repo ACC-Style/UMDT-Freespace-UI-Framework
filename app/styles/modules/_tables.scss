@@ -1,0 +1,56 @@
+.data--table {
+    thead>tr th {
+        color: $color-light;
+        border-right: 1px solid #fff;
+        font-weight: lighter;
+    }
+    td {
+        // font-size: .85em;
+    }
+    th {
+        border-right: 1px solid #fff;
+    }
+}
+
+#data--table-users-participants {
+    thead,
+    tbody,
+    tfoot {
+        background: transparent;
+        border: none;
+    }
+    thead {
+        display: none;
+    }
+    .actionable {
+        padding: 0 0 0 0;
+        text-align: center;
+        button {
+            padding: .5em 1em .5em 1em;
+            margin: 0 auto;
+        }
+    }
+    tbody {
+        .icon {
+            float: left;
+            margin-right: .25em;
+        }
+    }
+}
+
+#data--table-users {
+    .actionable {
+        text-align: center;
+        padding: 0 0 0 0;
+        button {
+            padding: .5em 1em .5em 1em;
+            margin: 0 auto;
+        }
+    }
+}
+
+.table-transparent {
+    tr {
+        background: transparent !important;
+    }
+}

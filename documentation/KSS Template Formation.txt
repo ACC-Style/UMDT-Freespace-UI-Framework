@@ -1,0 +1,8 @@
+// title here.
+//
+// :hover             - Quib hover highlight.
+// .stars-given       - A highlight indicating you’ve already given a star.
+// .stars-given:hover - Quib hover highlight on top of stars-given styling.
+// .disabled          - Dims the button to indicate it cannot be used.
+//
+// Styleguide 1.1.1.

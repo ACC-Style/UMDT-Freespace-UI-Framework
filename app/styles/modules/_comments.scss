@@ -1,0 +1,75 @@
+.comment---project {
+    .form--input-text {
+        padding-bottom: 1.5em;
+        input {
+            float: left;
+            background: transparent;
+            width: 80%;
+            &::placeholder {
+                color: $color-neutral-light;
+            }
+            &:focus {
+                // color: $palette-color-lightens;
+                // background: $palette-color-darken;
+                border-bottom-color: $palette-color-darken;
+            }
+        }
+        label {
+            // visibility: hidden;
+            display: none;
+        }
+    }
+    .comment---reply {
+        background-color: white;
+    }
+    small {
+        color: $color-morning;
+    }
+    input {
+        font-size: 1em;
+    }
+    .counter {
+        font-weight: bolder;
+    }
+}
+
+.off-canvas {
+    blockquote {
+        color: $palette-color-lightens;
+        border: none;
+    }
+    .comment---reply {
+        background-color: transparent;
+        border-left: 1px solid $color-neutral-light;
+        padding-left: 1em;
+        blockquote {
+            margin-bottom: 0;
+            padding-bottom: 1em;
+        }
+    }
+    .comment---project {
+        button.button-show {
+            margin-top: 2em;
+        }
+        button.button-reply {
+            margin: 1em 0 0 0;
+            border: none;
+            border-bottom: 1px solid $color-neutral-light;
+            display: block;
+            height: 43px;
+            width: 47px;
+            width: 20%;
+            i {
+                color: $color-neutral-light;
+                margin-left: -.35em;
+            }
+            &:hover {
+                // border: $palette-color-lightens 1px solid;
+                background: $palette-color-lightens;
+                i {
+                    color: $palette-color-darken;
+                }
+            }
+        }
+    }
+}

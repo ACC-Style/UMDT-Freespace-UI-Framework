@@ -1,0 +1,101 @@
+.content--page {
+    padding: 0; // margin-bottom: 10em;
+}
+
+.content--login {
+    margin-top: 10%;
+}
+
+#content--page.is-open-left {
+    margin-right: 16%; // width: 84%;
+    // transition: width 2s;
+}
+
+#content--page.is-open-right {
+    // transition: width 2s;
+    margin-left: 16%;
+}
+
+// remove these:
+#page--TOC {
+    button.panel--side-button {
+        display: none;
+    }
+}
+
+#page--create-project {
+    .panel--center-column-project {}
+}
+
+#page--directory {
+    .dashboard---panel-notification {
+        .form--input-checkbox {
+            margin-top: 0px;
+        }
+        li {
+            font-size: small;
+            i {
+                color: $palette-color-median;
+                margin-right: .25em;
+            }
+        }
+    }
+    .notification---project {
+        i {
+            margin-right: .25em;
+        }
+    }
+    .dashboard---panel-project {
+        .feature--tabs-list {
+            li {
+                width: 20%;
+                padding: 0 0 0 0;
+                &.-is-editable {
+                    label {
+                        // display: none;
+                    }
+                    a {
+                        // float: left;
+                        // text-align: right;
+                        // width: 50%; 
+                        // border: 1px solid red;
+                    }
+                    .switch-input-space {
+                        padding: .65em 0 0 .25em;
+                        width: 50%;
+                        text-align: left; // border: 1px solid red;
+                        float: right;
+                        label {
+                            float: left;
+                        }
+                        i {
+                            padding-top: .5em;
+                        }
+                    }
+                }
+                a:focus {
+                    background: transparent;
+                }
+            }
+            ul li:last-child {
+                border-right: none;
+            }
+        }
+    }
+    .data--table td td {
+        font-size: 1em;
+    }
+    .list--users li {
+        display: inline-block;
+        margin-right: 1em;
+    }
+    .feature--edit-mode {
+        padding: 0 0 0 0; // border: 1px solid;
+        margin: .5em 0 0 0;
+        text-align: right;
+        height: 1.5em;
+    }
+    .form--input-text textarea.taller {
+        height: 13.5em;
+    }
+}

@@ -1,0 +1,68 @@
+.margins-none {
+    margin: 0 0 0 0 !important;
+}
+
+.super-sized-lg {
+    font-size: 1.5rem;
+}
+
+.super-sized-xl {
+    font-size: 4rem;
+}
+
+.super-sized-xxl {
+    font-size: 5rem;
+    font-weight: lighter;
+}
+
+.tabs,
+.tabs-content {
+    border: none;
+}
+
+.tabs-title a {
+    color: $color-white;
+    text-transform: uppercase;
+}
+
+.valign-middle {
+    display: table;
+}
+
+.valign-middle .columns {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.valign-middle .columns,
+.valign-middle [class*="column"]+[class*="column"]:last-child {
+    float: none;
+}
+
+.-bolder {
+    font-weight: 700;
+}
+
+.helper-align-middle {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+// typography
+.h7 {
+    font-size: .85rem;
+}
+
+ul.no-bullets {
+    list-style: none;
+    margin-left: 0;
+}
+
+ul.small {
+    font-size: 80%;
+    .hd {
+        margin-top: 1em;
+        margin-left: -1em;
+    }
+}

@@ -1,0 +1,51 @@
+form(data-abide='7v3wyo-abide', novalidate='',id='quib-form')
+  .grid-x.grid-padding-x
+
+        .form--input-text.-is-required
+          .cell
+            label
+              | Input
+              input(type='text', placeholder="Use me, or don't", aria-describedby='exampleHelpTex', data-abide-ignore='')
+            p#exampleHelpTex.help-text This input is ignored by Abide using `data-abide-ignore`
+          .cell
+            label
+              | Input
+              input#password(type='password', placeholder='yeti4preZ', aria-describedby='exampleHelpText', required='')
+              span.form-error
+                | I'm required!
+            p#exampleHelpText.help-text Enter a password please.
+          .cell
+            label
+              | Input
+              input(type='password', placeholder='yeti4preZ', aria-describedby='exampleHelpText2', required='', pattern='alpha_numeric', data-equalto='password')
+              span.form-error
+                | Hey, passwords are supposed to match!
+            p#exampleHelpText2.help-text
+              | This field is using the `data-equalto="password"` attribute, causing it to match the password field above
+          
+        .cell.cell-block-container
+            .grid-x.grid-padding-x
+                .cell.medium-4.medium-cell-block-y
+                  input#Prohibited(name='Prohibited', type='hidden', value='false')
+                  input#CanEdit(data-val='true', data-val-required='The CanEdit field is required.', name='CanEdit', type='hidden', value='true')
+                  input#IsConceptDataElementPublished(data-val='true', data-val-required='The IsConceptDataElementPublished field is required.', name='IsConceptDataElementPublished', type='hidden', value='False')
+                  input#IsConceptValueSetPublished(data-val='true', data-val-required='The IsConceptValueSetPublished field is required.', name='IsConceptValueSetPublished', type='hidden', value='False')
+                  input#HasDataElements(data-val='true', data-val-required='The HasDataElements field is required.', name='HasDataElements', type='hidden', value='True')
+                  input#PreviousDomainConceptId(name='PreviousDomainConceptId', type='hidden', value='3214')
+                  input#UpdateEDWValues(data-val='true', data-val-required='The UpdateEDWValues field is required.', name='UpdateEDWValues', type='hidden', value='False')
+                  label(for='DomainConceptId') Domain Concept
+                  select#DomainConceptId.small-12(name='DomainConceptId')
+                        option(value='') ** Please Select **
+                        option(selected='selected', value='3214') Care Provider
+                        option(value='3216') Condition
+                        option(value='3217') Device
+                        option(value='3218') Drug
+                        option(value='3219') Lab Visit Occurrence
+                        option(value='3221') Measurement
+                        option(value='3222') Observation
+                        option(value='3223') Patient
+                        option(value='3379') Patient Ethnicity
+                        option(value='3378') Patient Race
+                        option(value='3224') Procedure
+                        option(value='3225') Registry Information
+                        option(value='3226') Visit Occurrence

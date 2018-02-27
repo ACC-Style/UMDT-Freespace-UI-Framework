@@ -1,0 +1,35 @@
+.content--breadcrumb {
+    overflow: hidden; // margin-bottom: 1em;
+}
+
+.breadcrumbs--nav {
+    // border-bottom: 1px solid #ececec;
+    &-link,
+    &-item {
+        .icon {
+            display: block;
+            float: left;
+            margin-right: .5em;
+        }
+        .text {}
+    }
+    &-item.disabled {
+        a:hover {
+            text-decoration: none; // cursor: pointer;
+        }
+        .text {
+            color: $palette-color-lightens;
+        }
+        .icon {
+            color: $palette-color-lightens;
+        }
+    }
+}
+
+.breadcrumbs li:last-child {
+    text-transform: unset;
+}
+
+.breadcrumbs li:last-child {
+    text-transform: unset;
+}

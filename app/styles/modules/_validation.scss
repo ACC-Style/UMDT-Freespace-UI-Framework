@@ -1,0 +1,8 @@
+.validation--summary {
+    display: none;
+    &.alert {
+        ul li {
+            color: $palette-color-accent;
+        }
+    }
+}
