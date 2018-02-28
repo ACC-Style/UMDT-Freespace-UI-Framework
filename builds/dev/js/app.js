@@ -148,6 +148,739 @@ var __makeRelativeRequire = function(require, mappings, pref) {
   }
 };
 
+require.register("jquery.fancytree/dist/modules/jquery.fancytree.edit.js", function(exports, require, module) {
+  require = __makeRelativeRequire(require, {}, "jquery.fancytree");
+  (function() {
+    /*!
+ * jquery.fancytree.edit.js
+ *
+ * Make node titles editable.
+ * (Extension module for jquery.fancytree.js: https://github.com/mar10/fancytree/)
+ *
+ * Copyright (c) 2008-2017, Martin Wendt (http://wwWendt.de)
+ *
+ * Released under the MIT license
+ * https://github.com/mar10/fancytree/wiki/LicenseInfo
+ *
+ * @version 2.27.0
+ * @date 2017-12-16T09:14:27Z
+ */
+
+;(function( factory ) {
+	if ( typeof define === "function" && define.amd ) {
+		// AMD. Register as an anonymous module.
+		define( [ "jquery", "./jquery.fancytree" ], factory );
+	} else if ( typeof module === "object" && module.exports ) {
+		// Node/CommonJS
+		require("./jquery.fancytree");
+		module.exports = factory(require("jquery"));
+	} else {
+		// Browser globals
+		factory( jQuery );
+	}
+
+}( function( $ ) {
+
+"use strict";
+
+
+/*******************************************************************************
+ * Private functions and variables
+ */
+
+var isMac = /Mac/.test(navigator.platform),
+	escapeHtml = $.ui.fancytree.escapeHtml,
+	unescapeHtml = $.ui.fancytree.unescapeHtml;
+
+/**
+ * [ext-edit] Start inline editing of current node title.
+ *
+ * @alias FancytreeNode#editStart
+ * @requires Fancytree
+ */
+$.ui.fancytree._FancytreeNodeClass.prototype.editStart = function(){
+	var $input,
+		node = this,
+		tree = this.tree,
+		local = tree.ext.edit,
+		instOpts = tree.options.edit,
+		$title = $(".fancytree-title", node.span),
+		eventData = {
+			node: node,
+			tree: tree,
+			options: tree.options,
+			isNew: $(node[tree.statusClassPropName]).hasClass("fancytree-edit-new"),
+			orgTitle: node.title,
+			input: null,
+			dirty: false
+			};
+
+	// beforeEdit may want to modify the title before editing
+	if( instOpts.beforeEdit.call(node, {type: "beforeEdit"}, eventData) === false ) {
+		return false;
+	}
+	$.ui.fancytree.assert(!local.currentNode, "recursive edit");
+	local.currentNode = this;
+	local.eventData = eventData;
+
+	// Disable standard Fancytree mouse- and key handling
+	tree.widget._unbind();
+	// #116: ext-dnd prevents the blur event, so we have to catch outer clicks
+	$(document).on("mousedown.fancytree-edit", function(event){
+		if( ! $(event.target).hasClass("fancytree-edit-input") ){
+			node.editEnd(true, event);
+		}
+	});
+
+	// Replace node with <input>
+	$input = $("<input />", {
+		"class": "fancytree-edit-input",
+		type: "text",
+		value: tree.options.escapeTitles ? eventData.orgTitle : unescapeHtml(eventData.orgTitle)
+	});
+	local.eventData.input = $input;
+	if ( instOpts.adjustWidthOfs != null ) {
+		$input.width($title.width() + instOpts.adjustWidthOfs);
+	}
+	if ( instOpts.inputCss != null ) {
+		$input.css(instOpts.inputCss);
+	}
+
+	$title.html($input);
+
+	// Focus <input> and bind keyboard handler
+	$input
+		.focus()
+		.change(function(event){
+			$input.addClass("fancytree-edit-dirty");
+		}).keydown(function(event){
+			switch( event.which ) {
+			case $.ui.keyCode.ESCAPE:
+				node.editEnd(false, event);
+				break;
+			case $.ui.keyCode.ENTER:
+				node.editEnd(true, event);
+				return false; // so we don't start editmode on Mac
+			}
+			event.stopPropagation();
+		}).blur(function(event){
+			return node.editEnd(true, event);
+		});
+
+	instOpts.edit.call(node, {type: "edit"}, eventData);
+};
+
+
+/**
+ * [ext-edit] Stop inline editing.
+ * @param {Boolean} [applyChanges=false] false: cancel edit, true: save (if modified)
+ * @alias FancytreeNode#editEnd
+ * @requires jquery.fancytree.edit.js
+ */
+$.ui.fancytree._FancytreeNodeClass.prototype.editEnd = function(applyChanges, _event){
+	var newVal,
+		node = this,
+		tree = this.tree,
+		local = tree.ext.edit,
+		eventData = local.eventData,
+		instOpts = tree.options.edit,
+		$title = $(".fancytree-title", node.span),
+		$input = $title.find("input.fancytree-edit-input");
+
+	if( instOpts.trim ) {
+		$input.val($.trim($input.val()));
+	}
+	newVal = $input.val();
+
+	eventData.dirty = ( newVal !== node.title );
+	eventData.originalEvent = _event;
+
+	// Find out, if saving is required
+	if( applyChanges === false ) {
+		// If true/false was passed, honor this (except in rename mode, if unchanged)
+		eventData.save = false;
+	} else if( eventData.isNew ) {
+		// In create mode, we save everything, except for empty text
+		eventData.save = (newVal !== "");
+	} else {
+		// In rename mode, we save everyting, except for empty or unchanged text
+		eventData.save = eventData.dirty && (newVal !== "");
+	}
+	// Allow to break (keep editor open), modify input, or re-define data.save
+	if( instOpts.beforeClose.call(node, {type: "beforeClose"}, eventData) === false){
+		return false;
+	}
+	if( eventData.save && instOpts.save.call(node, {type: "save"}, eventData) === false){
+		return false;
+	}
+	$input
+		.removeClass("fancytree-edit-dirty")
+		.off();
+	// Unbind outer-click handler
+	$(document).off(".fancytree-edit");
+
+	if( eventData.save ) {
+		// # 171: escape user input (not required if global escaping is on)
+		node.setTitle( tree.options.escapeTitles ? newVal : escapeHtml(newVal) );
+		node.setFocus();
+	}else{
+		if( eventData.isNew ) {
+			node.remove();
+			node = eventData.node = null;
+			local.relatedNode.setFocus();
+		} else {
+			node.renderTitle();
+			node.setFocus();
+		}
+	}
+	local.eventData = null;
+	local.currentNode = null;
+	local.relatedNode = null;
+	// Re-enable mouse and keyboard handling
+	tree.widget._bind();
+	// Set keyboard focus, even if setFocus() claims 'nothing to do'
+	$(tree.$container).focus();
+	eventData.input = null;
+	instOpts.close.call(node, {type: "close"}, eventData);
+	return true;
+};
+
+
+/**
+* [ext-edit] Create a new child or sibling node and start edit mode.
+*
+* @param {String} [mode='child'] 'before', 'after', or 'child'
+* @param {Object} [init] NodeData (or simple title string)
+* @alias FancytreeNode#editCreateNode
+* @requires jquery.fancytree.edit.js
+* @since 2.4
+*/
+$.ui.fancytree._FancytreeNodeClass.prototype.editCreateNode = function(mode, init){
+	var newNode,
+		tree = this.tree,
+		self = this;
+
+	mode = mode || "child";
+	if( init == null ) {
+		init = { title: "" };
+	} else if( typeof init === "string" ) {
+		init = { title: init };
+	} else {
+		$.ui.fancytree.assert($.isPlainObject(init));
+	}
+	// Make sure node is expanded (and loaded) in 'child' mode
+	if( mode === "child" && !this.isExpanded() && this.hasChildren() !== false ) {
+		this.setExpanded().done(function(){
+			self.editCreateNode(mode, init);
+		});
+		return;
+	}
+	newNode = this.addNode(init, mode);
+
+	// #644: Don't filter new nodes.
+	newNode.match = true;
+	$(newNode[tree.statusClassPropName])
+		.removeClass("fancytree-hide")
+		.addClass("fancytree-match");
+
+	newNode.makeVisible(/*{noAnimation: true}*/).done(function(){
+		$(newNode[tree.statusClassPropName]).addClass("fancytree-edit-new");
+		self.tree.ext.edit.relatedNode = self;
+		newNode.editStart();
+	});
+};
+
+
+/**
+ * [ext-edit] Check if any node in this tree  in edit mode.
+ *
+ * @returns {FancytreeNode | null}
+ * @alias Fancytree#isEditing
+ * @requires jquery.fancytree.edit.js
+ */
+$.ui.fancytree._FancytreeClass.prototype.isEditing = function(){
+	return this.ext.edit ? this.ext.edit.currentNode : null;
+};
+
+
+/**
+ * [ext-edit] Check if this node is in edit mode.
+ * @returns {Boolean} true if node is currently beeing edited
+ * @alias FancytreeNode#isEditing
+ * @requires jquery.fancytree.edit.js
+ */
+$.ui.fancytree._FancytreeNodeClass.prototype.isEditing = function(){
+	return this.tree.ext.edit ? this.tree.ext.edit.currentNode === this : false;
+};
+
+
+/*******************************************************************************
+ * Extension code
+ */
+$.ui.fancytree.registerExtension({
+	name: "edit",
+	version: "2.27.0",
+	// Default options for this extension.
+	options: {
+		adjustWidthOfs: 4,   // null: don't adjust input size to content
+		allowEmpty: false,   // Prevent empty input
+		inputCss: {minWidth: "3em"},
+		// triggerCancel: ["esc", "tab", "click"],
+		triggerStart: ["f2", "mac+enter", "shift+click"],
+		trim: true,          // Trim whitespace before save
+		// Events:
+		beforeClose: $.noop, // Return false to prevent cancel/save (data.input is available)
+		beforeEdit: $.noop,  // Return false to prevent edit mode
+		close: $.noop,       // Editor was removed
+		edit: $.noop,        // Editor was opened (available as data.input)
+//		keypress: $.noop,    // Not yet implemented
+		save: $.noop         // Save data.input.val() or return false to keep editor open
+	},
+	// Local attributes
+	currentNode: null,
+
+	treeInit: function(ctx){
+		this._superApply(arguments);
+		this.$container.addClass("fancytree-ext-edit");
+	},
+	nodeClick: function(ctx) {
+		if( $.inArray("shift+click", ctx.options.edit.triggerStart) >= 0 ){
+			if( ctx.originalEvent.shiftKey ){
+				ctx.node.editStart();
+				return false;
+			}
+		}
+		if( $.inArray("clickActive", ctx.options.edit.triggerStart) >= 0 ){
+			// Only when click was inside title text (not aynwhere else in the row)
+			if( ctx.node.isActive() && !ctx.node.isEditing() &&
+				$(ctx.originalEvent.target).hasClass("fancytree-title")
+			){
+				ctx.node.editStart();
+				return false;
+			}
+		}
+		return this._superApply(arguments);
+	},
+	nodeDblclick: function(ctx) {
+		if( $.inArray("dblclick", ctx.options.edit.triggerStart) >= 0 ){
+			ctx.node.editStart();
+			return false;
+		}
+		return this._superApply(arguments);
+	},
+	nodeKeydown: function(ctx) {
+		switch( ctx.originalEvent.which ) {
+		case 113: // [F2]
+			if( $.inArray("f2", ctx.options.edit.triggerStart) >= 0 ){
+				ctx.node.editStart();
+				return false;
+			}
+			break;
+		case $.ui.keyCode.ENTER:
+			if( $.inArray("mac+enter", ctx.options.edit.triggerStart) >= 0 && isMac ){
+				ctx.node.editStart();
+				return false;
+			}
+			break;
+		}
+		return this._superApply(arguments);
+	}
+});
+// Value returned by `require('jquery.fancytree..')`
+return $.ui.fancytree;
+}));  // End of closure
+  })();
+});
+
+require.register("jquery.fancytree/dist/modules/jquery.fancytree.filter.js", function(exports, require, module) {
+  require = __makeRelativeRequire(require, {}, "jquery.fancytree");
+  (function() {
+    /*!
+ * jquery.fancytree.filter.js
+ *
+ * Remove or highlight tree nodes, based on a filter.
+ * (Extension module for jquery.fancytree.js: https://github.com/mar10/fancytree/)
+ *
+ * Copyright (c) 2008-2017, Martin Wendt (http://wwWendt.de)
+ *
+ * Released under the MIT license
+ * https://github.com/mar10/fancytree/wiki/LicenseInfo
+ *
+ * @version 2.27.0
+ * @date 2017-12-16T09:14:27Z
+ */
+
+;(function( factory ) {
+	if ( typeof define === "function" && define.amd ) {
+		// AMD. Register as an anonymous module.
+		define( [ "jquery", "./jquery.fancytree" ], factory );
+	} else if ( typeof module === "object" && module.exports ) {
+		// Node/CommonJS
+		require("./jquery.fancytree");
+		module.exports = factory(require("jquery"));
+	} else {
+		// Browser globals
+		factory( jQuery );
+	}
+
+}( function( $ ) {
+
+"use strict";
+
+
+/*******************************************************************************
+ * Private functions and variables
+ */
+
+var KeyNoData = "__not_found__",
+	escapeHtml = $.ui.fancytree.escapeHtml;
+
+function _escapeRegex(str){
+	/*jshint regexdash:true */
+	return (str + "").replace(/([.?*+\^\$\[\]\\(){}|-])/g, "\\$1");
+}
+
+function extractHtmlText(s){
+	if( s.indexOf(">") >= 0 ) {
+		return $("<div/>").html(s).text();
+	}
+	return s;
+}
+
+$.ui.fancytree._FancytreeClass.prototype._applyFilterImpl = function(filter, branchMode, _opts){
+	var match, statusNode, re, reHighlight, temp,
+		count = 0,
+		treeOpts = this.options,
+		escapeTitles = treeOpts.escapeTitles,
+		prevAutoCollapse = treeOpts.autoCollapse,
+		opts = $.extend({}, treeOpts.filter, _opts),
+		hideMode = opts.mode === "hide",
+		leavesOnly = !!opts.leavesOnly && !branchMode;
+
+	// Default to 'match title substring (not case sensitive)'
+	if(typeof filter === "string"){
+		if( filter === "" ) {
+			this.warn("Fancytree passing an empty string as a filter is handled as clearFilter().");
+			this.clearFilter();
+			return;
+		}
+		if( opts.fuzzy ) {
+			// See https://codereview.stackexchange.com/questions/23899/faster-javascript-fuzzy-string-matching-function/23905#23905
+			// and http://www.quora.com/How-is-the-fuzzy-search-algorithm-in-Sublime-Text-designed
+			// and http://www.dustindiaz.com/autocomplete-fuzzy-matching
+			match = filter.split("").reduce(function(a, b) {
+				return a + "[^" + b + "]*" + b;
+			});
+		} else {
+			match = _escapeRegex(filter); // make sure a '.' is treated literally
+		}
+		re = new RegExp(".*" + match + ".*", "i");
+		reHighlight = new RegExp(_escapeRegex(filter), "gi");
+		filter = function(node){
+			var text = escapeTitles ? node.title : extractHtmlText(node.title),
+				res = !!re.test(text);
+
+			if( res && opts.highlight ) {
+				if( escapeTitles ) {
+					// #740: we must not apply the marks to escaped entity names, e.g. `&quot;`
+					// Use some exotic characters to mark matches:
+					temp = text.replace(reHighlight, function(s){
+						return "\uFFF7" + s + "\uFFF8";
+					});
+					// now we can escape the title...
+					node.titleWithHighlight = escapeHtml(temp)
+						// ... and finally insert the desired `<mark>` tags
+						.replace(/\uFFF7/g, "<mark>")
+						.replace(/\uFFF8/g, "</mark>");
+				} else {
+					node.titleWithHighlight = text.replace(reHighlight, function(s){
+						return "<mark>" + s + "</mark>";
+					});
+				}
+				// node.debug("filter", escapeTitles, text, node.titleWithHighlight);
+			}
+			return res;
+		};
+	}
+
+	this.enableFilter = true;
+	this.lastFilterArgs = arguments;
+
+	this.$div.addClass("fancytree-ext-filter");
+	if( hideMode ){
+		this.$div.addClass("fancytree-ext-filter-hide");
+	} else {
+		this.$div.addClass("fancytree-ext-filter-dimm");
+	}
+	this.$div.toggleClass("fancytree-ext-filter-hide-expanders", !!opts.hideExpanders);
+	// Reset current filter
+	this.visit(function(node){
+		delete node.match;
+		delete node.titleWithHighlight;
+		node.subMatchCount = 0;
+	});
+	statusNode = this.getRootNode()._findDirectChild(KeyNoData);
+	if( statusNode ) {
+		statusNode.remove();
+	}
+
+	// Adjust node.hide, .match, and .subMatchCount properties
+	treeOpts.autoCollapse = false;  // #528
+
+	this.visit(function(node){
+		if ( leavesOnly && node.children != null ) {
+			return;
+		}
+		var res = filter(node),
+			matchedByBranch = false;
+
+		if( res === "skip" ) {
+			node.visit(function(c){
+				c.match = false;
+			}, true);
+			return "skip";
+		}
+		if( !res && (branchMode || res === "branch") && node.parent.match ) {
+			res = true;
+			matchedByBranch = true;
+		}
+		if( res ) {
+			count++;
+			node.match = true;
+			node.visitParents(function(p){
+				p.subMatchCount += 1;
+				// Expand match (unless this is no real match, but only a node in a matched branch)
+				if( opts.autoExpand && !matchedByBranch && !p.expanded ) {
+					p.setExpanded(true, {noAnimation: true, noEvents: true, scrollIntoView: false});
+					p._filterAutoExpanded = true;
+				}
+			});
+		}
+	});
+	treeOpts.autoCollapse = prevAutoCollapse;
+
+	if( count === 0 && opts.nodata && hideMode ) {
+		statusNode = opts.nodata;
+		if( $.isFunction(statusNode) ) {
+			statusNode = statusNode();
+		}
+		if( statusNode === true ) {
+			statusNode = {};
+		} else if( typeof statusNode === "string" ) {
+			statusNode = { title: statusNode };
+		}
+		statusNode = $.extend({
+			statusNodeType: "nodata",
+			key: KeyNoData,
+			title: this.options.strings.noData
+		}, statusNode);
+
+		this.getRootNode().addNode(statusNode).match = true;
+	}
+	// Redraw whole tree
+	this.render();
+	return count;
+};
+
+/**
+ * [ext-filter] Dimm or hide nodes.
+ *
+ * @param {function | string} filter
+ * @param {boolean} [opts={autoExpand: false, leavesOnly: false}]
+ * @returns {integer} count
+ * @alias Fancytree#filterNodes
+ * @requires jquery.fancytree.filter.js
+ */
+$.ui.fancytree._FancytreeClass.prototype.filterNodes = function(filter, opts) {
+	if( typeof opts === "boolean" ) {
+		opts = { leavesOnly: opts };
+		this.warn("Fancytree.filterNodes() leavesOnly option is deprecated since 2.9.0 / 2015-04-19. Use opts.leavesOnly instead.");
+	}
+	return this._applyFilterImpl(filter, false, opts);
+};
+
+/**
+ * @deprecated
+ */
+$.ui.fancytree._FancytreeClass.prototype.applyFilter = function(filter){
+	this.warn("Fancytree.applyFilter() is deprecated since 2.1.0 / 2014-05-29. Use .filterNodes() instead.");
+	return this.filterNodes.apply(this, arguments);
+};
+
+/**
+ * [ext-filter] Dimm or hide whole branches.
+ *
+ * @param {function | string} filter
+ * @param {boolean} [opts={autoExpand: false}]
+ * @returns {integer} count
+ * @alias Fancytree#filterBranches
+ * @requires jquery.fancytree.filter.js
+ */
+$.ui.fancytree._FancytreeClass.prototype.filterBranches = function(filter, opts){
+	return this._applyFilterImpl(filter, true, opts);
+};
+
+
+/**
+ * [ext-filter] Reset the filter.
+ *
+ * @alias Fancytree#clearFilter
+ * @requires jquery.fancytree.filter.js
+ */
+$.ui.fancytree._FancytreeClass.prototype.clearFilter = function(){
+	var $title,
+		statusNode = this.getRootNode()._findDirectChild(KeyNoData),
+		escapeTitles = this.options.escapeTitles,
+		enhanceTitle = this.options.enhanceTitle;
+
+	if( statusNode ) {
+		statusNode.remove();
+	}
+	this.visit(function(node){
+		if( node.match && node.span ) {  // #491, #601
+			$title = $(node.span).find(">span.fancytree-title");
+			if( escapeTitles ) {
+				$title.text(node.title);
+			} else {
+				$title.html(node.title);
+			}
+			if( enhanceTitle ) {
+				enhanceTitle({type: "enhanceTitle"}, {node: node, $title: $title});
+			}
+		}
+		delete node.match;
+		delete node.subMatchCount;
+		delete node.titleWithHighlight;
+		if ( node.$subMatchBadge ) {
+			node.$subMatchBadge.remove();
+			delete node.$subMatchBadge;
+		}
+		if( node._filterAutoExpanded && node.expanded ) {
+			node.setExpanded(false, {noAnimation: true, noEvents: true, scrollIntoView: false});
+		}
+		delete node._filterAutoExpanded;
+	});
+	this.enableFilter = false;
+	this.lastFilterArgs = null;
+	this.$div.removeClass("fancytree-ext-filter fancytree-ext-filter-dimm fancytree-ext-filter-hide");
+	this.render();
+};
+
+
+/**
+ * [ext-filter] Return true if a filter is currently applied.
+ *
+ * @returns {Boolean}
+ * @alias Fancytree#isFilterActive
+ * @requires jquery.fancytree.filter.js
+ * @since 2.13
+ */
+$.ui.fancytree._FancytreeClass.prototype.isFilterActive = function(){
+	return !!this.enableFilter;
+};
+
+
+/**
+ * [ext-filter] Return true if this node is matched by current filter (or no filter is active).
+ *
+ * @returns {Boolean}
+ * @alias FancytreeNode#isMatched
+ * @requires jquery.fancytree.filter.js
+ * @since 2.13
+ */
+$.ui.fancytree._FancytreeNodeClass.prototype.isMatched = function(){
+	return !(this.tree.enableFilter && !this.match);
+};
+
+
+/*******************************************************************************
+ * Extension code
+ */
+$.ui.fancytree.registerExtension({
+	name: "filter",
+	version: "2.27.0",
+	// Default options for this extension.
+	options: {
+		autoApply: true,   // Re-apply last filter if lazy data is loaded
+		autoExpand: false, // Expand all branches that contain matches while filtered
+		counter: true,     // Show a badge with number of matching child nodes near parent icons
+		fuzzy: false,      // Match single characters in order, e.g. 'fb' will match 'FooBar'
+		hideExpandedCounter: true,  // Hide counter badge if parent is expanded
+		hideExpanders: false,       // Hide expanders if all child nodes are hidden by filter
+		highlight: true,   // Highlight matches by wrapping inside <mark> tags
+		leavesOnly: false, // Match end nodes only
+		nodata: true,      // Display a 'no data' status node if result is empty
+		mode: "dimm"       // Grayout unmatched nodes (pass "hide" to remove unmatched node instead)
+	},
+	nodeLoadChildren: function(ctx, source) {
+		return this._superApply(arguments).done(function() {
+			if( ctx.tree.enableFilter && ctx.tree.lastFilterArgs && ctx.options.filter.autoApply ) {
+				ctx.tree._applyFilterImpl.apply(ctx.tree, ctx.tree.lastFilterArgs);
+			}
+		});
+	},
+	nodeSetExpanded: function(ctx, flag, callOpts) {
+		delete ctx.node._filterAutoExpanded;
+		// Make sure counter badge is displayed again, when node is beeing collapsed
+		if( !flag && ctx.options.filter.hideExpandedCounter && ctx.node.$subMatchBadge ) {
+			ctx.node.$subMatchBadge.show();
+		}
+		return this._superApply(arguments);
+	},
+	nodeRenderStatus: function(ctx) {
+		// Set classes for current status
+		var res,
+			node = ctx.node,
+			tree = ctx.tree,
+			opts = ctx.options.filter,
+			$title = $(node.span).find("span.fancytree-title"),
+			$span = $(node[tree.statusClassPropName]),
+			enhanceTitle = ctx.options.enhanceTitle,
+			escapeTitles = ctx.options.escapeTitles;
+
+		res = this._super(ctx);
+		// nothing to do, if node was not yet rendered
+		if( !$span.length || !tree.enableFilter ) {
+			return res;
+		}
+		$span
+			.toggleClass("fancytree-match", !!node.match)
+			.toggleClass("fancytree-submatch", !!node.subMatchCount)
+			.toggleClass("fancytree-hide", !(node.match || node.subMatchCount));
+		// Add/update counter badge
+		if( opts.counter && node.subMatchCount && (!node.isExpanded() || !opts.hideExpandedCounter) ) {
+			if( !node.$subMatchBadge ) {
+				node.$subMatchBadge = $("<span class='fancytree-childcounter'/>");
+				$("span.fancytree-icon, span.fancytree-custom-icon", node.span).append(node.$subMatchBadge);
+			}
+			node.$subMatchBadge.show().text(node.subMatchCount);
+		} else if ( node.$subMatchBadge ) {
+			node.$subMatchBadge.hide();
+		}
+		// node.debug("nodeRenderStatus", node.titleWithHighlight, node.title)
+		// #601: also chek for $title.length, because we don't need to render
+		// if node.span is null (i.e. not rendered)
+		if( node.span && (!node.isEditing || !node.isEditing.call(node)) ) {
+			if( node.titleWithHighlight ) {
+				$title.html(node.titleWithHighlight);
+			} else if ( escapeTitles ) {
+				$title.text(node.title);
+			} else {
+				$title.html(node.title);
+			}
+			if( enhanceTitle ) {
+				enhanceTitle({type: "enhanceTitle"}, {node: node, $title: $title});
+			}
+		}
+		return res;
+	}
+});
+// Value returned by `require('jquery.fancytree..')`
+return $.ui.fancytree;
+}));  // End of closure
+  })();
+});
+
 require.register("jquery.fancytree/dist/modules/jquery.fancytree.js", function(exports, require, module) {
   require = __makeRelativeRequire(require, {}, "jquery.fancytree");
   (function() {
@@ -19310,6 +20043,7 @@ var tree = require('../models/tree');
 
 console.groupCollapsed('// About');
 console.log(info.application.project + ' developed by ' + info.application.developer);
+console.log('Tree testing: ' + tree.tree.testing);
 console.groupEnd();
 
 });
@@ -19453,6 +20187,8 @@ require.register("scripts/vendors/datatables.js", function(exports, require, mod
 var $ = require('jquery');
 console.groupCollapsed('//Vendor: Datatable');
 
+console.log($.fn.dataTable.version);
+
 $('#data--table-search').DataTable({
     fixedHeader: true,
     "oLanguage": {
@@ -19503,20 +20239,20 @@ console.groupEnd();
 });
 
 require.register("scripts/vendors/fancytree.js", function(exports, require, module) {
-"use strict";
+'use strict';
 
-console.groupCollapsed("//Vendor: Foundation");
+console.groupCollapsed('//Vendor: FancyTree');
 
 // Import LESS or CSS:
 // import 'jquery.fancytree/dist/skin-lion/ui.fancytree.less';
 
-// const $ = require('jquery');
+var $ = require('jquery');
 
-// const fancytree = require('jquery.fancytree');
-// require('jquery.fancytree/dist/modules/jquery.fancytree.edit');
-// require('jquery.fancytree/dist/modules/jquery.fancytree.filter');
+var fancytree = require('jquery.fancytree');
+require('jquery.fancytree/dist/modules/jquery.fancytree.edit');
+require('jquery.fancytree/dist/modules/jquery.fancytree.filter');
 
-// console.log(fancytree.version);
+console.log(fancytree.version);
 
 // $(function () {
 //     $('#tree').fancytree({
@@ -19553,6 +20289,7 @@ require.register("scripts/vendors/foundation.js", function(exports, require, mod
 "use strict";
 
 console.groupCollapsed("//Vendor: Foundation");
+console.log(Foundation.version);
 $(document).foundation();
 console.groupEnd();
 

@@ -1,15 +1,15 @@
-console.groupCollapsed(`//Vendor: Foundation`);
+console.groupCollapsed(`//Vendor: FancyTree`);
 
 // Import LESS or CSS:
 // import 'jquery.fancytree/dist/skin-lion/ui.fancytree.less';
 
-// const $ = require('jquery');
+const $ = require('jquery');
 
-// const fancytree = require('jquery.fancytree');
-// require('jquery.fancytree/dist/modules/jquery.fancytree.edit');
-// require('jquery.fancytree/dist/modules/jquery.fancytree.filter');
+const fancytree = require('jquery.fancytree');
+require('jquery.fancytree/dist/modules/jquery.fancytree.edit');
+require('jquery.fancytree/dist/modules/jquery.fancytree.filter');
 
-// console.log(fancytree.version);
+console.log(fancytree.version);
 
 // $(function () {
 //     $('#tree').fancytree({
