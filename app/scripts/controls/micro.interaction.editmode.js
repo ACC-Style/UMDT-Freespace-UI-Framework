@@ -1,3 +1,5 @@
+console.groupCollapsed(`// Micro-Interactions: Edit Mode`);
+
 console.log("............ micro interactions: EDIT MODE");
 
 var allElements = $('*[data-micro-interaction-type="edit-mode"]'),
@@ -39,5 +41,6 @@ function toggleEditMode(element) {
     }
 }
 
+console.groupEnd();
 
 init();

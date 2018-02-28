@@ -1,10 +1,10 @@
-module.exports = {
-    application: {
-        project: "Free Space Foundation6",
-        version: 1.0,
-        developer: "aQuib Sylvester (ACCF)"
+{
+    "application": {
+        "project": "Free Space Foundation6",
+        "version": 1.0,
+        "developer": "aQuib Sylvester (ACC)"
     },
-    settings: {
-        platform: true,
+    "settings": {
+        "platform": true
     }
-};
+}

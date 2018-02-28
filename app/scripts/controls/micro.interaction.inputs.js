@@ -1,10 +1,9 @@
 "use strict";
 
 // purpose - to determine which input fields has a value and remove the border-bottom style below it.
+console.groupCollapsed(`// Micro-Interactions: Edit Mode 2`);
 
 var $ = require('jquery');
-
-console.log("............MICRO...............");
 
 
 // collect elements
@@ -32,3 +31,5 @@ allInputsItems.each(function (index) {
         // $(this).parents('div').addClass('is-filled');
     }
 });
+
+console.groupEnd();

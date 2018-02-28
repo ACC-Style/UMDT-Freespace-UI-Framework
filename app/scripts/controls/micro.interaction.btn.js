@@ -7,7 +7,9 @@
 
 var $ = require('jquery');
 
-console.log("............ micro interactions:");
+
+console.groupCollapsed(`// Micro-Interactions`);
+
 
 
 
@@ -46,5 +48,6 @@ function toggleSelection(button) {
     // button.removeClass("is-selected");
     // }
 }
+console.groupEnd();
 
 init();

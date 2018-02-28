@@ -1,3 +1,3 @@
-console.log(".....................Foundation 6 initilized");
+console.groupCollapsed(`//Vendor: Foundation`);
 $(document).foundation();
-console.log(".....................");
+console.groupEnd();

@@ -7,7 +7,8 @@
 
 var $ = require('jquery');
 
-console.log("............ progress bar:");
+console.groupCollapsed(`// Progress Bar`);
+
 
 
 // on page load...
@@ -55,3 +56,5 @@ function moveProgressBar() {
 //         }
 //     }
 // }
+
+console.groupEnd();

@@ -6,8 +6,7 @@
 // functions for each value type
 
 var $ = require('jquery');
-
-console.log("............ micro interactions: TABS");
+console.groupCollapsed(`// Micro-Interactions: Tabs`);
 // collect elements
 var allTabs = $(".feature--tabs-list .tabs li"),
     numberTabs = $(".feature--tabs-list .tabs li").length,
@@ -25,3 +24,5 @@ allTabs.each(function (index) {
 
 console.log(numberTabs.length);
 console.log(maxWidth, "/", tabWidth);
+
+console.groupEnd();

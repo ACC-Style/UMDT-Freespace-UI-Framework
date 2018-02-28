@@ -5,9 +5,10 @@
 // function to determine attribute value
 // functions for each value type
 
+console.groupCollapsed(`// Workspace`);
+
 var $ = require('jquery');
 
-console.log("............ workspace interactions:");
 
 var allDataElementsItems = $(".column--list-elements-data .feature--draggable_items li"),
     allDataConceptsItems = $(".column--list-concepts-data .feature--draggable_items li"),
@@ -41,3 +42,5 @@ console.log(`selected concepts: ${allSelectedDataConceptsBookmarks.length}`);
 // var matchText = allDataConceptsItems.find("This");
 
 // console.log(`matching ${allDataConceptsItems}`)
+
+console.groupEnd();

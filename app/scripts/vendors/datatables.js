@@ -1,5 +1,6 @@
 var $ = require('jquery');
-console.log("............ datatables");
+console.groupCollapsed(`//Vendor: Datatable`);
+
 
 $('#data--table-search').DataTable({
     fixedHeader: true,
@@ -46,3 +47,5 @@ var $select = $('<select/>').appendTo('#datatable--select-custom')
 $('<option/>').val('1').text('All').appendTo($select);
 $('<option/>').val('2').text('Mine Only').appendTo($select);
 $('#datatable--select-custom').appendTo('#data--table-example_length');
+
+console.groupEnd();
