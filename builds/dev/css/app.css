@@ -4647,9 +4647,9 @@ a.thumbnail {
   top: calc(100% + 0.6495rem);
   z-index: 1200;
   max-width: 10rem;
-  padding: 0.75rem;
+  padding: 0.35rem;
   border-radius: 0;
-  background-color: #000;
+  background-color: #627BBE;
   font-size: 70%;
   color: #fff; }
   .tooltip::before {
@@ -4662,7 +4662,7 @@ a.thumbnail {
     content: '';
     border-top-width: 0;
     border-bottom-style: solid;
-    border-color: transparent transparent #000;
+    border-color: transparent transparent #627BBE;
     bottom: 100%; }
   .tooltip.bottom.align-center::before {
     left: 50%;
@@ -4675,7 +4675,7 @@ a.thumbnail {
     content: '';
     border-bottom-width: 0;
     border-top-style: solid;
-    border-color: #000 transparent transparent;
+    border-color: #627BBE transparent transparent;
     top: 100%;
     bottom: auto; }
   .tooltip.top.align-center::before {
@@ -4689,7 +4689,7 @@ a.thumbnail {
     content: '';
     border-right-width: 0;
     border-left-style: solid;
-    border-color: transparent transparent transparent #000;
+    border-color: transparent transparent transparent #627BBE;
     left: 100%; }
   .tooltip.left.align-center::before {
     bottom: auto;
@@ -4703,7 +4703,7 @@ a.thumbnail {
     content: '';
     border-left-width: 0;
     border-right-style: solid;
-    border-color: transparent #000 transparent transparent;
+    border-color: transparent #627BBE transparent transparent;
     right: 100%;
     left: auto; }
   .tooltip.right.align-center::before {
