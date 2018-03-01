@@ -5313,6 +5313,21 @@ ul.small {
   margin: 0 0 .025em 0;
   padding: 1em; }
 
+.panel--left .dropdown.menu.vertical > li.opens-right > a.panel--side-button::after,
+.panel--right .dropdown.menu.vertical > li.opens-right > a.panel--side-button::after {
+  display: none; }
+
+.panel--left .dropdown.menu.vertical > li > a.panel--side-button,
+.panel--right .dropdown.menu.vertical > li > a.panel--side-button {
+  padding-right: 0px; }
+  .panel--left .dropdown.menu.vertical > li > a.panel--side-button:hover,
+  .panel--right .dropdown.menu.vertical > li > a.panel--side-button:hover {
+    padding-right: 1.5em; }
+    .panel--left .dropdown.menu.vertical > li > a.panel--side-button:hover ::after,
+    .panel--right .dropdown.menu.vertical > li > a.panel--side-button:hover ::after {
+      display: block;
+      border-color: transparent transparent transparent #3adb76; }
+
 button.option-button {
   height: 1.25em !important;
   width: 1.25em !important;

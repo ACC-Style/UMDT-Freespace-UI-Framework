@@ -53,14 +53,36 @@
                         span.counter.is-hidden 6
                         span.text 
                               | CCD
-                        ul.vertical.dropdown.menu(data-dropdown-menu='')
-                              li
-                                    a(href='#') Item 1
-                                    ul.vertical.menu.nested
-                                          li
-                                                a(href='#') Item 1A
-
-
+            .cell.small-1
+                  ul.vertical.dropdown.menu.menu--dropdown(data-dropdown-menu)
+                        li.dropdown--item
+                              a.panel--side-button.button.button--navigation
+                                    span.icon
+                                          i.fa.fa-database(aria-hidden='true')
+                                    span.counter.is-hidden 6
+                                    span.text 
+                                          | CCD*
+                              ul.vertical.menu.nested
+                                    li.dropdown--item-sub
+                                          a(href='#') Concepts & Data Elements    
+                                    li.dropdown--item-sub
+                                          a(href='#') Value Sets
+                        li.dropdown--item
+                              a.panel--side-button.button.button--navigation
+                                    span.icon
+                                          i.fa.fa-database(aria-hidden='true')
+                                    span.counter.is-hidden 6
+                                    span.text 
+                                          | TDD*
+                              ul.vertical.menu.nested
+                                    li.dropdown--item-sub
+                                          a(href='#') Registries   
+                                    li.dropdown--item-sub
+                                          a(href='#') Registries Elements
+                                    li.dropdown--item-sub
+                                          a(href='#') Registries Contraints
+                                    li.dropdown--item-sub
+                                          a(href='#') Registries DataSets
 
 
 
@@ -72,7 +94,7 @@
                         span.text 
                               | Reports
             //- hr
-            .cell.small-1
+            //- .cell.small-1
                   button.panel--side-button.button(type='button', data-toggle='content--offcanvas-left-filter')
                         span.icon
                               i.material-icons.md-18(aria-hidden='true') pan_tool

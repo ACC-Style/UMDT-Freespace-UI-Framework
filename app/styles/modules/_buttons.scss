@@ -121,6 +121,30 @@
             margin: 0 0 .025em 0;
             padding: 1em;
         }
+        .dropdown {
+            .dropdown--item {
+                // width: 3.35em;
+                // height: 3.35em;
+                .panel--side-button {
+                    .icon {
+                        // color: $palette-color-darken;
+                    }
+                }
+            }
+        }
+        .dropdown.menu.vertical>li.opens-right>a.panel--side-button::after {
+            display: none; // border-color: $color-grass;
+        }
+        .dropdown.menu.vertical>li>a.panel--side-button {
+            padding-right: 0px;
+            &:hover {
+                padding-right: 1.5em;
+                ::after {
+                    display: block;
+                    border-color: transparent transparent transparent $color-grass;
+                }
+            }
+        }
     }
 
     button.option-button {
