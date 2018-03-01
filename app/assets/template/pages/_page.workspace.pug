@@ -24,8 +24,10 @@ include /template/variables/_mixins
                     .panel--center-column-options.small-1.medium-2.large-1.cell
                             button.option-button.button.has-tip(data-tooltip='', aria-haspopup='true', data-disable-hover='false', tabindex='1', title='Customize') 
                                 i.material-icons.md-18 settings
-                    .panel--center-column-features.cell
-                            input.feature--filter-input(type='text')
+                .panel--center-column-features.cell
+                        i.icon.material-icons.md-14 filter_list
+                        i.icon-clear.material-icons.md-14 close
+                        input.feature--filter-input(type='text', placeholder='quick a filter')
                 .column--list-concepts-data.cell.medium-cell-block-y
                     //- h2 1
                     include /template/components/_data.list.elements.pug 
@@ -60,7 +62,9 @@ include /template/variables/_mixins
                             button.option-button.button.has-tip(data-tooltip='', aria-haspopup='true', data-disable-hover='false', tabindex='1', title='Customize') 
                                 i.material-icons.md-18 settings
                     .panel--center-column-features.cell
-                            input.feature--filter-input(type='text')
+                        i.icon.material-icons.md-14 filter_list
+                        i.icon-clear.material-icons.md-14 close
+                        input.feature--filter-input(type='text', placeholder='quick a filter')
                 .column--list-elements-data.cell.medium-cell-block-y
                     //- h2 2
                     include /template/components/_data.list.tree.pug

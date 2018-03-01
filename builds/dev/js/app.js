@@ -19882,9 +19882,11 @@ document.addEventListener('DOMContentLoaded', function () {
   require('./scripts/controls/micro.interaction.tabs.js');
   require('./scripts/controls/workspace.counter.js');
   require('./scripts/controls/micro.interaction.editmode.js');
+  require('./scripts/controls/micro.interaction.filter.js');
   require('./scripts/controls/progress.bar.js');
   require('./scripts/vendors/foundation');
   require('./scripts/vendors/fancytree');
+  require('./scripts/vendors/content.menu');
   require('./scripts/vendors/datatables');
 
   console.log('initialized...');
@@ -19995,8 +19997,85 @@ init();
 
 });
 
+require.register("scripts/controls/micro.interaction.filter.js", function(exports, require, module) {
+"use strict";
+
+console.group("// Micro-Interactions: Quick Filter");
+
+var all_inputs = $('.feature--filter-input'),
+    all_input_clear_btns = $(".panel--center-column-features .icon-clear"),
+    all_icons = $(".panel--center-column-features .icon");
+
+console.log("# of inputs: " + all_inputs.length);
+console.log("# of icons: " + all_icons.length);
+console.log("# of clears: " + all_input_clear_btns.length);
+
+function valueDetector() {
+    var element = $(this),
+        val = element.val();
+
+    if (val === "") {
+        console.log("empty");
+        $(element).parent("div").find("i").removeClass("-is-green");
+    } else {
+        console.log("not-empty");
+        $(element).parent("div").find("i").addClass("-is-green");
+    }
+    console.log("css: " + element.attr('class') + " | val: " + val);
+}
+
+function clearInput() {
+    var btn = $(this),
+        input = $(btn).next();
+    $(btn).parent("div").find("i").removeClass("-is-green");
+    input.val("");
+
+    console.log("btn: " + btn.attr('class') + " | input: " + input.attr('class'));
+}
+
+all_inputs.blur(valueDetector);
+all_input_clear_btns.click(clearInput);
+
+console.groupEnd();
+
+});
+
 require.register("scripts/controls/micro.interaction.inputs.js", function(exports, require, module) {
 "use strict";
+
+// purpose - to determine which input fields has a value and remove the border-bottom style below it.
+
+console.groupCollapsed("// Micro-Interactions: Edit Mode 2");
+
+var $ = require('jquery');
+
+// collect elements
+var allInputsItems = $("input, textarea"),
+    allColors = ["red", "blue", "greens"];
+
+// log allColors
+allColors.forEach(function (color) {
+    console.log(color);
+}, undefined);
+
+// log allInputsItems
+allInputsItems.each(function (index) {
+    var element = $(this),
+        value = element.val();
+
+    console.log(index + ": " + value);
+    // TODO: had class added to parent
+    if (value == "") {
+        element.addClass('-is-empty');
+        console.log("empty");
+    } else {
+        console.log("filled");
+        element.addClass('-is-filled');
+        // $(this).parents('div').addClass('is-filled');
+    }
+});
+
+console.groupEnd();
 
 });
 
@@ -20013,22 +20092,18 @@ require.register("scripts/controls/micro.interaction.tabs.js", function(exports,
 var $ = require('jquery');
 console.groupCollapsed("// Micro-Interactions: Tabs");
 // collect elements
-var allTabs = $(".feature--tabs-list .tabs li"),
-    numberTabs = $(".feature--tabs-list .tabs li").length,
-    maxWidth = $(".feature--tabs-list").width(),
-    tabWidth = maxWidth / numberTabs - 0.95;
+var allTabs = $(".feature--tabs-list > .tabs li"),
+    numberTabs = allTabs.length,
+    maxWidth = $(".column--list-workspace").width(),
+    tabWidth = maxWidth / numberTabs;
 // calculate percentage not pixcel
-
+console.log("test-" + allTabs[1].outerHTML);
 // log tabs width
 allTabs.each(function (index) {
-    var element = $(this),
-        width = element.width();
-    element.width(tabWidth);
-    console.log(width);
+    var element = $(this);
+    element.css("width", tabWidth);
+    console.log("name - " + element.text() + " / width: " + element.width() + " / " + element.outerHTML);
 });
-
-console.log(numberTabs.length);
-console.log(maxWidth, "/", tabWidth);
 
 console.groupEnd();
 
@@ -20043,7 +20118,7 @@ var tree = require('../models/tree');
 
 console.groupCollapsed('// About');
 console.log(info.application.project + ' developed by ' + info.application.developer);
-console.log('Tree testing: ' + tree.tree.testing);
+console.log('Tree testing: ' + tree[0].title);
 console.groupEnd();
 
 });
@@ -20120,12 +20195,13 @@ require.register("scripts/controls/workspace.counter.js", function(exports, requ
 // function to determine attribute value
 // functions for each value type
 
-console.groupCollapsed("// Workspace");
 
 var $ = require('jquery');
+console.groupCollapsed("// Workspace");
 
 var allDataElementsItems = $(".column--list-elements-data .feature--draggable_items li"),
     allDataConceptsItems = $(".column--list-concepts-data .feature--draggable_items li"),
+    collection = $(".column--list-concepts-data .feature--draggable_items-link"),
     allDataConceptsBookmarks = $(".column--list-concepts-data .feature--draggable_items li.-is-bookmarked "),
     allDataElementsBookmarks = $(".column--list-elements-data .feature--draggable_items li.-is-bookmarked "),
     allSelectedDataConceptsBookmarks = $(".column--list-elements-data .feature--draggable_items li.-is-selected "),
@@ -20150,11 +20226,14 @@ updateCounter(totalDataElementsItems, totalDataConceptsItems, totalDataConceptsB
 console.log("selected element: " + allSelectedDataElementsBookmarks.length);
 console.log("selected concepts: " + allSelectedDataConceptsBookmarks.length);
 
-// console.log(allDataConceptsItems.text());
+// function filterTitle(array) {
+//     for (let index in array) {
+//         console.log(array[index].text);
+//     }
 
-// var matchText = allDataConceptsItems.find("This");
+// }
+// filterTitle(collection);
 
-// console.log(`matching ${allDataConceptsItems}`)
 
 console.groupEnd();
 
@@ -20174,11 +20253,37 @@ module.exports = {
 });
 
 require.register("scripts/models/tree.json", function(exports, require, module) {
-module.exports = {
-    "tree": {
-        "testing": true
+module.exports = [{
+        "title": "Node 1",
+        "key": "1"
+    },
+    {
+        "title": "Folder 2",
+        "key": "2",
+        "folder": true,
+        "children": [{
+                "title": "Node 2.1",
+                "key": "3"
+            },
+            {
+                "title": "Node 2.2",
+                "key": "4"
+            }
+        ]
     }
-};
+];
+});
+
+require.register("scripts/vendors/content.menu.js", function(exports, require, module) {
+'use strict';
+
+var $ = require('jquery');
+
+console.groupCollapsed('//Vendor: Content Menu');
+// console.log(fancytree.version);
+
+console.groupEnd();
+
 });
 
 require.register("scripts/vendors/datatables.js", function(exports, require, module) {
@@ -20247,6 +20352,7 @@ console.groupCollapsed('//Vendor: FancyTree');
 // import 'jquery.fancytree/dist/skin-lion/ui.fancytree.less';
 
 var $ = require('jquery');
+var tree = require('../models/tree');
 
 var fancytree = require('jquery.fancytree');
 require('jquery.fancytree/dist/modules/jquery.fancytree.edit');
@@ -20254,33 +20360,36 @@ require('jquery.fancytree/dist/modules/jquery.fancytree.filter');
 
 console.log(fancytree.version);
 
-// $(function () {
-//     $('#tree').fancytree({
-//         extensions: ['edit', 'filter'],
-//         source: [{
-//                 title: "Node 1",
-//                 key: "1"
-//             },
-//             {
-//                 title: "Folder 2",
-//                 key: "2",
-//                 folder: true,
-//                 children: [{
-//                         title: "Node 2.1",
-//                         key: "3"
-//                     },
-//                     {
-//                         title: "Node 2.2",
-//                         key: "4"
-//                     }
-//                 ]
-//             }
-//         ],
-//     });
-//     const tree = fancytree.getTree('#tree');
-//     // Note: Loading and initialization may be asynchronous, so the nodes may not be accessible yet.
-// })
-
+$(function () {
+    $('#tree').fancytree({
+        extensions: ['edit', 'filter'],
+        source: [{
+            url: "..scripts/models/tree",
+            cache: false
+        }]
+        // source: [{
+        //         title: "Node 1",
+        //         key: "1"
+        //     },
+        //     {
+        //         title: "Folder 2",
+        //         key: "2",
+        //         folder: true,
+        //         children: [{
+        //                 title: "Node 2.1",
+        //                 key: "3"
+        //             },
+        //             {
+        //                 title: "Node 2.2",
+        //                 key: "4"
+        //             }
+        //         ]
+        //     }
+        // ]
+    });
+    var tree = fancytree.getTree('#tree');
+    // Note: Loading and initialization may be asynchronous, so the nodes may not be accessible yet.
+});
 console.groupEnd();
 
 });

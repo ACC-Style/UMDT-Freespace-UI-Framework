@@ -228,3 +228,11 @@
 }
 
 .-is-in-inverse-mode {}
+
+.-is-green {
+    color: $color-grass !important;
+}
+
+.-is-green+.feature--filter-input {
+    border-bottom-color: $color-grass;
+}

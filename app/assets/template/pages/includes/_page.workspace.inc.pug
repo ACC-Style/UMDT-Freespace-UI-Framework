@@ -7,16 +7,16 @@
                 //- .icon.-is-unlock
                     i.material-icons.md-16(aria-hidden='true') mode_edit 
                 a(href="#panel1", aria-selected="true") 
-                    | Element
+                    | Form
 
             li.tabs-title
-                a(href="#panel2") Element 2
+                a(href="#panel2") Editable
 
             li.tabs-title
-                a(href="#panel3") Element 3
+                a(href="#panel3") Stuff
 
             li.tabs-title
-                a(href="#panel3") Element 4
+                a(href="#panel3") Elements
 
 
         .tabs-content(data-tabs-content="example-tabs").-is-editable
@@ -29,7 +29,7 @@
                                     label.switch-value(for='swtich-edit-mode')
                                         //- | Edit Mode:
                                     input#swtich-edit-mode.switch-input(type='checkbox', name='exampleSwitch')
-                                    label.switch-paddle(for='swtich-edit-mode', data-micro-interaction-type="edit-mode",data-micro-interaction-subject=".dashboard---panel-project")
+                                    label.switch-paddle(for='swtich-edit-mode', data-micro-interaction-type="edit-mode",data-micro-interaction-subject=".column--list-workspace")
                                         span.show-for-sr Edit Mode
                                         span.switch-active(aria-hidden='true')
                                             i.material-icons.md-16(aria-hidden='true') mode_edit

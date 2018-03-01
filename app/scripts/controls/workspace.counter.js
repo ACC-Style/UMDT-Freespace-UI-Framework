@@ -5,13 +5,14 @@
 // function to determine attribute value
 // functions for each value type
 
-console.groupCollapsed(`// Workspace`);
 
-var $ = require('jquery');
+const $ = require('jquery');
+console.groupCollapsed(`// Workspace`);
 
 
 var allDataElementsItems = $(".column--list-elements-data .feature--draggable_items li"),
     allDataConceptsItems = $(".column--list-concepts-data .feature--draggable_items li"),
+    collection = $(".column--list-concepts-data .feature--draggable_items-link"),
     allDataConceptsBookmarks = $(".column--list-concepts-data .feature--draggable_items li.-is-bookmarked "),
     allDataElementsBookmarks = $(".column--list-elements-data .feature--draggable_items li.-is-bookmarked "),
     allSelectedDataConceptsBookmarks = $(".column--list-elements-data .feature--draggable_items li.-is-selected "),
@@ -32,15 +33,20 @@ function updateCounter(elements, concepts, dbookmarks, ebookmarks) {
     console.log(`number of bookmarks: ${totalDataConceptsBookmarks}`);
 }
 
+
 updateCounter(totalDataElementsItems, totalDataConceptsItems, totalDataConceptsBookmarks, totalDataElementsBookmarks);
 
 console.log(`selected element: ${allSelectedDataElementsBookmarks.length}`);
 console.log(`selected concepts: ${allSelectedDataConceptsBookmarks.length}`);
 
-// console.log(allDataConceptsItems.text());
 
-// var matchText = allDataConceptsItems.find("This");
+// function filterTitle(array) {
+//     for (let index in array) {
+//         console.log(array[index].text);
+//     }
 
-// console.log(`matching ${allDataConceptsItems}`)
+// }
+// filterTitle(collection);
+
 
 console.groupEnd();

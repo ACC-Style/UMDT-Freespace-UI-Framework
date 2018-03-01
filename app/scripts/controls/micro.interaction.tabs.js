@@ -8,21 +8,17 @@
 var $ = require('jquery');
 console.groupCollapsed(`// Micro-Interactions: Tabs`);
 // collect elements
-var allTabs = $(".feature--tabs-list .tabs li"),
-    numberTabs = $(".feature--tabs-list .tabs li").length,
-    maxWidth = $(".feature--tabs-list").width(),
-    tabWidth = (maxWidth / numberTabs) - 0.95;
+var allTabs = $(".feature--tabs-list > .tabs li"),
+    numberTabs = allTabs.length,
+    maxWidth = $(".column--list-workspace").width(),
+    tabWidth = (maxWidth / numberTabs);
 // calculate percentage not pixcel
-
+console.log(`test-${allTabs[1].outerHTML}`)
 // log tabs width
 allTabs.each(function (index) {
-    let element = $(this),
-        width = element.width();
-    element.width(tabWidth);
-    console.log(width);
+    let element = $(this);
+    element.css("width", tabWidth);
+    console.log(`name - ${element.text()} / width: ${element.width()} / ${element.outerHTML}`);
 });
-
-console.log(numberTabs.length);
-console.log(maxWidth, "/", tabWidth);
 
 console.groupEnd();

@@ -69,9 +69,6 @@
 @import 'modules/accordion';
 @import 'modules/validation';
 @import 'modules/progress.bar';
-//INTERACTION (different visual states of elements & affordances)
-@import 'affordances/states';
-@import 'affordances/draggable';
 //LAYOUT (isolated sections/areas of layout. Only uses id classes)
 @import 'layout/header';
 @import 'layout/page';
@@ -82,3 +79,7 @@
 @import 'layout/footer';
 //VENDORS (Third party vendor css)
 @import 'theme/helper.icons';
+@import 'theme/ie';
+//INTERACTION (different visual states of elements & affordances)
+@import 'affordances/states';
+@import 'affordances/draggable';
