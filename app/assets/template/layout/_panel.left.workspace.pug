@@ -16,7 +16,7 @@
                               | Filter
             //- hr
 
-            //- .cell.small-1
+            .cell.small-1
                   a.panel--side-button.button( href='dashboard.html')
                         span.icon
                               i.material-icons.md-18(aria-hidden='true') dashboard
@@ -24,11 +24,11 @@
                         span.text 
                               | Dashboard
                               
-            //- .cell.small-1
+            .cell.small-1
                   a.panel--side-button.button(data-toggle='content--offcanvas-left-reports')
                         span.icon
                               i.material-icons.md-18(aria-hidden='true') sort
-                        span.counter 6`
+                        span.counter 6
                         span.text 
                               | Taxonomy
 
@@ -39,14 +39,14 @@
                         span.counter.is-hidden 6
                         span.text 
                               | Create Project
-            .cell.small-1
+            //- .cell.small-1
                   a.panel--side-button.button.button--navigation.warning
                         span.icon
                               i.fa.fa-database(aria-hidden='true')
                         span.counter.is-hidden 6
                         span.text 
                               | TDD
-            .cell.small-1
+            //- .cell.small-1
                   a.panel--side-button.button.button--navigation.warning
                         span.icon
                               i.fa.fa-database(aria-hidden='true')
@@ -64,9 +64,13 @@
                                           | CCD*
                               ul.vertical.menu.nested
                                     li.dropdown--item-sub
-                                          a(href='#') Concepts & Data Elements    
+                                          a(href='#') 
+                                                i.material-icons.md-18(aria-hidden='true') view_module
+                                                | Concepts & Data Elements    
                                     li.dropdown--item-sub
-                                          a(href='#') Value Sets
+                                          a(href='#') 
+                                                i.material-icons.md-18(aria-hidden='true') flip_to_back
+                                                | Value Sets
                         li.dropdown--item
                               a.panel--side-button.button.button--navigation
                                     span.icon
@@ -76,13 +80,21 @@
                                           | TDD*
                               ul.vertical.menu.nested
                                     li.dropdown--item-sub
-                                          a(href='#') Registries   
+                                          a(href='#') 
+                                                i.material-icons.md-18(aria-hidden='true') list
+                                                | Registries                            
                                     li.dropdown--item-sub
-                                          a(href='#') Registries Elements
+                                          a(href='#') 
+                                                i.material-icons.md-18(aria-hidden='true') view_module
+                                                | Registries Elements
                                     li.dropdown--item-sub
-                                          a(href='#') Registries Contraints
+                                          a(href='#') 
+                                                i.material-icons.md-18(aria-hidden='true') picture_in_picture
+                                                | Registries Contraints
                                     li.dropdown--item-sub
-                                          a(href='#') Registries DataSets
+                                          a(href='#') 
+                                                i.material-icons.md-18(aria-hidden='true') flip_to_front
+                                                | Registries DataSets
 
 
 

@@ -231,6 +231,10 @@
 
 .-is-green {
     color: $color-grass !important;
+    a,
+    i {
+        color: $color-grass !important;
+    }
 }
 
 .-is-green+.feature--filter-input {

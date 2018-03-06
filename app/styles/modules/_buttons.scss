@@ -125,23 +125,61 @@
             .dropdown--item {
                 // width: 3.35em;
                 // height: 3.35em;
+                &.is-active {
+                    .text {
+                        display: block;
+                        margin: 0 1.15em 0 .15em;
+                    }
+                    a.panel--side-button {
+                        width: auto !important;
+                        background-color: $palette-color-darken;
+                        color: $color-light;
+                    }
+                }
                 .panel--side-button {
                     .icon {
                         // color: $palette-color-darken;
                     }
                 }
             }
+            .dropdown--item-sub {
+                i {
+                    float: right;
+                }
+                a {
+                    padding: 1.35em 1.5em 1.35em 1.5em;
+                }
+            }
         }
         .dropdown.menu.vertical>li.opens-right>a.panel--side-button::after {
-            display: none; // border-color: $color-grass;
+            // display: none; 
+            position: inherit;
+            margin: -.5em 0 0 0 !important;
+            border-color: transparent transparent transparent $palette-color-darken; // margin: -4px 0 0 0 !important;
         }
         .dropdown.menu.vertical>li>a.panel--side-button {
             padding-right: 0px;
+            height: 3.35em;
+            width: 3.75em;
             &:hover {
-                padding-right: 1.5em;
+                // padding-right: 1.5em;
                 ::after {
-                    display: block;
-                    border-color: transparent transparent transparent $color-grass;
+                    display: block; // position: absolute;
+                    // margin-left: 3em;
+                    // border-color: transparent transparent transparent $color-grass !important;
+                }
+            }
+        }
+        .menu.nested {
+            width: 4em;
+            background: $palette-color-median; // border: none;
+            li {
+                &:hover {
+                    background: $palette-color-darken;
+                }
+                a {
+                    color: $palette-color-lightens;
+                    font-size: 80%;
                 }
             }
         }

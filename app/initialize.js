@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   require('./scripts/controls/progress.bar.js');
   require('./scripts/vendors/foundation');
   require('./scripts/vendors/fancytree');
-  require('./scripts/vendors/content.menu');
+  require('./scripts/vendors/context.menu.js');
   require('./scripts/vendors/datatables');
 
 

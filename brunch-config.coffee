@@ -1,18 +1,26 @@
 exports.config =
-  
+  jsWrapper: 'raw'
   files:
 
     javascripts: 
-      joinTo: 'js/app.js'
+      joinTo:
+        'js/app.js' 
+        # 'js/app.js': /^app/,
+        # 'js/vendor.js': /^(?!app)/
+
   
-    stylesheets: 
-      joinTo: 'css/app.css'
+    stylesheets:  
+      joinTo: 'css/app.css' 
   
   paths:
-    public: 'builds/dev'
+    public: 'build'
     watched: [ 'app' ]
   
   plugins: 
+    babel:
+        ignore: [
+          /^(node_modules|vendor)/
+        ]      
     sass: 
       options:
         includePaths: [ 'node_modules/foundation-sites/scss']
@@ -30,7 +38,7 @@ exports.config =
                   "destination"  : "documentation/styleguide/"
                   # "homepage"     : "../kss_styleguide/index.html",
                   # "css": [],
-                  # "js" : []
+                  # "js" : [] 
                 }
 
     # pug:
@@ -46,6 +54,13 @@ exports.config =
     globals:
       $: 'jquery'
       jQuery: 'jquery'
+      # Foundation: 'foundation-sites'
   
   modules:
-    addSourceURLs: true
+    enabled: true
+    addSourceURLs: false
+    # wrapper: false
+    # definition: false
+    # autoRequire: 
+          # 'js/app.js': ['initialize']
+    

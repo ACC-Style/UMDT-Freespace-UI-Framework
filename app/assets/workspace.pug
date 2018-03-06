@@ -36,6 +36,7 @@ html.no-js(lang='en')
                                     span.text
                                         | project
                             li.breadcrumbs--nav-item
+                                a(href='#').breadcrumbs--nav-link 
                                     span.icon
                                         i.material-icons.md-18 folder_special
                                     span.text
@@ -43,25 +44,43 @@ html.no-js(lang='en')
                             li.breadcrumbs--nav-item
                                 a(href='#').breadcrumbs--nav-link 
                                     span.icon
-                                        i.material-icons.md-18 save
+                                        //- i.material-icons.md-18 save
+                                        i.fa.fa-database(aria-hidden='true')
                                     span.text
-                                        | CDD!
+                                        | CDD
                             li.breadcrumbs--nav-item
                                 a(href='#').breadcrumbs--nav-link 
                                     span.icon
-                                        i.material-icons.md-18 lightbulb_outline
+                                        i.material-icons.md-18 view_module
                                     span.text
-                                        | concept
+                                        | Concepts & Data Elements
+                            li.breadcrumbs--nav-item
+                                a(href='#').breadcrumbs--nav-link 
+                                    span.icon
+                                        i.material-icons.md-18 flip_to_back
+                                    span.text
+                                        | Value Sets
                             li.breadcrumbs--nav-item
                                     span.icon
                                         i.material-icons.md-18 change_history
                                     span.text
-                                        | data element
+                                        | element/concept
                             li.breadcrumbs--nav-item  
                                     span.icon
                                         i.material-icons.md-18 mode_edit
                                     span.text
-                                        | element*
+                                        | element name*
+                            li.breadcrumbs--nav-item.-is-green 
+                                a(href='#panel2').breadcrumbs--nav-link                              
+                                    span.icon
+                                        i.material-icons.md-18 tab
+                                    span.text
+                                        | editing*
+                            li.breadcrumbs--nav-item 
+                                    span.icon
+                                        i.material-icons.md-18 lock_outline
+                                    span.text
+                                        | locked*
 
             //- page content(edtiable)            
             .content--page

@@ -13,6 +13,7 @@
     "eslint": "^4.7.1",
     "foundation-sites": "^6.4.2",
     "jquery": "3.2.1",
+    "jquery-contextmenu": "^3.0.0-beta.1",
     "jquery.fancytree": "^2.27.0",
     "json-brunch": "^1.5.4",
     "node-sass": "^4.5.3"

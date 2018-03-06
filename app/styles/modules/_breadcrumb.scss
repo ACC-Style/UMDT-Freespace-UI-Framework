@@ -33,3 +33,7 @@
 .breadcrumbs li:last-child {
     text-transform: unset;
 }
+
+.breadcrumbs a:hover {
+    text-decoration: none !important;
+}
