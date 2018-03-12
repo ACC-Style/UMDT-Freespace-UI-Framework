@@ -176,6 +176,7 @@
     }
     &-workspace {
         border: 1px solid $palette-color-median;
+        border-top: none;
         border-bottom: 0.5em solid $palette-color-median;
         .tabs-content {
             padding: 0 0 0 0;

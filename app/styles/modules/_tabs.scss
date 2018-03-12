@@ -5,7 +5,7 @@
         border-right: 1px solid $palette-color-median;
         border-bottom: 1px solid $palette-color-median;
         background-color: $palette-color-lightens;
-        padding-top: 1px;
+        padding: 0 0 0 0 !important;
         box-shadow: 11px -2px 31px -17px rgba(0, 0, 0, 0.39);
         a {
             padding: 1.25em 0 0 0;
@@ -13,9 +13,32 @@
             font-weight: bold;
         }
         a:focus {
-            -webkit-appearance: none;
-            border: none;
+            outline: none;
         }
+        .icon {
+            text-decoration: none;
+            cursor: default;
+        }
+        .tab-icon {
+            float: left;
+            margin: -16px 0 0 -0px;
+            i {
+                margin-top: -20px;
+                padding: 3px; // background-color: black;
+                // background-color: $palette-color-median;
+                color: $color-light;
+                text-decoration: none;
+            }
+        } // &.-is-locked {
+        //     i {
+        //         color: $color-morning;
+        //     }
+        // }
+        // &.-is-editable {
+        //     i {
+        //         color: $color-grass;
+        //     }
+        // }
     }
     .tabs-title>a:focus,
     .tabs-title>a[aria-selected='true'] {
@@ -39,6 +62,11 @@
             border-left: none;
         }
     }
+    .tabs-title {
+        &:last-child {
+            border-right: none;
+        }
+    }
     .tabs-title a {
         color: $palette-color-darken;
     }
@@ -52,6 +80,7 @@
 .content--tab {
     // border-top: $border-thin-top solid; 
     // background-color: red;
+    height: 35em;
 }
 
 .tabs-title>a[aria-selected='true'] {
@@ -72,5 +101,32 @@
                 }
             }
         }
+    }
+}
+
+.definitions--details {
+    border: 1px solid $palette-color-lightens;
+    .tabs-panel {
+        padding-left: 2em;
+        padding-right: 1em;
+    }
+}
+
+#tab--definitions li,
+#tab--code-binding li {
+    // padding: 0 0 0 0;
+    // margin: 0 0 0 0;
+    /* border: none; */
+    border: 1px solid $palette-color-lightens;
+    border-right: none;
+    background-color: $color-light;
+    &.is-active {
+        // padding: 0 0 0 0;
+        // margin: 0 0 0 0;
+        /* border: none; */
+        border: 1px solid $palette-color-lightens;
+        border-bottom: none;
+        background-color: $palette-color-lightens;
+        color: white;
     }
 }

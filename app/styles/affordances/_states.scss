@@ -87,7 +87,7 @@
 // TODO: refractor is-required styles
 .form--input-text.-is-required {
     label:after {
-        position: absolute;
+        // position: absolute;
         font-family: 'Material Icons';
         font-size: 1.25em;
         margin-top: -.25em;
@@ -146,8 +146,94 @@
     }
     li.tabs-title {
         // border-bottom-color: $color-grass;
-        .icon {
+        .tab-icon {
             display: none;
+        }
+    }
+}
+
+.tabs-title {
+    .tab-icon i {
+        background-color: $palette-color-median;
+        color: $palette-color-lightens;
+    }
+    &.-is-locked {
+        // border-top-color: red;
+        .tab-icon i {
+            background-color: $palette-color-darken;
+            color: $palette-color-lightens;
+        }
+    }
+    &.-is-saved {
+        // border-top-color: red;
+    }
+    &.-is-broken {
+        border-top-color: $palette-color-accent;
+        .tab-icon i {
+            background-color: $palette-color-accent;
+            color: $color-heat;
+        }
+    }
+    &.-is-editable {
+        border-top-color: $color-grass;
+        .tab-icon i {
+            background-color: $color-grass;
+            color: $palette-color-lightens;
+        }
+    }
+}
+
+// accordion
+ul.accordion li.-is-unsaved {
+    .accordion-item .accordion-title {
+        border-top-color: lighten( $color-heat, 25%);
+        color: $color-heat;
+    }
+}
+
+ul.accordion li.-is-editable {
+    .accordion-title {
+        border-top-color: lighten( $color-grass, 25%);
+        color: $color-grass !important;
+    }
+}
+
+ul.accordion li.-is-broken {
+    .accordion-title {
+        border-top-color: lighten( $palette-color-accent, 25%); // border-top-color: $palette-color-accent;
+        color: $palette-color-accent;
+    }
+}
+
+ul.accordion li.-is-saved {
+    .accordion-title {
+        // border-top-color: $palette-color-accent;
+    }
+}
+
+// tabs
+.tabs-title.is-active {
+    &.-is-locked {
+        .tab-icon i {
+            color: $color-morning !important;
+        }
+    }
+    &.-is-saved {
+        .tab-icon i {
+            background-color: $palette-color-darken;
+            color: $color-light;
+        }
+    }
+    &.-is-broken {
+        border-top-color: $palette-color-accent;
+        .tab-icon i {
+            color: $color-light;
+        }
+    }
+    &.-is-editable {
+        border-top-color: $color-grass;
+        .tab-icon i {
+            color: $palette-color-lightens;
         }
     }
 }
@@ -209,9 +295,8 @@
         .icon {
             // display: block;
             position: absolute; // float: right;
-            background: #3adb76;
-            padding: .025em .25em .025em .25em;
-            color: $palette-color-base;
+            // background: #3adb76;
+            padding: .025em .25em .025em .25em; // color: $palette-color-base;
         }
     }
     li.tabs-title:last-child {

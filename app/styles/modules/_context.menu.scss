@@ -1,0 +1,21 @@
+.context-menu-list {
+    background: $palette-color-median;
+    box-shadow: 0 9px 28px rgba(0, 0, 0, 0.5);
+    border-radius: 0 0 0 0;
+    border: none;
+    padding: 0 0 0 0;
+    li {
+        font-size: 80%;
+        padding: 1.5em 1em 1.5em 3em;
+        color: $palette-color-lightens;
+        background-color: transparent;
+        &:hover {
+            background: $palette-color-darken;
+        }
+    }
+    .context-menu-icon.context-menu-icon--fa::before {
+        color: $palette-color-lightens !important;
+        margin-left: .5em;
+        float: right;
+    }
+}

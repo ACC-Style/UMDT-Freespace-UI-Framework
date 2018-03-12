@@ -1,0 +1,88 @@
+form(data-abide='7v3wyo-abide', novalidate='')
+    .grid-x.grid-padding-x
+
+        .cell.small-6
+            .grid-y
+                .cell
+
+                    .form--input-text.-is-required
+                        label
+                            | ID:
+                        input(type='text', placeholder='1234', aria-describedby='exampleHelpText', required='', pattern='number', value="1212")
+                        span.form-error
+                            | A name of the new create is required.
+                        //- p#exampleHelpText.help-text.-has-error Any help information (what is restricted or allow with name input)
+
+
+        .cell.small-6
+            .grid-y
+                .cell
+                    .form--input-text.-is-required
+                        label
+                            | Product ID:
+                        input(type='text', placeholder='phrase', aria-describedby='exampleHelpText', value="55555")
+                        //- span.form-error
+                            | Tags are useful for stuff
+        //- .cell.small-1
+                .cell
+                    .form--input-text
+                        .switch.tiny
+                                label.switch-value(for='swtich-active-s')
+                                    | Show
+                                input#swtich-active-s.switch-input(type='checkbox', name='exampleSwitch')
+                                label.switch-paddle(for='swtich-active-s')
+                                    span.show-for-sr Edit Mode
+                                    span.switch-active(aria-hidden='true')
+                                        i.material-icons.md-16(aria-hidden='true') visibility
+                                    span.switch-inactive(aria-hidden='true')
+                                        i.material-icons.md-16(aria-hidden='true') visibility_off
+        //- .cell.small-1
+                .cell
+                    .form--input-text
+                        .switch.tiny
+                                label.switch-value(for='swtich-active')
+                                    | Active
+                                input#swtich-active.switch-input(type='checkbox', name='exampleSwitch')
+                                label.switch-paddle(for='swtich-active')
+                                    span.show-for-sr Edit Mode
+                                    span.switch-active(aria-hidden='true')
+                                        i.material-icons.md-16(aria-hidden='true') alarm_on
+                                    span.switch-inactive(aria-hidden='true')
+                                        i.material-icons.md-16(aria-hidden='true') alarm_off
+        .cell.small-6
+            .grid-y
+                .cell
+                    .form--input-text.-is-required
+                        label
+                            | Name:
+                        input(type='text', placeholder='phrase', aria-describedby='exampleHelpText', value="DDD")
+                        span.form-error
+                            | Tags are useful for stuff
+        .cell.small-6
+            .grid-y
+                .cell
+                    .form--input-text.-is-required
+                        label
+                            | Shortname:
+                        input(type='text', placeholder='phrase', aria-describedby='exampleHelpText', value="CCC")
+                        span.form-error
+                            | Tags are useful for stuff
+
+        //- .cell.small-6
+            .grid-y
+                .cell
+                    .form--input-text
+                        label
+                            | Start Date:
+                        input(type='text', disabled, placeholder='phrase', aria-describedby='exampleHelpText', required='', pattern='date', value="10/5/2017").disabled
+                        span.form-error
+                            | Date is required
+
+        //- .cezll
+            .form--input-text.-is-required
+                label
+                    | Symnomyms:
+                input(type='text', placeholder='1234', aria-describedby='exampleHelpText', required='', pattern='number', value="like, this, here")
+                span.form-error
+                    | A description of the new create is required.
+                p#exampleHelpText.help-text.-has-error Multi symnoyms can be entered serpeate by a commna

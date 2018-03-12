@@ -215,6 +215,7 @@
         border-color: $palette-color-lightens;
         &:hover {
             background-color: $palette-color-darken;
+            box-shadow: 0 9px 28px rgba(0, 0, 0, 0.5);
         }
         &:hover .text,
         &:hover .icon {

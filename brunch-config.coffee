@@ -4,13 +4,14 @@ exports.config =
 
     javascripts: 
       joinTo:
-        'js/app.js' 
+        'js/app.js'
         # 'js/app.js': /^app/,
-        # 'js/vendor.js': /^(?!app)/
+        # 'js/vendor.js': /^node_modules/
 
   
     stylesheets:  
-      joinTo: 'css/app.css' 
+      joinTo: 
+        'css/app.css' 
   
   paths:
     public: 'build'
@@ -22,8 +23,9 @@ exports.config =
           /^(node_modules|vendor)/
         ]      
     sass: 
+    # use to include npm page scss as needed
       options:
-        includePaths: [ 'node_modules/foundation-sites/scss']
+        includePaths: [ 'node_modules/foundation-sites/scss', 'node_modules/jquery-contextmenu/src/sass/']
         precision: 8
 
     kss:
@@ -55,7 +57,10 @@ exports.config =
       $: 'jquery'
       jQuery: 'jquery'
       # Foundation: 'foundation-sites'
-  
+    # use to include js that will be untouched
+    static:
+      ['node_modules/jquery-contextmenu/dist/jquery.contextMenu.js']
+
   modules:
     enabled: true
     addSourceURLs: false

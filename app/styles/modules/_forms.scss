@@ -1,0 +1,60 @@
+.workspace- {
+    &-form {
+        height: 2em;
+        padding: 0 1em 0 1em;
+        overflow-x: hidden;
+        &.flush {
+            padding: 0 0 0 0 !important;
+        }
+        .accordion-title,
+        .accordion-content {
+            border: none;
+        }
+        .accordion-content[data-tab-content] {
+            padding-top: 0px;
+        }
+        .accordion-item .text {
+            .option-button {
+                border: none;
+                margin: -4px 0 0 .5em;
+            }
+        }
+        .definitions--details {
+            padding: 0 0 0 1em;
+        }
+    }
+    &-controls {
+        padding: .65em .5em 0 0;
+        border-top: 1px solid $palette-color-lightens;
+        text-align: right; // background-color: $palette-color-lightens;
+        button {
+            padding: 1em;
+            margin: -2px 1em 0 0;
+        }
+    }
+    &-options {
+        padding: .65em .5em 0 0;
+        border-bottom: 1px solid $palette-color-lightens;
+        button {
+            display: inline-block;
+            float: right;
+            margin-left: 1em;
+        }
+        .blurb {
+            width: 80%;
+            float: left;
+            color: $palette-color-median;
+            padding-left: 1em;
+        }
+    }
+}
+
+.switch .switch-active i,
+.switch .switch-inactive i {
+    color: $color-light;
+}
+
+.switch .switch-active,
+.switch .switch-inactive {
+    color: $color-light;
+}

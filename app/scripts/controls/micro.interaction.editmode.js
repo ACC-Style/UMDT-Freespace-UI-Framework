@@ -10,7 +10,7 @@ var allElements = $('*[data-micro-interaction-type="edit-mode"]'),
 
 
 function init() {
-    allTogglesElement.addClass("-is-hidden");
+    // allTogglesElement.addClass("-is-hidden");
     target.addClass("-edit-mode-off");
 }
 

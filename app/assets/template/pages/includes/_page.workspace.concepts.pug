@@ -1,0 +1,213 @@
+.feature--tabs.grid.collapse
+    .feature--tabs-list.medium-3.cell
+        ul#example-tabs.tabs(data-tabs="",data-deep-link="true")
+            li.tabs-title.-is-editable.is-active.-is-locked
+                a(href="#panel1", aria-selected="true") 
+                    | Registry
+                    span.icon
+                        i.material-icons.md-16(aria-hidden='true') change_history
+                    span.tab-icon
+                        i.material-icons.md-16(aria-hidden='true') save
+
+            li.tabs-title.-is-editable
+                a(href="#panel2") 
+                    span.text
+                        | Concept
+                    span.icon
+                        i.material-icons.md-16(aria-hidden='true') view_module
+                    span.tab-icon
+                        i.material-icons.md-16(aria-hidden='true') mode_edit 
+
+            li.tabs-title.-is-saved
+                a(href="#panel3")
+                    span.text
+                        | Data Element
+                    span.icon
+                        i.material-icons.md-16(aria-hidden='true') change_history
+                    span.tab-icon
+                        i.material-icons.md-16(aria-hidden='true') save
+                        
+            li.tabs-title.-is-broken
+                a(href="#panel3") Registery Element
+                    span.icon
+                        i.material-icons.md-16(aria-hidden='true') change_history
+                    span.tab-icon
+                        i.material-icons.md-16(aria-hidden='true') error_outline
+ 
+        .tabs-content(data-tabs-content="example-tabs").-is-editable
+            #panel1.tabs-panel.is-active
+                .grid-y.content--tab 
+                    .cell.small-1.workspace--options.feature--edit-mode
+                        //- p Currently edititng*
+                        button
+                            .icon
+                                i.material-icons.md-18 zoom_out_map
+                        .switch-input-spacedata-micro-interaction-type
+                            .switch.tiny
+                                label.switch-value(for='swtich-edit-mode')
+                                    //- | Edit Mode:
+                                input#swtich-edit-mode.switch-input(type='checkbox', name='exampleSwitch')
+                                label.switch-paddle(for='swtich-edit-mode', data-micro-interaction-type="edit-mode",data-micro-interaction-subject=".column--list-workspace")
+                                    span.show-for-sr Edit Mode
+                                    span.switch-active(aria-hidden='true')
+                                        i.material-icons.md-16(aria-hidden='true') mode_edit
+                                    span.switch-inactive(aria-hidden='true')
+                                        i.material-icons.md-16(aria-hidden='true') lock
+                    .cell.small-10.medium-cell-block-y.workspace--form
+                        //- h2 1
+                        include /template/variables/_form.registry.pug
+                    .cell.small-1.workspace--controls
+                        .panel--center-bottom-controls.float-right
+                            button.button.success(data-micro-interaction="toggle")
+                                | Save
+                            button.button.alert(data-micro-interaction="toggle")
+                                | Cancel
+            
+            #panel2.tabs-panel.full
+                .grid-y.content--tab 
+                    .cell.small-1.workspace--options.feature--edit-mode
+                        p.h7.blurb.small Instructions: Lorem ipsum dolor sit amet, consectetur 
+                        button
+                            .icon
+                                i.material-icons.md-18 open_with
+                        .switch-input-spacedata-micro-interaction-type
+                            .switch.tiny
+                                label.switch-value(for='swtich-edit-mode')
+                                    //- | Edit Mode:
+                                input#swtich-edit-mode.switch-input(type='checkbox', name='exampleSwitch')
+                                label.switch-paddle(for='swtich-edit-mode', data-micro-interaction-type="edit-mode",data-micro-interaction-subject=".column--list-workspace")
+                                    span.show-for-sr Edit Mode
+                                    span.switch-active(aria-hidden='true')
+                                        i.material-icons.md-16(aria-hidden='true') mode_edit
+                                    span.switch-inactive(aria-hidden='true')
+                                        i.material-icons.md-16(aria-hidden='true') lock
+                    .cell.small-10.medium-cell-block-y.workspace--form.flush
+                        ul.accordion(data-accordion='tp8seet-accordion', role='tablist')
+                            li.accordion-item.is-active(data-accordion-item='')
+                                a#0rmnx1-accordion-label.accordion-title(href='#', aria-controls='0rmnx1-accordion', role='tab', aria-expanded='true', aria-selected='true') 
+                                    .text Concept
+                                        button.option-button.button.has-tip(data-tooltip='', aria-haspopup='true', data-disable-hover='false', tabindex='1', title='New Concept') 
+                                            i.material-icons.md-18 add_box
+                                #0rmnx1-accordion.accordion-content(data-tab-content='', role='tabpanel', aria-labelledby='0rmnx1-accordion-label', aria-hidden='false', style='display: block;')
+                                    include /template/variables/_form.tab.concept.pug
+
+                            li.accordion-item(data-accordion-item='').-is-broken
+                                a#ec5u7s-accordion-label.accordion-title(href='#', aria-controls='ec5u7s-accordion', role='tab', aria-expanded='false', aria-selected='false') 
+                                    .text Definitions   
+                                        button.option-button.button.has-tip(data-tooltip='', aria-haspopup='true', data-disable-hover='false', tabindex='1', title='New Definition') 
+                                            i.material-icons.md-18 add_box
+                                #ec5u7s-accordion.accordion-content(data-tab-content='', role='tabpanel', aria-labelledby='ec5u7s-accordion-label', aria-hidden='true')
+                                    include /template/variables/_form.tab.definitions.pug
+                            li.accordion-item(data-accordion-item='')
+                                a#x20pz9-accordion-label.accordion-title(href='#', aria-controls='x20pz9-accordion', role='tab', aria-expanded='false', aria-selected='false') 
+                                    .text Code System Binding
+                                        button.option-button.button.has-tip(data-tooltip='', aria-haspopup='true', data-disable-hover='false', tabindex='1', title='New Code System Binding') 
+                                            i.material-icons.md-18 add_box
+                                #x20pz9-accordion.accordion-content(data-tab-content='', role='tabpanel', aria-labelledby='x20pz9-accordion-label', aria-hidden='true')
+                                    include /template/variables/_form.tab.code.pug
+                            li.accordion-item(data-accordion-item='')
+                                a#x11pz9-accordion-label.accordion-title(href='#', aria-controls='x20pz9-accordion', role='tab', aria-expanded='false', aria-selected='false') 
+                                    .text Taxon
+                                        button.option-button.button.has-tip(data-tooltip='', aria-haspopup='true', data-disable-hover='false', tabindex='1', title='New Taxon') 
+                                            i.material-icons.md-18 add_box
+                                #x20pz9-accordion.accordion-content(data-tab-content='', role='tabpanel', aria-labelledby='x20pz9-accordion-label', aria-hidden='true')
+                                    include /template/variables/_form.tab.taxon.pug
+                    .cell.small-1.workspace--controls
+                        .panel--center-bottom-controls.float-right
+
+                            button.button.success(data-micro-interaction="toggle")
+                                | Save
+                            button.button.alert(data-micro-interaction="toggle")
+                                | Cancel
+
+                //- .content--tab
+                    //- h2 Databases
+                    .grid-x.grid-padding-x
+                        
+                        ul.accordion(data-accordion='tp8eet-accordion', role='tablist')
+                            li.accordion-item.is-active(data-accordion-item='')
+                                a#0rmnx1-accordion-label.accordion-title(href='#', aria-controls='0rmnx1-accordion', role='tab', aria-expanded='true', aria-selected='true') 
+                                    .text ACC Accordion 1
+                                #0rmnx1-accordion.accordion-content(data-tab-content='', role='tabpanel', aria-labelledby='0rmnx1-accordion-label', aria-hidden='false', style='display: block;')
+                                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo nec libero vitae porttitor. Suspendisse ac sapien et ante condimentum iaculis. Ut dapibus ex vestibulum erat pellentesque suscipit quis sed nisl. Sed lobortis neque sit amet ligula pharetra, ac hendrerit nulla laoreet. Cras in vulputate nulla. Donec vel blandit lectus. Duis fermentum sit amet mauris id iaculis. Praesent a sollicitudin enim. Curabitur quis sagittis sapien, sed tempus sapien. Nam non dictum sapien, in varius odio. Sed eu condimentum orci, nec mollis nulla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce quis elit non nisi pellentesque fermentum et in nibh.
+                                    a(href='#') Link Here
+                            li.accordion-item(data-accordion-item='')
+                                a#ec5u7s-accordion-label.accordion-title(href='#', aria-controls='ec5u7s-accordion', role='tab', aria-expanded='false', aria-selected='false') 
+                                    .text ACC Accordion 2
+                                #ec5u7s-accordion.accordion-content(data-tab-content='', role='tabpanel', aria-labelledby='ec5u7s-accordion-label', aria-hidden='true')
+                                    .form--input-text
+                                    textarea Lorem ipsum dolor sis nulla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce quis elit non nisi pellentesque fermentum et in nibh.
+                                    button.button I do nothing!
+                            li.accordion-item(data-accordion-item='')
+                                a#x20pz9-accordion-label.accordion-title(href='#', aria-controls='x20pz9-accordion', role='tab', aria-expanded='false', aria-selected='false') 
+                                    .text ACC Accordion 3
+                                #x20pz9-accordion.accordion-content(data-tab-content='', role='tabpanel', aria-labelledby='x20pz9-accordion-label', aria-hidden='true')
+                                    .form--input-text
+                                    label
+                                        | Type your name!
+                                        input(type='text')
+                                    p#exampleHelpText2.help-text
+                                        | Please put your full name here
+            #panel3.tabs-panel
+                .grid-y.content--tab 
+                    .cell.small-1.workspace--options.feature--edit-mode
+                        p.h7.blurb.small Instructions: Lorem ipsum dolor sit amet, consectetur 
+                        button
+                            .icon
+                                i.material-icons.md-18 open_with
+                        .switch-input-spacedata-micro-interaction-type
+                            .switch.tiny
+                                label.switch-value(for='swtich-edit-mode')
+                                    //- | Edit Mode:
+                                input#swtich-edit-mode.switch-input(type='checkbox', name='exampleSwitch')
+                                label.switch-paddle(for='swtich-edit-mode', data-micro-interaction-type="edit-mode",data-micro-interaction-subject=".column--list-workspace")
+                                    span.show-for-sr Edit Mode
+                                    span.switch-active(aria-hidden='true')
+                                        i.material-icons.md-16(aria-hidden='true') mode_edit
+                                    span.switch-inactive(aria-hidden='true')
+                                        i.material-icons.md-16(aria-hidden='true') lock
+                    .cell.small-10.medium-cell-block-y.workspace--form.flush
+                        ul.accordion(data-accordion='tp8eet-accordion', role='tablist')
+                            li.accordion-item.is-active(data-accordion-item='')
+                                a#0rmnx1-accordion-label.accordion-title(href='#', aria-controls='0rmnx1-accordion', role='tab', aria-expanded='true', aria-selected='true') 
+                                    .text Concept Association
+                                        button.option-button.button.has-tip(data-tooltip='', aria-haspopup='true', data-disable-hover='false', tabindex='1', title='New Concept') 
+                                            i.material-icons.md-18 add_box
+                                #0rmnx1-accordion.accordion-content(data-tab-content='', role='tabpanel', aria-labelledby='0rmnx1-accordion-label', aria-hidden='false', style='display: block;')
+                                    include /template/variables/_form.tab.concept.pug
+
+                            li.accordion-item(data-accordion-item='')
+                                a#ec5u7s-accordion-label.accordion-title(href='#', aria-controls='ec5u7s-accordion', role='tab', aria-expanded='false', aria-selected='false') 
+                                    .text Code Instruction(s)   
+                                        button.option-button.button.has-tip(data-tooltip='', aria-haspopup='true', data-disable-hover='false', tabindex='1', title='New Definition') 
+                                            i.material-icons.md-18 add_box
+                                #ec5u7s-accordion.accordion-content(data-tab-content='', role='tabpanel', aria-labelledby='ec5u7s-accordion-label', aria-hidden='true')
+                                    include /template/variables/_form.tab.definitions.pug
+                            li.accordion-item(data-accordion-item='')
+                                a#x11pz9-accordion-label.accordion-title(href='#', aria-controls='x20pz9-accordion', role='tab', aria-expanded='false', aria-selected='false') 
+                                    .text Taxon
+                                        button.option-button.button.has-tip(data-tooltip='', aria-haspopup='true', data-disable-hover='false', tabindex='1', title='New Taxon') 
+                                            i.material-icons.md-18 add_box
+                                #x20pz9-accordion.accordion-content(data-tab-content='', role='tabpanel', aria-labelledby='x20pz9-accordion-label', aria-hidden='true')
+                                    include /template/variables/_form.tab.taxon.pug
+                    .cell.small-1.workspace--controls
+                        .panel--center-bottom-controls.float-right
+                            button.button.warning(data-micro-interaction="toggle")
+                                | Save & Pin
+                            button.button.success(data-micro-interaction="toggle")
+                                | Save
+                            button.button.alert(data-micro-interaction="toggle")
+                                | Cancel
+
+            #panel4.tabs-panel
+                .content--tab 
+                    .grid-x.grid-padding-x
+                        .cell.medium-auto.medium-cell-block-container                    
+                           h4 4
+                    .grid-x.grid-padding-x
+                        .panel--center-bottom-blank.medium-7.large-10.cell  
+                        .panel--center-bottom-controls.small-12.medium-4.large-2.cell
+                                button.button.success.float-right
+                                    | save
+                                button.button.alert.float-right
+                                    | cancel

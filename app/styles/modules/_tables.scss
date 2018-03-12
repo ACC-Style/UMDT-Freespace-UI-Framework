@@ -54,3 +54,46 @@
         background: transparent !important;
     }
 }
+
+table#data--table-taxon {
+    thead {
+        display: none;
+    }
+    th {
+        padding: 0 0 0 0;
+        margin: 0 0 0 0;
+    }
+    tbody tr:nth-child(even) {
+        background-color: #fff;
+    }
+    tr:hover {
+        background-color: $palette-color-lightens !important;
+    }
+    td {
+        padding: 0 0 0 1em;
+        margin: 0 0 0 0;
+        a.button.delete {
+            // height: .25em;
+            // width: .25em;
+            margin-top: 1em;
+            padding: .25em;
+            i {
+                text-decoration: none;
+            }
+            &:hover {
+                i {
+                    color: $color-light;
+                }
+            }
+        }
+    }
+    thead,
+    tbody,
+    tfoot {
+        border: none;
+        background: transparent;
+    }
+    tbody>tr>td {
+        width: 90%;
+    }
+}
