@@ -25,7 +25,7 @@ exports.config =
     sass: 
     # use to include npm page scss as needed
       options:
-        includePaths: [ 'node_modules/foundation-sites/scss', 'node_modules/jquery-contextmenu/src/sass/']
+        includePaths: [ 'node_modules/foundation-sites/scss', 'node_modules/jquery-contextmenu/src/sass/', '/node_modules/jquery.fancytree/dist/skin-material/ui.fancytree.min.css']
         precision: 8
 
     kss:

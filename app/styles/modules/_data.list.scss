@@ -2,6 +2,16 @@
     font-size: 85%;
     ul {
         outline: none;
+        list-style: none;
+        li {
+            margin-bottom: .5em;
+        }
+    }
+    ul.ui-fancytree {
+        margin: 1em 0 0 .25em;
+    }
+    .material-icons {
+        font-size: 17px;
     }
     .fancytree-container {
         outline: none;

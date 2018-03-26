@@ -9,14 +9,90 @@ const $ = require('jquery');
 const fancytree = require('jquery.fancytree');
 require('jquery.fancytree/dist/modules/jquery.fancytree.edit');
 require('jquery.fancytree/dist/modules/jquery.fancytree.filter');
+require('jquery.fancytree/dist/modules/jquery.fancytree.wide.js');
+require('jquery.fancytree/dist/modules/jquery.fancytree.table.js');
+require('jquery.fancytree/dist/modules/jquery.fancytree.glyph.js');
 
 
 console.log(fancytree.version);
 // console.log(`list data: ${tree[0].title}`);
 
 $("#data-list-elements").fancytree({
+    extensions: ["glyph", "wide", ],
+    debugLevel: 4,
     checkbox: true,
     selectMode: 3,
+    tooltip: function (event, data) {
+        var node = data.node,
+            data = node.data;
+
+        if (data.author) {
+            return node.title + ", " + data.author + ", " + data.year;
+        }
+    },
+    glyph: {
+        preset: "material",
+        map: {
+            _addClass: "material-icons",
+            checkbox: {
+                text: "check_box_outline_blank"
+            },
+            checkboxSelected: {
+                text: "check_box"
+            },
+            checkboxUnknown: {
+                text: "indeterminate_check_box"
+            },
+            dragHelper: {
+                text: "play_arrow"
+            },
+            dropMarker: {
+                text: "arrow-forward"
+            },
+            error: {
+                text: "warning"
+            },
+            expanderClosed: {
+                text: "chevron_right"
+            },
+            expanderLazy: {
+                text: "last_page"
+            },
+            expanderOpen: {
+                text: "expand_more"
+            },
+            loading: {
+                text: "autorenew",
+                addClass: "fancytree-helper-spin"
+            },
+            nodata: {
+                text: "info"
+            },
+            noExpander: {
+                text: ""
+            },
+            radio: {
+                text: "radio_button_unchecked"
+            },
+            radioSelected: {
+                text: "radio_button_checked"
+            },
+            // Default node icons.
+            // (Use tree.options.icon callback to define custom icons based on node data)
+            doc: {
+                text: "web_asset"
+            },
+            docOpen: {
+                text: "web_asset"
+            },
+            folder: {
+                text: "folder"
+            },
+            folderOpen: {
+                text: "folder"
+            }
+        }
+    },
     source: {
         url: "../data/tree.json"
     },
@@ -47,6 +123,62 @@ $("#data-list-elements").fancytree({
     //         folderOpen: "fa-folder-open"
     //     }
     // },
+
+
+});
+
+$.contextMenu({
+    selector: "#data-list-elements span.fancytree-title",
+    items: {
+        "cut": {
+            name: "Cut",
+            icon: "cut",
+            callback: function (key, opt) {
+                var node = $.ui.fancytree.getNode(opt.$trigger);
+                alert("Clicked on " + key + " on " + node);
+            }
+        },
+        "copy": {
+            name: "Copy",
+            icon: "copy"
+        },
+        "paste": {
+            name: "Paste",
+            icon: "paste",
+            // disabled: false
+        },
+        "sep1": "----",
+        "edit": {
+            name: "Edit",
+            icon: "edit",
+            // disabled: true
+        },
+        "delete": {
+            name: "Delete",
+            icon: "delete",
+            // disabled: true
+        },
+        "more": {
+            name: "More",
+            items: {
+                "sub1": {
+                    name: "Sub 1"
+                },
+                "sub1": {
+                    name: "Sub 2"
+                }
+            }
+        }
+    },
+    callback: function (itemKey, opt) {
+        var node = $.ui.fancytree.getNode(opt.$trigger);
+        alert("select " + itemKey + " on " + node);
+    }
+});
+$(".option-collapse").click(function () {
+    $.ui.fancytree.getTree(1).visit(function (node) {
+        node.setExpanded(false);
+    });
 });
 
 // Select a node on click
