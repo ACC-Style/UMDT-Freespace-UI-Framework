@@ -1,6 +1,29 @@
 [{
-        "title": "Node 1",
-        "key": "1"
+        "title": "Data Element",
+        "key": "1",
+        "bookmark": true,
+        "pinned": true
+    },
+    {
+        "title": "Data Element 2",
+        "key": "1",
+        "bookmark": true,
+        "pinned": true,
+        "children": [{
+                "title": "Data Element 2.A",
+                "key": "3"
+            },
+            {
+                "title": "Data Element 2.B",
+                "key": "4"
+            }
+        ]
+    },
+    {
+        "title": "Data Element 3",
+        "key": "1",
+        "bookmark": true,
+        "pinned": true
     },
     {
         "title": "Folder 2",

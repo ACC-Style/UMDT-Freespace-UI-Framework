@@ -18,14 +18,13 @@ $("#data-list-elements").fancytree({
     checkbox: true,
     selectMode: 3,
     source: {
-        url: "https://cdn.rawgit.com/mar10/fancytree/72e03685/demo/ajax-tree-products.json"
+        url: "../data/tree.json"
     },
-    lazyLoad: function (event, data) {
-        data.result = {
-            url: "https://cdn.rawgit.com/mar10/fancytree/72e03685/demo/ajax-sub2.json"
-        };
-    },
-
+    // lazyLoad: function (event, data) {
+    //     data.result = {
+    //         url: "https://cdn.rawgit.com/mar10/fancytree/72e03685/demo/ajax-sub2.json"
+    //     };
+    // },
     activate: function (event, data) {
         $("#statusLine").text(event.type + ": " + data.node);
     },
@@ -33,7 +32,21 @@ $("#data-list-elements").fancytree({
         $("#statusLine").text(
             event.type + ": " + data.node.isSelected() + " " + data.node
         );
-    }
+    },
+    // extensions: ["glyph"],
+    // icon: function (event, data) {
+    //     // (Optional dynamic icon definition...)
+    // },
+    // glyph: {
+    //     // The preset defines defaults for all supported icon types.
+    //     // It also defines a common class name that is prepended (in this case 'fa ')
+    //     preset: "awesome4",
+    //     map: {
+    //         // Override distinct default icons here
+    //         folder: "fa-folder",
+    //         folderOpen: "fa-folder-open"
+    //     }
+    // },
 });
 
 // Select a node on click
