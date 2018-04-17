@@ -1,19 +1,49 @@
-#data-list-elements {
+#data-list-elements,
+#data-list-concepts {
     font-size: 85%;
     ul {
         outline: none;
         list-style: none;
         li {
             margin-bottom: .5em;
+            .fancytree-node {
+                .fancytree-expander {
+                    color: $color-neutral-light; // margin-top: 3px;
+                }
+                .fancytree-checkbox {
+                    color: $palette-color-median; // margin-top: 3px;
+                }
+                .fancytree-icon {
+                    margin-right: 3px;
+                    float: right;
+                    color: $color-neutral-medium;
+                }
+                .fancytree-title {
+                    color: $palette-color-darken;
+                    padding-left: 7px;
+                }
+            }
         }
     }
     ul.ui-fancytree {
-        margin: 1em 0 0 .25em;
+        margin: 1em 0 0 1.25em;
     }
     .material-icons {
         font-size: 17px;
     }
     .fancytree-container {
         outline: none;
+    }
+}
+
+#data-list-elements {
+    ul {
+        li {
+            .fancytree-node {
+                .fancytree-icon {
+                    // color: $color-white;
+                }
+            }
+        }
     }
 }

@@ -10,7 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
   require('./scripts/controls/micro.interaction.filter.js');
   require('./scripts/controls/progress.bar.js');
   require('./scripts/vendors/foundation');
-  require('./scripts/vendors/fancytree');
+  require('./scripts/vendors/fancytree.elements');
+  require('./scripts/vendors/fancytree.concepts');
   require('./scripts/vendors/context.menu.js');
   require('./scripts/vendors/datatables');
 

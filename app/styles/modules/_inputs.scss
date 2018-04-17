@@ -203,7 +203,7 @@ input[disabled] {
     // color: $color-neutral-light;
     color: $color-grass;
     font-size: 80%;
-    width: 81%;
+    width: 60%;
     height: 2em;
     padding: .25em 0 .25em 2em;
     margin: 0 0 0 2em;
@@ -332,4 +332,8 @@ span.form-error.is-visible {
             padding-top: 8px;
         }
     }
+}
+
+textarea.shorter {
+    height: 4em !important;
 }

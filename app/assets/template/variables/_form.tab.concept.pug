@@ -1,20 +1,27 @@
 form(data-abide='7v3wyo-abide', novalidate='')
     .grid-x.grid-padding-x
 
-        .cell.small-6
+        .cell
             .grid-y
                 .cell
 
                     .form--input-text.-is-required
                         label
                             | Name:
-                        input(type='text', placeholder='1234', aria-describedby='exampleHelpText', required='', pattern='number', value="AquibConcept")
+                        textarea(rows='4', cols='50').shorter
+                            | Guideline directed medical therapy maximum dose at least 3 months for Ischemic Cardiomyopathy
                         span.form-error
-                            | A name of the new create is required.
-                        //- p#exampleHelpText.help-text.-has-error Any help information (what is restricted or allow with name input)
+                            | A description of the new create is required.
+                        //- p#exampleHelpText.help-text.-has-error Any help information (what is restricted or allow with description input)
+                        //- label
+                        //-     | Name:
+                        //- input(type='text', placeholder='1234', aria-describedby='exampleHelpText', required='', pattern='number', value="Guideline directed medical therapy maximum dose at least 3 months for Ischemic Cardiomyopathy")
+                        //- span.form-error
+                        //-     | A name of the new create is required.
+                        //- //- p#exampleHelpText.help-text.-has-error Any help information (what is restricted or allow with name input)
 
 
-        .cell.small-3
+        .cell.small-6
             .grid-y
                 .cell
                     .form--input-text

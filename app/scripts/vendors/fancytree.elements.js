@@ -1,4 +1,4 @@
-console.group(`//Vendor: FancyTree`);
+console.group(`//Vendor: FancyTree - Elements`);
 
 // Import LESS or CSS:
 // import 'jquery.fancytree/dist/skin-lion/ui.fancytree.less';
@@ -20,7 +20,7 @@ console.log(fancytree.version);
 $("#data-list-elements").fancytree({
     extensions: ["glyph", "wide", ],
     debugLevel: 4,
-    checkbox: true,
+    checkbox: false,
     selectMode: 3,
     tooltip: function (event, data) {
         var node = data.node,
@@ -80,16 +80,17 @@ $("#data-list-elements").fancytree({
             // Default node icons.
             // (Use tree.options.icon callback to define custom icons based on node data)
             doc: {
-                text: "web_asset"
+                text: "change_history"
             },
             docOpen: {
                 text: "web_asset"
+                // text: "web_asset"
             },
             folder: {
                 text: "folder"
             },
             folderOpen: {
-                text: "folder"
+                text: "folder_open"
             }
         }
     },
@@ -130,33 +131,45 @@ $("#data-list-elements").fancytree({
 $.contextMenu({
     selector: "#data-list-elements span.fancytree-title",
     items: {
-        "cut": {
-            name: "Cut",
-            icon: "cut",
-            callback: function (key, opt) {
-                var node = $.ui.fancytree.getNode(opt.$trigger);
-                alert("Clicked on " + key + " on " + node);
+        // "cut": {
+        //     name: "Cut",
+        //     icon: "cut",
+        //     callback: function (key, opt) {
+        //         var node = $.ui.fancytree.getNode(opt.$trigger);
+        //         alert("Clicked on " + key + " on " + node);
+        //     }
+        // },
+        // "copy": {
+        //     name: "Copy",
+        //     icon: "copy"
+        // },
+        // "paste": {
+        //     name: "Paste",
+        //     icon: "paste",
+        //     // disabled: false
+        // },
+        // "sep1": "----",
+        edit: {
+            name: "Edit",
+            icon: "fa-edit",
+            callback: function (e, key, currentMenuData) {
+                alert("Foo!");
             }
         },
-        "copy": {
-            name: "Copy",
-            icon: "copy"
+        clone: {
+            name: "Clone",
+            icon: "fa-copy",
+            callback: function (e, key, currentMenuData) {
+                alert("Bar!")
+            }
         },
-        "paste": {
-            name: "Paste",
-            icon: "paste",
-            // disabled: false
-        },
-        "sep1": "----",
-        "edit": {
-            name: "Edit",
-            icon: "edit",
-            // disabled: true
-        },
-        "delete": {
-            name: "Delete",
-            icon: "delete",
-            // disabled: true
+        view: {
+            name: "view",
+            icon: "fa-edit",
+            callback: function (e, key, currentMenuData) {
+                // alert("View udpates!");
+                console.log("tree")
+            }
         },
         "more": {
             name: "More",

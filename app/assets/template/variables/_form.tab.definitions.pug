@@ -18,43 +18,48 @@ form(data-abide='7v3wyo-abide', novalidate='')
         .cell.definitions--details.tabs-content(data-tabs-content='tab--definitions')
             #panel1v.tabs-panel.is-active
                 .grid-x
-                    .cell.small-6
+                    .cell
                         .form--input-text.-is-required
                             label
                                 | Type:1
-                            input(type='text', placeholder='1234', aria-describedby='exampleHelpText', required='', pattern='number', value="AquibConcept")
+                            input(type='text', placeholder='1234', aria-describedby='exampleHelpText', required='', pattern='number', value="Guideline directed Ischemic Cardiomyopathy")
                             span.form-error
                                 | A name of the new create is required.
                             //- p#exampleHelpText.help-text.-has-error Any help information (what is restricted or allow with name input)
 
 
-                    .cell.small-6
+                    .cell
                         .grid-y
                             .cell
                                 .form--input-text
                                     label
                                         | Title:
-                                    input(type='text', placeholder='phrase', aria-describedby='exampleHelpText', value="55555")
+                                    input(type='text', placeholder='phrase', aria-describedby='exampleHelpText', value="Longer Longer Longer Longer Longer Title")
                                     //- span.form-error
                                         | Tags are useful for stuff
                     .cell.small-6
                         .grid-y
                             .cell
-                                .form--input-text
+                                .form--input-text.-is-required
                                     label
                                         | Definition:
-                                    input(type='text', placeholder='phrase', aria-describedby='exampleHelpText', value="Care Provider")
+                                    textarea(rows='4', cols='50').taller
+                                        | A black hole is a region of spacetime exhibiting such strong gravitational effects that nothing—not even particles and electromagnetic radiation such as light—can escape from inside it. The theory of general relativity predicts that a sufficiently compact mass can deform spacetime to form a black hole.")
                                     span.form-error
-                                        | Tags are useful for stuff
+                                        | A description of the new create is required.
+                                    //- p#exampleHelpText.help-text.-has-error Any help information (what is restricted or allow with description input)
                     .cell.small-6
                         .grid-y
                             .cell
                                 .form--input-text
                                     label
                                         | Definition Source:
-                                    input(type='text', placeholder='phrase', aria-describedby='exampleHelpText', value="Care Provider")
+                                    textarea(rows='4', cols='50').taller
+                                        | 1) O’Gara PT, Kushner FG, Ascheim DD, et al. 2013 ACCF/AHA guideline for the management of ST-elevation myocardial infarction: a report of the American College of Cardiology Foundation/American Heart Association Task Force on Practice Guidelines. J Am Coll Cardiol 2013;61 2) Russo AM, Stainback RF, Bailey SR, et al. ACCF/HRS/AHA/ASE/HFSA/SCAI/SCCT/SCMR 2013 appropriate use criteria for implantable cardioverter-defibrillators and cardiac resynchronization therapy. J Am Coll Cardiol 2013;61:1318-68. doi: 10.1016/j.jacc.2012.12.017
+
                                     span.form-error
-                                        | Tags are useful for stuff
+                                        | A description of the new create is required.
+                                    //- p#exampleHelpText.help-text.-has-error Any help information (what is restricted or allow with description input)
 
                     .cell.small-12
                         .grid-y
