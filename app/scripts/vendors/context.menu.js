@@ -60,6 +60,25 @@ $.contextMenu({
         }
     }
 });
+
+
+$.contextMenu({
+    selector: '.tabs-title',
+    callback: function (key, options) {
+        var m = "clicked: " + key;
+        window.console && console.log(m) || alert(m);
+    },
+    items: {
+        "save": {
+            name: "Save",
+            icon: "fa-save"
+        },
+        "close": {
+            name: "Close",
+            icon: "fa-times"
+        }
+    }
+});
 $('.abba').click(itemShower);
 console.log($('.abba'));
 
