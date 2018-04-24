@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   require('./scripts/vendors/fancytree.elements');
   require('./scripts/vendors/fancytree.concepts');
   require('./scripts/vendors/context.menu.js');
-  require('./scripts/vendors/datatables');
+  // require('./scripts/vendors/datatables');
 
 
   console.log('initialized...');

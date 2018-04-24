@@ -7,18 +7,29 @@
 
 var $ = require('jquery');
 console.groupCollapsed(`// Micro-Interactions: Tabs`);
-// collect elements
-var allTabs = $(".feature--tabs-list > .tabs li"),
-    numberTabs = allTabs.length,
-    maxWidth = $(".column--list-workspace").width(),
-    tabWidth = (maxWidth / numberTabs);
-// calculate percentage not pixcel
-console.log(`test-${allTabs[1].outerHTML}`)
-// log tabs width
-allTabs.each(function (index) {
-    let element = $(this);
-    element.css("width", tabWidth);
-    console.log(`name - ${element.text()} / width: ${element.width()} / ${element.outerHTML}`);
-});
+
+var FreespaceApp = window.FreespaceApp = {};
+
+FreespaceApp.fix = {
+    tabs() {
+        let allTabs = $(".feature--tabs-list > .tabs li"),
+            numberTabs = allTabs.length,
+            maxWidth = $(".column--list-workspace").width(),
+            tabWidth = (maxWidth / numberTabs);
+        // calculate percentage not pixcel
+        console.log(`test-${allTabs[1].outerHTML}`)
+
+        // log tabs width
+        allTabs.each(function (index) {
+            let element = $(this);
+            element.css("width", tabWidth);
+            console.log(`name - ${element.text()} / width: ${element.width()} / ${element.outerHTML}`);
+        });
+
+    }
+}
+// init
+FreespaceApp.fix.tabs();
+
 
 console.groupEnd();

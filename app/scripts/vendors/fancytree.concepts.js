@@ -121,13 +121,8 @@ $("#data-table-concepts").fancytree({
         }
     },
     source: {
-        url: "../data/tree.json"
+        url: "https://stage.tools.acc.org/UMDT/Templates/data/tree.json"
     },
-    // lazyLoad: function (event, data) {
-    //     data.result = {
-    //         url: "https://cdn.rawgit.com/mar10/fancytree/72e03685/demo/ajax-sub2.json"
-    //     };
-    // },
     activate: function (event, data) {
         $("#statusLine").text(event.type + ": " + data.node);
     },
@@ -136,22 +131,6 @@ $("#data-table-concepts").fancytree({
             event.type + ": " + data.node.isSelected() + " " + data.node
         );
     },
-    // extensions: ["glyph"],
-    // icon: function (event, data) {
-    //     // (Optional dynamic icon definition...)
-    // },
-    // glyph: {
-    //     // The preset defines defaults for all supported icon types.
-    //     // It also defines a common class name that is prepended (in this case 'fa ')
-    //     preset: "awesome4",
-    //     map: {
-    //         // Override distinct default icons here
-    //         folder: "fa-folder",
-    //         folderOpen: "fa-folder-open"
-    //     }
-    // },
-
-
 });
 
 
@@ -355,9 +334,9 @@ $(".option-collapse").click(function () {
 
 //     node.toggleSelected();
 // });
-
 $("input#filter-input").keyup(function (e) {
-    console.log('...');
+    console.log('...here');
+
     var n,
         tree = $.ui.fancytree.getTree(),
         args = "autoApply autoExpand fuzzy hideExpanders highlight leavesOnly nodata".split(" "),
@@ -371,7 +350,7 @@ $("input#filter-input").keyup(function (e) {
     opts.mode = $("#hideMode").is(":checked") ? "hide" : "dimm";
 
     if (e && e.which === $.ui.keyCode.ESCAPE || $.trim(match) === "") {
-        //   $("button#btnResetSearch").click();
+        $(".icon-clear").click();
         return;
     }
     if ($("#regex").is(":checked")) {
@@ -383,8 +362,9 @@ $("input#filter-input").keyup(function (e) {
         // Pass a string to perform case insensitive matching
         n = filterFunc.call(tree, match, opts);
     }
-    // $("button#btnResetSearch").attr("disabled", false);
-    // $("span#matches").text("(" + n + " matches)");
+    $(".icon-clear").attr("disabled", false);
+    $(".total").text(`${n}/${args.length}`);
+    // $(".total").text("(" + n + " matches)");
 }).focus();
 
 console.groupEnd();

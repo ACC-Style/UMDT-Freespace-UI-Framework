@@ -42,6 +42,25 @@
     }
 }
 
+.column--list-concepts.cell.medium-2.-is-collapsed-column,
+.column--list-elements.cell.medium-2.-is-collapsed-column {
+    width: 2em !important;
+    h6.panel--center-column-title-text.h7 {
+        transform: rotate(90deg);
+        transform-origin: top left;
+        margin: 2em 0 0 0;
+        width: 20em;
+    }
+    button[data-micro-interaction='collapse'] {
+        position: absolute;
+        margin-top: -3em;
+    }
+}
+
+.column--list-concepts.cell.medium-2.-is-expanded-column {
+    // width: auto !important;
+}
+
 .-is-bookmarked {
     a .icon-l i {
         // display: none;

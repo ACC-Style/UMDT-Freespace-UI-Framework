@@ -1,7 +1,7 @@
 var $ = require('jquery');
-console.groupCollapsed(`//Vendor: Datatable`);
+console.group(`//Vendor: Datatable`);
 
-console.log($.fn.dataTable.version);
+// console.log($.fn.dataTable.version);
 
 $('#data--table-search').DataTable({
     fixedHeader: true,
