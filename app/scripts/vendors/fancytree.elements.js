@@ -77,8 +77,6 @@ $("#data-list-elements").fancytree({
             radioSelected: {
                 text: "radio_button_checked"
             },
-            // Default node icons.
-            // (Use tree.options.icon callback to define custom icons based on node data)
             doc: {
                 text: "change_history"
             },
@@ -95,13 +93,8 @@ $("#data-list-elements").fancytree({
         }
     },
     source: {
-        url: "../data/tree.json"
+        url: "https://stage.tools.acc.org/UMDT/Templates/data/tree.json"
     },
-    // lazyLoad: function (event, data) {
-    //     data.result = {
-    //         url: "https://cdn.rawgit.com/mar10/fancytree/72e03685/demo/ajax-sub2.json"
-    //     };
-    // },
     activate: function (event, data) {
         $("#statusLine").text(event.type + ": " + data.node);
     },
@@ -109,46 +102,12 @@ $("#data-list-elements").fancytree({
         $("#statusLine").text(
             event.type + ": " + data.node.isSelected() + " " + data.node
         );
-    },
-    // extensions: ["glyph"],
-    // icon: function (event, data) {
-    //     // (Optional dynamic icon definition...)
-    // },
-    // glyph: {
-    //     // The preset defines defaults for all supported icon types.
-    //     // It also defines a common class name that is prepended (in this case 'fa ')
-    //     preset: "awesome4",
-    //     map: {
-    //         // Override distinct default icons here
-    //         folder: "fa-folder",
-    //         folderOpen: "fa-folder-open"
-    //     }
-    // },
-
-
+    }
 });
 
 $.contextMenu({
     selector: "#data-list-elements span.fancytree-title",
     items: {
-        // "cut": {
-        //     name: "Cut",
-        //     icon: "cut",
-        //     callback: function (key, opt) {
-        //         var node = $.ui.fancytree.getNode(opt.$trigger);
-        //         alert("Clicked on " + key + " on " + node);
-        //     }
-        // },
-        // "copy": {
-        //     name: "Copy",
-        //     icon: "copy"
-        // },
-        // "paste": {
-        //     name: "Paste",
-        //     icon: "paste",
-        //     // disabled: false
-        // },
-        // "sep1": "----",
         edit: {
             name: "Edit",
             icon: "fa-edit",
@@ -193,14 +152,4 @@ $(".option-collapse").click(function () {
         node.setExpanded(false);
     });
 });
-
-// Select a node on click
-// $("#button1").click(function () {
-//     var tree = $.ui.fancytree.getTree(),
-//         node = tree.findFirst(function (n) {
-//             return n.title === "The Hobbit";
-//         });
-
-//     node.toggleSelected();
-// });
 console.groupEnd();

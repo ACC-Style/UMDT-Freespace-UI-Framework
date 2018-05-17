@@ -39,13 +39,13 @@ $("#data-table-concepts").fancytree({
         autoApply: true, // Re-apply last filter if lazy data is loaded
         autoExpand: false, // Expand all branches that contain matches while filtered
         counter: true, // Show a badge with number of matching child nodes near parent icons
-        fuzzy: false, // Match single characters in order, e.g. 'fb' will match 'FooBar'
-        hideExpandedCounter: true, // Hide counter badge if parent is expanded
+        fuzzy: true, // Match single characters in order, e.g. 'fb' will match 'FooBar'
+        hideExpandedCounter: false, // Hide counter badge if parent is expanded
         hideExpanders: false, // Hide expanders if all child nodes are hidden by filter
         highlight: true, // Highlight matches by wrapping inside <mark> tags
         leavesOnly: false, // Match end nodes only
         nodata: true, // Display a 'no data' status node if result is empty
-        mode: "dimm" // Grayout unmatched nodes (pass "hide" to remove unmatched node instead)
+        mode: "hide" // Grayout unmatched nodes (pass "hide" to remove unmatched node instead)
     },
     selectMode: 3,
     tooltip: function (event, data) {
@@ -103,14 +103,11 @@ $("#data-table-concepts").fancytree({
             radioSelected: {
                 text: "radio_button_checked"
             },
-            // Default node icons.
-            // (Use tree.options.icon callback to define custom icons based on node data)
             doc: {
                 text: "change_history"
             },
             docOpen: {
                 text: "web_asset"
-                // text: "web_asset"
             },
             folder: {
                 text: "folder"
@@ -208,14 +205,11 @@ $("#data-list-concepts").fancytree({
             radioSelected: {
                 text: "radio_button_checked"
             },
-            // Default node icons.
-            // (Use tree.options.icon callback to define custom icons based on node data)
             doc: {
                 text: "change_history"
             },
             docOpen: {
                 text: "web_asset"
-                // text: "web_asset"
             },
             folder: {
                 text: "folder"
@@ -228,11 +222,6 @@ $("#data-list-concepts").fancytree({
     source: {
         url: "../data/tree.json"
     },
-    // lazyLoad: function (event, data) {
-    //     data.result = {
-    //         url: "https://cdn.rawgit.com/mar10/fancytree/72e03685/demo/ajax-sub2.json"
-    //     };
-    // },
     activate: function (event, data) {
         $("#statusLine").text(event.type + ": " + data.node);
     },
@@ -240,46 +229,12 @@ $("#data-list-concepts").fancytree({
         $("#statusLine").text(
             event.type + ": " + data.node.isSelected() + " " + data.node
         );
-    },
-    // extensions: ["glyph"],
-    // icon: function (event, data) {
-    //     // (Optional dynamic icon definition...)
-    // },
-    // glyph: {
-    //     // The preset defines defaults for all supported icon types.
-    //     // It also defines a common class name that is prepended (in this case 'fa ')
-    //     preset: "awesome4",
-    //     map: {
-    //         // Override distinct default icons here
-    //         folder: "fa-folder",
-    //         folderOpen: "fa-folder-open"
-    //     }
-    // },
-
-
+    }
 });
 
 $.contextMenu({
     selector: "#data-list-concepts span.fancytree-title",
     items: {
-        // "cut": {
-        //     name: "Cut",
-        //     icon: "cut",
-        //     callback: function (key, opt) {
-        //         var node = $.ui.fancytree.getNode(opt.$trigger);
-        //         alert("Clicked on " + key + " on " + node);
-        //     }
-        // },
-        // "copy": {
-        //     name: "Copy",
-        //     icon: "copy"
-        // },
-        // "paste": {
-        //     name: "Paste",
-        //     icon: "paste",
-        //     // disabled: false
-        // },
-        // "sep1": "----",
         edit: {
             name: "Edit",
             icon: "fa-edit",
@@ -324,16 +279,6 @@ $(".option-collapse").click(function () {
         node.setExpanded(false);
     });
 });
-
-// Select a node on click
-// $("#button1").click(function () {
-//     var tree = $.ui.fancytree.getTree(),
-//         node = tree.findFirst(function (n) {
-//             return n.title === "The Hobbit";
-//         });
-
-//     node.toggleSelected();
-// });
 $("input#filter-input").keyup(function (e) {
     console.log('...here');
 
@@ -343,11 +288,12 @@ $("input#filter-input").keyup(function (e) {
         opts = {},
         filterFunc = $("#branchMode").is(":checked") ? tree.filterBranches : tree.filterNodes,
         match = $(this).val();
-
+    console.log(tree)
     $.each(args, function (i, o) {
         opts[o] = $("#" + o).is(":checked");
     });
-    opts.mode = $("#hideMode").is(":checked") ? "hide" : "dimm";
+
+    // opts.mode = $("#hideMode").is(":checked") ? "hide" : "dimm";
 
     if (e && e.which === $.ui.keyCode.ESCAPE || $.trim(match) === "") {
         $(".icon-clear").click();
