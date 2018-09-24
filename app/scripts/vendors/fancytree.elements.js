@@ -93,7 +93,7 @@ $("#data-list-elements").fancytree({
         }
     },
     source: {
-        url: "https://stage.tools.acc.org/UMDT/Templates/data/tree.json"
+        url: "../data/tree.json"
     },
     activate: function (event, data) {
         $("#statusLine").text(event.type + ": " + data.node);
