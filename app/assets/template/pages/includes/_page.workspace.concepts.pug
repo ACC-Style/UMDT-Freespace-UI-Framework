@@ -2,45 +2,69 @@
     .feature--tabs-list.medium-3.cell
         ul#example-tabs.tabs(data-tabs="",data-deep-link="true")
             li.tabs-title.-is-editable.is-active.-is-locked
-                a(href="#panel1", aria-selected="true") 
-                    | Registry
-                    span.icon
-                        i.material-icons.md-12(aria-hidden='true') change_history
-                    span.tab-icon
-                        i.material-icons.md-12(aria-hidden='true') save
+                .tab-icons
+                    span.item-icon
+                        i.material-icons.md-14(aria-hidden='true') wifi
+                    span.item-id 555
+                    span.status-icon
+                        i.material-icons.md-14(aria-hidden='true') mode_edit 
                     span.tab-icon-close
-                        i.material-icons.md-12(aria-hidden='true') close
+                        i.material-icons.md-14(aria-hidden='true') close 
+                a(href="#panel1", aria-selected="true") 
+
+                    //- span.icon
+                        i.material-icons.md-12(aria-hidden='true') view_module
+                    span.text
+                        | Registry Long And Even Longer Than Before
+
 
             li.tabs-title.-is-editable
-                a(href="#panel2") 
-                    span.text
-                        | Concept
-                    span.icon
-                        i.material-icons.md-12(aria-hidden='true') view_module
-                    span.tab-icon
-                        i.material-icons.md-12(aria-hidden='true') mode_edit 
+                .tab-icons
+                    span.item-icon
+                        i.material-icons.md-14(aria-hidden='true') history
+                    span.item-id 555
+                    span.status-icon
+                        i.material-icons.md-14(aria-hidden='true') mode_edit 
                     span.tab-icon-close
-                        i.material-icons.md-12(aria-hidden='true') close
+                        i.material-icons.md-14(aria-hidden='true') close 
+                a(href="#panel1", aria-selected="true") 
+
+                    //- span.icon
+                        i.material-icons.md-12(aria-hidden='true') view_module
+                    span.text
+                        | Concept Long And Even Longer ThanLong And Even Longer ThanLong And Even Longer Than Before
 
             li.tabs-title.-is-saved
-                a(href="#panel3")
+                .tab-icons
+                    span.item-icon
+                        i.material-icons.md-14(aria-hidden='true') history
+                    span.item-id 555
+                    //- span.status-icon
+                    //-     i.material-icons.md-14(aria-hidden='true') mode_edit 
+                    span.tab-icon-close
+                        i.material-icons.md-14(aria-hidden='true') close 
+                a(href="#panel1", aria-selected="true") 
+
+                    //- span.icon
+                        i.material-icons.md-12(aria-hidden='true') view_module
                     span.text
                         | Data Element
-                    span.icon
-                        i.material-icons.md-12(aria-hidden='true') change_history
-                    span.tab-icon
-                        i.material-icons.md-12(aria-hidden='true') save
-                    span.tab-icon-close
-                        i.material-icons.md-12(aria-hidden='true') close
 
             li.tabs-title.-is-broken
-                a(href="#panel3") Registery Element
-                    span.icon
-                        i.material-icons.md-12(aria-hidden='true') change_history
-                    span.tab-icon
-                        i.material-icons.md-12(aria-hidden='true') error_outline
+                .tab-icons
+                    span.item-icon
+                        i.material-icons.md-14(aria-hidden='true') history
+                    span.item-id 555
+                    span.status-icon
+                        i.material-icons.md-14(aria-hidden='true') error 
                     span.tab-icon-close
-                        i.material-icons.md-12(aria-hidden='true') close
+                        i.material-icons.md-14(aria-hidden='true') close 
+                a(href="#panel1", aria-selected="true") 
+
+                    //- span.icon
+                        i.material-icons.md-12(aria-hidden='true') view_module
+                    span.text
+                        | Broken Element
                         
         .tabs-content(data-tabs-content="example-tabs").-is-editable
             #panel1.tabs-panel.is-active

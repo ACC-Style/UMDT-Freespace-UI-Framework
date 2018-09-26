@@ -18,15 +18,19 @@
 
 .-is-selected {
     color: $palette-color-darken;
+
     a {
         color: $palette-color-darken;
         background-color: $palette-color-lightens;
     }
+
     a.feature--draggable_items-item:hover {
         color: $color-twinkle !important;
     }
+
     &.panel--side-button button {
         color: #fff;
+
         .text {
             display: block;
         }
@@ -45,12 +49,14 @@
 .column--list-concepts.cell.medium-2.-is-collapsed-column,
 .column--list-elements.cell.medium-2.-is-collapsed-column {
     width: 2em !important;
+
     h6.panel--center-column-title-text.h7 {
         transform: rotate(90deg);
         transform-origin: top left;
         margin: 2em 0 0 0;
         width: 20em;
     }
+
     button[data-micro-interaction='collapse'] {
         position: absolute;
         margin-top: -3.19em;
@@ -84,6 +90,7 @@
 }
 
 .-is-read {
+
     .icon,
     .text,
     .btn,
@@ -94,6 +101,7 @@
 }
 
 .-is-unread {
+
     .icon,
     .text,
     .btn,
@@ -129,9 +137,12 @@
         color: $palette-color-accent;
         -webkit-font-feature-settings: 'liga';
     }
-} // TODO: had class added to parent
+}
+
+// TODO: had class added to parent
 .-is-filled {
     border-bottom: none !important;
+
     &:focus {
         border-bottom: 1px solid red !important;
     }
@@ -153,17 +164,22 @@
         // display: none;
         cursor: auto;
     }
+
     select {
         border: 1px transparent solid;
     }
+
     select:disabled {
         background-color: transparent;
         appearance: none;
     }
+
     textarea {
         border: none;
     }
+
     li.tabs-title {
+
         // border-bottom-color: $color-grass;
         .tab-icon {
             display: none;
@@ -176,26 +192,37 @@
         background-color: $palette-color-median;
         color: $palette-color-lightens;
     }
+
     &.-is-locked {
+
         // border-top-color: red;
         .tab-icon i {
             background-color: $palette-color-darken;
             color: $palette-color-lightens;
         }
     }
+
     &.-is-saved {
         // border-top-color: red;
     }
+
     &.-is-broken {
         border-top-color: $palette-color-accent;
-        .tab-icon i {
+
+        .tab-icon i,
+        .tab-icons,
+        .tab-icon-close i {
             background-color: $palette-color-accent;
             color: $color-heat;
         }
     }
+
     &.-is-editable {
         border-top-color: $color-grass;
-        .tab-icon i {
+
+        .tab-icon i,
+        .tab-icons,
+        .tab-icon-close i {
             background-color: $color-grass;
             color: $palette-color-lightens;
         }
@@ -205,21 +232,21 @@
 // accordion
 ul.accordion li.-is-unsaved {
     .accordion-item .accordion-title {
-        border-top-color: lighten( $color-heat, 25%);
+        border-top-color: lighten($color-heat, 25%);
         color: $color-heat;
     }
 }
 
 ul.accordion li.-is-editable {
     .accordion-title {
-        border-top-color: lighten( $color-grass, 25%);
+        border-top-color: lighten($color-grass, 25%);
         color: $color-grass !important;
     }
 }
 
 ul.accordion li.-is-broken {
     .accordion-title {
-        border-top-color: lighten( $palette-color-accent, 25%); // border-top-color: $palette-color-accent;
+        border-top-color: lighten($palette-color-accent, 25%); // border-top-color: $palette-color-accent;
         color: $palette-color-accent;
     }
 }
@@ -237,20 +264,25 @@ ul.accordion li.-is-saved {
             color: $color-morning !important;
         }
     }
+
     &.-is-saved {
         .tab-icon i {
             background-color: $palette-color-darken;
             color: $color-light;
         }
     }
+
     &.-is-broken {
         border-top-color: $palette-color-accent;
+
         .tab-icon i {
             color: $color-light;
         }
     }
+
     &.-is-editable {
         border-top-color: $color-grass;
+
         .tab-icon i {
             color: $palette-color-lightens;
         }
@@ -262,12 +294,15 @@ ul.accordion li.-is-saved {
         border-color: $color-grass;
         border-right: none;
     }
+
     .tabs-content {
         border-right: 1px solid $color-grass;
     }
+
     .feature--tabs-list ul li:last-child {
         border-right: 1px solid $palette-color-median !important;
     }
+
     .tabs-content,
     label,
     .tabs-title.is-active,
@@ -277,6 +312,7 @@ ul.accordion li.-is-saved {
         // background-color: $palette-color-median;
         // color: $palette-color-lightens;
     }
+
     [type='text'],
     [type='password'],
     [type='date'],
@@ -295,22 +331,28 @@ ul.accordion li.-is-saved {
         // background-color: $-copalettelor-lightens;
         border-bottom: 1px solid $color-grass !important;
     }
+
     textarea {
         // background-color: $-copalettelor-lightens;
         border-right: 1px solid $color-grass;
     }
+
     select {
         border: 1px solid $color-grass;
     }
+
     li.tabs-title.-is-editable {
         border-top-color: $color-grass;
         border-right-color: $color-grass;
+
         *[data-micro-interaction="mode"] {
             display: none;
         }
     }
+
     li.tabs-title {
         border-bottom-color: $color-grass;
+
         .icon {
             // display: block;
             position: absolute; // float: right;
@@ -318,14 +360,17 @@ ul.accordion li.-is-saved {
             padding: .025em .25em .025em .25em; // color: $palette-color-base;
         }
     }
+
     li.tabs-title:last-child {
         // border-right-color: $palette-color-darken !important;
     }
+
     li.tabs-title.is-active {
         *[data-micro-interaction] {
             display: block;
         }
     }
+
     input:checked~.switch-paddle {
         background: $color-grass;
     }
@@ -335,6 +380,7 @@ ul.accordion li.-is-saved {
 
 .-is-green {
     color: $color-grass !important;
+
     a,
     i {
         color: $color-grass !important;
