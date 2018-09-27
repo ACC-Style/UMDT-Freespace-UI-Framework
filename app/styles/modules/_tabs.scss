@@ -12,13 +12,16 @@
             display: block;
             // border: 1px solid red;
             height: 1.5em;
-            margin: 0 0 0 0;
-            padding: 0 0 0 0;
+            // height: 1.5em;
+            // color: $palette-color-darken !important;
+            margin: 1px 0 0 0;
+            padding: 0 1px 0 0;
         }
 
         a {
             display: inline-flex;
             align-items: center;
+            width: 100%;
 
             padding: 0 0 0 0; // padding: 1.25em .5em 4em .5em;
             // height: 3.75em;
@@ -36,9 +39,16 @@
         .text {
             display: block;
             float: left;
-            width: 90%;
+            width: auto;
+            margin: 0 0 0 0;
+            width: 100%;
+            // white-space: nowrap;
             text-align: center;
-            height: 2em; // border: 1px solid red;
+            // text-overflow: ellipsis;
+            padding: 0 .5em .5em 0;
+            // height: 2.5em;
+            // border: 1px solid red;
+            // overflow: hidden;
         }
 
         .item-icon {
@@ -96,11 +106,13 @@
             color: $palette-color-median;
 
             &:hover {
-                background: $palette-color-median;
+                background: $palette-color-darken;
                 color: $color-light;
 
                 i {
                     text-decoration: none !important;
+                    background: $palette-color-darken;
+
 
                     &:hover {
                         color: $color-light;
@@ -135,16 +147,21 @@
     .tabs-title.is-active {
         // border-left: 1px solid;
         border-right: 1px solid;
-        height: 3.31em !important;
+        // height: 3.31em !important;
         border-top-color: $palette-color-darken;
         background-color: $color-light;
         color: $palette-color-darken;
-        height: 3.52em;
+        // height: 3.52em;
         border-bottom: none;
 
         &:first-child,
         &:last-child {
             border-left: none;
+        }
+
+        .tab-icons {
+            // height: 1.5em;
+            // color: $palette-color-base !important;
         }
     }
 

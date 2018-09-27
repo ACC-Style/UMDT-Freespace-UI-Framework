@@ -188,9 +188,9 @@
 }
 
 .tabs-title {
-    .tab-icon i {
-        background-color: $palette-color-median;
-        color: $palette-color-lightens;
+    .tab-icons i {
+        // background-color: $palette-color-median;
+        color: $palette-color-darken;
     }
 
     &.-is-locked {
@@ -207,24 +207,29 @@
     }
 
     &.-is-broken {
-        border-top-color: $palette-color-accent;
+        // border-top-color: $palette-color-accent;
 
-        .tab-icon i,
-        .tab-icons,
-        .tab-icon-close i {
+        .tab-icons {
             background-color: $palette-color-accent;
-            color: $color-heat;
+
+            .item-id,
+            i {
+                color: $color-heat;
+            }
         }
     }
 
     &.-is-editable {
-        border-top-color: $color-grass;
+        // border-top-color: $palette-color-median;
+        // border-top-color: $color-grass;
 
-        .tab-icon i,
-        .tab-icons,
-        .tab-icon-close i {
+        .tab-icons {
             background-color: $color-grass;
-            color: $palette-color-lightens;
+
+            .item-id,
+            i {
+                color: $color-light;
+            }
         }
     }
 }
@@ -259,6 +264,17 @@ ul.accordion li.-is-saved {
 
 // tabs
 .tabs-title.is-active {
+
+    .tab-icons {
+        // background-color: $color-light;
+        background-color: $palette-color-median;
+
+        .item-id,
+        i {
+            color: $color-light;
+        }
+    }
+
     &.-is-locked {
         .tab-icon i {
             color: $color-morning !important;
@@ -273,19 +289,28 @@ ul.accordion li.-is-saved {
     }
 
     &.-is-broken {
-        border-top-color: $palette-color-accent;
+        // border-top-color: $palette-color-accent;
 
-        .tab-icon i {
-            color: $color-light;
+        .tab-icons {
+
+            .item-id,
+            i {
+                color: $color-heat;
+            }
         }
     }
 
     &.-is-editable {
-        border-top-color: $color-grass;
 
-        .tab-icon i {
-            color: $palette-color-lightens;
+        // border-top-color: $color-grass;
+        .tab-icons {
+
+            .item-id,
+            i {
+                color: $color-grass;
+            }
         }
+
     }
 }
 
@@ -389,4 +414,14 @@ ul.accordion li.-is-saved {
 
 .-is-green+.feature--filter-input {
     border-bottom-color: $color-grass;
+}
+
+.fancytree-selected {
+    color: $color-light !important;
+    background-color: $palette-color-median !important;
+
+    .material-icons {
+        color: $color-light !important;
+    }
+
 }
