@@ -1,12 +1,19 @@
 .feature--tabs {
     .tabs-title {
         // color: $palette-color-darken !important;
-        border-top: $border-thin-top solid $palette-color-median; // border-left: 1px solid $palette-color-lightens;
-        border-right: 1px solid $palette-color-median;
-        border-bottom: 1px solid $palette-color-median;
+        height: 4.31em;
+        // overflow: hidden;
+        border-top: $border-skinny solid $palette-color-median;
+
+        border-right: 1px solid $palette-color-median !important;
+        // border-bottom: 1px solid $palette-color-median;
         background-color: $palette-color-lightens;
         padding: 0 0 0 0 !important;
-        box-shadow: 11px -2px 31px -17px rgba(0, 0, 0, 0.39);
+
+        // box-shadow: 11px -2px 31px -17px rgba(0, 0, 0, 0.39);
+        &:first-child {
+            border-left: $border-skinny solid $palette-color-median;
+        }
 
         .tab-icons {
             display: block;
@@ -14,19 +21,22 @@
             height: 1.5em;
             // height: 1.5em;
             // color: $palette-color-darken !important;
-            margin: 1px 0 0 0;
-            padding: 0 1px 0 0;
+            margin: -1px 0 0 0;
+            padding: 0 3px 0;
+            // width: 101%;
         }
+
+
 
         a {
             display: inline-flex;
             align-items: center;
             width: 100%;
 
-            padding: 0 0 0 0; // padding: 1.25em .5em 4em .5em;
+            padding: 0 1em 0 1em; // padding: 1.25em .5em 4em .5em;
             // height: 3.75em;
             height: auto;
-            min-height: 5em;
+            min-height: 2.89em;
             text-transform: capitalize;
             font-size: 90%;
             font-weight: bold;
@@ -36,16 +46,29 @@
             outline: none;
         }
 
+        a:active {
+            background: none;
+        }
+
+        &.is-active {
+            a {
+                height: 3.25em;
+                background-color: white !important;
+            }
+        }
+
         .text {
+            // @include multiLineEllipsis($lineHeight: 1em, $lineCount: 1, $bgColor: transparent);
             display: block;
             float: left;
             width: auto;
-            margin: 0 0 0 0;
+            padding: 0 0 .25em 0;
             width: 100%;
-            // white-space: nowrap;
+            white-space: nowrap;
+            overflow: hidden;
             text-align: center;
-            // text-overflow: ellipsis;
-            padding: 0 .5em .5em 0;
+            text-overflow: ellipsis;
+            // padding: 0 .5em .5em .25em;
             // height: 2.5em;
             // border: 1px solid red;
             // overflow: hidden;
@@ -135,7 +158,8 @@
 
     .tabs-title>a:focus,
     .tabs-title>a[aria-selected="true"] {
-        background-color: $color-light; // border-top: $border-thick-top solid;
+        background-color: $color-light;
+        // border-top: $border-thick-top solid;
         // border-left: 1px solid;
         // border-right: 1px solid;
         // border-top: $border-thick-top solid;
@@ -145,10 +169,13 @@
     }
 
     .tabs-title.is-active {
-        // border-left: 1px solid;
-        border-right: 1px solid;
+        // border-left: 3px solid;
+        // border-right: 3px solid !important;
         // height: 3.31em !important;
-        border-top-color: $palette-color-darken;
+        // border-top: 2px solid $palette-color-median;
+        border-right: $border-thin solid $palette-color-median !important;
+        border-left: $border-thin solid $palette-color-median !important;
+        // border-top-color: $palette-color-darken;
         background-color: $color-light;
         color: $palette-color-darken;
         // height: 3.52em;
@@ -188,6 +215,12 @@
     height: 35em;
 }
 
+.tabs-content {
+    border-top: $border-thin solid $palette-color-median;
+    border-right: 1px solid $palette-color-median;
+
+}
+
 .tabs-title>a[aria-selected="true"] {
     background: none !important;
 }
@@ -217,6 +250,9 @@
         padding-left: 2em;
         padding-right: 1em;
         padding-top: 1em;
+
+        // border-left: $border-thick solid $palette-color-median;
+
     }
 }
 

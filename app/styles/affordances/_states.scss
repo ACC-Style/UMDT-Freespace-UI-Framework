@@ -264,6 +264,7 @@ ul.accordion li.-is-saved {
 
 // tabs
 .tabs-title.is-active {
+    border-right: 1px solid $palette-color-median !important;
 
     .tab-icons {
         // background-color: $color-light;
