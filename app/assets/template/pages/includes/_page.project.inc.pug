@@ -2,27 +2,80 @@
     .feature--tabs-list.medium-3.cell
         ul#example-tabs.tabs(data-tabs="",data-deep-link="true")
             li.tabs-title.-is-editable.is-active
-                .icon.-is-lock
-                    i.material-icons.md-16(aria-hidden='true') mode_edit 
-                .icon.-is-unlock
-                    i.material-icons.md-16(aria-hidden='true') mode_edit 
+                .tab-icons
+                    span.item-icon
+                        i.material-icons.md-14(aria-hidden='true') assignment_turned_in
+                    //- span.item-id 555
+                    span.status-icon
+                        //- i.material-icons.md-14(aria-hidden='true') mode_edit 
+                    span.tab-icon-close
+                        i.material-icons.md-14(aria-hidden='true') close 
                 a(href="#panel1", aria-selected="true") 
-                    | Profile
+
+                    //- span.icon
+                        i.material-icons.md-12(aria-hidden='true') view_module
+                    span.text Profile
 
             li.tabs-title
-                a(href="#panel2") CDD
+                .tab-icons
+                    span.item-icon
+                        i.material-icons.md-14(aria-hidden='true') supervisor_account
+                    //- span.item-id 555
+                    span.status-icon
+                        //- i.material-icons.md-14(aria-hidden='true') mode_edit 
+                    span.tab-icon-close
+                        i.material-icons.md-14(aria-hidden='true') close 
+                a(href="#panel1", aria-selected="true") 
+
+                    //- span.icon
+                        i.material-icons.md-12(aria-hidden='true') view_module
+                    span.text CDD
 
             li.tabs-title
-                a(href="#panel3") TDD
+                .tab-icons
+                    span.item-icon
+                        i.material-icons.md-14(aria-hidden='true') bubble_chart
+                    //- span.item-id 555
+                    span.status-icon
+                        //- i.material-icons.md-14(aria-hidden='true') mode_edit 
+                    span.tab-icon-close
+                        i.material-icons.md-14(aria-hidden='true') close 
+                a(href="#panel1", aria-selected="true") 
+
+                    //- span.icon
+                        i.material-icons.md-12(aria-hidden='true') view_module
+                    span.text TDD
 
             li.tabs-title
-                a(href="#panel4") Publish
+                .tab-icons
+                    span.item-icon
+                        i.material-icons.md-14(aria-hidden='true') build
+                    //- span.item-id 555
+                    span.status-icon
+                        //- i.material-icons.md-14(aria-hidden='true') mode_edit 
+                    span.tab-icon-close
+                        i.material-icons.md-14(aria-hidden='true') close 
+                a(href="#panel1", aria-selected="true") 
+
+                    //- span.icon
+                        i.material-icons.md-12(aria-hidden='true') view_module
+                    span.text Publish
+
 
             li.tabs-title
-                a(href="#panel5") Scratch Pad
+                .tab-icons
+                    span.item-icon
+                        i.material-icons.md-14(aria-hidden='true') cloud_upload
+                    //- span.item-id 555
+                    span.status-icon
+                        //- i.material-icons.md-14(aria-hidden='true') mode_edit 
+                    span.tab-icon-close
+                        i.material-icons.md-14(aria-hidden='true') close 
+                a(href="#panel1", aria-selected="true") 
 
-            li.tabs-title
-                a(href="#panel6") Users
+                    //- span.icon
+                        i.material-icons.md-12(aria-hidden='true') view_module
+                    span.text Users
 
 
 
@@ -31,7 +84,7 @@
                 .content--tab
                     .grid-x
                         .cell.feature--edit-mode
-                            .switch-input-spacedata-micro-interaction-type
+                            //- .switch-input-spacedata-micro-interaction-type
                                 .switch.tiny
                                     label.switch-value(for='swtich-edit-mode')
                                         //- | Edit Mode:

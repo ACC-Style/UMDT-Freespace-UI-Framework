@@ -1,4 +1,14 @@
 .feature--tabs {
+    .tabs-title.is-active {
+        .text {
+
+            &:hover {
+                // border-bottom: 1px solid #F0F3F8;
+                white-space: normal;
+            }
+        }
+    }
+
     .tabs-title {
         // color: $palette-color-darken !important;
         height: 4.31em;
@@ -72,7 +82,10 @@
             // height: 2.5em;
             // border: 1px solid red;
             // overflow: hidden;
+
+
         }
+
 
         .item-icon {
             display: block;
@@ -212,12 +225,12 @@
 .content--tab {
     // border-top: $border-thin-top solid;
     // background-color: red;
-    height: 35em;
+    // height: 35em;
+    height: 35.25em;
 }
 
 .tabs-content {
-    border-top: $border-thin solid $palette-color-median;
-    border-right: 1px solid $palette-color-median;
+    border: $border-thin solid $palette-color-median;
 
 }
 
