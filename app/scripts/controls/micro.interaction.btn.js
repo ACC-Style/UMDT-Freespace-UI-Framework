@@ -74,6 +74,7 @@ function columnCollpaser(event) {
         targetColumn.find(".panel--center-column-features").show();
         targetColumn.find(".column--list-concepts-data").show();
         targetColumn.find(".column--list-elements-data").show();
+        targetColumn.find(".column--list-properties-data").show();
         targetColumn.find(".column--list-elements-counter").show();
         targetColumn.find(".column--list-concepts-counter").show();
         //     // change icon
@@ -95,6 +96,7 @@ function columnCollpaser(event) {
         //     // hide some section in colmun
         targetColumn.find(".panel--center-column-features").hide();
         targetColumn.find(".column--list-concepts-data").hide();
+        targetColumn.find(".column--list-properties-data").hide();
         targetColumn.find(".column--list-elements-data").hide();
         targetColumn.find(".column--list-elements-counter").hide();
         targetColumn.find(".column--list-concepts-counter").hide();

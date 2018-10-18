@@ -1,0 +1,16 @@
+h7.title-properties Table
+form(data-abide='7v3wyo-abide', novalidate='')
+
+    .cell
+        .form--input-text.-is-required
+            label
+                | Input
+            input(type='text', placeholder='1234', aria-describedby='exampleHelpText', required='', pattern='number')
+            span.form-error
+                | Yo, you had better fill this out, it's required.
+
+    .cell
+        .form--input-text
+            label
+                | Input 2
+            input(type='text', placeholder="Use me, or don't", aria-describedby='exampleHelpTex', data-abide-ignore='')

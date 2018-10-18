@@ -1,12 +1,12 @@
 ::-webkit-scrollbar-thumb {
-    // background: $color-neutral-light; 
+    // background: $color-neutral-light;
     background: $palette-color-median;
 }
 
 ::-webkit-scrollbar-track {
-    background: $color-light;
+    background: $palette-color-base;
 }
 
 ::-webkit-scrollbar {
-    width: 3px;
+    width: $border-slim;
 }

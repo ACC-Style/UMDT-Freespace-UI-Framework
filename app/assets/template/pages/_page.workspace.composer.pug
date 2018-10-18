@@ -80,39 +80,39 @@ include /template/variables/_mixins
                                                 i.material-icons.md-12 remove_red_eye
                                         span.total
                                                 | 1/2         
-            .column--list.column--list-elements.cell.medium-2
+            .column--list.column--list-properties.cell.medium-2
                 .grid-x
                     //- .panel--center-column-type.small-1.medium-1.large-1.cell
                             i.material-icons.md-18 change_history
                     .panel--center-column-title.small-8.medium-8.large-8.cell
-                            h6.panel--center-column-title-text.h7 Data Elements
+                            h6.panel--center-column-title-text.h7 Properties
+                                span.text-item Item-Name
                     .panel--center-column-options.small-1.medium-2.large-1.cell
-                            button.option-button.button.has-tip(data-tooltip='', aria-haspopup='true', data-disable-hover='false', tabindex='1', title='New ', data-micro-interaction='clone') 
-                                i.material-icons.md-14 add_box
+                        //-     button.option-button.button.has-tip(data-tooltip='', aria-haspopup='true', data-disable-hover='false', tabindex='1', title='New ', data-micro-interaction='clone') 
+                        //-         i.material-icons.md-14 add_box
                     .panel--center-column-options.small-1.medium-2.large-1.cell
-                            button.option-button.button.has-tip(data-tooltip='', aria-haspopup='true', data-disable-hover='false', tabindex='1', title='Clone', data-micro-interaction='copy') 
-                                i.material-icons.md-14 content_copy
+                        //-     button.option-button.button.has-tip(data-tooltip='', aria-haspopup='true', data-disable-hover='false', tabindex='1', title='Clone', data-micro-interaction='copy') 
+                        //-         i.material-icons.md-14 content_copy
                     .panel--center-column-options.small-1.medium-2.large-1.cell
-                            button.option-button.button.has-tip(data-tooltip='', aria-haspopup='true', data-disable-hover='false', tabindex='1', title='Expand All', , data-micro-interaction='expand') 
-                                i.material-icons.md-14 zoom_out_map
+                        //-     button.option-button.button.has-tip(data-tooltip='', aria-haspopup='true', data-disable-hover='false', tabindex='1', title='Expand All', , data-micro-interaction='expand') 
+                        //-         i.material-icons.md-14 zoom_out_map
                     .panel--center-column-options.small-1.medium-2.large-1.cell
                             button.option-button.button.has-tip(data-tooltip='', aria-haspopup='true', data-disable-hover='false', tabindex='1', title='collapse column', data-micro-interaction='collapse') 
                                 i.material-icons.md-14 skip_previous
-                    .panel--center-column-features.cell
+                //-     .panel--center-column-features.cell
                         i.icon.material-icons.md-14 filter_list
                         i.icon-clear.material-icons.md-14 close
                         input.feature--filter-input(type='text', placeholder='quick a filter')
-                .column--list-elements-data.cell.medium-cell-block-y
-                    //- h2 2
-                    include /template/components/_data.list.tree.pug
+                .column--list-properties-data.cell.medium-cell-block-y
+                    include /template/components/_properties.panel.pug
                 .column--list-elements-counter.cell
                         .grid-x
-                                .counter-selected.small-6.medium-6.large-6.cell
+                                //- .counter-selected.small-6.medium-6.large-6.cell
                                         span.icon
                                                 i.material-icons.md-12 check
                                         span.total-selected
                                                 | 1   
-                                .counter-viewing.small-6.medium-6.large-6.cell
+                                //- .counter-viewing.small-6.medium-6.large-6.cell
                                         span.icon
                                                 i.material-icons.md-12 remove_red_eye
                                         span.total

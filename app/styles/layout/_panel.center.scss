@@ -4,8 +4,8 @@
         // border-top: $border-thick-top solid $palette-color-lightens;
         // border-top: none;
         // border-left: 1px solid $palette-color-lightens;
-        // border-right: 1px solid $palette-color-lightens; 
-        // border-bottom: $border-thick-top solid $palette-color-lightens; 
+        // border-right: 1px solid $palette-color-lightens;
+        // border-bottom: $border-thick-top solid $palette-color-lightens;
         // background-color: #ececec;
         .grid-x {
             // height: 50em;
@@ -21,7 +21,7 @@
     }
 
     &-column-project {
-        // border: none; 
+        // border: none;
         border: 1px solid $palette-color-lightens;
     }
 
@@ -65,8 +65,8 @@
 
         &-type {
             i {
-                padding-left: .75em;
-                padding-top: .5em;
+                padding-left: 0.75em;
+                padding-top: 0.5em;
             }
 
             // border-bottom: 1px solid #ececec;
@@ -76,7 +76,16 @@
         &-title {
             text-transform: uppercase;
             padding-left: 1.5em;
-            padding-top: .5em;
+            padding-top: 0.5em;
+
+            .text-item {
+                font-weight: bold;
+
+                &::before {
+                    padding-right: 0.25em;
+                    content: ":";
+                }
+            }
         }
 
         &-features {
@@ -94,7 +103,7 @@
                 color: $color-neutral-light;
                 font-size: 14px;
                 float: right;
-                margin-right: .5em;
+                margin-right: 0.5em;
                 margin-top: 6px;
                 cursor: pointer;
             }
@@ -108,19 +117,19 @@
 
     &-column-footer {
         border-top: 1px solid #ececec;
-        font-size: .75em;
+        font-size: 0.75em;
         color: $color-neutral-light;
 
         .feature--visible_count {
             .material-icons {
                 position: absolute;
-                margin-top: .055em;
+                margin-top: 0.055em;
                 margin-left: -2em;
             }
         }
 
         p {
-            margin: .25em 1em .25em 0;
+            margin: 0.25em 1em 0.25em 0;
         }
     }
 }
@@ -161,7 +170,7 @@
             text-align: right;
 
             .icon {
-                padding: 1em .25em 0 .5em;
+                padding: 1em 0.25em 0 0.5em;
             }
 
             .total {
@@ -195,7 +204,7 @@
             text-align: right;
 
             .icon {
-                padding: 1em .25em 0 .5em;
+                padding: 1em 0.25em 0 0.5em;
             }
 
             .total {
@@ -213,12 +222,74 @@
         }
     }
 
+    &-properties {
+        border: 0.5em solid $palette-color-lightens;
+        border-left: 1px solid $palette-color-lightens;
+        border-right: none;
+        // background-color: $palette-color-median;
+        background-color: $palette-color-lightens;
+
+        &-data {
+            height: 33.5em;
+            padding: 0 1em 0 1.5em;
+        }
+
+        .title-properties {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 1em;
+        }
+
+        &-counter {
+            color: $color-morning;
+            padding-right: 1em;
+            text-align: right;
+
+            .icon {
+                padding: 1em 0.25em 0 0.5em;
+            }
+
+            .total {
+                font-size: 75%;
+            }
+
+            .total-selected {
+                font-size: 75%;
+            }
+
+            .counter-selected {
+                padding-left: 1em;
+                text-align: left;
+            }
+        }
+
+        .form--input-text {
+
+            [type='text'],
+            [type='password'],
+            [type='date'],
+            [type='datetime'],
+            [type='datetime-local'],
+            [type='month'],
+            [type='week'],
+            [type='email'],
+            [type='number'],
+            [type='search'],
+            [type='tel'],
+            [type='time'],
+            [type='url'],
+            [type='color'],
+            textarea {
+                background: transparent;
+            }
+
+        }
+    }
+
     &-workspace {
         // border: $border-slim-top solid $palette-color-median;
         // border-right: $border-slim-top solid $palette-color-median !important;
-
-        border-top: none;
-        // border-bottom: 0.5em solid $palette-color-median;
+        border-top: none; // border-bottom: 0.5em solid $palette-color-median;
 
         .tabs-content {
             padding: 0 0 0 0;
@@ -238,7 +309,6 @@
         .tabs-panel {
             // border-left: $border-thin solid $palette-color-median;
             // border-right: $border-thin solid $palette-color-median;
-
         }
     }
 }

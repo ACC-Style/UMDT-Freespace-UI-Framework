@@ -1,0 +1,50 @@
+.card--element {
+    &-node {
+        font-size: 80%;
+        cursor: pointer;
+        border: none;
+        margin: .25em 1em 1em 1em;
+        // background-color: $color-heat;
+        // width: 100%;
+
+        .card-divider {
+            padding: .25em .25em .25em 1em;
+            border: $border-thin solid $palette-color-lightens;
+            border-radius: .5em;
+            background: transparent;
+
+            span.icon {
+                // display: inline-block;
+                margin-top: 2px;
+            }
+
+            span.text {
+                // display: inline-block;
+                margin-top: -12px;
+            }
+        }
+
+        .card-section {
+            padding: .25em 1em .25em 1em;
+            border: $border-thin solid $palette-color-lightens;
+            border-top: none !important;
+            margin-left: 1em;
+            width: 95%;
+            background: $palette-color-lightens;
+            border-radius: 0 0 .5em .5em;
+
+
+        }
+
+        .card-options {
+            text-align: center;
+            padding-top: .25em;
+            border-left: $border-skinny solid $palette-color-lightens;
+
+        }
+    }
+
+    &-operator {
+        display: block;
+    }
+}

@@ -229,14 +229,42 @@
                             button.button.alert(data-micro-interaction="toggle")
                                 | Cancel
             #panelD.tabs-panel
-                .content--tab 
-                    .grid-x.grid-padding-x
-                        .cell.medium-auto.medium-cell-block-container                    
-                           h4 4
-                    .grid-x.grid-padding-x
-                        .panel--center-bottom-blank.medium-7.large-10.cell  
-                        .panel--center-bottom-controls.small-12.medium-4.large-2.cell
-                                button.button.success.float-right
-                                    | save
-                                button.button.alert.float-right
-                                    | cancel
+                .grid-y.content--tab 
+                    .cell.small-1.workspace--options.feature--edit-mode
+                        p.h7.blurb.small Instructions: Lorem ipsum dolor sit amet, consectetur 
+                        //- button
+                        //-     .icon
+                        //-         i.material-icons.md-18 open_with
+                    .cell.small-10.medium-cell-block-y.workspace--form.flush
+                        include /template/components/_card.element.pug
+
+                        table
+                            thead
+                            tr
+                                th(width='200') Table Header
+                                th Table Header
+                                th(width='150') Table Header
+                                th(width='150') Table Header
+                            tbody
+                            tr
+                                td Content Goes Here
+                                td This is longer content Donec id elit non mi porta gravida at eget metus.
+                                td Content Goes Here
+                                td Content Goes Here
+                            tr
+                                td Content Goes Here
+                                td This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.
+                                td Content Goes Here
+                                td Content Goes Here
+                            tr
+                                td Content Goes Here
+                                td This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.
+                                td Content Goes Here
+                                td Content Goes Here
+
+                    .cell.small-1.workspace--controls
+                        .panel--center-bottom-controls.float-right
+                            button.button.success(data-micro-interaction="toggle")
+                                | Save
+                            button.button.alert(data-micro-interaction="toggle")
+                                | Cancel

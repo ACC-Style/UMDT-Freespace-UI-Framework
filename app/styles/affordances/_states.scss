@@ -47,6 +47,7 @@
 }
 
 .column--list-concepts.cell.medium-2.-is-collapsed-column,
+.column--list-properties.cell.medium-2.-is-collapsed-column,
 .column--list-elements.cell.medium-2.-is-collapsed-column {
     width: 2em !important;
 
@@ -425,4 +426,17 @@ ul.accordion li.-is-saved {
         color: $color-light !important;
     }
 
+}
+
+.card--element-node.-is-selected {
+
+    .card-section,
+    .card-divider {
+        border: $border-thin solid $palette-color-median;
+    }
+
+    .card-section {
+        background: $palette-color-median;
+        color: $palette-color-base;
+    }
 }
