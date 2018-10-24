@@ -1,34 +1,143 @@
 #card-id-1.card--element-node.card(data-micro-interaction="card")
     .card-divider
         .grid-x
-            .car-title.cell.small-11
-                span.icon
+            .car-title.cell.small-10
+                .icon
                     i.material-icons.md-18 change_history
-                span.text
+                .text
                     | Element Name Here
-            .card-options.small-1
-                button(data-micro-interaction="button")
-                    .icon
-                        i.material-icons.md-18 zoom_out_map
-                button(data-micro-interaction="card")
-                    .icon
-                        i.material-icons.md-18 zoom_out_map
+            .card-options.small-2
+                button.button-option-setting.-is-expanded(data-micro-interaction="button")
+                    span.icon
+                        i.material-icons.md-18 settings
+                button.button-option-drag(data-micro-interaction="card")
+                    span.icon
+                        i.material-icons.md-18 drag_handle
     .card-section
-        //- h4 This is a card.
-        p It has an easy to override visual style, and is appropriately subdued.
 
-#card-id-2.card--element-node.-is-selected.card(data-micro-interaction="card")
+        .grid-x
+            .medium-2.cell
+                .form--input-text
+                    .switch.tiny
+                            label.switch-value(for='switchA-1')
+                                | Show
+                            input#switchA-1.switch-input(type='checkbox', name='switchA-1')
+                            label.switch-paddle(for='switchA-1')
+                                span.show-for-sr Edit Mode
+                                span.switch-active(aria-hidden='true')
+                                    i.material-icons.md-14(aria-hidden='true') visibility
+                                span.switch-inactive(aria-hidden='true')
+                                    i.material-icons.md-14(aria-hidden='true') visibility_off
+            .medium-2.cell
+                .form--input-text
+                    .switch.tiny
+                            label.switch-value(for='switchA-2')
+                                | Show
+                            input#switchA-2.switch-input(type='checkbox', name='switchA-2')
+                            label.switch-paddle(for='switchA-2')
+                                span.show-for-sr Edit Mode
+                                span.switch-active(aria-hidden='true')
+                                    i.material-icons.md-14(aria-hidden='true') visibility
+                                span.switch-inactive(aria-hidden='true')
+                                    i.material-icons.md-14(aria-hidden='true') visibility_off
+
+            .medium-3.cell
+                .form--input-select
+                    label
+                        | Options
+                    select(required='')
+                        option(value='volvo') One
+                        option(value='saab') Two
+                        option(value='mercedes') Three
+            .medium-3.cell
+                .form--input-select
+                    label
+                        | Options
+                    select(required='')
+                        option(value='volvo') One
+                        option(value='saab') Two
+                        option(value='mercedes') Three
+
+#card-id-2.card--element-node.-is-selected.-is-indented-1.card(data-micro-interaction="card")
     .card-divider
-        | Card Header
-    //-img(src='https://via.placeholder.com/350x150')
+        .grid-x
+            .car-title.cell.small-10
+                .icon
+                    i.material-icons.md-18 change_history
+                .text
+                    | Element Name Here
+            .card-options.small-2
+                button.button-option-setting(data-micro-interaction="button")
+                    span.icon
+                        i.material-icons.md-18 settings
+                button.button-option-drag(data-micro-interaction="card")
+                    span.icon
+                        i.material-icons.md-18 drag_handle
     .card-section
         //- h4 This is a card.
         p It has an easy to override visual style, and is appropriately subdued.
 
 #card-id-3.card--element-operator.-is-selected.card(data-micro-interaction="card")
     .card-divider
-        | Card Header
-    //-img(src='https://via.placeholder.com/350x150')
-    .card-section
+        .grid-x
+            .car-title.cell.small-10
+                .icon
+                    i.material-icons.md-18 mode_edit
+                .text
+                    | Operator
+            .card-options.small-2
+                button.button-option-setting(data-micro-interaction="button")
+                    span.icon
+                        i.material-icons.md-18 settings
+                button.button-option-drag(data-micro-interaction="card")
+                    span.icon
+                        i.material-icons.md-18 drag_handle
+    .card-section.-is-collapsed
         //- h4 This is a card.
         p It has an easy to override visual style, and is appropriately subdued.
+
+#card-id-5.card--element-node.card(data-micro-interaction="card")
+    .card-divider
+        .grid-x
+            .car-title.cell.small-10
+                .icon
+                    i.material-icons.md-18 change_history
+                .text
+                    | Element Name Here
+            .card-options.small-2
+                button.button-option-setting.-is-expanded(data-micro-interaction="button")
+                    span.icon
+                        i.material-icons.md-18 settings
+                button.button-option-drag(data-micro-interaction="card")
+                    span.icon
+                        i.material-icons.md-18 drag_handle
+    .card-section
+        //- h4 This is a card.
+        //- p It has an easy to o   verride visual style, and is appropriately subdued.
+        .switch.tiny
+            input#tinySwitch.switch-input(type='checkbox', name='exampleSwitch')
+            label.switch-paddle(for='tinySwitch')
+                span.show-for-sr Tiny Sandwiches Enabled
+
+#card-id-4.card--element-node.-is-indented-2.card(data-micro-interaction="card")
+    .card-divider
+        .grid-x
+            .car-title.cell.small-10
+                .icon
+                    i.material-icons.md-18 change_history
+                .text
+                    | Element Name Here
+            .card-options.small-2
+                button.button-option-setting.-is-expanded(data-micro-interaction="button")
+                    span.icon
+                        i.material-icons.md-18 settings
+                button.button-option-drag(data-micro-interaction="card")
+                    span.icon
+                        i.material-icons.md-18 drag_handle
+    .card-section
+        //- h4 This is a card.
+        //- p It has an easy to o   verride visual style, and is appropriately subdued.
+        .switch.tiny
+            input#tinySwitch.switch-input(type='checkbox', name='exampleSwitch')
+            label.switch-paddle(for='tinySwitch')
+                span.show-for-sr Tiny Sandwiches Enabled

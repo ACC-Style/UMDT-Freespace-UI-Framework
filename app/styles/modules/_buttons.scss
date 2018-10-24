@@ -1,6 +1,7 @@
     .button,
         {
         border: 1px solid;
+
         &:hover {
             background: $palette-color-darken;
             color: $color-light;
@@ -19,6 +20,7 @@
     .button.primary,
         {
         border: 1px solid;
+
         &:hover {
             background: $palette-color-median;
             color: $color-light;
@@ -30,6 +32,7 @@
         background: transparent; // color: $color-light;
         border: 1px solid $color-heat;
         color: $color-heat;
+
         &:hover {
             background: $color-heat;
             color: $color-light;
@@ -41,6 +44,7 @@
         background: transparent; // color: $color-light;
         border: 1px solid $palette-color-accent;
         color: $palette-color-accent;
+
         &:hover {
             // background: transparent;
             color: $color-light;
@@ -52,6 +56,7 @@
         background: transparent; // color: $color-light;
         color: $color-grass;
         border: 1px solid $color-grass;
+
         &:hover {
             // background: transparent;
             color: $color-light;
@@ -60,17 +65,20 @@
 
     .menu--nav {
         text-align: right;
+
         &-link {
             background-color: $palette-color-base;
             padding: .5em .25em .25em .25em;
             color: $palette-color-median;
             display: inline-block;
             margin: 0 1em 0 0;
+
             .icon {
                 float: left;
                 margin-right: .25em;
                 margin-top: -.1em;
             }
+
             .text {
                 display: none;
                 float: left;
@@ -80,11 +88,13 @@
                 font-size: .85em;
             }
         }
+
         &-link:hover {
             background: $palette-color-darken;
             color: $palette-color-lightens;
             border: none;
             text-decoration: none;
+
             .text {
                 // position: absolute;
                 padding-right: 1em;
@@ -92,12 +102,14 @@
                 display: block;
                 text-decoration: none;
             }
+
             i {
                 color: $palette-color-lightens !important;
                 text-decoration: none !important;
                 ;
             }
         }
+
         &-link.button {
             // background-color: transparent;
             border-radius: .15em;
@@ -110,7 +122,9 @@
             padding: .75em;
             margin-bottom: .15em
         }
-    } // TODO: add mixin for button class
+    }
+
+    // TODO: add mixin for button class
     .panel--left,
     .panel--right {
         button {
@@ -121,8 +135,10 @@
             margin: 0 0 .025em 0;
             padding: 1em;
         }
+
         .dropdown {
             .dropdown--item {
+
                 // width: 3.35em;
                 // height: 3.35em;
                 &.is-active {
@@ -130,38 +146,46 @@
                         display: block;
                         margin: 0 1.15em 0 .15em;
                     }
+
                     a.panel--side-button {
                         width: auto !important;
                         background-color: $palette-color-darken;
                         color: $color-light;
                     }
                 }
+
                 .panel--side-button {
                     .icon {
                         // color: $palette-color-darken;
                     }
                 }
             }
+
             .dropdown--item-sub {
                 i {
                     float: right;
                 }
+
                 a {
                     padding: 1.35em 1.5em 1.35em 1.5em;
                 }
             }
         }
+
         .dropdown.menu.vertical>li.opens-right>a.panel--side-button::after {
             // display: none; 
             position: inherit;
             margin: -.5em 0 0 0 !important;
             border-color: transparent transparent transparent $palette-color-darken; // margin: -4px 0 0 0 !important;
         }
+
         .dropdown.menu.vertical>li>a.panel--side-button {
             padding-right: 0px;
             height: 3.35em;
             width: 3.75em;
+
             &:hover {
+
                 // padding-right: 1.5em;
                 ::after {
                     display: block; // position: absolute;
@@ -170,13 +194,16 @@
                 }
             }
         }
+
         .menu.nested {
             width: 4em;
             background: $palette-color-median; // border: none;
+
             li {
                 &:hover {
                     background: $palette-color-darken;
                 }
+
                 a {
                     color: $palette-color-lightens;
                     font-size: 80%;
@@ -195,12 +222,15 @@
         padding: 0 0 0 0 !important;
         background: none;
         margin: 0 0 0 0;
+
         &:hover {
             background: none;
+
             i {
                 color: $palette-color-darken;
             }
         }
+
         i {
             color: $palette-color-median; // margin-top: .35em
         }
@@ -213,14 +243,17 @@
         color: $palette-color-base;
         background-color: $palette-color-median;
         border-color: $palette-color-lightens;
+
         &:hover {
             background-color: $palette-color-darken;
             box-shadow: 0 9px 28px rgba(0, 0, 0, 0.5);
         }
+
         &:hover .text,
         &:hover .icon {
             text-decoration: none;
             color: $color-white;
+
             i {
                 color: $color-white;
                 text-decoration: none;
@@ -234,6 +267,7 @@
             margin-right: .25em;
             margin-top: -.1em;
         }
+
         .text {
             display: none;
             float: left;
@@ -241,6 +275,7 @@
             font-weight: bold;
             font-size: .85em;
         }
+
         .counter {
             position: absolute;
             display: block;
@@ -253,20 +288,25 @@
             font-weight: bold;
             font-size: 12px;
         }
+
         &:hover {
             // position: absolute;
             z-index: 99999;
+
             .text {
                 display: block;
             }
+
             .icon {
                 margin-right: .25em;
             }
+
             .counter {
                 background: transparent;
                 color: $color-heat;
             }
         }
+
         .fa {
             width: 1.34em;
             height: 1.25em;
@@ -284,6 +324,7 @@
             .text {
                 margin-right: .5em;
             }
+
             .counter {
                 margin-left: -12px;
                 margin-top: -14px;
@@ -296,10 +337,12 @@
             .icon {
                 float: left;
             }
+
             .counter {
                 margin-top: -14px;
                 margin-left: 22px;
             }
+
             &:hover {
                 .text {
                     margin-left: .5em;
@@ -323,6 +366,7 @@
             padding: 0 0 0 0;
             margin-right: .25em;
             border: none; // color: $palette-color-lightens;
+
             &:hover {
                 color: $palette-color-darken;
                 background-color: $palette-color-lightens;
@@ -342,7 +386,9 @@
         // align-items: center;
         height: 9em;
         margin: 2em; // padding: 1.5em 2em 2em 2em;
+
         &:hover {
+
             i,
             .txt {
                 color: $palette-color-base;
@@ -354,5 +400,17 @@
     .button-view-comments {
         i {
             float: right;
+        }
+    }
+
+    .card-options {
+        button.button-option {
+            &-setting .icon i {
+                color: $color-neutral-light;
+            }
+
+            &-drag .icon i {
+                color: $color-neutral-light;
+            }
         }
     }

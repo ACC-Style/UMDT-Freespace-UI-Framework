@@ -62,9 +62,12 @@
 .switch .switch-active i,
 .switch .switch-inactive i {
     color: $color-light;
+    padding-top: 0px;
 }
 
 .switch .switch-active,
 .switch .switch-inactive {
     color: $color-light;
+    padding-top: 0px;
+
 }
