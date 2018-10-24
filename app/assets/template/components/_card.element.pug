@@ -218,18 +218,77 @@
                                 span.switch-inactive(aria-hidden='true')
                                     i.material-icons.md-14(aria-hidden='true') visibility_off
 
-
-.card-divider
+#composer-a.composer--grid
     .grid-x
-        .car-title.cell.small-10
-            .icon
-                i.material-icons.md-18 mode_edit
-            .text
-                | Operator
-        .card-options.small-2
-            button.button-option-setting(data-micro-interaction="option")
-                span.icon
-                    i.material-icons.md-18 settings
-            button.button-option-drag(data-micro-interaction="card")
-                span.icon
-                    i.material-icons.md-18 drag_handle
+        .composer--grid-cell.cell.small-4
+            | 1
+        .composer--grid-cell.cell.small-4.-is-hovered
+            | 2
+        .composer--grid-cell.cell.small-4
+            | 3
+
+#composer-a.composer--grid.-is-selected
+    .grid-x
+        .composer--grid-cell.cell.small-4
+            | 1
+        .composer--grid-cell.cell.small-4.-is-selected
+            #card-id-7.card--element-node.card(data-micro-interaction="card")
+                .card-divider
+                    .grid-x
+                        .car-title.cell.small-10
+                            .icon
+                                i.material-icons.md-18 change_history
+                            .text
+                                | Element Name Here
+                        .card-options.small-2
+                            button.button-option-setting.-is-expanded(data-micro-interaction="option")
+                                span.icon
+                                    i.material-icons.md-18 settings
+                            button.button-option-drag(data-micro-interaction="card")
+                                span.icon
+                                    i.material-icons.md-18 drag_handle
+                .card-section
+                    .grid-x
+                        .medium-3.cell
+                            .form--input-text
+                                .switch.tiny
+                                        label.switch-value(for='switchC-1')
+                                            | Show
+                                        input#switchC-1.switch-input(type='checkbox', name='switchC-1')
+                                        label.switch-paddle(for='switchC-1')
+                                            span.show-for-sr Edit Mode
+                                            span.switch-active(aria-hidden='true')
+                                                i.material-icons.md-14(aria-hidden='true') visibility
+                                            span.switch-inactive(aria-hidden='true')
+                                                i.material-icons.md-14(aria-hidden='true') visibility_off
+            #card-id-8.card--element-node.-is-indented-1.card(data-micro-interaction="card")
+                .card-divider
+                    .grid-x
+                        .car-title.cell.small-10
+                            .icon
+                                i.material-icons.md-18 change_history
+                            .text
+                                | Element Name Here
+                        .card-options.small-2
+                            button.button-option-setting.-is-expanded(data-micro-interaction="option")
+                                span.icon
+                                    i.material-icons.md-18 settings
+                            button.button-option-drag(data-micro-interaction="card")
+                                span.icon
+                                    i.material-icons.md-18 drag_handle
+                .card-section
+                    .grid-x
+                        .medium-3.cell
+                            .form--input-text
+                                .switch.tiny
+                                        label.switch-value(for='switchC-1')
+                                            | Show
+                                        input#switchC-1.switch-input(type='checkbox', name='switchC-1')
+                                        label.switch-paddle(for='switchC-1')
+                                            span.show-for-sr Edit Mode
+                                            span.switch-active(aria-hidden='true')
+                                                i.material-icons.md-14(aria-hidden='true') visibility
+                                            span.switch-inactive(aria-hidden='true')
+                                                i.material-icons.md-14(aria-hidden='true') visibility_off
+        .composer--grid-cell.cell.small-4
+            | 3

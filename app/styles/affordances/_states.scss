@@ -491,3 +491,27 @@ ul.accordion li.-is-saved {
     }
 
 }
+
+.composer--grid.-is-selected {
+    border-color: $color-grass;
+
+    .composer--grid-cell {
+        // border-right-color: $color-grass;
+
+    }
+}
+
+.composer--grid {
+
+    .composer--grid-cell.-is-selected {
+        background-color: $color-light;
+        border: solid $color-grass;
+        // background-color: $palette-color-median;
+
+    }
+
+    .composer--grid-cell.-is-hovered {
+        border: solid $palette-color-median;
+
+    }
+}

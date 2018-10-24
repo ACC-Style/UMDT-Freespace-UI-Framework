@@ -5,13 +5,15 @@
         cursor: pointer;
         border: none;
         margin: .25em 1em 1em 1em; // background-color: $color-heat;
+        background: transparent;
 
         // width: 100%;
         .card-divider {
             padding: .25em .25em .25em 1em;
             border: $border-thin solid $palette-color-lightens;
             border-radius: .5em;
-            background: transparent;
+            background: $color-light;
+
 
             .icon {
                 display: flex;

@@ -1,0 +1,21 @@
+.composer--grid {
+    padding: 1em;
+    display: block;
+    clear: both;
+    margin: 0 .25em 0 .25em;
+    // border: $border-thin solid $color-light;
+
+    .composer--grid-cell {
+        // background: $palette-color-base;
+        background-color: $palette-color-base;
+        padding: 1em;
+        text-align: center;
+        border-right: $border-thin solid $color-light;
+        // border-right: $border-thin solid $palette-color-median;
+    }
+
+    .composer--grid-cell:last-child {
+        border-right: none;
+
+    }
+}
