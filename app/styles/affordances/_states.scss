@@ -452,9 +452,14 @@ ul.accordion li.-is-saved {
     .card-section {
         background: $palette-color-median;
         color: $palette-color-base;
+
+        .form--input-select,
+        .form--input-text {
+            label {
+                color: $palette-color-lightens;
+            }
+        }
     }
-
-
 }
 
 .card--element-node {
