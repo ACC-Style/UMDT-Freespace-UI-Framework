@@ -1,6 +1,6 @@
 .feature--tabs.grid.collapse
     .feature--tabs-list.medium-3.cell
-        ul#example-tabs.tabs(data-tabs="",data-deep-link="true")
+        ul#example-tabsA.tabs(data-tabs="",data-deep-link="true")
             li.tabs-title.-is-editable.is-active
                 .tab-icons
                     span.item-icon
@@ -10,12 +10,25 @@
                         //- i.material-icons.md-14(aria-hidden='true') mode_edit 
                     span.tab-icon-close
                         i.material-icons.md-14(aria-hidden='true') close 
-                a(href="#panel1", aria-selected="true") 
+                a(href="#panelA-1", aria-selected="true") 
 
                     //- span.icon
                         i.material-icons.md-12(aria-hidden='true') view_module
                     span.text Profile
+            li.tabs-title
+                .tab-icons
+                    span.item-icon
+                        i.material-icons.md-14(aria-hidden='true') cloud_upload
+                    //- span.item-id 555
+                    span.status-icon
+                        //- i.material-icons.md-14(aria-hidden='true') mode_edit 
+                    span.tab-icon-close
+                        i.material-icons.md-14(aria-hidden='true') close 
+                a(href="#panelA-2", aria-selected="true") 
 
+                    //- span.icon
+                        i.material-icons.md-12(aria-hidden='true') view_module
+                    span.text Users
             li.tabs-title
                 .tab-icons
                     span.item-icon
@@ -25,7 +38,7 @@
                         //- i.material-icons.md-14(aria-hidden='true') mode_edit 
                     span.tab-icon-close
                         i.material-icons.md-14(aria-hidden='true') close 
-                a(href="#panel1", aria-selected="true") 
+                a(href="#panelA-3", aria-selected="true") 
 
                     //- span.icon
                         i.material-icons.md-12(aria-hidden='true') view_module
@@ -40,7 +53,7 @@
                         //- i.material-icons.md-14(aria-hidden='true') mode_edit 
                     span.tab-icon-close
                         i.material-icons.md-14(aria-hidden='true') close 
-                a(href="#panel1", aria-selected="true") 
+                a(href="#panelA-4", aria-selected="true") 
 
                     //- span.icon
                         i.material-icons.md-12(aria-hidden='true') view_module
@@ -55,51 +68,28 @@
                         //- i.material-icons.md-14(aria-hidden='true') mode_edit 
                     span.tab-icon-close
                         i.material-icons.md-14(aria-hidden='true') close 
-                a(href="#panel1", aria-selected="true") 
+                a(href="#panelA-5", aria-selected="true") 
 
                     //- span.icon
                         i.material-icons.md-12(aria-hidden='true') view_module
                     span.text Publish
 
 
-            li.tabs-title
-                .tab-icons
-                    span.item-icon
-                        i.material-icons.md-14(aria-hidden='true') cloud_upload
-                    //- span.item-id 555
-                    span.status-icon
-                        //- i.material-icons.md-14(aria-hidden='true') mode_edit 
-                    span.tab-icon-close
-                        i.material-icons.md-14(aria-hidden='true') close 
-                a(href="#panel1", aria-selected="true") 
-
-                    //- span.icon
-                        i.material-icons.md-12(aria-hidden='true') view_module
-                    span.text Users
 
 
+        .tabs-content(data-tabs-content="example-tabsA").-is-editable
+        
+            #panelA-1.tabs-panel.is-active
+                .grid-y.content--tab 
+                    .cell.small-1.workspace--options
+                        p.h7.blurb.small Instructions: Project: Lorem ipsum dolor sit amet, consectetur 
+                        button
+                            .icon
+                                i.material-icons.md-18 settings
 
-        .tabs-content(data-tabs-content="example-tabs").-is-editable
-            #panel1.tabs-panel.is-active
-                .content--tab
-                    .grid-x
-                        .cell.feature--edit-mode
-                            //- .switch-input-spacedata-micro-interaction-type
-                                .switch.tiny
-                                    label.switch-value(for='swtich-edit-mode')
-                                        //- | Edit Mode:
-                                    input#swtich-edit-mode.switch-input(type='checkbox', name='exampleSwitch')
-                                    label.switch-paddle(for='swtich-edit-mode', data-micro-interaction-type="edit-mode",data-micro-interaction-subject=".dashboard---panel-project")
-                                        span.show-for-sr Edit Mode
-                                        span.switch-active(aria-hidden='true')
-                                            i.material-icons.md-16(aria-hidden='true') mode_edit
-                                        span.switch-inactive(aria-hidden='true')
-                                            i.material-icons.md-16(aria-hidden='true') lock 
-                        .cell
-
+                    .cell.small-10.medium-cell-block-y.workspace--form
                             form(data-abide='7v3wyo-abide', novalidate='')
                                 .grid-x.grid-padding-x
-
                                     .cell.small-6
                                         .grid-y
                                             .cell
@@ -198,162 +188,223 @@
                                                 li.list--user-item
                                                     a.button.button--label(data-tooltip="gdfnq7-tooltip", aria-haspopup="true", data-disable-hover="false", tabindex="1", title="", aria-describedby="hikmyv-tooltip", data-yeti-box="hikmyv-tooltip", data-toggle="hikmyv-tooltip", data-resize="hikmyv-tooltip", data-events="resize")
                                                         i.material-icons.md-18(aria-hidden='true',data-open='modal--users-addition') add_box	
-                                    .cell
-                                        .grid-x.grid-padding-x
-                                            .panel--center-bottom-controls.small-12.cell
+                    .cell.workspace--controls
+                        .panel--center-bottom-controls.float-right
+                            button.button.warning(data-micro-interaction="toggle")
+                                | Save & Pin
+                            button.button.success(data-micro-interaction="toggle")
+                                | Save
+                            button.button.alert(data-micro-interaction="toggle")
+                                | Cancel
+            #panelA-2.tabs-panel
+                .grid-y.content--tab 
+                    .cell.small-1.workspace--options
+                        .grid-x
+                            .cell.small-10
+                                //- i.material-icons.md-18 info
+                                p.h7.blurb.small.txt-help 
+                                    | Instructions: Search a user and and to project
+                                //- .form--input-text
+                                    label.-is-hidden
+                                        | Search and Add
+                                    input(type='text', placeholder='enter user name', aria-describedby='exampleHelpText', required='', pattern='number')
+                            .cell.small-2  
 
-                                                button.button.success.float-right(data-micro-interaction="toggle")
-                                                    | Save
-                                                button.button.alert.float-right(data-micro-interaction="toggle")
-                                                    | Cancel
-            #panel2.tabs-panel
-                .content--tab 
-                    //- h2 Databases
-                    .grid-x.grid-padding-x
-                        .small-2.text-center
-                            a.button.button--database.small(href="#")
-                                i.material-icons.md-24 view_module
-                                .txt Concepts & Data Elements
-                        .small-2.text-center
-                            a.button.button--database.small(href="#")
-                                i.material-icons.md-24 line_style
-                                .txt Value Sets
-            #panel3.tabs-panel
-                .content--tab 
-                    //- h2 Databases
-                    .grid-x.grid-padding-x
-                        .small-2.text-center
-                            a.button.button--database.small(href="#")
-                                i.material-icons.md-24 view_module
-                                .txt Registries
-                        .small-2.text-center
-                            a.button.button--database.small(href="#")
-                                i.material-icons.md-24 line_style
-                                .txt Registries Elements
-                        .small-2.text-center
-                            a.button.button--database.small(href="#")
-                                i.material-icons.md-24 line_style
-                                .txt Registries Constraints
-            #panel4.tabs-panel
-                .content--tab 
-                    //- h2 Databases
-                    .grid-x.grid-padding-x
-                        .small-2.text-center
-                            a.button.button--database.small(href="#")
-                                i.material-icons.md-24 view_module
-                                .txt Registries
-                        .small-2.text-center
-                            a.button.button--database.small(href="#")
-                                i.material-icons.md-24 line_style
-                                .txt Registries Elements
-                        .small-2.text-center
-                            a.button.button--database.small(href="#")
-                                i.material-icons.md-24 line_style
-                                .txt Registries Constraints
-            #panel5.tabs-panel
-                .content--tab 
-                    //- h2 Databases
-                    .grid-x.grid-padding-x
-                        .small-2.text-center
-                            a.button.button--database.small(href="#")
-                                i.material-icons.md-24 view_module
-                                .txt Registries
-                        .small-2.text-center
-                            a.button.button--database.small(href="#")
-                                i.material-icons.md-24 line_style
-                                .txt Registries Elements
-                        .small-2.text-center
-                            a.button.button--database.small(href="#")
-                                i.material-icons.md-24 line_style
-                                .txt Registries Constraints
-            #panel6.tabs-panel-users
-                .content--tab 
-                    .grid-x.grid-padding-x
-                        .cell
-                            br
-                        .panel--center-column-content.cell.small-4
-                            h3 Current Users
-                            .list--project-users
-                                .project-user
-                                    .grid-x
-                                        .cell.small-2.icon
-                                            i.material-icons.md-18(aria-hidden='true') account_box
-                                        .cell.small-2.user A. Lastname
-                                        .cell.small-4.user-role Reviewer
-                                        .cell.small-2.actionable
-                                            button.button.alert(type='reset', value='Reset', data-tooltip, aria-haspopup='true', data-disable-hover='false', tabindex='1', title='delete this user')
-                                                    i.material-icons.md-16(aria-hidden='true') delete
+                                button
+                                    .icon
+                                        i.material-icons.md-18 info
 
-                            //- table#data--table-users-participants.data--table.display(cellspacing='0', width='100%').table-transparent
+                    .cell.small-10.medium-cell-block-y.workspace--form
+                            table#data--table-search.data--table-inside-tab.display(cellspacing='0', width='100%')
                                 thead
                                     tr
-                                    th User
-                                    th Role
-                                    th -action-
-                                tbody
-                                    tr
-                                        td 
-                                            .icon
-                                                i.material-icons.md-24(aria-hidden='true') account_box
-                                            .user
-                                                | Quib
-                                        td Leader
-                                        td.actionable 
-                                            button.button.alert(type='reset', value='Reset', data-tooltip, aria-haspopup='true', data-disable-hover='false', tabindex='1', title='delete this user')
-                                                .icon
-                                                    i.material-icons.md-16(aria-hidden='true') delete
-                                    tr
-                                        td Dude
-                                        td Leader
-                                        td.actionable 
-                                            button.button.alert(type='reset', value='Reset') 
-                                                .icon
-                                                    i.material-icons.md-16(aria-hidden='true') delete
-                        .panel--center-column-content.cell.small-8
-                            h3 Add User(s):
-                            //- p.tiny Search are add users
-                            table#data--table-users.data--table.display(cellspacing='0', width='100%')
-                                thead
-                                    tr
-                                        th First Name
+                                        th Frist Name
                                         th Last Name
-                                        th Username
                                         th Role
-                                        th -action-
+                                        th User
+                                        th Email
+                                //- tfoot
+                                    tr
+                                        th Frist Name
+                                        th Last Name
+                                        th Role
+                                        th User
+                                        th Email
                                 tbody
                                     tr
-                                        td FistNameHere
-                                        td LastNameHere
-                                        th Username
-                                        td Role Here
-                                        td.actionable 
-                                            button.button.success(type='reset', value='Reset') 
-                                                .icon
-                                                    i.material-icons.md-16(aria-hidden='true') person_add
+                                        td John
+                                        td Dude
+                                        td President
+                                        td jd
+                                        td jd@email.de
                                     tr
-                                        td FistNameHere
-                                        td LastNameHere
-                                        th Username
-                                        td Role Here
-                                        td.actionable 
-                                            button.button.success(type='reset', value='Reset') 
-                                                .icon
-                                                    i.material-icons.md-16(aria-hidden='true') person_add
+                                        td John
+                                        td Dude
+                                        td President
+                                        td jd
+                                        td jd@email.de
                                     tr
-                                        td FistNameHere
-                                        td LastNameHere
-                                        th Username
-                                        td Role Here
-                                        td.actionable 
-                                            button.button.success(type='reset', value='Reset') 
-                                                .icon
-                                                    i.material-icons.md-16(aria-hidden='true') person_add
+                                        td John
+                                        td Dude
+                                        td President
+                                        td jd
+                                        td jd@email.de
                                     tr
-                                        td You
-                                        td Me
-                                        th youme
-                                        td Together
-                                        td.actionable 
-                                            button.button.success.has-tip(type='reset', value='Reset', data-tooltip, aria-haspopup='true', data-disable-hover='false', tabindex='1', title='Add this user')
-                                                .icon
-                                                    i.material-icons.md-16(aria-hidden='true') person_add
+                                        td John
+                                        td Dude
+                                        td President
+                                        td jd
+                                        td jd@email.de
+                                    tr
+                                        td John
+                                        td Dude
+                                        td President
+                                        td jd
+                                        td jd@email.de
+                                    tr
+                                        td John
+                                        td Dude
+                                        td President
+                                        td jd
+                                        td jd@email.de
+                    .cell.workspace--controls
+                        .panel--center-bottom-controls.float-right
+                            button.button.success(data-micro-interaction="toggle")
+                                //- .icon
+                                    i.material-icons.md-18 search
+                                .text
+                                    | Search
+                            //- button.button.success(data-micro-interaction="toggle")
+                                | Save
+                            //- button.button.alert(data-micro-interaction="toggle")
+                                | Cancel
+            #panelA-3.tabs-panel
+                .grid-y.content--tab 
+                    .cell.small-1.workspace--options
+                        p.h7.blurb.small Instructions: Project: Lorem ipsum dolor sit amet, consectetur 
+                        button
+                            .icon
+                                i.material-icons.md-18 settings
+
+                    .cell.small-10.medium-cell-block-y.workspace--form
+                        .grid-x.grid-padding-x
+                            .small-2
+                                .content--tab-nav
+                                    h5 Actions
+                                    a.button.button--tab-nav.small(href="#")
+                                        .icon
+                                            i.material-icons.md-24 view_module
+                                        .txt Registries
+                                    a.button.button--tab-nav.small(href="#")
+                                        .icon
+                                            i.material-icons.md-24 view_module
+                                        .txt Registries
+                                    a.button.button--tab-nav.small(href="#")
+                                        .icon
+                                            i.material-icons.md-24 view_module
+                                        .txt Registries
+                            .small-10
+                                | CDD dashboard
+
+            #panelA-4.tabs-panel
+                .grid-y.content--tab 
+                    .cell.small-1.workspace--options
+                        p.h7.blurb.small Instructions: Project: Lorem ipsum dolor sit amet, consectetur 
+                        button
+                            .icon
+                                i.material-icons.md-18 settings
+
+                    .cell.small-10.medium-cell-block-y.workspace--form
+                        .grid-x.grid-padding-x
+                            .small-2
+                                .content--tab-nav
+                                    h5 Actions
+                                    a.button.button--tab-nav.small(href="#")
+                                        i.material-icons.md-24 view_module
+                                        .txt Registries
+                                    a.button.button--tab-nav.small(href="#")
+                                        i.material-icons.md-24 line_style
+                                        .txt Registries Elements    
+                                    a.button.button--tab-nav.small(href="#")
+                                        i.material-icons.md-24 line_style
+                                        .txt Registries Constraints
+                            .small-10
+                                | TDD dashboard
+            #panelA-5.tabs-panel
+                .grid-y.content--tab 
+                    .cell.small-1.workspace--options
+                        p.h7.blurb.small Instructions: Project: Lorem ipsum dolor sit amet, consectetur 
+                        button
+                            .icon
+                                i.material-icons.md-18 settings
+
+                    .cell.small-10.medium-cell-block-y.workspace--form
+                        .grid-x.grid-padding-x
+                            .small-2
+                                .content--tab-nav
+                                    h5 Actions
+                                    a.button.button--tab-nav.small(href="#")
+                                        i.material-icons.md-24 view_module
+                                        .txt Registries
+                                    a.button.button--tab-nav.small(href="#")
+                                        i.material-icons.md-24 line_style
+                                        .txt Registries Elements    
+                                    a.button.button--tab-nav.small(href="#")
+                                        i.material-icons.md-24 line_style
+                                        .txt Registries Constraints
+                            .small-10
+                                h5 Publish History
+
+                                table#data--table-search.data--table-inside-tab.display(cellspacing='0', width='100%')
+                                    thead
+                                        tr
+                                            th Frist Name
+                                            th Last Name
+                                            th Role
+                                            th User
+                                            th Email
+                                    //- tfoot
+                                        tr
+                                            th Frist Name
+                                            th Last Name
+                                            th Role
+                                            th User
+                                            th Email
+                                    tbody
+                                        tr
+                                            td John
+                                            td Dude
+                                            td President
+                                            td jd
+                                            td jd@email.de
+                                        tr
+                                            td John
+                                            td Dude
+                                            td President
+                                            td jd
+                                            td jd@email.de
+                                        tr
+                                            td John
+                                            td Dude
+                                            td President
+                                            td jd
+                                            td jd@email.de
+                                        tr
+                                            td John
+                                            td Dude
+                                            td President
+                                            td jd
+                                            td jd@email.de
+                                        tr
+                                            td John
+                                            td Dude
+                                            td President
+                                            td jd
+                                            td jd@email.de
+                                        tr
+                                            td John
+                                            td Dude
+                                            td President
+                                            td jd
+                                            td jd@email.de
+            

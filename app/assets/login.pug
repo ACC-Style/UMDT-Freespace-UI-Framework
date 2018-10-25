@@ -21,7 +21,7 @@ html.no-js(lang='en')
             //- include /template/components/_billboard.pug
             
             //- breadcrumbs
-            //- include /template/components/_breadcrumb.pug 
+            include /template/components/_breadcrumb.pug 
                 //- breadcrumbs - content(editable)
                 block contentBreadcrumb
                     nav(aria-label='You are here:', role='navigation')
@@ -29,21 +29,15 @@ html.no-js(lang='en')
                             li.breadcrumbs--nav-item
                                 a(href='index.html').breadcrumbs--nav-link
                                     span.icon
-                                        i.material-icons.md-18 crop
+                                        i.material-icons.md-18 layers
                                     span.text
-                                        | UMDT
-                            li.breadcrumbs--nav-item
-                                a(href='dashboard.html').breadcrumbs--nav-link
-                                    span.icon
-                                        i.material-icons.md-18 list
-                                    span.text
-                                        | Projects
+                                        | Templates
                             li.breadcrumbs--nav-item
                                 span.icon
-                                    i.material-icons.md-18 folder
+                                    i.material-icons.md-18 layers
                                 span.text
                                     strong
-                                        | Project Name
+                                        | Login Page
 
             //- page content(edtiable)            
             .content--page

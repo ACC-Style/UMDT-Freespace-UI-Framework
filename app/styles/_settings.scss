@@ -47,10 +47,10 @@
 @import 'variables/variables';
 // 1. Global
 // ---------
-$global-font-size: 95%;
+$global-font-size: 97%;
 $global-width: rem-calc(1200);
 $global-lineheight: 1.75;
-$foundation-palette: ( primary: $palette-color-darken, secondary: $color-neutral-light, success: $color-grass, warning: $color-heat, alert: $palette-color-accent, );
+$foundation-palette: (primary: $palette-color-darken, secondary: $color-neutral-light, success: $color-grass, warning: $color-heat, alert: $palette-color-accent, );
 // $foundation-palette: ( primary: #1779ba, secondary: #767676, success: #3adb76, warning: #ffae00, alert: #000, );
 $light-gray: $color-neutral-medium;
 $medium-gray:$color-neutral-light;
@@ -74,14 +74,14 @@ $print-transparent-backgrounds: true;
 @include add-foundation-colors;
 // 2. Breakpoints
 // --------------
-$breakpoints: ( small: 0, medium: 640px, large: 1024px, xlarge: 1200px, xxlarge: 1440px, );
+$breakpoints: (small: 0, medium: 640px, large: 1024px, xlarge: 1200px, xxlarge: 1440px, );
 $print-breakpoint: large;
 $breakpoint-classes: (small medium large);
 // 3. The Grid
 // -----------
 $grid-row-width: $global-width;
 $grid-column-count: 12;
-$grid-column-gutter: ( small: 20px, medium: 30px, );
+$grid-column-gutter: (small: 20px, medium: 30px, );
 $grid-column-align-edge: true;
 $block-grid-max: 8;
 // 4. Base Typography
@@ -96,7 +96,7 @@ monospace;
 $header-color: inherit;
 $header-lineheight: 1.4;
 $header-margin-bottom: 0.5rem;
-$header-styles: ( small: ( 'h1': ('font-size': 20), 'h2': ('font-size': 18), 'h3': ('font-size': 16), 'h4': ('font-size': 14), 'h5': ('font-size': 13), 'h6': ('font-size': 12), ), medium: ( 'h1': ('font-size': 28), 'h2': ('font-size': 26), 'h3': ('font-size': 24), 'h4': ('font-size': 22), 'h5': ('font-size': 20), 'h6': ('font-size': 18), ), );
+$header-styles: (small: ('h1': ('font-size': 20), 'h2': ('font-size': 18), 'h3': ('font-size': 16), 'h4': ('font-size': 14), 'h5': ('font-size': 13), 'h6': ('font-size': 12), ), medium: ('h1': ('font-size': 28), 'h2': ('font-size': 26), 'h3': ('font-size': 24), 'h4': ('font-size': 22), 'h5': ('font-size': 20), 'h6': ('font-size': 18), ), );
 // $header-styles: ( small: ( 'h1': ('font-size': 24), 'h2': ('font-size': 20), 'h3': ('font-size': 19), 'h4': ('font-size': 18), 'h5': ('font-size': 17), 'h6': ('font-size': 16), ), medium: ( 'h1': ('font-size': 48), 'h2': ('font-size': 40), 'h3': ('font-size': 31), 'h4': ('font-size': 25), 'h5': ('font-size': 20), 'h6': ('font-size': 16), ), );
 $header-text-rendering: optimizeLegibility;
 $small-font-size: 70%;
@@ -213,7 +213,7 @@ $button-background-hover: scale-color($button-background, $lightness: -15%);
 $button-color: $white;
 $button-color-alt: $black;
 $button-radius: $global-radius;
-$button-sizes: ( tiny: 0.6rem, small: 0.75rem, default: 0.9rem, large: 1.25rem, );
+$button-sizes: (tiny: 0.6rem, small: 0.75rem, default: 0.9rem, large: 1.25rem, );
 $button-palette: $foundation-palette;
 $button-opacity-disabled: 0.25;
 $button-background-hover-lightness: -20%;
@@ -252,9 +252,9 @@ $card-margin: $global-margin;
 // 15. Close Button
 // ----------------
 $closebutton-position: right top;
-$closebutton-offset-horizontal: ( small: 0.66rem, medium: 1rem, );
-$closebutton-offset-vertical: ( small: 0.33em, medium: 0.5rem, );
-$closebutton-size: ( small: 1.5em, medium: 2em, );
+$closebutton-offset-horizontal: (small: 0.66rem, medium: 1rem, );
+$closebutton-offset-vertical: (small: 0.33em, medium: 0.5rem, );
+$closebutton-size: (small: 1.5em, medium: 2em, );
 $closebutton-lineheight: 1;
 $closebutton-color: $dark-gray;
 $closebutton-color-hover: $black;
@@ -273,7 +273,7 @@ $dropdown-border: 1px solid $medium-gray;
 $dropdown-font-size: 1rem;
 $dropdown-width: 300px;
 $dropdown-radius: $global-radius;
-$dropdown-sizes: ( tiny: 100px, small: 200px, large: 400px, );
+$dropdown-sizes: (tiny: 100px, small: 200px, large: 400px, );
 // 18. Dropdown Menu
 // -----------------
 $dropdownmenu-arrows: true;
@@ -411,7 +411,7 @@ $progress-radius: $global-radius;
 // 28. Responsive Embed
 // --------------------
 $responsive-embed-margin-bottom: rem-calc(16);
-$responsive-embed-ratios: ( default: 4 by 3, widescreen: 16 by 9, );
+$responsive-embed-ratios: (default: 4 by 3, widescreen: 16 by 9, );
 // 29. Reveal
 // ----------
 $reveal-background: $white;

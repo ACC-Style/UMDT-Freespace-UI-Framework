@@ -414,3 +414,19 @@
             }
         }
     }
+
+    .button--tab-nav {
+        clear: both;
+        padding: .25em .25em 0 .5em;
+        width: 100%;
+        margin-left: 1em;
+
+        .icon {
+            float: right;
+        }
+
+        .text {
+            margin-left: .5em;
+            float: left;
+        }
+    }

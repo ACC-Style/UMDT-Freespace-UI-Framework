@@ -1,17 +1,21 @@
 .form--input-radio {
     width: 100%;
+
     label {
         color: $palette-color-median; // margin-left: 0px;
         margin-right: 3em;
         margin-left: 2em;
     }
+
     input[type="radio"] {
         font-size: 1.5em;
         display: none;
+
         &:checked+label {
             font-weight: 900;
             color: $palette-color-darken; // font-weight: bolder;
         }
+
         &+label:before {
             // display: inline-block;
             // animation: ripple 0.2s linear forwards;
@@ -26,9 +30,11 @@
             -webkit-font-feature-settings: 'liga';
             margin-right: .25em; // margin-top: .25em;
         }
+
         &+label:after {
             transform: scale(1);
         }
+
         &:checked+label:before {
             // border-color: $md-radio-checked-color;
             // animation: ripple 0.2s linear forwards;
@@ -38,6 +44,7 @@
             color: $palette-color-darken;
             -webkit-font-feature-settings: 'liga';
         }
+
         &:checked+label:after {
             transform: scale(1);
         }
@@ -45,6 +52,7 @@
 }
 
 .form--input-checkbox {
+
     // width: 100%;
     label {
         // margin-left: 0px;
@@ -52,13 +60,16 @@
         margin-right: 3em;
         margin-left: 2em;
     }
+
     input[type="checkbox"] {
         display: none;
         padding-right: 5em;
+
         &:checked+label {
             color: $palette-color-darken;
             font-weight: 900;
         }
+
         &+label:before {
             display: block;
             position: absolute;
@@ -70,9 +81,11 @@
             content: "check_box_outl    ine_blank";
             -webkit-font-feature-settings: 'liga';
         }
+
         &+label:after {
             transform: scale(1);
         }
+
         &:checked+label:before {
             animation: ripple 0.2s linear forwards;
             font-family: 'Material Icons';
@@ -80,6 +93,7 @@
             content: "check_box";
             -webkit-font-feature-settings: 'liga';
         }
+
         &:checked+label:after {
             transform: scale(1);
         }
@@ -102,12 +116,15 @@
 [type='color'],
 textarea {
     // font-size: 140%;
+    font-size: 95%;
     border: none;
     border-bottom: 1px solid $color-neutral-light;
     box-shadow: none; // font-weight: bold;
+
     &:focus {
         border: none;
         border-bottom: 1px solid $color-light; // border-bottom: 1px solid $palette-color-darken;
+
         &:focus:after {
             font-family: 'Material Icons';
             font-size: 1.25em;
@@ -117,6 +134,7 @@ textarea {
             -webkit-font-feature-settings: 'liga';
         }
     }
+
     &:focus {
         border-bottom: 1px solid $palette-color-darken;
     }
@@ -129,6 +147,7 @@ textarea {
 input[disabled] {
     background: transparent;
     border-bottom: none;
+
     &+label:before {
         animation: ripple 0.2s linear forwards;
         font-family: 'Material Icons';
@@ -143,21 +162,28 @@ input[disabled] {
     {
     .help-text {
         color: $palette-color-lightens;
+
         &:hover {
             color: $palette-color-median;
         }
     }
+
     .text-mirror {
         // display: block;
         margin-left: .5em;
         font-size: 140%;
     }
+
+    select {}
 }
 
 .form--input-select {
+    font-size: 1rem !important;
+
     width: 100%; // display: inline-block;
     position: relative; // border: 1px solid red;
     font-size: 1.35em; // &:after {
+
     //     font-family: 'Material Icons';
     //     font-size: 2em;
     //     margin-top: -.5em;
@@ -174,7 +200,9 @@ input[disabled] {
             // color: $palette-color-darken;
         }
     }
+
     select {
+
         // padding: 10px 40px 10px 10px;
         // -webkit-appearance: none;
         // -ms-appearance: none;
@@ -209,6 +237,7 @@ input[disabled] {
     margin: 0 0 0 2em;
     border: none; // border-bottom: 1px solid $color-neutral-light;
     background: transparent;
+
     &:focus {
         color: $color-grass;
         border-bottom: 1px solid $color-grass;
@@ -227,18 +256,22 @@ input[disabled] {
 
 #content--offcanvas-left,
 .off-canvas {
+
     label,
     legend {
         // color: $color-light;
         color: $palette-color-median;
     }
+
     .feature--filter-input,
     .form--input-text input,
     .form--input-text textarea {
         background: $palette-color-darken;
+
         &:focus {
             color: $palette-color-lightens;
             background: $palette-color-darken;
+
             &:focus:after {}
         }
     }
@@ -249,10 +282,12 @@ input[disabled] {
 .form--input-checkbox,
 .form--input-text {
     margin-bottom: 1em; // margin-top: 1em;
+
     label,
     legend {
         color: $color-neutral;
     }
+
     fieldset label {
         color: $palette-color-median;
     }
@@ -294,6 +329,7 @@ span.form-error.is-visible {
     padding: 0 0 0 0;
     margin: 0 0 0 0; // border: 1px solid red;
     float: left;
+
     select {
         width: 8em;
     }
@@ -305,6 +341,7 @@ span.form-error.is-visible {
         border: none;
         color: $color-neutral;
         background-color: $color-light;
+
         &:after {
             animation: ripple 0.2s linear forwards;
             font-family: 'Material Icons';
@@ -325,12 +362,14 @@ span.form-error.is-visible {
 
 .switch {
     text-align: right;
+
     .switch-active,
     .switch-inactive {
         i {
             padding-top: 8px;
         }
     }
+
     .switch-paddle {
         margin-top: 1em;
         margin-left: .5em;

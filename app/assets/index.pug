@@ -18,8 +18,8 @@ html.no-js(lang='en')
 
             
             //- billboard - content(editable)            
-            include /template/components/_progress.bar.pug 
-            include /template/components/_billboard.pug
+            //- include /template/components/_progress.bar.pug 
+            //- include /template/components/_billboard.pug
             
 
             
@@ -29,18 +29,18 @@ html.no-js(lang='en')
                 block contentBreadcrumb
                     nav(aria-label='You are here:', role='navigation')
                         ul.breadcrumbs--nav-list.breadcrumbs
+                            //- li.breadcrumbs--nav-item
+                            //-     a(href='index.html').breadcrumbs--nav-link
+                            //-         span.icon
+                            //-             i.material-icons.md-18 crop
+                            //-         span.text
+                            //-             | UMDT
                             li.breadcrumbs--nav-item
                                 a(href='index.html').breadcrumbs--nav-link
                                     span.icon
-                                        i.material-icons.md-18 crop
+                                        i.material-icons.md-18 layers
                                     span.text
-                                        | UMDT
-                            li.breadcrumbs--nav-item
-                                //- a(href='index.html').breadcrumbs--nav-link
-                                span.icon
-                                    i.material-icons.md-18 layers
-                                span.text
-                                    | Templates
+                                        | TEMPLATES
                             //- li.breadcrumbs--nav-item
                                     span.icon
                                         i.material-icons.md-18 grid_on
@@ -79,3 +79,5 @@ html.no-js(lang='en')
             //- footer
             //- include /template/layout/_footer.pug
             include /template/layout/_footer.blank.pug
+            //- include /template/components/_progress.bar.pug 
+

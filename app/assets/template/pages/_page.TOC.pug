@@ -11,55 +11,52 @@ include /template/variables/_mixins
         //- hr
 
         .grid-x
-            .cell.medium-2.-is-hidden 
+            .cell.medium-12.-is-hidden 
                 p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo nec libero vitae porttitor. Suspendisse ac sapien et ante condimentum iaculis. Ut dapibus ex vestibulum erat pellentesque suscipit quis sed nisl. Sed lobortis neque sit amet ligula pharetra, ac hendrerit nulla laoreet. Cras in vulputate nulla. Donec vel blandit lectus. Duis fermentum sit amet mauris id iaculis. Praesent a sollicitudin enim. Curabitur quis sagittis sapien, sed tempus sapien. Nam non dictum sapien, in varius odio. Sed eu condimentum orci, nec mollis nulla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce quis elit non nisi pellentesque fermentum et in nibh.
 
         section- Templates
 
         h1 Templates
-        .callout.success
-            p udpated: 10/10/2018
+        include /template/components/_billboard.pug
+        //- .callout.success
+            p udpated: 10/25/2018
         .grid-x
-            .cell.medium-2.-is-hidden           
-                h3 Layout
+            .cell.medium-2.-is-hidden          
+                //- h3 General Pages
                 ul.no-bullets
                     li 
                         p
                             a(href="layout_tamplate.html") Boilerplate Structure
-                            a(data-open='code-template').code-link .pug'
+                            //- a(data-open='code-template').code-link .pug'
                     li                         
                         p 
                             a(href="layout_header.html") Header 
-                            a(data-open='code-header').code-link .pug' 
+                            //- a(data-open='code-header').code-link .pug' 
 	
                     li 
                         p
                             a(href="layout_footer.html") Footer
-                            a(data-open='code-footer').code-link .pug'
+                            //- a(data-open='code-footer').code-link .pug'
                     li 
                         p
                             a(href="layout_page.html") Inner Page
-                            a(data-open='code-page').code-link .pug'
+                            //- a(data-open='code-page').code-link .pug'
 
-            .cell.medium-2
-                h3 Pages
+            .cell.medium-3
+                h4 Pages
                 ul.no-bullets
                     li                         
                         p 
                             a(href="login.html") Login 
-                            a(data-open='code-login').code-link .pug' 
-	
-                    li 
-                        p
-                            a(href="kitchensink.html") Kitchen Sink  
-                            a(data-open='code-kitchen').code-link .pug'
+                            //- a(data-open='code-login').code-link .pug' 
 
-                        ul
+
+                        //- ul
                             li 
                                 p
                                     a(href="kitchensink.html#Prompts") Prompts 
-                                    a(data-open='code-create-project').code-link .pug'
-                                    i.material-icons.md-18.has-tip(data-tooltip='', aria-haspopup='true', data-disable-hover='false', tabindex='1', title='Requires 3rd party resource - datatables.net') file_download
+                                    //- a(data-open='code-create-project').code-link .pug'
+                                    //- i.material-icons.md-18.has-tip(data-tooltip='', aria-haspopup='true', data-disable-hover='false', tabindex='1', title='Requires 3rd party resource - datatables.net') file_download
 
 
                     //- li 
@@ -69,32 +66,35 @@ include /template/variables/_mixins
                     //-         i.material-icons.md-18.has-tip(data-tooltip='', aria-haspopup='true', data-disable-hover='false', tabindex='1', title='Requires 3rd party resource') file_download
 
 
-                    li 
+                    //- li 
                         p
                             a(href="dashboard.html") Dashboard (home) 
-                            a(data-open='code-dashboard').code-link .pug'
-                            a(data-open='code-script-datatable').code-link ('js'
-                            i.material-icons.md-18.has-tip(data-tooltip='', aria-haspopup='true', data-disable-hover='false', tabindex='1', title='Requires 3rd party resource - datatables.net') file_download
+                            //- a(data-open='code-dashboard').code-link .pug'
+                            //- a(data-open='code-script-datatable').code-link ('js'
+                            //- i.material-icons.md-18.has-tip(data-tooltip='', aria-haspopup='true', data-disable-hover='false', tabindex='1', title='Requires 3rd party resource - datatables.net') file_download
 
                     li 
                         p
                             a(href="search.html") Search 
-                            a(data-open='code-search').code-link .pug'
-                            i.material-icons.md-18.has-tip(data-tooltip='', aria-haspopup='true', data-disable-hover='false', tabindex='1', title='Requires 3rd party resource - datatables.net') file_download
+                            //- a(data-open='code-search').code-link .pug'
+                            //- i.material-icons.md-18.has-tip(data-tooltip='', aria-haspopup='true', data-disable-hover='false', tabindex='1', title='Requires 3rd party resource - datatables.net') file_download
                     li 
                         p
-                            a(href="create-project.html") Create Project Page
-                            a(data-open='code-create-project').code-link .pug'
-                            i.material-icons.md-18.has-tip(data-tooltip='', aria-haspopup='true', data-disable-hover='false', tabindex='1', title='Requires 3rd party resource - datatables.net') file_download
+                            a(href="create-project.html") Create Project
+                            //- a(data-open='code-create-project').code-link .pug'
+                            //- i.material-icons.md-18.has-tip(data-tooltip='', aria-haspopup='true', data-disable-hover='false', tabindex='1', title='Requires 3rd party resource - datatables.net') file_download
                     li 
                         p
-                            a(href="project.html") Project Page
-                            a(data-open='code-project').code-link .pug'
-                            i.material-icons.md-18.has-tip(data-tooltip='', aria-haspopup='true', data-disable-hover='false', tabindex='1', title='Requires 3rd party resource - datatables.net') file_download
+                            a(href="project.html") Project 
+                                sup [1]
+                            //- a(data-open='code-project').code-link .pug'
+                            //- i.material-icons.md-18.has-tip(data-tooltip='', aria-haspopup='true', data-disable-hover='false', tabindex='1', title='Requires 3rd party resource - datatables.net') file_download
+                    br
+                    h4 Feature Pages
  
                     li 
                         p
-                            a(href="workspace.html") Worksapce (generic)
+                            a(href="workspace.html") Worksapce - Generic
                             //- a(href="workspace.html") Worksapce (generic)
                             //- a(data-open='code-search').code-link .pug'
                             //- i.material-icons.md-18.has-tip(data-tooltip='', aria-haspopup='true', data-disable-hover='false', tabindex='1', title='Requires 3rd party resource - datatables.net') file_download
@@ -105,7 +105,8 @@ include /template/variables/_mixins
 
                     li 
                         p
-                            a(href="workspace.html") Worksapce (composer)
+                            a(href="workspace-composer.html") Worksapce - From Composer
+                                sup [2]
                             //- a(href="workspace.html") Worksapce (generic)
                             //- a(data-open='code-search').code-link .pug'
                             //- i.material-icons.md-18.has-tip(data-tooltip='', aria-haspopup='true', data-disable-hover='false', tabindex='1', title='Requires 3rd party resource - datatables.net') file_download
@@ -114,36 +115,63 @@ include /template/variables/_mixins
                             //- br 
                             //- | Workspace (Concept/Elements)
                             
-                    li 
+                    //- li 
                         //- a(href="project-create.html") 
                         p Taxonomy
 
 
 
 
-            .cell.medium-2
-                h3 Features
+            .cell.medium-3
+                h4 UI Elements
+                ul.no-bullets
+                    li 
+                        p
+                            a(href="kitchensink.html") Kitchen Sink  
+                            //- a(data-open='code-kitchen').code-link .pug'
+                    li
+                        p Glossary
+
+            .cell.medium-3
+                h4 UI Patterns
                 ul.no-bullets
                     li
-                        p Tables
+                        p Data Tables
                     li 
-                        p Tree List      
+                        p Tree List Columns    
                     li 
                         p Modal
                     li 
-                        p List Filter
+                        p Draggable Card
                     li 
                         p Off-Canvas Panel
                     li 
                         p Side Navigation
                     li 
-                        p Notification Bar
+                        p Side Notification
                     li 
                         p Search
-
+                    li 
+                        p Progress Bar
+                    li 
+                        p Tabs (with Status)
 
             .cell.medium-3
-                h3 Micro-interactions
+                h3 Custom Scripts
+                ul.no-bullets
+                    li 
+                        p
+                            | Micro-interactions  
+                            //- a(data-open='code-script-micro-interaction').code-link .pug'
+                            i.material-icons.md-18.has-tip(data-tooltip='', aria-haspopup='true', data-disable-hover='false', tabindex='1', title='Requires 3rd party resource - datatables.net') file_download
+                    li 
+                        p
+                            | Foundation   
+                            //- a(data-open='code-script-foundation').code-link .pug'
+                            i.material-icons.md-18.has-tip(data-tooltip='', aria-haspopup='true', data-disable-hover='false', tabindex='1', title='Requires 3rd party resource - datatables.net') file_download
+
+            .cell.medium-3
+                h3 Dependencies
                 //- ul.no-bullets
                 //-     li
                 //-         p
@@ -156,20 +184,6 @@ include /template/variables/_mixins
                 //-     li 
                 //-         p Inputs
 
-
-            .cell.medium-2
-                h3 Custom Scripts
-                ul.no-bullets
-                    li 
-                        p
-                            | Micro-interactions 
-                            a(data-open='code-script-micro-interaction').code-link .pug'
-                            i.material-icons.md-18.has-tip(data-tooltip='', aria-haspopup='true', data-disable-hover='false', tabindex='1', title='Requires 3rd party resource - datatables.net') file_download
-                    li 
-                        p
-                            | Foundation 
-                            a(data-open='code-script-foundation').code-link .pug'
-                            i.material-icons.md-18.has-tip(data-tooltip='', aria-haspopup='true', data-disable-hover='false', tabindex='1', title='Requires 3rd party resource - datatables.net') file_download
         //- section- Overview
 
         //- section- Overview
@@ -178,7 +192,7 @@ include /template/variables/_mixins
         //- p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo nec libero vitae porttitor. Suspendisse ac sapien et ante condimentum iaculis. Ut dapibus ex vestibulum erat pellentesque suscipit quis sed nisl. Sed lobortis neque sit amet ligula pharetra, ac hendrerit nulla laoreet. Cras in vulputate nulla. Donec vel blandit lectus. Duis fermentum sit amet mauris id iaculis. Praesent a sollicitudin enim. Curabitur quis sagittis sapien, sed tempus sapien. Nam non dictum sapien, in varius odio. Sed eu condimentum orci, nec mollis nulla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce quis elit non nisi pellentesque fermentum et in nibh.
         //- hr
         //- .grid-x
-        //-     .cell.medium-2.          
+        //-     .cell.medium-3.          
         //-         h3 Layout
         //-         ul.no-bullets
         //-             li 

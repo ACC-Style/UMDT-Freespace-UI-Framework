@@ -21,30 +21,45 @@ sans-serif;
 // TODO: Create mixin for making font bold
 $typeface-copy:'Lato',
 sans-serif;
+
 a,
 li,
 p,
-{
+    {
     // letter-spacing: .0025em;
+
+    &.text-help {
+        color: $color-neutral-light;
+    }
 }
 
 a {
     // TODO: remove imporant call here
     color: $palette-color-median; // color: $palette-color-median !important;
-     :hover {
+
+    :hover {
         color: $palette-color-darken;
         text-decoration: underline; // background: $palette-color-lightens;
     }
-     :focus {
+
+    :focus {
         color: $palette-color-median;
     }
-     :active {
+
+    :active {
         color: $palette-color-median;
         text-decoration: underline;
     }
-     :visited {
+
+    :visited {
         color: $palette-color-median;
     }
 }
+
+sup {
+    color: $color-neutral-light;
+
+}
+
 
 // TODO: add style for <hr>

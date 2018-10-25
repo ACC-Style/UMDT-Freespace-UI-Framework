@@ -9,6 +9,24 @@ include /template/variables/_mixins
                     .cell.small-3
                         .content--panel.dashboard---panel-notification
                             h2.heading--h2
+                                | Quick Actions
+                            p.h7.text-help You saved Quick Actions to optimize workflow
+
+                            .notification---project
+                                button.close-button(aria-label='Close menu', type='button', data-close).button
+                                    span.icon
+                                        i.material-icons.md-18 close
+
+                                ul.list--notification-items.no-bullets
+                                    li
+                                        i.material-icons.md-12(aria-hidden='true').has-tip(data-tooltip='', aria-haspopup='true', data-disable-hover='false', tabindex='1', title='change by {username}') publish
+                                        a  Publish to DEV
+                                    li 
+                                        i.material-icons.md-12(aria-hidden='true').has-tip(data-tooltip='', aria-haspopup='true', data-disable-hover='false', tabindex='1', title='change by {username}') file_copy
+                                        a  TDD Clone
+
+
+                            h2.heading--h2
                                 | Recent Update
                             //- p.h7 Recent changes to this project
                             p.h7.is-hidden No notifications
