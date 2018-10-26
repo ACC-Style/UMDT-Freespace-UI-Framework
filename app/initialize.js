@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   require('./scripts/vendors/foundation');
   require('./scripts/vendors/chardinjs.min.js');
   // require('./scripts/vendors/context.menu.js');
+  require('./scripts/vendors/vendor.chardinjs.js');
   require('./scripts/vendors/fancytree.concepts');
   require('./scripts/vendors/fancytree.elements');
   // require('./scripts/vendors/datatables');

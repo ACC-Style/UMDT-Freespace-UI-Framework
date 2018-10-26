@@ -16,6 +16,11 @@ FreespaceApp.fix = {
             numberTabs = allTabs.length,
             maxWidth = $(".column--list-workspace").width(),
             tabWidth = (maxWidth / numberTabs);
+
+        if (allTabs.length == 0) {
+            console.log("no tabs")
+            return
+        }
         // calculate percentage not pixcel
         console.log(`test-${allTabs[1].outerHTML}`)
 
