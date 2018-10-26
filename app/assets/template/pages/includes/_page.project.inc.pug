@@ -288,7 +288,7 @@
 
                     .cell.small-10.medium-cell-block-y.workspace--form
                         .grid-x.grid-padding-x
-                            .small-2
+                            .small-3
                                 .content--tab-nav
                                     h5 Actions
                                     a.button.button--tab-nav.small(href="#")
@@ -303,7 +303,7 @@
                                         .icon
                                             i.material-icons.md-24 view_module
                                         .txt Registries
-                            .small-10
+                            .small-9
                                 | CDD dashboard
 
             #panelA-4.tabs-panel
@@ -316,43 +316,57 @@
 
                     .cell.small-10.medium-cell-block-y.workspace--form
                         .grid-x.grid-padding-x
-                            .small-2
+                            .small-3
                                 .content--tab-nav
                                     h5 Actions
                                     a.button.button--tab-nav.small(href="#")
-                                        i.material-icons.md-24 view_module
+                                        .icon
+                                            i.material-icons.md-24 view_module
                                         .txt Registries
                                     a.button.button--tab-nav.small(href="#")
-                                        i.material-icons.md-24 line_style
+                                        .icon
+                                            i.material-icons.md-24 line_style
                                         .txt Registries Elements    
                                     a.button.button--tab-nav.small(href="#")
-                                        i.material-icons.md-24 line_style
+                                        .icon
+                                            i.material-icons.md-24 line_style
                                         .txt Registries Constraints
-                            .small-10
+                            .small-9
                                 | TDD dashboard
             #panelA-5.tabs-panel
                 .grid-y.content--tab 
                     .cell.small-1.workspace--options
-                        p.h7.blurb.small Instructions: Project: Lorem ipsum dolor sit amet, consectetur 
+                        p.h7.blurb.small Instructions: Publish projects to different environments etc etc..
                         button
                             .icon
                                 i.material-icons.md-18 settings
 
                     .cell.small-10.medium-cell-block-y.workspace--form
                         .grid-x.grid-padding-x
-                            .small-2
+                            .small-3
                                 .content--tab-nav
                                     h5 Actions
                                     a.button.button--tab-nav.small(href="#")
-                                        i.material-icons.md-24 view_module
-                                        .txt Registries
+                                        .icon
+                                            i.material-icons.md-24 cloud_upload
+                                        .txt Publish Summary
                                     a.button.button--tab-nav.small(href="#")
-                                        i.material-icons.md-24 line_style
-                                        .txt Registries Elements    
+                                        .icon
+                                            i.material-icons.md-24 cloud_upload
+                                        .txt Publish Preview (Stage)    
                                     a.button.button--tab-nav.small(href="#")
-                                        i.material-icons.md-24 line_style
-                                        .txt Registries Constraints
-                            .small-10
+                                        .icon
+                                            i.material-icons.md-24 cloud_upload
+                                        .txt Publish Summary (Prod)
+                                    a.button.button--tab-nav.small.warning(href="#")
+                                        .icon
+                                            i.material-icons.md-24 publish
+                                        .txt Publish Summary DEV
+                                    a.button.button--tab-nav.small.warning(href="#")
+                                        .icon
+                                            i.material-icons.md-24 publish
+                                        .txt Publish Summary STAGE
+                            .small-9
                                 h5 Publish History
 
                                 table#data--table-search.data--table-inside-tab.display(cellspacing='0', width='100%')

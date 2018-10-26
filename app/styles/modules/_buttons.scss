@@ -356,7 +356,7 @@
     }
 
     .button+.button {
-        margin-left: 2em;
+        // margin-left: 2em;
     }
 
     .notification---project {
@@ -417,16 +417,20 @@
 
     .button--tab-nav {
         clear: both;
-        padding: .25em .25em 0 .5em;
-        width: 100%;
+        padding: 1.5em .5em .5em 1.5em;
+        height: 4em;
+        width: 90%;
         margin-left: 1em;
+        text-align: left;
 
         .icon {
             float: right;
+            margin-top: -7px;
         }
 
         .text {
-            margin-left: .5em;
+            margin-left: 1em;
             float: left;
+
         }
     }
