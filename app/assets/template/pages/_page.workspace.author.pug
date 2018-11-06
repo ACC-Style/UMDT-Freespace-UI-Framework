@@ -10,18 +10,12 @@ include /template/variables/_mixins
                 .grid-x(data-intro="Column Menus - shows contextual menu and actions items" data-position="right")
                     //- .panel--center-column-type.small-1.medium-1.large-1.cell
                             i.material-icons.md-18 lightbulb_outline
-                    .panel--center-column-title.small-8.medium-8.large-8.cell
-                            h6.panel--center-column-title-text.h7 Registery
-                    .panel--center-column-options.small-1.medium-2.large-1.cell
-                            button.option-button.button.has-tip(data-tooltip='', aria-haspopup='true', data-disable-hover='false', tabindex='1', title='New ', data-micro-interaction='clone') 
-                                i.material-icons.md-14 add_box
-                    .panel--center-column-options.small-1.medium-2.large-1.cell
-                            button.option-button.button.has-tip(data-tooltip='', aria-haspopup='true', data-disable-hover='false', tabindex='1', title='Clone', data-micro-interaction='copy') 
-                                i.material-icons.md-14 content_copy
-                    .panel--center-column-options.small-1.medium-2.large-1.cell
+                    .panel--center-column-title.small-10.medium-10.large-10.cell
+                            h6.panel--center-column-title-text.h7 Metrix & Reporting
+                    .panel--center-column-options.small-1.medium-1.large-1.cell
                             button.option-button.button.has-tip(data-tooltip='', aria-haspopup='true', data-disable-hover='false', tabindex='1', title='Expand All', , data-micro-interaction='expand') 
-                                i.material-icons.md-14 zoom_out_map
-                    .panel--center-column-options.small-1.medium-2.large-1.cell
+                                i.material-icons.md-14 add_box
+                    .panel--center-column-options.small-1.medium-1.large-1.cell
                             button.option-button.button.has-tip(data-tooltip='', aria-haspopup='true', data-disable-hover='false', tabindex='1', title='collapse column', data-micro-interaction='collapse') 
                                 i.material-icons.md-14 skip_previous
                 .panel--center-column-features.cell
@@ -47,18 +41,16 @@ include /template/variables/_mixins
                 .grid-x
                     //- .panel--center-column-type.small-1.medium-1.large-1.cell
                             i.material-icons.md-18 lightbulb_outline
-                    .panel--center-column-title.small-8.medium-8.large-8.cell
-                            h6.panel--center-column-title-text.h7 Concepts
-                    .panel--center-column-options.small-1.medium-2.large-1.cell
-                            button.option-button.button.has-tip(data-tooltip='', aria-haspopup='true', data-disable-hover='false', tabindex='1', title='New ', data-micro-interaction='clone') 
-                                i.material-icons.md-14 add_box
-                    .panel--center-column-options.small-1.medium-2.large-1.cell
+                    .panel--center-column-title.small-9.medium-9.large-9.cell
+                            h6.panel--center-column-title-text.h7 Executive Report
+
+                    .panel--center-column-options.small-1.medium-1.large-1.cell
                             button.option-button.button.has-tip(data-tooltip='', aria-haspopup='true', data-disable-hover='false', tabindex='1', title='Clone', data-micro-interaction='copy') 
-                                i.material-icons.md-14 content_copy
-                    .panel--center-column-options.small-1.medium-2.large-1.cell
+                                i.material-icons.md-14 add_box
+                    .panel--center-column-options.small-1.medium-1.large-1.cell
                             button.option-button.button.has-tip(data-tooltip='', aria-haspopup='true', data-disable-hover='false', tabindex='1', title='Expand All', , data-micro-interaction='expand') 
-                                i.material-icons.md-14 zoom_out_map
-                    .panel--center-column-options.small-1.medium-2.large-1.cell
+                                i.material-icons.md-14 content_copy
+                    .panel--center-column-options.small-1.medium-1.large-1.cell
                             button.option-button.button.has-tip(data-tooltip='', aria-haspopup='true', data-disable-hover='false', tabindex='1', title='collapse column', data-micro-interaction='collapse') 
                                 i.material-icons.md-14 skip_previous
                 .panel--center-column-features.cell
@@ -104,7 +96,7 @@ include /template/variables/_mixins
                         i.icon-clear.material-icons.md-14 close
                         input.feature--filter-input(type='text', placeholder='quick a filter')
                 .column--list-properties-data.cell.medium-cell-block-y
-                    include /template/components/_properties.panel.pug
+                    include /template/components/_properties.panel.workspace.author.pug
                 .column--list-elements-counter.cell
                         .grid-x
                                 //- .counter-selected.small-6.medium-6.large-6.cell
@@ -120,7 +112,7 @@ include /template/variables/_mixins
             .column--list-workspace.cell.medium-auto.medium-cell-block-container
                 //- .grid-x
                     //- .cell.medium-12.medium-cell-block-y
-                include /template/pages/includes/_page.workspace.concepts.pug 
+                include /template/pages/includes/_inc.workspace.author.pug 
                 //- include /template/pages/includes/_page.workspace.inc.pug 
 .cell.shrink.footer
     //- footer include

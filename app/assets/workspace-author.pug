@@ -38,49 +38,26 @@ html.no-js(lang='en')
                             li.breadcrumbs--nav-item
                                 //- a(href='#').breadcrumbs--nav-link 
                                 span.icon
-                                    i.material-icons.md-18 folder_special
+                                    i.material-icons.md-18 insert_chart_outlined
                                 span.text
-                                        | project
+                                        | Reports
                             li.breadcrumbs--nav-item
                                 //- a(href='#').breadcrumbs--nav-link 
                                 span.icon
-                                    //- i.material-icons.md-18 save
-                                    i.fa.fa-database(aria-hidden='true')
-                                    span.text
-                                        | CDD
-                            li.breadcrumbs--nav-item(data-intro="Breabcrumbs uses Material Icons <a href='http://localhost:3333/kitchensink.html'> (view icon glossary)</a>" data-position="right")
-                                //- a(href='#').breadcrumbs--nav-link 
-                                span.icon
-                                    i.material-icons.md-18 view_module
+                                    i.material-icons.md-18 insert_chart
                                 span.text
-                                        | Concepts & Data Elements
+                                        | Reports Name Here
                             li.breadcrumbs--nav-item
                                 //- a(href='#').breadcrumbs--nav-link 
                                 span.icon
-                                    i.material-icons.md-18 flip_to_back
+                                    i.material-icons.md-18 format_line_spacing
                                 span.text
-                                        | Value Sets
-                            li.breadcrumbs--nav-item 
-                                    span.icon
-                                        i.material-icons.md-18 change_history
-                                    span.text
-                                        | data element
-                            li.breadcrumbs--nav-item  
-                                    span.icon
-                                        i.material-icons.md-18 mode_edit
-                                    span.text
-                                        | element name*
+                                        | Section
                             li.breadcrumbs--nav-item.-is-green 
-                                a(href='#panel2').breadcrumbs--nav-link                              
                                     span.icon
-                                        i.material-icons.md-18 tab
+                                        i.material-icons.md-18 bar_chart
                                     span.text
-                                        | editing*
-                            li.breadcrumbs--nav-item 
-                                    span.icon
-                                        i.material-icons.md-18 lock_outline
-                                    span.text
-                                        | locked*
+                                        | Report Line 1
 
             //- page content(edtiable)            
             .content--page
@@ -96,7 +73,8 @@ html.no-js(lang='en')
                         //- include /template/pages/_page.concepts2.pug
                         //- include /template/variables/_kitchen.sink.pug
                         //- include /template/pages/_page.workspace.pug
-                        include /template/pages/_page.workspace.composer.pug
+                        include /template/pages/_page.workspace.author.pug
+                        //- include /template/pages/_page.workspace.composer.pug
                         //- include /template/pages/_page.workspace-test.pug
                         //- include /template/pages/_page.grid.pug
                         //- include /template/pages/_page.login.pug
