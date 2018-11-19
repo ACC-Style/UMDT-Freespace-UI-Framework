@@ -1,0 +1,62 @@
+include /template/variables/_mixins
+//- include /template/components/_prompt.pug
+#page--directory.panel--center-container
+    .grid-x
+        //- page
+        .panel--center-column-directory.small-2.medium-2.large-12.cell  
+            .content--panel
+                .grid-x
+                    .cell
+                        .content--panel
+                        p
+                            | Material Icon Documentation
+                            a(href='http://google.github.io/material-design-icons/') 
+                                | http://google.github.io/material-design-icons/
+                            
+                            table#data--table-icons.data--table.display(cellspacing='0', width='100%')
+                                thead
+                                    tr
+                                        th Type
+                                        th Page/Location
+                                        th Code Sy
+                                        th Sample
+                                tbody
+                                    tr
+                                        td Taxnomy
+                                        td Home
+                                        td device_hub
+                                        td 
+                                            a(href='index.html').breadcrumbs--nav-link
+                                                span.icon
+                                                    i.material-icons.md-18 device_hub
+                                    tr
+                                        td Create Project
+                                        td Home
+                                        td create_new_folder
+                                        td 
+                                            a(href='index.html').breadcrumbs--nav-link
+                                                span.icon
+                                                    i.material-icons.md-18 create_new_folder
+
+                                    tr
+                                        td Updates
+                                        td Right Navigation
+                                        td new_releases
+                                        td 
+                                            a(href='index.html').breadcrumbs--nav-link
+                                                span.icon
+                                                    i.material-icons.md-18 new_releases
+
+                                    tr
+                                        td Data Element
+                                        td Global
+                                        td change_history
+                                        td 
+                                            a(href='index.html').breadcrumbs--nav-link
+                                                span.icon
+                                                    i.material-icons.md-18 change_history
+
+
+                                 
+//- footer include
+//- include /template/layout/_panel.center.footer.pug 

@@ -1,7 +1,20 @@
 var $ = require('jquery');
+var dt = require('datatables.net')();
+
 console.group(`//Vendor: Datatable`);
 
-// console.log($.fn.dataTable.version);
+console.log($.fn.dataTable.version);
+
+
+$('#data--table-icons').DataTable({
+    fixedHeader: true,
+    "oLanguage": {
+        "sSearch": "Quick filter:",
+        // "sInfo": "Showing _TOTAL_ entries to show (_START_ to _END_)"
+    },
+    dom: 'l<"#datatable--select-custom">frtip'
+});
+
 
 $('#data--table-search').DataTable({
     fixedHeader: true,
@@ -11,6 +24,7 @@ $('#data--table-search').DataTable({
     },
     dom: 'l<"#datatable--select-custom">frtip'
 });
+
 
 $('#data--table-projects').DataTable({
     fixedHeader: false,
