@@ -1,37 +1,63 @@
+.ui-fancytree {
+
+
+    .fancytree-has-children {
+        .fancytree-title {
+            font-weight: bolder;
+        }
+    }
+}
+
 #data-list-elements,
 #data-table-elements,
-#data-list-concepts {
+#data-list-concepts,
+#data-list-author-metrix,
+#data-list-author-executive {
     font-size: 85%;
+
     ul {
         outline: none;
         list-style: none;
+
         li {
             margin-bottom: .5em;
+
             .fancytree-node {
                 .fancytree-expander {
                     color: $color-neutral-light; // margin-top: 3px;
                 }
+
                 .fancytree-checkbox {
                     color: $palette-color-median; // margin-top: 3px;
                 }
+
                 .fancytree-icon {
                     margin-right: 3px;
                     float: right;
                     color: $color-neutral-medium;
                 }
+
                 .fancytree-title {
                     color: $palette-color-darken;
                     padding-left: 7px;
+                    // font-weight: bolder;
                 }
+
+
             }
+
+
         }
     }
+
     ul.ui-fancytree {
         margin: 1em 0 0 1.25em;
     }
+
     .material-icons {
         font-size: 17px;
     }
+
     .fancytree-container {
         outline: none;
     }
@@ -52,36 +78,45 @@
 table#data-table-concepts {
     font-size: 85%; // width: 99%;
     margin: 0 0 0 0;
+
     tbody th,
     tbody td {
         padding: .25em 0 .25em 0;
         border: none;
     }
+
     tbody {
         border: none;
     }
+
     tbody tr>td {
         padding: 0 0 0 .25em;
     }
+
     tbody tr td+td {
         text-align: center;
     }
+
     tbody tr td+td+td {
         text-align: left;
     }
+
     thead tr th {
         color: $palette-color-median;
         text-align: center;
     }
+
     tr {
         border-top: 1px solid $palette-color-lightens;
         background-color: $color-white;
     }
+
     thead {
         // background: $color-neutral-light; // color: #002B59;
         background: $color-white;
         text-align: left;
     }
+
     thead th,
     thead td,
     tfoot th,
@@ -90,10 +125,12 @@ table#data-table-concepts {
         font-weight: lighter;
         text-align: left;
     }
+
     .material-icons {
         font-size: 17px;
         color: $palette-color-median;
     }
+
     span[role="presentation"] {
         margin-right: 3px;
         float: right;

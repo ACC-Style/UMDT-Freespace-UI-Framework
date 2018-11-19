@@ -140,4 +140,125 @@
             }
         }
     }
+
+
+    &-group {
+        clear: both;
+        font-size: 80%;
+        cursor: pointer;
+        border: none;
+        margin: .25em 1em 1em 1em; // background-color: $color-heat;
+
+
+
+        .card-divider {
+            padding: .25em .25em .25em 1em;
+            // border: $border-thin solid $palette-color-lightens;
+            border-radius: .5em;
+            background: $color-twinkle;
+            color: $palette-color-darken;
+
+
+
+            .form--input-text {
+                display: inline-block;
+                height: 2em;
+                margin-bottom: 0;
+
+                .switch .switch-paddle {
+                    margin-top: 0px;
+                }
+
+                // label {
+                //     &:before {
+                //         display: inline-block;
+                //         content: "{"
+                //     }
+
+                //     &:after {
+                //         display: inline-block;
+                //         content: "{"
+                //     }
+                // }
+
+            }
+
+            .icon {
+                display: flex;
+                color: $palette-color-darken;
+                align-items: center;
+                height: 100%;
+                float: left;
+                margin-right: .5em; // border: 1px solid red;
+            }
+
+            .text {
+                display: flex;
+                align-items: center;
+                font-weight: bold;
+                height: 100%;
+                float: left; // margin-top: -12px;
+                // border: 1px solid red;
+            }
+
+            .card-options {
+                text-align: right;
+                padding-top: .25em; // border-left: $border-skinny solid $palette-color-lightens;
+
+                .icon i {
+                    color: $palette-color-darken;
+                }
+
+            }
+        }
+
+        .card-section {
+            padding: .25em 1em .25em 1em;
+            border: $border-thin solid $palette-color-lightens;
+            border-top: none !important;
+            margin-left: 1em;
+            width: 95%;
+            background: $color-light;
+            border-radius: 0 0 .5em .5em;
+
+            .form--input-select,
+            .form--input-text {
+                margin: 0 0 0 0;
+
+                label {
+                    float: left;
+                    width: auto;
+                    font-size: 80%;
+                    text-align: right;
+                    padding-right: .5em;
+                    padding-top: .5em;
+                    margin: 0 0 0 0;
+
+                }
+
+                label.switch-paddle {
+                    width: 4em;
+                    margin: 0 0 0 0;
+
+                }
+
+                select {
+                    float: left;
+                    margin: 0 0 0 0;
+                    width: auto;
+                    height: 1.80em;
+                    padding: 0 0 0 .5em;
+                    font-size: 80%;
+                    border-color: $color-neutral-medium;
+                }
+
+                .switch {
+                    margin: 0 0 0 0;
+
+                }
+            }
+        }
+
+
+    }
 }

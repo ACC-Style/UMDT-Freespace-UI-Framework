@@ -1,0 +1,110 @@
+#card-id-1.card--element-node.card(data-micro-interaction="card")
+    .card-divider
+        .grid-x
+            .car-title.cell.small-10
+                .icon
+                    i.material-icons.md-18 change_history
+                .text
+                    | Element Name Here
+            .card-options.small-2
+                button.button-option-setting(data-micro-interaction="option")
+                    span.icon
+                        i.material-icons.md-18 settings
+                button.button-option-drag(data-micro-interaction="card")
+                    span.icon
+                        i.material-icons.md-18 drag_handle
+    .card-section.-is-expanded
+
+        .grid-x
+            .medium-3.cell
+                .form--input-text
+                    .switch.tiny
+                            label.switch-value(for='switchA-1')
+                                | Show
+                            input#switchA-1.switch-input(type='checkbox', name='switchA-1')
+                            label.switch-paddle(for='switchA-1')
+                                span.show-for-sr Edit Mode
+                                span.switch-active(aria-hidden='true')
+                                    i.material-icons.md-14(aria-hidden='true') visibility
+                                span.switch-inactive(aria-hidden='true')
+                                    i.material-icons.md-14(aria-hidden='true') visibility_off
+            .medium-3.cell
+                .form--input-text
+                    .switch.tiny
+                            label.switch-value(for='switchA-2')
+                                | Show
+                            input#switchA-2.switch-input(type='checkbox', name='switchA-2')
+                            label.switch-paddle(for='switchA-2')
+                                span.show-for-sr Edit Mode
+                                span.switch-active(aria-hidden='true')
+                                    i.material-icons.md-14(aria-hidden='true') visibility
+                                span.switch-inactive(aria-hidden='true')
+                                    i.material-icons.md-14(aria-hidden='true') visibility_off
+
+            .medium-3.cell
+                .form--input-select
+                    label
+                        | Options
+                    select(required='')
+                        option(value='volvo') One
+                        option(value='saab') Two
+                        option(value='mercedes') Three
+            .medium-3.cell
+                .form--input-select
+                    label
+                        | Options
+                    select(required='')
+                        option(value='volvo') One
+                        option(value='saab') Two
+                        option(value='mercedes') Three
+
+#card-id-3.card--element-group.card(data-micro-interaction="card")
+    .card-divider
+        .grid-x
+            .car-title.cell.small-10
+                .icon
+                    i.material-icons.md-18 mode_edit
+                .text
+                    | Group
+                .form--input-text
+                        .switch.tiny
+                                //- label.switch-value(for='swtich-active-s')
+                                    | Supressed
+                                input#group-swi.switch-input(type='checkbox', name='exampleSwitch')
+                                label.switch-paddle(for='group-swi')
+                                    span.show-for-sr Edit Mode
+                                    span.switch-active(aria-hidden='true')
+                                        .text AND
+                                        //- i.material-icons.md-16(aria-hidden='true') visibility
+                                    span.switch-inactive(aria-hidden='true')
+                                        .text OR
+                                        //- i.material-icons.md-16(aria-hidden='true') visibility_off
+            .card-options.small-2
+                button.button-option-setting(data-micro-interaction="delete")
+                    span.icon
+                        i.material-icons.md-18 delete
+                //- button.button-option-setting(data-micro-interaction="option")
+                    span.icon
+                        i.material-icons.md-18 setting
+                button.button-option-setting(data-micro-interaction="add")
+                    span.icon
+                        i.material-icons.md-18 library_add
+                button.button-option-drag(data-micro-interaction="card")
+                    span.icon
+                        i.material-icons.md-18 drag_handle
+    .card-section.-is-expanded
+        .grid-x
+            .medium-12.cell
+                table#data-table-concepts
+                    colgroup
+                        col.col-1
+                        col.col-2
+                        col.col-3
+                    thead
+                        tr
+                            th date element
+                            th operator
+                            th value
+                            th 
+                    tbody
+

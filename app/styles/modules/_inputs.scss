@@ -121,6 +121,10 @@ textarea {
     border-bottom: 1px solid $color-neutral-light;
     box-shadow: none; // font-weight: bold;
 
+    &+button.button-appended {
+        border-bottom: 1px solid $color-neutral-light;
+    }
+
     &:focus {
         border: none;
         border-bottom: 1px solid $color-light; // border-bottom: 1px solid $palette-color-darken;
@@ -133,6 +137,10 @@ textarea {
             color: $palette-color-median;
             -webkit-font-feature-settings: 'liga';
         }
+    }
+
+    &:focus+button.button-appended {
+        border-bottom: 1px solid $color-light;
     }
 
     &:focus {
@@ -160,13 +168,28 @@ input[disabled] {
 .form--input-text,
 .form--input-select,
     {
-    .help-text {
-        color: $palette-color-lightens;
+    .help {
+        &-text {
+            color: $palette-color-lightens;
 
-        &:hover {
-            color: $palette-color-median;
+            &:hover {
+                color: $palette-color-median;
+            }
+
+        }
+
+        &-info {
+            // color: $color-neutral-light;
+            color: $color-neutral-medium;
+            font-size: 80%;
+            font-style: italic;
+            float: left;
+            clear: both;
         }
     }
+
+
+
 
     .text-mirror {
         // display: block;
@@ -354,6 +377,12 @@ span.form-error.is-visible {
 
 .form--input-select select {
     font-size: 100%;
+    margin-top: .25em;
+    border: $border-skinny-top solid transparent !important;
+
+    &:hover {
+        border: $border-skinny-top solid $palette-color-lightens;
+    }
 }
 
 #datatable--select-custom {
@@ -374,6 +403,10 @@ span.form-error.is-visible {
         margin-top: 1em;
         margin-left: .5em;
     }
+
+    .switch-value {
+        width: 0px;
+    }
 }
 
 textarea.shorter {
@@ -382,4 +415,12 @@ textarea.shorter {
 
 label {
     line-height: 1;
+
+    .text {
+        margin-left: .5em;
+    }
+
+    .link {
+        margin-left: .5em;
+    }
 }

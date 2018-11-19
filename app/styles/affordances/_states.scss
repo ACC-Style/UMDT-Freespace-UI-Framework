@@ -142,9 +142,17 @@
 
 // TODO: had class added to parent
 .-is-filled {
-    border-bottom: none !important;
+    border-bottom: 1px solid transparent !important;
+
+    &+button.button-appended {
+        border-bottom: none !important;
+    }
 
     &:focus {
+        border-bottom: 1px solid red !important;
+    }
+
+    &:focus+button.button-appended {
         border-bottom: 1px solid red !important;
     }
 }
@@ -158,6 +166,37 @@
         color: $palette-color-accent;
         -webkit-font-feature-settings: 'liga';
     }
+}
+
+.-with-help-text {
+    input {
+        margin-bottom: 0;
+    }
+
+    .form-error.is-visible {
+        margin-top: 1px;
+        margin-bottom: 0;
+        float: left;
+        clear: both;
+    }
+}
+
+.-with-input-button {
+    input {
+        width: 80%;
+        float: left;
+        // border: 1px solid red;
+    }
+
+    button.button-appended {
+
+        &.-is-focused {
+            border-bottom: 1px solid red;
+        }
+
+    }
+
+
 }
 
 .-edit-mode-off {
@@ -429,7 +468,8 @@ ul.accordion li.-is-saved {
 }
 
 .card--element-node,
-.card--element-operator {
+.card--element-operator,
+.card--element-group {
     .card-section.-is-expanded {
         display: block;
     }
@@ -442,7 +482,8 @@ ul.accordion li.-is-saved {
 
 }
 
-.card--element-node.-is-selected {
+.card--element-node.-is-selected,
+.card--element-group.-is-selected {
 
     .card-section,
     .card-divider {
@@ -462,7 +503,8 @@ ul.accordion li.-is-saved {
     }
 }
 
-.card--element-node {
+.card--element-node,
+.card--element-group {
 
     .card-options {
         button.button-option {
@@ -513,5 +555,133 @@ ul.accordion li.-is-saved {
     .composer--grid-cell.-is-hovered {
         border: solid $palette-color-median;
 
+    }
+}
+
+
+.form--input-select {
+    &.primary {
+
+        select {
+            color: $palette-color-darken;
+            border-color: $palette-color-darken;
+
+            option {
+                color: $palette-color-darken;
+            }
+
+            &:hover {
+                border-color: $palette-color-darken !important;
+            }
+        }
+
+    }
+
+    &.secondary {
+
+        select {
+            color: $color-neutral;
+            border-color: $color-neutral;
+
+            option {
+                color: $color-neutral;
+            }
+
+            &:hover {
+                border-color: $color-neutral !important;
+            }
+        }
+
+    }
+
+
+    &.success {
+
+        select {
+            color: $color-grass;
+            border-color: $color-grass;
+
+            option {
+                color: $color-grass;
+            }
+
+            &:hover {
+                border-color: $color-grass !important;
+            }
+        }
+
+    }
+
+    &.alert {
+
+        select {
+            color: $palette-color-accent;
+            border-color: $palette-color-accent;
+
+            option {
+                color: $palette-color-accent;
+            }
+
+            &:hover {
+                border-color: $palette-color-accent !important;
+            }
+        }
+
+    }
+
+
+    &.warning {
+
+        select {
+            color: $color-heat;
+            border-color: $color-heat;
+
+            option {
+                color: $color-heat;
+            }
+
+            &:hover {
+                border-color: $color-heat !important;
+            }
+        }
+
+    }
+}
+
+.form--input-text {
+    &.primary {
+        input {
+            color: $palette-color-darken;
+        }
+    }
+
+    &.secondary {
+
+        input {
+            color: $color-neutral;
+        }
+    }
+
+
+    &.success {
+
+        input {
+            color: $color-grass;
+        }
+    }
+
+    &.alert {
+
+        input {
+            color: $palette-color-accent;
+        }
+    }
+
+
+    &.warning {
+
+        input {
+            color: $color-heat;
+        }
     }
 }

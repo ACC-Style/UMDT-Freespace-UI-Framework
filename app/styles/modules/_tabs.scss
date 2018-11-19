@@ -240,6 +240,21 @@
             padding-left: 1em;
         }
     }
+
+    .divider-section {
+        width: 150%;
+        border: none;
+        border-top: $border-skinny-top solid $palette-color-lightens;
+        margin-bottom: 1em;
+        margin-left: -2em;
+        padding-top: .5em;
+        padding-left: 3em;
+
+        &-heading {
+            color: $palette-color-darken;
+            text-transform: uppercase;
+        }
+    }
 }
 
 .tabs-content {

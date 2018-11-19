@@ -8,12 +8,39 @@ var $ = require('jquery');
 
 // collect elements
 var allInputsItems = $("input, textarea"),
-    allColors = ["red", "blue", "greens"];
+    allColors = ["red", "blue", "greens"],
+    allInputsFocus = $(".-with-input-button input");
 
 // log allColors
 allColors.forEach(function (color) {
     console.log(color);
 }, this);
+
+
+// allInputsFocus.focus(focusInputsButtons);
+// allInputsFocus.blur(blurInputsButtons);
+
+// log allInputsItems when focus chanage appneded button
+function focusInputsButtons(event) {
+
+    let input = $(this),
+        btn = $(this).next(".button-appended");
+
+
+    console.log(`this is' ${input.attr("class")}`);
+    console.log(`this is' ${btn.attr("class")}`);
+
+    btn.addClass("-is-focused");
+
+}
+
+function blurInputsButtons(event) {
+
+    let input = $(this),
+        btn = $(this).next(".button-appended");
+    btn.removeClass("-is-focused");
+
+}
 
 // log allInputsItems
 allInputsItems.each(function (index) {

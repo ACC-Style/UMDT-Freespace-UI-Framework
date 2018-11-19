@@ -1,0 +1,170 @@
+form(data-abide='7v3wyo-abide', novalidate='')
+    .grid-x.grid-padding-x
+        .cell.small-4
+            .form--input-text.-is-required
+                label
+                    | Major Categories
+                input(type='text', placeholder='1234', aria-describedby='exampleHelpText', required='', pattern='number', value="1212")
+                span.form-error
+                    | A name of the new create is required.
+                //- p#exampleHelpText.help-text.-has-error Any help information (what is resticted or allow with name input)
+        .cell.small-4
+
+            .form--input-text.-is-required
+                label
+                    | Minor Categories
+                input(type='text', placeholder='1234', aria-describedby='exampleHelpText', required='', pattern='number', value="1212")
+                span.form-error
+                    | A name of the new create is required.
+                //- p#exampleHelpText.help-text.-has-error Any help information (what is restricted or allow with name input)
+        .cell.small-2
+
+                    .form--input-text
+                        .switch.tiny
+                                label.switch-value(for='swtich-active-s')
+                                    | Supressed
+                                input#swtich-active-s.switch-input(type='checkbox', name='exampleSwitch')
+                                label.switch-paddle(for='swtich-active-s')
+                                    span.show-for-sr Edit Mode
+                                    span.switch-active(aria-hidden='true')
+                                        i.material-icons.md-16(aria-hidden='true') visibility
+                                    span.switch-inactive(aria-hidden='true')
+                                        i.material-icons.md-16(aria-hidden='true') visibility_off
+        .cell.small-2
+            .form--input-text.-is-required
+                label
+                    | ID
+                input(type='text', placeholder='1234', aria-describedby='exampleHelpText', required='', pattern='number', value="1212")
+                span.form-error
+                    | A name of the new create is required.
+                //- p#exampleHelpText.help-text.-has-error Any help information (what is restricted or allow with name input)
+        .cell.small-8
+            .grid-y
+                .cell
+                    .form--input-text.-is-required.-with-help-text.-with-input-button
+                        label
+                            | Algorithm
+                        input(type='text', placeholder='1234', aria-describedby='exampleHelpText', required='', pattern='number', value="1212")
+                        button.button.button-appended
+                                span.icon
+                                    i.material-icons.md-16(aria-hidden='true') exit_to_app
+                        span.form-error
+                            | A name of the new create is required.
+                        p#help3.help-info Month date year timePM
+                        //- p#exampleHelpText.help-text.-has-error Any help information (what is restricted or allow with name input)
+       
+        .cell.small-4
+            .grid-y
+                .cell
+                    .form--input-text.-is-required.-with-help-text
+                        label
+                            | Updated:
+                        input(type='text', placeholder='phrase', aria-describedby='exampleHelpText', value="Matt")
+                        p#help3.help-info Month date year timePM
+        .cell.small-6
+            .grid-y
+                .cell
+                    .form--input-text.-is-required.-with-help-text.-with-input-button
+                        label
+                            | Population
+                        input(type='text', placeholder='1234', aria-describedby='exampleHelpText', required='', pattern='number', value="Title")
+                        button.button.button-appended
+                                span.icon
+                                    i.material-icons.md-16(aria-hidden='true') exit_to_app
+                        span.form-error
+                            | A name of the new create is required.
+        .cell.small-6
+            .grid-y
+                .cell
+                    .form--input-text.-is-required.-with-help-text.-with-input-button
+                        label
+                            | Lines Reported
+                        input(type='text', placeholder='1234', aria-describedby='exampleHelpText', required='', pattern='number', value="Detailed Selected Line")
+                        button.button.button-appended
+                                span.icon
+                                    i.material-icons.md-16(aria-hidden='true') exit_to_app
+                        span.form-error
+                            | A name of the new create is required.
+                        //- p#help3.help-info Month date year timePM
+                        //- p#exampleHelpText.help-text.-has-error Any help information (what is restricted or allow with name input)
+
+        .cell.small-12
+            .grid-y
+                .cell
+                    .form--input-text.-is-required
+                        label
+                            | Line Text
+                        input(type='text', placeholder='phrase', aria-describedby='exampleHelpText', value="Matt")
+                        //- p#help2.help-text
+                            | {Month}{date}{year}{timePM}
+        .cell.small-12
+            .grid-y
+                .cell
+                    .form--input-text.-is-required
+                        label
+                            | Line Text
+                        input(type='text', placeholder='phrase', aria-describedby='exampleHelpText', value="Matt")
+                        //- p#help2.help-text
+                            | {Month}{date}{year}{timePM}
+
+        .cell.divider-section
+            //- hr.divider-section
+            h6.divider-section-heading.h7 Styling
+        .cell.small-4
+            .form--input-text.-is-required.warning
+                label
+                    | Indent
+                input(type='text', placeholder='1234', aria-describedby='exampleHelpText', required='', pattern='number', value="1212")
+                span.form-error
+                    | A name of the new create is required.
+                //- p#exampleHelpText.help-text.-has-error Any help information (what is restricted or allow with name input)
+        .cell.small-4
+            .form--input-radio
+                fieldset
+                    legend Grey Background
+                        input#quibRed(type='radio', name='quib', value='Red')
+        .cell.small-4
+                    .form--input-text
+                        .switch.tiny
+                                label.switch-value(for='swtich-active-dd')
+                                    | Bold
+                                input#swtich-active-dd.switch-input(type='checkbox', name='exampleSwitch')
+                                label.switch-paddle(for='swtich-active-dd')
+                                    span.show-for-sr Edit Mode
+                                    span.switch-active(aria-hidden='true')
+                                        i.material-icons.md-16(aria-hidden='true') format_bold
+                                    span.switch-inactive(aria-hidden='true')
+                                        i.material-icons.md-16(aria-hidden='true') format_italic
+        .cell.divider-section
+            //- hr.divider-section
+            h6.divider-section-heading.h7 Samples Inputs
+        .cell.small-4
+            .form--input-select.warning
+                label
+                    | Population
+                select(required='')
+                    option(value='volvo') Volvo Car
+                    option(value='saab') Saab
+                    option(value='mercedes') Mercedes Longer
+                    option(value='audi') Audi
+        .cell.small-4
+            .form--input-text.-is-required.warning
+                label
+                    | Test
+                    span.text tetx
+                    span.icon 
+                        i.material-icons.md-16(aria-hidden='true') format_bold
+                    span.link 
+                        a tetx
+                input(type='text', placeholder='1234', aria-describedby='exampleHelpText', required='', pattern='number', value="1212")
+                span.form-error
+                    | A name of the new create is required.
+                //- p#exampleHelpText.help-text.-has-error Any help information (what is restricted or allow with name input)
+        .cell.divider-section
+            //- hr.divider-section
+            h6.divider-section-heading.h7 Population Groups
+        .cell.small-12
+            include /template/components/_card.element.author.pug
+        .cell.divider-section
+            //- hr.divider-section
+            h6.divider-section-heading.h7 Query Sample
