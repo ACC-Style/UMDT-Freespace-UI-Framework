@@ -1,139 +1,138 @@
 .data--table {
-    font-size: 1rem;
-
-    thead>tr th {
-        color: $color-light;
-        border-right: 1px solid #fff;
-        font-weight: lighter;
+  font-size: 1rem;
+  border-collapse: separate;
+  thead > tr th {
+    text-align: center;
+    height: 2em;
+    background-color: $palette-color-lightens;
+    color: $palette-color-darken;
+    border-right: $border-skinny solid $color-light; // border-bottom: $border-skinny solid $color-morning;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding-top: 0.25em;
+    padding-bottom: 0px;
+    font-weight: lighter;
+  }
+  td {
+    font-size: 0.85em;
+  }
+  th {
+    border-right: 1px solid #fff;
+  }
+  &-inside-tab {
+    font-size: 90%;
+    thead,
+    tbody,
+    tfoot {
+      border: none;
     }
-
-    td {
-        // font-size: .85em;
+    thead {
+      background: transparent;
     }
-
-    th {
-        border-right: 1px solid #fff;
+    thead > tr {
+      // color: $color-light;
+      background: transparent; // border-right: 1px solid #fff;
+      font-weight: lighter;
     }
-
-    &-inside-tab {
-        font-size: 90%;
-
-        thead,
-        tbody,
-        tfoot {
-            border: none;
-        }
-
-        thead {
-            background: transparent;
-        }
-
-        thead>tr {
-            // color: $color-light;
-            background: transparent;
-            // border-right: 1px solid #fff;
-            font-weight: lighter;
-        }
-    }
+  }
+  &-head {
+    // text-align: center;
+    margin: 0 auto;
+    white-space: nowrap;
+    width: 7rem;
+    overflow: hidden;
+    text-overflow: ellipsis; // border: 1px solid #000000;
+  }
+  &-option {
+    width: 100%; // border: 1px solid #000000;
+  }
 }
 
 #data--table-users-participants {
-
-    thead,
-    tbody,
-    tfoot {
-        background: transparent;
-        border: none;
+  thead,
+  tbody,
+  tfoot {
+    background: transparent;
+    border: none;
+  }
+  thead {
+    display: none;
+  }
+  .actionable {
+    padding: 0 0 0 0;
+    text-align: center;
+    button {
+      padding: 0.5em 1em 0.5em 1em;
+      margin: 0 auto;
     }
-
-    thead {
-        display: none;
+  }
+  tbody {
+    .icon {
+      float: left;
+      margin-right: 0.25em;
     }
-
-    .actionable {
-        padding: 0 0 0 0;
-        text-align: center;
-
-        button {
-            padding: .5em 1em .5em 1em;
-            margin: 0 auto;
-        }
-    }
-
-    tbody {
-        .icon {
-            float: left;
-            margin-right: .25em;
-        }
-    }
+  }
 }
 
 #data--table-users {
-    .actionable {
-        text-align: center;
-        padding: 0 0 0 0;
-
-        button {
-            padding: .5em 1em .5em 1em;
-            margin: 0 auto;
-        }
+  .actionable {
+    text-align: center;
+    padding: 0 0 0 0;
+    button {
+      padding: 0.5em 1em 0.5em 1em;
+      margin: 0 auto;
     }
+  }
 }
 
 .table-transparent {
-    tr {
-        background: transparent !important;
-    }
+  tr {
+    background: transparent !important;
+  }
 }
 
 table#data--table-taxon {
-    thead {
-        display: none;
-    }
-
-    th {
-        padding: 0 0 0 0;
-        margin: 0 0 0 0;
-    }
-
-    tbody tr:nth-child(even) {
-        background-color: #fff;
-    }
-
-    tr:hover {
-        background-color: $palette-color-lightens !important;
-    }
-
-    td {
-        padding: 0 0 0 1em;
-        margin: 0 0 0 0;
-
-        a.button.delete {
-            // height: .25em;
-            // width: .25em;
-            margin-top: 1em;
-            padding: .25em;
-
-            i {
-                text-decoration: none;
-            }
-
-            &:hover {
-                i {
-                    color: $color-light;
-                }
-            }
+  thead {
+    display: none;
+  }
+  th {
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+  }
+  tbody tr:nth-child(even) {
+    background-color: #fff;
+  }
+  tr:hover {
+    background-color: $palette-color-lightens !important;
+  }
+  td {
+    padding: 0 0 0 1em;
+    margin: 0 0 0 0;
+    a.button.delete {
+      // height: .25em;
+      // width: .25em;
+      margin-top: 1em;
+      padding: 0.25em;
+      i {
+        text-decoration: none;
+      }
+      &:hover {
+        i {
+          color: $color-light;
         }
+      }
     }
-
-    thead,
-    tbody,
-    tfoot {
-        border: none;
-        background: transparent;
-    }
-
-    tbody>tr>td {
-        width: 90%;
-    }
+  }
+  thead,
+  tbody,
+  tfoot {
+    border: none;
+    background: transparent;
+  }
+  tbody > tr > td {
+    width: 90%;
+  }
 }
+
+// table#data--table-sample {}

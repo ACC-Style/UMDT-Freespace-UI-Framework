@@ -685,3 +685,17 @@ ul.accordion li.-is-saved {
         }
     }
 }
+
+select {
+    border-color: $color-neutral;
+    margin-left: .25em;
+    margin-right: .25em;
+
+    option {
+        // color: $color-neutral;
+    }
+
+    &:hover {
+        border-color: $color-neutral !important;
+    }
+}

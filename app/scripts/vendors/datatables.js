@@ -6,6 +6,18 @@ console.group(`//Vendor: Datatable`);
 console.log($.fn.dataTable.version);
 
 
+$('#data--table-sample').DataTable({
+    fixedHeader: true,
+    "paging": false,
+    "searching": false,
+    "info": false,
+    "oLanguage": {
+        // "sSearch": "Quick filter:",
+        // "sInfo": "Showing _TOTAL_ entries to show (_START_ to _END_)"
+    },
+    // dom: 'l<"#datatable--select-custom">frtip'
+});
+
 $('#data--table-icons').DataTable({
     fixedHeader: true,
     "oLanguage": {

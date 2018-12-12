@@ -32,38 +32,6 @@
                         i.material-icons.md-12(aria-hidden='true') view_module
                     span.text
                         | Header Text
-
-            //- li.tabs-title.-is-saved
-                .tab-icons
-                    span.item-icon
-                        i.material-icons.md-14(aria-hidden='true') history
-                    span.item-id 555
-                    //- span.status-icon
-                    //-     i.material-icons.md-14(aria-hidden='true') mode_edit 
-                    span.tab-icon-close
-                        i.material-icons.md-14(aria-hidden='true') close 
-                a(href="#panelC", aria-selected="true") 
-
-                    //- span.icon
-                        i.material-icons.md-12(aria-hidden='true') view_module
-                    span.text
-                        | Layout Grid
-
-            //- li.tabs-title
-                .tab-icons
-                    span.item-icon
-                        i.material-icons.md-14(aria-hidden='true') history
-                    span.item-id 555
-                    span.status-icon
-                        i.material-icons.md-14(aria-hidden='true') error 
-                    span.tab-icon-close
-                        i.material-icons.md-14(aria-hidden='true') close 
-                a(href="#panelD", aria-selected="true") 
-
-                    //- span.icon
-                        i.material-icons.md-12(aria-hidden='true') view_module
-                    span.text
-                        | Drag Elements
                         
         .tabs-content(data-tabs-content="example-tabs").-is-editable
             #panelA.tabs-panel.is-active
@@ -73,17 +41,6 @@
                         button
                             .icon
                                 i.material-icons.md-18 zoom_out_map
-                        //- .switch-input-spacedata-micro-interaction-type
-                            .switch.tiny
-                                label.switch-value(for='swtich-edit-mode')
-                                    //- | Edit Mode:
-                                input#swtich-edit-mode.switch-input(type='checkbox', name='exampleSwitch')
-                                label.switch-paddle(for='swtich-edit-mode', data-micro-interaction-type="edit-mode",data-micro-interaction-subject=".column--list-workspace")
-                                    span.show-for-sr Edit Mode
-                                    span.switch-active(aria-hidden='true')
-                                        i.material-icons.md-16(aria-hidden='true') mode_edit
-                                    span.switch-inactive(aria-hidden='true')
-                                        i.material-icons.md-16(aria-hidden='true') lock
                     .cell.small-10.medium-cell-block-y.workspace--form
                         //- h2 1
                         include /template/variables/_form.author.pug
@@ -100,48 +57,68 @@
                         button
                             .icon
                                 i.material-icons.md-18 open_with
-                        //- .switch-input-spacedata-micro-interaction-type
-                            .switch.tiny
-                                label.switch-value(for='swtich-edit-mode')
-                                    //- | Edit Mode:
-                                input#swtich-edit-mode.switch-input(type='checkbox', name='exampleSwitch')
-                                label.switch-paddle(for='swtich-edit-mode', data-micro-interaction-type="edit-mode",data-micro-interaction-subject=".column--list-workspace")
-                                    span.show-for-sr Edit Mode
-                                    span.switch-active(aria-hidden='true')
-                                        i.material-icons.md-16(aria-hidden='true') mode_edit
-                                    span.switch-inactive(aria-hidden='true')
-                                        i.material-icons.md-16(aria-hidden='true') lock
-                    .cell.small-10.medium-cell-block-y.workspace--form.flush
-                        ul.accordion(data-accordion='tp8seet-accordion', role='tablist')
-                            li.accordion-item.is-active(data-accordion-item='')
-                                a#0rmnx1-accordion-label.accordion-title(href='#', aria-controls='0rmnx1-accordion', role='tab', aria-expanded='true', aria-selected='true') 
-                                    .text Concept
-                                        button.option-button.button.has-tip(data-tooltip='', aria-haspopup='true', data-disable-hover='false', tabindex='1', title='New Concept') 
-                                            i.material-icons.md-18 add_box
-                                #0rmnx1-accordion.accordion-content(data-tab-content='', role='tabpanel', aria-labelledby='0rmnx1-accordion-label', aria-hidden='false', style='display: block;')
-                                    include /template/variables/_form.tab.concept.pug
-
-                            li.accordion-item(data-accordion-item='').-is-broken
-                                a#ec5u7s-accordion-label.accordion-title(href='#', aria-controls='ec5u7s-accordion', role='tab', aria-expanded='false', aria-selected='false') 
-                                    .text Definitions   
-                                        button.option-button.button.has-tip(data-tooltip='', aria-haspopup='true', data-disable-hover='false', tabindex='1', title='New Definition') 
-                                            i.material-icons.md-18 add_box
-                                #ec5u7s-accordion.accordion-content(data-tab-content='', role='tabpanel', aria-labelledby='ec5u7s-accordion-label', aria-hidden='true')
-                                    include /template/variables/_form.tab.definitions.pug
-                            li.accordion-item(data-accordion-item='')
-                                a#x20pz9-accordion-label.accordion-title(href='#', aria-controls='x20pz9-accordion', role='tab', aria-expanded='false', aria-selected='false') 
-                                    .text Code System Binding
-                                        button.option-button.button.has-tip(data-tooltip='', aria-haspopup='true', data-disable-hover='false', tabindex='1', title='New Code System Binding') 
-                                            i.material-icons.md-18 add_box
-                                #x20pz9-accordion.accordion-content(data-tab-content='', role='tabpanel', aria-labelledby='x20pz9-accordion-label', aria-hidden='true')
-                                    include /template/variables/_form.tab.code.pug
-                            li.accordion-item(data-accordion-item='')
-                                a#x11pz9-accordion-label.accordion-title(href='#', aria-controls='x20pz9-accordion', role='tab', aria-expanded='false', aria-selected='false') 
-                                    .text Taxon
-                                        button.option-button.button.has-tip(data-tooltip='', aria-haspopup='true', data-disable-hover='false', tabindex='1', title='New Taxon') 
-                                            i.material-icons.md-18 add_box
-                                #x20pz9-accordion.accordion-content(data-tab-content='', role='tabpanel', aria-labelledby='x20pz9-accordion-label', aria-hidden='true')
-                                    include /template/variables/_form.tab.taxon.pug
+                    .cell.small-10.medium-cell-block-y.workspace--form
+                        table#data--table-sample.data--table
+                            thead
+                                tr
+                                    th(width='200') 
+                                        .data--table-head(data-tooltip tabindex="1" title="One One One One One One Tou")
+                                            | One One One One One One Tou
+                                    th 
+                                        .data--table-head
+                                            | Two Words
+                                    th(width='150') 
+                                        .data--table-head
+                                            | Three Words
+                                    th(width='150') 
+                                        .data--table-head
+                                            | Super Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Word Header
+                            tbody
+                                tr
+                                    td 1 Super Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Word Header
+                                    td q
+                                    td w
+                                    td 2
+                                tr
+                                    td  Super Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Word Header
+                                    td T
+                                    td Cw
+                                    td we
+                                tr
+                                    td  Super Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Word Header
+                                    td Thwus.
+                                    td Cwre
+                                    td we
+                                tr
+                                    td 1 Super Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Word Header
+                                    td q
+                                    td w
+                                    td 2
+                                tr
+                                    td C Super Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Word Header
+                                    td T
+                                    td Cw
+                                    td we
+                                tr
+                                    td Cww Super Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Word Header
+                                    td Thwus.
+                                    td Cwre
+                                    td we
+                                tr
+                                    td 1 Super Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Word Header
+                                    td q
+                                    td w
+                                    td 2
+                                tr
+                                    td C Super Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Word Header
+                                    td T
+                                    td Cw
+                                    td we
+                                tr
+                                    td Cww
+                                    td Thwus.
+                                    td Cwre
+                                    td we
                     .cell.small-1.workspace--controls
                         .panel--center-bottom-controls.float-right
 
