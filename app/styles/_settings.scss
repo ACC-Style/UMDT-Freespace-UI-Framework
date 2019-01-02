@@ -436,8 +436,10 @@ $slider-opacity-disabled: 0.25;
 $slider-radius: $global-radius;
 // 31. Switch
 // ----------
-$switch-background: $medium-gray;
-$switch-background-active: $primary-color;
+$switch-background:$palette-color-darken;
+// $switch-background: $medium-gray;
+$switch-background-active: $palette-color-median;
+// $switch-background-active: $primary-color;
 $switch-height: 2rem;
 $switch-height-tiny: 1.5rem;
 $switch-height-small: 1.75rem;

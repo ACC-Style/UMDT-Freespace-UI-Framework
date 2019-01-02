@@ -112,7 +112,21 @@
     }
 }
 
+
 // TODO: refractor is-required styles
+.form--input-select.-is-required {
+    label:after {
+        position: absolute;
+        font-family: 'Material Icons';
+        font-size: 1.25em;
+        margin-top: -.25em;
+        margin-left: .25em;
+        content: "star";
+        color: $palette-color-accent;
+        -webkit-font-feature-settings: 'liga';
+    }
+}
+
 .form--input-text.-is-required {
     label:after {
         // position: absolute;

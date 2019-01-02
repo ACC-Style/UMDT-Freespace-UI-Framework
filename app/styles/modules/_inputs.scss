@@ -239,11 +239,12 @@ input[readonly]:focus {
     select {
 
         // padding: 10px 40px 10px 10px;
-        // -webkit-appearance: none;
-        // -ms-appearance: none;
-        // -moz-appearance: none;
-        // appearance: none;
-        background-image: none; // border: 1px solid $palette-color-lightens;
+        -webkit-appearance: none;
+        -ms-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        // background-image: none;
+        // border: 1px solid $palette-color-lightens;
         // background-color: transparent;
         // border-radius: 0;
         // position: relative;
@@ -403,6 +404,34 @@ span.form-error.is-visible {
 
 .switch {
     text-align: right;
+
+    &.switch-disable {
+        cursor: none;
+
+        .switch-paddle {
+            cursor: not-allowed !important;
+
+        }
+
+        .switch-paddle::after {
+            background: $color-light;
+            // border: $border-skinny solid $color-neutral-light;
+
+        }
+
+        .switch-paddle,
+        input:checked~.switch-paddle {
+            color: $color-light;
+            background: $color-neutral-light;
+
+            // border: $border-skinny solid $color-neutral-light;
+
+            i {
+                color: $color-light;
+
+            }
+        }
+    }
 
     .switch-active,
     .switch-inactive {

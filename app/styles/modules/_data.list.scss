@@ -137,3 +137,44 @@ table#data-table-concepts {
         color: $palette-color-lightens;
     }
 }
+
+// fancy tree
+.ui-fancytree {
+    li[role="treeitem"] {
+        span.fancytree-node {
+            // display: inline-block;
+            width: 100%;
+
+            span[role="button"] {
+                display: inline-block;
+                float: left;
+                border: 1px solid green;
+                width: 5%;
+                clear: left;
+            }
+
+            span[role="presentation"] {
+                display: inline-block;
+                border: 1px solid blue;
+                float: right;
+                width: 5%;
+
+            }
+
+            span[role="checkbox"] {
+                display: inline-block;
+                border: 1px solid blue;
+                float: left;
+                width: 10%;
+
+            }
+
+            span.fancytree-title {
+                border: 1px solid red;
+                display: inline-block;
+                float: left;
+                width: 80%;
+            }
+        }
+    }
+}

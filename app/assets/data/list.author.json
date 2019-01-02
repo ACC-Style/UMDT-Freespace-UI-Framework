@@ -42,7 +42,7 @@
                 "key": "3"
             },
             {
-                "title": "C",
+                "title": "Long name here  It is super long, longer than it needs to be",
                 "key": "4",
                 "extraClasses": "-has-children",
                 "children": [{
@@ -50,7 +50,7 @@
                         "key": "3"
                     },
                     {
-                        "title": "C",
+                        "title": "Long name here  It is super long, longer than it needs to be",
                         "key": "4"
                     }
                 ]
