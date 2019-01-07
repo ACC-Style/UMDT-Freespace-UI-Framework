@@ -158,7 +158,7 @@ table#data-table-concepts {
     }
 
     li[role="treeitem"] {
-        border: 1px solid cyan;
+        // border: 1px solid cyan;
         list-style: none;
 
         span.fancytree-node {
@@ -187,7 +187,7 @@ table#data-table-concepts {
                 // border: 1px solid red;
                 display: inline-block;
                 // float: left;
-                // width: 75%;
+                width: 75%;
 
                 b {
                     display: inline-block;

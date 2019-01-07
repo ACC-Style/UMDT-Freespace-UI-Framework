@@ -418,19 +418,22 @@ ul.accordion li.-is-saved {
   border-bottom-color: $color-grass;
 }
 
-.ui-fancytree.-has-selection-blur {
-  .fancytree-selected,
-  li[aria-selected="true"] {
-    color: $color-light !important;
-    background-color: $palette-color-lightens !important;
-  }
-}
-
-.fancytree-selected,
-li[aria-selected="true"] {
-  color: $color-light !important;
+// .ui-fancytree.-has-selection-blur .fancytree-node {
+//     .fancytree-selected,
+//     li[aria-selected="true"] {
+//         color: $color-light !important;
+//         background-color: $palette-color-lightens !important;
+//     }
+// }
+.fancytree-node .fancytree-selected,
+li[aria-selected="true"],
+tr[aria-selected="true"] {
   background-color: $palette-color-median !important;
-  .material-icons {
+  .fancytree-title {
+    color: $color-light !important;
+  }
+  .material-icons,
+  td {
     color: $color-light !important;
   }
 }
