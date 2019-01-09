@@ -202,6 +202,36 @@ table#data-table-concepts {
             }
         }
     }
+
+    li[role="treeitem"].primary {
+        span.fancytree-title {
+            color: $palette-color-median !important;
+        }
+    }
+
+    li[role="treeitem"].secondary {
+        span.fancytree-title {
+            color: $color-neutral !important;
+        }
+    }
+
+    li[role="treeitem"].success {
+        span.fancytree-title {
+            color: $color-grass !important;
+        }
+    }
+
+    li[role="treeitem"].warning {
+        span.fancytree-title {
+            color: $color-heat !important;
+        }
+    }
+
+    li[role="treeitem"].alert {
+        span.fancytree-title {
+            color: $palette-color-accent !important;
+        }
+    }
 }
 
 ul.ui-fancytree {
