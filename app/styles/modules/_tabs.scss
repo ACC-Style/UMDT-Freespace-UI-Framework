@@ -251,8 +251,16 @@
         padding-left: 3em;
 
         &-heading {
+            float: left;
             color: $palette-color-darken;
             text-transform: uppercase;
+        }
+
+        .divider-section-options {
+            // display: inline-block;
+            margin-left: 68%;
+            // text-align: right;
+
         }
     }
 }
