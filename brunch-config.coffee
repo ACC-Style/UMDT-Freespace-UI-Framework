@@ -1,5 +1,5 @@
 exports.config =
-  jsWrapper: 'raw'
+  
   files:
 
     javascripts: 

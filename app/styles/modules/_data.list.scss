@@ -204,34 +204,125 @@ table#data-table-concepts {
     }
 
     li[role="treeitem"].primary {
-        span.fancytree-title {
-            color: $palette-color-median !important;
+
+        span.fancytree-title,
+        .material-icons {
+            color: $palette-color-median;
+        }
+
+        span.fancytree-node {
+            background-color: rgba($palette-color-median, 0.055);
+
         }
     }
 
+
     li[role="treeitem"].secondary {
-        span.fancytree-title {
-            color: $color-neutral !important;
+
+        span.fancytree-title,
+        .material-icons {
+            color: $color-neutral;
+        }
+
+        span.fancytree-node {
+            background-color: rgba($color-neutral, 0.055);
+
         }
     }
 
     li[role="treeitem"].success {
-        span.fancytree-title {
-            color: $color-grass !important;
+
+        span.fancytree-title,
+        .material-icons {
+            color: $color-grass;
+        }
+
+        span.fancytree-node {
+            background-color: rgba($color-grass, 0.055);
+
         }
     }
 
     li[role="treeitem"].warning {
-        span.fancytree-title {
-            color: $color-heat !important;
+
+        span.fancytree-title,
+        .material-icons {
+            color: $color-heat;
+        }
+
+        span.fancytree-node {
+            background-color: rgba($color-heat, 0.055);
+
         }
     }
 
     li[role="treeitem"].alert {
-        span.fancytree-title {
-            color: $palette-color-accent !important;
+
+        span.fancytree-title,
+        .material-icons {
+            color: $palette-color-accent;
+        }
+
+        span.fancytree-node {
+            background-color: rgba($palette-color-accent, 0.055);
+
         }
     }
+}
+
+.fancytree-container tr[role="row"].primary {
+    background-color: rgba($palette-color-median, 0.055) !important;
+
+    .fancytree-titl,
+    .material-icons,
+    td {
+        color: $palette-color-median !important;
+    }
+
+}
+
+.fancytree-container tr[role="row"].success {
+    background-color: rgba($color-grass, 0.055) !important;
+
+    .fancytree-titl,
+    .material-icons,
+    td {
+        color: $color-grass !important;
+    }
+
+}
+
+.fancytree-container tr[role="row"].alert {
+    background-color: rgba($palette-color-accent, 0.055) !important;
+
+    .fancytree-titl,
+    .material-icons,
+    td {
+        color: $palette-color-accent !important;
+    }
+
+}
+
+.fancytree-container tr[role="row"].waring {
+    background-color: rgba($color-heat, 0.055) !important;
+
+    .fancytree-titl,
+    .material-icons,
+    td {
+        color: $color-heat !important;
+    }
+
+}
+
+.fancytree-container tr[role="row"].secondary {
+    background-color: rgba($color-neutral, 0.055) !important;
+
+    .fancytree-titl,
+    .material-icons,
+    td {
+        color: $color-neutral !important;
+    }
+
 }
 
 ul.ui-fancytree {

@@ -86,7 +86,7 @@
 @import 'theme/helper.icons';
 @import 'theme/ie';
 //INTERACTION (different visual states of elements & affordances)
-@import 'affordances/states';
 @import 'affordances/draggable';
 @import 'jquery.contextMenu';
 @import 'modules/context.menu';
+@import 'affordances/states';
