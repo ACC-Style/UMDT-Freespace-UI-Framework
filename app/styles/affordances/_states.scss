@@ -465,16 +465,10 @@ ul.accordion li.-is-saved {
   border-bottom-color: $color-grass;
 }
 
-// .ui-fancytree.-has-selection-blur .fancytree-node {
-//     .fancytree-selected,
-//     li[aria-selected="true"] {
-//         color: $color-light !important;
-//         background-color: $palette-color-lightens !important;
-//     }
-// }
-.fancytree-node .fancytree-selected,
-li[aria-selected="true"],
-tr[aria-selected="true"] {
+// tree view list (fancy tree)
+.fancytree-container li[aria-selected="true"][role="treeitem"],
+.fancytree-container tr[aria-selected="true"].fancytree-selected,
+.fancytree-container tr[aria-selected="true"].fancytree-active {
   background-color: $palette-color-median !important;
 
   .fancytree-title {
@@ -485,101 +479,133 @@ tr[aria-selected="true"] {
   td {
     color: $color-light !important;
   }
-}
 
-li[aria-selected="true"].success,
-tr[aria-selected="true"].success {
-  background-color: $color-grass !important;
+  &.success {
+    background-color: $color-grass !important;
 
-  .fancytree-title {
-    color: $color-light !important;
+    .fancytree-title {
+      color: $color-light !important;
+    }
+
+    .material-icons,
+    td {
+      color: $color-light !important;
+    }
   }
 
-  .material-icons,
-  td {
-    color: $color-light !important;
-  }
-}
+  &.alert {
+    background-color: $palette-color-accent !important;
 
-li[aria-selected="true"].alert,
-tr[aria-selected="true"].alert {
-  background-color: $palette-color-accent !important;
+    .fancytree-title {
+      color: $color-light !important;
+    }
 
-  .fancytree-title {
-    color: $color-light !important;
-  }
-
-  .material-icons,
-  td {
-    color: $color-light !important;
-  }
-}
-
-li[aria-selected="true"].warning,
-tr[aria-selected="true"].warning {
-  background-color: $color-heat !important;
-
-  .fancytree-title {
-    color: $color-light !important;
+    .material-icons,
+    td {
+      color: $color-light !important;
+    }
   }
 
-  .material-icons,
-  td {
-    color: $color-light !important;
-  }
-}
+  &.warning {
+    background-color: $color-heat !important;
 
-li[aria-selected="true"].primary,
-tr[aria-selected="true"].primary {
-  background-color: $palette-color-median !important;
+    .fancytree-title {
+      color: $color-light !important;
+    }
 
-  .fancytree-title {
-    color: $color-light !important;
-  }
-
-  .material-icons,
-  td {
-    color: $color-light !important;
-  }
-}
-
-li[aria-selected="true"].secondary,
-tr[aria-selected="true"].secondary {
-  background-color: $color-neutral !important;
-
-  .fancytree-title {
-    color: $color-light !important;
+    .material-icons,
+    td {
+      color: $color-light !important;
+    }
   }
 
-  .material-icons,
-  td {
-    color: $color-light !important;
+  &.primary {
+    background-color: $palette-color-median !important;
+
+    .fancytree-title {
+      color: $color-light !important;
+    }
+
+    .material-icons,
+    td {
+      color: $color-light !important;
+    }
   }
-}
 
-li[aria-selected="true"].-is-new,
-tr[aria-selected="true"].-is-new {
-  span.fancytree-title::after {
-    margin-left: .25em;
-    font-family: 'Material Icons';
-    font-size: .75em;
-    content: "new_releases";
-    -webkit-font-feature-settings: 'liga';
+  &.secondary {
+    background-color: $color-neutral !important;
 
+    .fancytree-title {
+      color: $color-light !important;
+    }
+
+    .material-icons,
+    td {
+      color: $color-light !important;
+    }
   }
-}
 
-li[aria-selected="true"].-is-touched,
-tr[aria-selected="true"].-is-touched {
-  span.fancytree-title::after {
-    margin-left: .25em;
-    font-family: 'Material Icons';
-    font-size: .75em;
-    content: "border_color";
-    -webkit-font-feature-settings: 'liga';
+  &.-is-new {
+    span.fancytree-title::after {
+      margin-left: .25em;
+      font-family: 'Material Icons';
+      font-size: .75em;
+      content: "new_releases";
+      -webkit-font-feature-settings: 'liga';
 
+    }
+  }
+
+  &.-is-touched {
+    span.fancytree-title::after {
+      margin-left: .25em;
+      font-family: 'Material Icons';
+      font-size: .75em;
+      content: "border_color";
+      -webkit-font-feature-settings: 'liga';
+
+    }
   }
 }
+
+.fancytree-container li[aria-selected],
+.fancytree-container tr[aria-selected] {
+  &.-is-new {
+    span.fancytree-title::after {
+      margin-left: .25em;
+      font-family: 'Material Icons';
+      font-size: .75em;
+      content: "new_releases";
+      -webkit-font-feature-settings: 'liga';
+
+    }
+  }
+
+  &.-is-touched {
+    span.fancytree-title::after {
+      margin-left: .25em;
+      font-family: 'Material Icons';
+      font-size: .75em;
+      content: "border_color";
+      -webkit-font-feature-settings: 'liga';
+
+    }
+  }
+
+  &.-was-selected {
+    background-color: rgba($palette-color-median, 0.15) !important;
+
+    .fancytree-title {
+      color: $palette-color-darken !important;
+    }
+
+    .material-icons,
+    td {
+      color: $palette-color-darken !important;
+    }
+  }
+}
+
 
 .fancytree-disabled>.fancytree-node .fancytree-title {
   color: $color-neutral-light !important;

@@ -120,7 +120,7 @@ table#data-table-concepts {
     }
 }
 
-// fancy tree
+// ul view
 .ui-fancytree {
     font-size: 85%;
     outline: none;
@@ -270,60 +270,133 @@ table#data-table-concepts {
     }
 }
 
-.fancytree-container tr[role="row"].primary {
-    background-color: rgba($palette-color-median, 0.055) !important;
+// table view
+.fancytree-container tr[role="row"] {
 
-    .fancytree-titl,
-    .material-icons,
-    td {
-        color: $palette-color-median !important;
+
+    &.primary {
+        background-color: rgba($palette-color-median, 0.055) !important;
+
+        .fancytree-title,
+        .material-icons,
+        td {
+            color: $palette-color-median !important;
+        }
+
     }
 
-}
+    &.success {
+        background-color: rgba($color-grass, 0.055) !important;
 
-.fancytree-container tr[role="row"].success {
-    background-color: rgba($color-grass, 0.055) !important;
+        .fancytree-title,
+        .material-icons,
+        td {
+            color: $color-grass !important;
+        }
 
-    .fancytree-titl,
-    .material-icons,
-    td {
-        color: $color-grass !important;
     }
 
-}
+    &.alert {
+        background-color: rgba($palette-color-accent, 0.055) !important;
 
-.fancytree-container tr[role="row"].alert {
-    background-color: rgba($palette-color-accent, 0.055) !important;
+        .fancytree-title,
+        .material-icons,
+        td {
+            color: $palette-color-accent !important;
+        }
 
-    .fancytree-titl,
-    .material-icons,
-    td {
-        color: $palette-color-accent !important;
     }
 
-}
+    &.waring {
+        background-color: rgba($color-heat, 0.055) !important;
 
-.fancytree-container tr[role="row"].waring {
-    background-color: rgba($color-heat, 0.055) !important;
+        .fancytree-title,
+        .material-icons,
+        td {
+            color: $color-heat !important;
+        }
 
-    .fancytree-titl,
-    .material-icons,
-    td {
-        color: $color-heat !important;
     }
 
-}
+    &.secondary {
+        background-color: rgba($color-neutral, 0.055) !important;
 
-.fancytree-container tr[role="row"].secondary {
-    background-color: rgba($color-neutral, 0.055) !important;
+        .fancytree-title,
+        .material-icons,
+        td {
+            color: $color-neutral !important;
+        }
 
-    .fancytree-titl,
-    .material-icons,
-    td {
-        color: $color-neutral !important;
     }
 
+    &.-is-new {
+        span.fancytree-title::after {
+            margin-left: .25em;
+            font-family: 'Material Icons';
+            font-size: .75em;
+            content: "new_releases";
+            -webkit-font-feature-settings: 'liga';
+
+        }
+    }
+
+    &.-is-touched {
+        span.fancytree-title::after {
+            margin-left: .25em;
+            font-family: 'Material Icons';
+            font-size: .75em;
+            content: "border_color";
+            -webkit-font-feature-settings: 'liga';
+
+        }
+    }
+
+    &.fancytree-has-children {
+
+        .material-icons {
+            color: $color-morning !important;
+        }
+    }
 }
+
+.fancytree-container li[aria-selected],
+.fancytree-container tr[aria-selected] {
+    &.-is-new {
+        span.fancytree-title::after {
+            margin-left: .25em;
+            font-family: 'Material Icons';
+            font-size: .75em;
+            content: "new_releases";
+            -webkit-font-feature-settings: 'liga';
+
+        }
+    }
+
+    &.-is-touched {
+        span.fancytree-title::after {
+            margin-left: .25em;
+            font-family: 'Material Icons';
+            font-size: .75em;
+            content: "border_color";
+            -webkit-font-feature-settings: 'liga';
+
+        }
+    }
+
+    &.-was-selected {
+        background-color: rgba($palette-color-median, 0.15) !important;
+
+        .fancytree-title {
+            color: $palette-color-darken !important;
+        }
+
+        .material-icons,
+        td {
+            color: $palette-color-darken !important;
+        }
+    }
+}
+
 
 ul.ui-fancytree {
     // margin: 1em 0 0 1em !important; // padding: 0 0 0 1em !important;
