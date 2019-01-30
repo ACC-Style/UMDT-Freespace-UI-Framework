@@ -1,0 +1,261 @@
+// TODO: refractor is-required styles
+.form--input-select.-is-required {
+    label:after {
+        position: absolute;
+        font-family: "Material Icons";
+        font-size: 1em;
+        margin-top: -0.25em;
+        margin-left: 0.25em;
+        content: "star";
+        color: $palette-color-accent;
+        -webkit-font-feature-settings: "liga";
+    }
+}
+
+.form--input-text.-is-required {
+    label:after {
+        // position: absolute;
+        font-family: "Material Icons";
+        font-size: 1em; // font-size: 1.25em;
+        margin-top: -0.25em;
+        margin-left: 0.25em;
+        content: "star";
+        color: $palette-color-accent;
+        -webkit-font-feature-settings: "liga";
+    }
+}
+
+.form--input-checkbox.-is-required,
+.form--input-radio.-is-required {
+    legend:after {
+        position: absolute;
+        font-family: "Material Icons";
+        font-size: 1em;
+        margin-top: -0.25em;
+        margin-left: 0.25em;
+        content: "star";
+        color: $palette-color-accent;
+        -webkit-font-feature-settings: "liga";
+    }
+}
+
+// TODO: had class added to parent
+.-is-filled {
+    border-bottom: 1px solid transparent !important;
+
+    &+button.button-appended {
+        border-bottom: none !important;
+    }
+
+    &:focus {
+        border-bottom: 1px solid red !important;
+    }
+
+    &:focus+button.button-appended {
+        border-bottom: 1px solid red !important;
+    }
+}
+
+.help-text.-has-error {
+    p:after {
+        font-family: "Material Icons";
+        font-size: 1.25em;
+        margin-top: -0.5em;
+        content: "error";
+        color: $palette-color-accent;
+        -webkit-font-feature-settings: "liga";
+    }
+}
+
+.-with-help-text {
+    input {
+        margin-bottom: 0;
+    }
+
+    .form-error.is-visible {
+        margin-top: 1px;
+        margin-bottom: 0;
+        float: left;
+        clear: both;
+    }
+}
+
+.-with-input-button {
+    input {
+        width: 80%;
+        float: left; // border: 1px solid red;
+    }
+
+    button.button-appended {
+        &.-is-focused {
+            border-bottom: 1px solid red;
+        }
+    }
+}
+
+.-edit-mode-off {
+    [disabled] {
+        // display: none;
+        cursor: auto;
+    }
+
+    select {
+        border: 1px transparent solid;
+    }
+
+    select:disabled {
+        background-color: transparent;
+        appearance: none;
+    }
+
+    textarea {
+        border: none;
+    }
+
+    li.tabs-title {
+
+        // border-bottom-color: $color-grass;
+        .tab-icon {
+            display: none;
+        }
+    }
+}
+
+
+.-is-in-inverse-mode {}
+
+.-is-green {
+    color: $color-grass !important;
+
+    a,
+    i {
+        color: $color-grass !important;
+    }
+}
+
+.-is-green+.feature--filter-input {
+    border-bottom-color: $color-grass;
+}
+
+.form--input-select {
+    &.primary {
+        select {
+            color: $palette-color-darken;
+            border-color: $palette-color-darken;
+
+            option {
+                color: $palette-color-darken;
+            }
+
+            &:hover {
+                border-color: $palette-color-darken !important;
+            }
+        }
+    }
+
+    &.secondary {
+        select {
+            color: $color-neutral;
+            border-color: $color-neutral;
+
+            option {
+                color: $color-neutral;
+            }
+
+            &:hover {
+                border-color: $color-neutral !important;
+            }
+        }
+    }
+
+    &.success {
+        select {
+            color: $color-grass;
+            border-color: $color-grass;
+
+            option {
+                color: $color-grass;
+            }
+
+            &:hover {
+                border-color: $color-grass !important;
+            }
+        }
+    }
+
+    &.alert {
+        select {
+            color: $palette-color-accent;
+            border-color: $palette-color-accent;
+
+            option {
+                color: $palette-color-accent;
+            }
+
+            &:hover {
+                border-color: $palette-color-accent !important;
+            }
+        }
+    }
+
+    &.warning {
+        select {
+            color: $color-heat;
+            border-color: $color-heat;
+
+            option {
+                color: $color-heat;
+            }
+
+            &:hover {
+                border-color: $color-heat !important;
+            }
+        }
+    }
+}
+
+.form--input-text {
+    &.primary {
+        input {
+            color: $palette-color-darken;
+        }
+    }
+
+    &.secondary {
+        input {
+            color: $color-neutral;
+        }
+    }
+
+    &.success {
+        input {
+            color: $color-grass;
+        }
+    }
+
+    &.alert {
+        input {
+            color: $palette-color-accent;
+        }
+    }
+
+    &.warning {
+        input {
+            color: $color-heat;
+        }
+    }
+}
+
+select {
+    border-color: $color-neutral;
+    margin-left: 0.25em;
+    margin-right: 0.25em;
+
+    option {
+        // color: $color-neutral;
+    }
+
+    &:hover {
+        border-color: $color-neutral !important;
+    }
+}

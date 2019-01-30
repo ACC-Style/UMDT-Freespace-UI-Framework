@@ -11,19 +11,93 @@ require("jquery.fancytree/dist/modules/jquery.fancytree.edit");
 require("jquery.fancytree/dist/modules/jquery.fancytree.filter");
 require("jquery.fancytree/dist/modules/jquery.fancytree.wide.js");
 require("jquery.fancytree/dist/modules/jquery.fancytree.table.js");
+require("jquery.fancytree/dist/modules/jquery.fancytree.dnd5.js");
 require("jquery.fancytree/dist/modules/jquery.fancytree.glyph.js");
 
 console.log(fancytree.version);
 // console.log(`list data: ${tree[0].title}`);
 
 $("#data-table-concepts").fancytree({
-  extensions: ["glyph", "wide", "table", "filter"],
-  debugLevel: 4,
-  checkbox: true,
+  extensions: ["glyph", "wide", "table", "filter", "dnd5"],
+  // debugLevel: 4,
+  checkbox: false,
   table: {
     indentation: 20, // indent 20px per node level
-    nodeColumnIdx: 2, // render the node title into the 2nd column
+    nodeColumnIdx: 0, // render the node title into the 2nd column
     checkboxColumnIdx: 0 // render the checkboxes into the 1st column
+  },
+  nd5: {
+    // autoExpandMS: 400,
+    // preventForeignNodes: true,
+    // preventNonNodes: true,
+    // preventRecursiveMoves: true, // Prevent dropping nodes on own descendants
+    // preventVoidMoves: true, // Prevent dropping nodes 'before self', etc.
+    // scroll: true,
+    // scrollSpeed: 7,
+    // scrollSensitivity: 10,
+
+    // --- Drag-support:
+
+    dragStart: function (node, data) {
+      /* This function MUST be defined to enable dragging for the tree.
+       *
+       * Return false to cancel dragging of node.
+       * data.dataTransfer.setData() and .setDragImage() is available
+       * here.
+       */
+      //          data.dataTransfer.setDragImage($("<div>hurz</div>").appendTo("body")[0], -10, -10);
+      return true;
+    },
+    dragDrag: function (node, data) {
+      data.dataTransfer.dropEffect = "move";
+    },
+    dragEnd: function (node, data) {},
+
+    // --- Drop-support:
+
+    dragEnter: function (node, data) {
+      // node.debug("dragEnter", data);
+      data.dataTransfer.dropEffect = "move";
+      // data.dataTransfer.effectAllowed = "copy";
+      return true;
+    },
+    dragOver: function (node, data) {
+      data.dataTransfer.dropEffect = "move";
+      // data.dataTransfer.effectAllowed = "copy";
+    },
+    dragLeave: function (node, data) {},
+    dragDrop: function (node, data) {
+      /* This function MUST be defined to enable dropping of items on
+       * the tree.
+       */
+      var transfer = data.dataTransfer;
+
+      node.debug("drop", data);
+
+      // alert("Drop on " + node + ":\n"
+      //   + "source:" + JSON.stringify(data.otherNodeData) + "\n"
+      //   + "hitMode:" + data.hitMode
+      //   + ", dropEffect:" + transfer.dropEffect
+      //   + ", effectAllowed:" + transfer.effectAllowed);
+
+      if (data.otherNode) {
+        // Drop another Fancytree node from same frame
+        // (maybe from another tree however)
+        var sameTree = (data.otherNode.tree === data.tree);
+
+        data.otherNode.moveTo(node, data.hitMode);
+      } else if (data.otherNodeData) {
+        // Drop Fancytree node from different frame or window, so we only have
+        // JSON representation available
+        node.addChild(data.otherNodeData, data.hitMode);
+      } else {
+        // Drop a non-node
+        node.addNode({
+          title: transfer.getData("text")
+        }, data.hitMode);
+      }
+      node.setExpanded();
+    }
   },
   renderColumns: function (event, data) {
     var node = data.node,
@@ -134,13 +208,14 @@ $("#data-table-concepts").fancytree({
   }
 });
 
+
 $("#data-list-concepts").fancytree({
-  extensions: ["glyph", "wide"],
-  debugLevel: 4,
-  checkbox: true,
+  extensions: ["glyph", "wide", "table", "filter"],
+  // debugLevel: 4,
+  checkbox: false,
   table: {
     indentation: 20, // indent 20px per node level
-    nodeColumnIdx: 2, // render the node title into the 2nd column
+    nodeColumnIdx: 0, // render the node title into the 2nd column
     checkboxColumnIdx: 0 // render the checkboxes into the 1st column
   },
   renderColumns: function (event, data) {
@@ -156,6 +231,18 @@ $("#data-list-concepts").fancytree({
     $tdList
       .eq(4)
       .html("<input type='checkbox' name='like' value='" + node.key + "'>");
+  },
+  filter: {
+    autoApply: true, // Re-apply last filter if lazy data is loaded
+    autoExpand: false, // Expand all branches that contain matches while filtered
+    counter: true, // Show a badge with number of matching child nodes near parent icons
+    fuzzy: true, // Match single characters in order, e.g. 'fb' will match 'FooBar'
+    hideExpandedCounter: false, // Hide counter badge if parent is expanded
+    hideExpanders: false, // Hide expanders if all child nodes are hidden by filter
+    highlight: true, // Highlight matches by wrapping inside <mark> tags
+    leavesOnly: false, // Match end nodes only
+    nodata: true, // Display a 'no data' status node if result is empty
+    mode: "hide" // Grayout unmatched nodes (pass "hide" to remove unmatched node instead)
   },
   selectMode: 3,
   tooltip: function (event, data) {
@@ -239,7 +326,6 @@ $("#data-list-concepts").fancytree({
     );
   }
 });
-
 $("#data-table-population").fancytree({
   extensions: ["glyph", "wide", "table", "filter"],
   debugLevel: 4,

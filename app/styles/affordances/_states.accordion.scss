@@ -1,0 +1,28 @@
+// accordion
+ul.accordion li.-is-unsaved {
+    .accordion-item .accordion-title {
+        border-top-color: lighten($color-heat, 25%);
+        color: $color-heat;
+    }
+}
+
+ul.accordion li.-is-editable {
+    .accordion-title {
+        border-top-color: lighten($color-grass, 25%);
+        color: $color-grass !important;
+    }
+}
+
+ul.accordion li.-is-broken {
+    .accordion-title {
+        border-top-color: lighten($palette-color-accent,
+            25%); // border-top-color: $palette-color-accent;
+        color: $palette-color-accent;
+    }
+}
+
+ul.accordion li.-is-saved {
+    .accordion-title {
+        // border-top-color: $palette-color-accent;
+    }
+}

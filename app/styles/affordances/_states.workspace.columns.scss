@@ -1,0 +1,30 @@
+.column--list-elements-data {
+    .-is-selected {
+        a {
+            color: $palette-color-lightens;
+            background-color: $palette-color-median;
+        }
+    }
+}
+
+.column--list-concepts.cell.medium-2.-is-collapsed-column,
+.column--list-properties.cell.medium-2.-is-collapsed-column,
+.column--list-elements.cell.medium-2.-is-collapsed-column {
+    width: 2em !important;
+
+    h6.panel--center-column-title-text.h7 {
+        transform: rotate(90deg);
+        transform-origin: top left;
+        margin: 2em 0 0 0;
+        width: 20em;
+    }
+
+    button[data-micro-interaction="collapse"] {
+        position: absolute;
+        margin-top: -3.19em;
+    }
+}
+
+.column--list-concepts.cell.medium-2.-is-expanded-column {
+    // width: auto !important;
+}

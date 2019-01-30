@@ -72,7 +72,7 @@
 @import 'modules/accordion';
 @import 'modules/validation';
 @import 'modules/progress.bar';
-@import 'modules/tree.list';
+@import 'modules/tree.view';
 //LAYOUT (isolated sections/areas of layout. Only uses id classes)
 @import 'layout/header';
 @import 'layout/page';
@@ -90,3 +90,10 @@
 @import 'jquery.contextMenu';
 @import 'modules/context.menu';
 @import 'affordances/states';
+@import 'affordances/states.tree.view';
+@import 'affordances/states.cards';
+@import 'affordances/states.accordion';
+@import 'affordances/states.tabs';
+@import 'affordances/states.workspace.composer';
+@import 'affordances/states.workspace.columns';
+@import 'affordances/states.inputs';

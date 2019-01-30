@@ -1,0 +1,271 @@
+.ui-fancytree {
+    .fancytree-has-children {
+        .fancytree-title {
+            font-weight: bolder;
+        }
+    }
+}
+
+table[role="treegrid"] {
+    font-size: 85%; // width: 99%;
+    margin: 0 0 0 0;
+
+    tbody th,
+    tbody td {
+        padding: 0.25em 0 0.25em 0;
+        border: none;
+    }
+
+    tbody {
+        border: none;
+    }
+
+    tbody tr>td {
+        padding: .25em 0 .25em 1.55em;
+    }
+
+    tbody tr td+td {
+        text-align: center;
+    }
+
+    tbody tr td+td+td {
+        text-align: left;
+    }
+
+    thead tr th {
+        // color: $palette-color-median;
+        // text-align: center;
+    }
+
+    tr {
+        border-top: $border-skinny solid $palette-color-lightens;
+        background-color: $color-white;
+    }
+
+    thead {
+        // background: $color-neutral-light; // color: #002B59;
+        background: $color-white;
+        text-align: left;
+    }
+
+    thead th,
+    thead td,
+    tfoot th,
+    tfoot td {
+        padding: 0 0.25rem 0 0;
+        font-weight: lighter;
+        text-align: left;
+    }
+
+    // .material-icons {
+    //     color: $palette-color-median;
+    // }
+
+    span[role="presentation"] {
+        font-size: 17px;
+        margin-right: 3px;
+        float: right;
+        // color: $palette-color-lightens;
+    }
+}
+
+
+
+// table view
+.fancytree-container tr[role="row"] {
+
+    &.fancytree-has-children {
+        // background-color: rgba($palette-color-median, 0.055);
+        font-weight: bold;
+
+        span[role="presentation"] {
+            color: $palette-color-darken !important;
+
+        }
+
+        &[aria-expanded="true"] {
+            background-color: rgba($color-twinkle, 0.25);
+
+            &+tr {
+                background-color: rgba($color-twinkle, 0.25);
+
+            }
+        }
+
+    }
+
+    &.fancytree-exp-cl {}
+
+    .fancytree-title {
+        // font-family: $typeface-heading;
+        // font-weight: bold;
+    }
+
+
+    td[role="gridcell"] {
+        span.fancytree-node {
+            width: 100%;
+
+            span[role="button"] {
+                display: inline-block;
+                margin-right: 3px;
+                margin-left: -23px;
+                float: left;
+                width: 10%;
+                clear: left;
+            }
+
+            span[role="presentation"] {
+                display: inline-block;
+                float: right;
+            }
+
+            span[role="checkbox"] {
+                display: inline-block;
+                float: left;
+                width: 10%;
+            }
+
+            span.fancytree-title {
+                display: inline-block;
+                width: 77%;
+
+                b {
+                    display: inline-block;
+                    width: 75%;
+                }
+            }
+
+            &.-has-children {
+                display: inline-block;
+            }
+        }
+    }
+
+    &.primary {
+        background-color: rgba($palette-color-median, 0.055);
+
+        .fancytree-title,
+        .material-icons,
+        span[role="presentation"],
+        td {
+            color: $palette-color-median !important;
+        }
+
+    }
+
+    &.success {
+        background-color: rgba($color-grass, 0.055);
+
+        .fancytree-title,
+        .material-icons,
+        span[role="presentation"],
+        td {
+            color: $color-grass !important;
+        }
+
+    }
+
+    &.alert {
+        background-color: rgba($palette-color-accent, 0.055);
+
+        .fancytree-title,
+        .material-icons,
+        span[role="presentation"],
+        td {
+            color: $palette-color-accent !important;
+        }
+
+    }
+
+    &.warning {
+        background-color: rgba($color-heat, 0.055);
+
+        .fancytree-title,
+        .material-icons,
+        span[role="presentation"],
+        td {
+            color: $color-heat !important;
+        }
+
+    }
+
+    &.secondary {
+        background-color: rgba($color-neutral, 0.055);
+
+        .fancytree-title,
+        .material-icons,
+        span[role="presentation"],
+        td {
+            color: $color-neutral !important;
+        }
+
+    }
+
+    &.-is-new {
+        span.fancytree-title::after {
+            margin-left: .25em;
+            font-family: 'Material Icons';
+            font-size: .75em;
+            content: "new_releases";
+            -webkit-font-feature-settings: 'liga';
+
+        }
+    }
+
+    &.-is-touched {
+        span.fancytree-title::after {
+            margin-left: .25em;
+            font-family: 'Material Icons';
+            font-size: .75em;
+            content: "border_color";
+            -webkit-font-feature-settings: 'liga';
+
+        }
+    }
+
+    &.fancytree-has-children {
+
+        .material-icons {
+            color: $color-morning !important;
+        }
+    }
+}
+
+.fancytree-container li[aria-selected],
+.fancytree-container tr[aria-selected] {
+    &.-is-new {
+        span.fancytree-title::after {
+            margin-left: .25em;
+            font-family: 'Material Icons';
+            font-size: .75em;
+            content: "new_releases";
+            -webkit-font-feature-settings: 'liga';
+
+        }
+    }
+
+    &.-is-touched {
+        span.fancytree-title::after {
+            margin-left: .25em;
+            font-family: 'Material Icons';
+            font-size: .75em;
+            content: "border_color";
+            -webkit-font-feature-settings: 'liga';
+
+        }
+    }
+
+    &.-was-selected {
+        background-color: rgba($palette-color-median, 0.15) !important;
+
+        .fancytree-title {
+            color: $palette-color-darken !important;
+        }
+
+        .material-icons,
+        td {
+            color: $palette-color-darken !important;
+        }
+    }
+}

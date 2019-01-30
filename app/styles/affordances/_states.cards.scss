@@ -1,0 +1,57 @@
+.card--element-node,
+.card--element-operator,
+.card--element-group {
+    .card-section.-is-expanded {
+        display: block;
+    }
+
+    .card-section.-is-collapsed {
+        display: none;
+    }
+}
+
+.card--element-node.-is-selected,
+.card--element-group.-is-selected {
+
+    .card-section,
+    .card-divider {
+        border: $border-thin solid $palette-color-median;
+    }
+
+    .card-section {
+        background: $palette-color-median;
+        color: $palette-color-base;
+
+        .form--input-select,
+        .form--input-text {
+            label {
+                color: $palette-color-lightens;
+            }
+        }
+    }
+}
+
+.card--element-node,
+.card--element-group {
+    .card-options {
+        button.button-option {
+            &-setting.-is-expanded .icon i {
+                color: $palette-color-median !important;
+            }
+
+            &-drag.-is-expanded .icon i {
+                color: $palette-color-median !important;
+            }
+        }
+    }
+
+    &.-is-indented-1 {
+        width: 80%;
+        float: right; // margin-left: 18%;
+    }
+
+    &.-is-indented-2 {
+        width: 60%;
+        float: right; // margin-left: 28%;
+    }
+}
