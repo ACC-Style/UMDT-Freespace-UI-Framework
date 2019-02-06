@@ -47,7 +47,7 @@
                   #1.1.1
               </span>
             </span>
-            A generic style ot test KSS.
+            .banner
           </a>
         </h3>
 
@@ -56,27 +56,15 @@
           <div class="kss-parameters__title">Parameters:</div>
           <ul class="kss-parameters">
             <li class="kss-parameters__item">
-              <div class="kss-parameters__name"><code>:hover</code></div>
+              <div class="kss-parameters__name"><code>.banner--header-text</code></div>
               <div class="kss-parameters__description">
                 Quib hover highlight.
               </div>
             </li>
             <li class="kss-parameters__item">
-              <div class="kss-parameters__name"><code>.stars-given</code></div>
+              <div class="kss-parameters__name"><code>.banner--header-hook</code></div>
               <div class="kss-parameters__description">
                 A highlight indicating you’ve already given a star.
-              </div>
-            </li>
-            <li class="kss-parameters__item">
-              <div class="kss-parameters__name"><code>.stars-given:hover</code></div>
-              <div class="kss-parameters__description">
-                Quib hover highlight on top of stars-given styling.
-              </div>
-            </li>
-            <li class="kss-parameters__item">
-              <div class="kss-parameters__name"><code>.disabled</code></div>
-              <div class="kss-parameters__description">
-                Dims the button to indicate it cannot be used.
               </div>
             </li>
           </ul>
@@ -84,7 +72,7 @@
 
 
         <div class="kss-source kss-style">
-          Source: <code>styles/base/_base.scss</code>, line 1
+          Source: <code>styles/modules/_banner.scss</code>, line 1
         </div>
 
     </div>
@@ -100,6 +88,29 @@
 <script>
   prettyPrint();
   var spy = new ScrollSpy('#kss-node', {
+    nav: '.kss-nav__menu-child > li > a',
+    className: 'is-in-viewport'
+  });
+  var kssFullScreen = new KssFullScreen({
+    idPrefix: 'kss-fullscreen-',
+    bodyClass: 'kss-fullscreen-mode',
+    elementClass: 'is-fullscreen'
+  });
+  var kssGuides = new KssGuides({
+    bodyClass: 'kss-guides-mode'
+  });
+  var kssMarkup = new KssMarkup({
+    bodyClass: 'kss-markup-mode',
+    detailsClass: 'kss-markup'
+  });
+</script>
+
+
+
+<!-- Automatically built using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->
+</body>
+</html>
+py = new ScrollSpy('#kss-node', {
     nav: '.kss-nav__menu-child > li > a',
     className: 'is-in-viewport'
   });
