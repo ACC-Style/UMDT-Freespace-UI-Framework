@@ -465,3 +465,63 @@ label {
         margin-left: .5em;
     }
 }
+
+// formating inline
+.form--input-text {
+
+    // &.inline {
+
+    //     // label,
+    //     label {
+    //         margin-top: 1em;
+    //         // border: 1px solid red;
+    //         margin-top: .25em;
+    //         float: left;
+    //         // width: 70%;
+    //         text-align: left;
+    //     }
+
+    //     input {
+    //         // margin-top: 0;
+    //         display: inline-block;
+    //         width: 80%;
+    //         float: left;
+    //         border: 1px solid red;
+    //     }
+    // }
+
+    // switches
+    &.inline .switch {
+
+        // label,
+        label.switch-value {
+            margin-top: .25em;
+            float: left;
+            width: 70%;
+            text-align: left;
+        }
+
+        label.switch-paddle,
+        input {
+            margin-top: 0;
+        }
+    }
+
+}
+
+.column--list-properties .form--input-text {
+
+
+    // switches
+    &.inline .switch {
+        margin-bottom: 1em;
+
+        // label,
+        label.switch-value {
+            font-size: 85%;
+            font-weight: bold;
+            color: $palette-color-median;
+        }
+
+    }
+}

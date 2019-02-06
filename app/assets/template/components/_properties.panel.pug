@@ -10,7 +10,37 @@ form(data-abide='7v3wyo-abide', novalidate='')
                 | Yo, you had better fill this out, it's required.
 
     .cell
-        .form--input-text
+        .form--input-text.inline
             label
                 | Input 2
             input(type='text', placeholder="Use me, or don't", aria-describedby='exampleHelpTex', data-abide-ignore='')
+
+    .cell
+        h7.title-properties Visibility
+    .cell
+        .form--input-text.inline
+            .switch.tiny
+                    label.switch-value(for='swtich-active')
+                        | Show as Navigation
+                    input#swtich-active.switch-input(type='checkbox', name='exampleSwitch')
+                    label.switch-paddle(for='swtich-active')
+                        span.show-for-sr Edit Mode
+                        span.switch-active(aria-hidden='true')
+                            | yes
+                        span.switch-inactive(aria-hidden='true')
+                            | no
+
+
+
+    .cell
+        .form--input-text.inline
+            .switch.tiny
+                    label.switch-value(for='swtich-active2')
+                        | Show as Tab
+                    input#swtich-active2.switch-input(type='checkbox', name='exampleSwitch2')
+                    label.switch-paddle(for='swtich-active2')
+                        span.show-for-sr Edit Mode
+                        span.switch-active(aria-hidden='true')
+                            | yes
+                        span.switch-inactive(aria-hidden='true')
+                            | no
