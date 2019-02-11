@@ -1,21 +1,43 @@
 .context-menu-list {
     background: $palette-color-median;
-    box-shadow: 0 9px 28px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
     border-radius: 0 0 0 0;
     border: none;
+    // border-color: $palette-color-darken;
     padding: 0 0 0 0;
+
     li {
-        font-size: 80%;
-        padding: 1.5em 1em 1.5em 3em;
+        font-size: 13px;
+        // letter-spacing: 1px;
+        padding: .80em .80em .80em 3em;
         color: $palette-color-lightens;
         background-color: transparent;
+        border-bottom: $border-skinny solid rgba($palette-color-lightens, 0.15);
+
         &:hover {
+            // background: $palette-color-darken;
             background: $palette-color-darken;
         }
+
+        span {
+            font-family: $typeface-heading;
+        }
+
+        &:last-child {
+            border-bottom: none;
+        }
     }
+
+    .context-menu-submenu:after {
+        border-color: transparent transparent transparent $palette-color-lightens !important;
+
+    }
+
     .context-menu-icon.context-menu-icon--fa::before {
         color: $palette-color-lightens !important;
         margin-left: .5em;
         float: right;
     }
+
+
 }

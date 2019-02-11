@@ -1,7 +1,7 @@
 .feature--tabs.grid.collapse
     .feature--tabs-list.medium-3.cell
         ul#example-tabs.tabs(data-tabs="",data-deep-link="true")
-            li.tabs-title.-is-editable.is-active.-is-locked
+            li.tabs-title.-is-editable.is-active.-is-locked(data-tooltip tabindex="1",title="parent: section name")
                 .tab-icons
                     span.item-icon
                         i.material-icons.md-14(aria-hidden='true') wifi
@@ -26,7 +26,7 @@
                         i.material-icons.md-14(aria-hidden='true') mode_edit 
                     span.tab-icon-close
                         i.material-icons.md-14(aria-hidden='true') close 
-                a(href="#panelB", aria-selected="true") 
+                a(href="#panelB", aria-selected="true")
 
                     //- span.icon
                         i.material-icons.md-12(aria-hidden='true') view_module

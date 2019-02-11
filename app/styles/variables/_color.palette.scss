@@ -13,8 +13,10 @@ $color-evening:#564873;
 $color-midnight:#11114E;
 $color-dusk:#BB2115;
 $color-twinkle:#ACE4EA;
-$color-heat:#ffae00;
-$color-grass:#3adb76;
+$color-heat:#ffa200;
+// $color-heat:#ffae00;
+$color-grass:#40c872;
+// $color-grass:#3adb76;
 $color-sun:#CC5543;
 $color-eclipse:#000;
 $color-light: #fff;
@@ -25,20 +27,26 @@ $color-neutral:#8a8a8a;
 $color-glass: transparent;
 $color-neutral-medium: #e6e6e6;
 $color-neutral-light: #cacaca;
-@function theme-color( $color, $color-zone-level) {
+
+@function theme-color($color, $color-zone-level) {
+
 	// TODO: make this function dictate the intensity of the color Palette.
-	@if( $mood-color-intensity-level==0) {
+	@if($mood-color-intensity-level==0) {
 		@return $color;
 	}
+
 	@else if ($mood-color-intensity-level >=1 and $color-zone-level==1) {
 		@return $product-brand-color;
 	}
+
 	@else if ($mood-color-intensity-level >=2 and $color-zone-level==2) {
 		@return $product-brand-color;
 	}
+
 	@else if ($mood-color-intensity-level >=3 and $color-zone-level==3) {
 		@return $product-brand-color;
 	}
+
 	@else {
 		@return $color;
 	}

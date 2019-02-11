@@ -156,3 +156,26 @@
         color: $color-neutral-light !important;
     }
 }
+
+.fancytree-node {
+    border: $border-skinny solid transparent;
+}
+
+.fancytree-node.fancytree-drop-target {
+    border: $border-slim dotted $palette-color-median;
+}
+
+.fancytree-node.fancytree-drop-before {
+    border-top: $border-slim solid $color-grass;
+}
+
+.fancytree-node.fancytree-drop-after {
+    border-bottom: $border-slim solid $color-grass;
+}
+
+.fancytree-node.fancytree-drop-after,
+.fancytree-node.fancytree-drop-before,
+.fancytree-node.fancytree-drop-target {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+
+}

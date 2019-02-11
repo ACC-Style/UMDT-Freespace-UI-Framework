@@ -2,9 +2,9 @@ h7.title-properties Table
 form(data-abide='7v3wyo-abide', novalidate='')
 
     .cell
-        .form--input-text.-is-required
+        .form--input-text
             label
-                | Input
+                | ID:
             input(type='text', placeholder='1234', aria-describedby='exampleHelpText', required='', pattern='number')
             span.form-error
                 | Yo, you had better fill this out, it's required.
@@ -44,3 +44,14 @@ form(data-abide='7v3wyo-abide', novalidate='')
                             | yes
                         span.switch-inactive(aria-hidden='true')
                             | no
+
+
+    .cell
+        .form--input-select.-is-required
+            label
+                | Cars:
+            select(required='')
+                option(value='volvo') Volvo
+                option(value='saab') Saab
+                option(value='mercedes') Mercedes 
+                option(value='audi') Audi

@@ -116,7 +116,7 @@
 [type='color'],
 textarea {
     // font-size: 140%;
-    font-size: 95%;
+    font-size: 90%;
     border: none;
     border-bottom: 1px solid $color-neutral-light;
     box-shadow: none; // font-weight: bold;
@@ -209,11 +209,29 @@ input[readonly]:focus {
         font-size: 140%;
     }
 
-    select {}
+}
+
+.column--list-properties-data {
+
+    .form--input-select {
+
+        select {
+            background-color: #F0F3F8;
+            height: 2.25em;
+            border: none;
+
+            &:hover {
+                // background-color: $color-white !important;
+            }
+        }
+
+
+
+    }
 }
 
 .form--input-select {
-    font-size: 1rem !important;
+    font-size: 90% !important;
 
     width: 100%; // display: inline-block;
     position: relative; // border: 1px solid red;
@@ -469,26 +487,28 @@ label {
 // formating inline
 .form--input-text {
 
-    // &.inline {
+    &.inline.type-input-id {
 
-    //     // label,
-    //     label {
-    //         margin-top: 1em;
-    //         // border: 1px solid red;
-    //         margin-top: .25em;
-    //         float: left;
-    //         // width: 70%;
-    //         text-align: left;
-    //     }
+        float: left;
 
-    //     input {
-    //         // margin-top: 0;
-    //         display: inline-block;
-    //         width: 80%;
-    //         float: left;
-    //         border: 1px solid red;
-    //     }
-    // }
+        // label,
+        label {
+            margin-top: 1em;
+            // border: 1px solid red;
+            margin-top: .25em;
+            float: left;
+            // width: 70%;
+            text-align: left;
+        }
+
+        input {
+            // margin-top: 0;
+            display: inline-block;
+            width: 80%;
+            float: left;
+            // border: 1px solid red;
+        }
+    }
 
     // switches
     &.inline .switch {
@@ -504,6 +524,7 @@ label {
         label.switch-paddle,
         input {
             margin-top: 0;
+            margin-bottom: 1em;
         }
     }
 
