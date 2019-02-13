@@ -7,6 +7,8 @@
         margin: .25em 1em 1em 1em; // background-color: $color-heat;
         background: transparent;
 
+
+
         // width: 100%;
         .card-divider {
             padding: .25em .25em .25em 1em;
@@ -50,33 +52,43 @@
                 label {
                     float: left;
                     width: auto;
-                    font-size: 80%;
+                    font-size: .85rem;
                     text-align: right;
                     padding-right: .5em;
-                    padding-top: .5em;
+                    padding-top: .15rem;
                     margin: 0 0 0 0;
 
                 }
 
                 label.switch-paddle {
-                    width: 4em;
+                    width: 2.85rem;
                     margin: 0 0 0 0;
 
+                }
+
+                .switch.tiny input:checked~ {
+                    .switch-paddle::after {
+                        left: 1.8rem;
+                    }
                 }
 
                 select {
                     float: left;
                     margin: 0 0 0 0;
                     width: auto;
-                    height: 1.80em;
-                    padding: 0 0 0 .5em;
-                    font-size: 80%;
-                    border-color: $color-neutral-medium;
+                    height: 1.20rem;
+                    padding: 0 1.5rem 0 .5rem;
+                    font-size: .85rem;
+                    // font-weight: bold;
+                    color: $palette-color-median;
+                    background-color: $palette-color-lightens;
+
                 }
 
                 .switch {
                     margin: 0 0 0 0;
 
+                    font-weight: lighter;
                 }
             }
         }
@@ -160,10 +172,12 @@
 
 
 
-            .form--input-text {
+            .form--input-select {
                 display: inline-block;
                 height: 2em;
                 margin-bottom: 0;
+
+
 
                 .switch .switch-paddle {
                     margin-top: 0px;

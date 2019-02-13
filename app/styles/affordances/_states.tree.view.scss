@@ -3,81 +3,63 @@
 .fancytree-container tr[aria-selected="true"].fancytree-selected,
 .fancytree-container tr[aria-selected="true"].fancytree-active {
     background-color: $palette-color-median !important;
-
     .fancytree-title {
         color: $color-light !important;
     }
-
     .material-icons,
     td {
         color: $color-light !important;
     }
-
     &.success {
         background-color: $color-grass !important;
-
         .fancytree-title {
             color: $color-light !important;
         }
-
         .material-icons,
         td {
             color: $color-light !important;
         }
     }
-
     &.alert {
         background-color: $palette-color-accent !important;
-
         .fancytree-title {
             color: $color-light !important;
         }
-
         .material-icons,
         td {
             color: $color-light !important;
         }
     }
-
     &.warning {
         background-color: $color-heat !important;
-
         .fancytree-title {
             color: $color-light !important;
         }
-
         .material-icons,
         td {
             color: $color-light !important;
         }
     }
-
     &.primary {
         background-color: $palette-color-median !important;
-
         .fancytree-title {
             color: $color-light !important;
         }
-
         .material-icons,
         td {
             color: $color-light !important;
         }
     }
-
     &.secondary {
         background-color: $color-neutral !important;
-
         .fancytree-title {
             color: $color-light !important;
         }
-
         .material-icons,
         td {
             color: $color-light !important;
         }
     }
-
     &.-is-new {
         span.fancytree-title::after {
             margin-left: .25em;
@@ -85,10 +67,8 @@
             font-size: .75em;
             content: "new_releases";
             -webkit-font-feature-settings: 'liga';
-
         }
     }
-
     &.-is-touched {
         span.fancytree-title::after {
             margin-left: .25em;
@@ -96,7 +76,6 @@
             font-size: .75em;
             content: "border_color";
             -webkit-font-feature-settings: 'liga';
-
         }
     }
 }
@@ -110,10 +89,8 @@
             font-size: .75em;
             content: "new_releases";
             -webkit-font-feature-settings: 'liga';
-
         }
     }
-
     &.-is-touched {
         span.fancytree-title::after {
             margin-left: .25em;
@@ -121,17 +98,13 @@
             font-size: .75em;
             content: "border_color";
             -webkit-font-feature-settings: 'liga';
-
         }
     }
-
     &.-was-selected {
         background-color: rgba($palette-color-median, 0.15) !important;
-
         .fancytree-title {
             color: $palette-color-darken !important;
         }
-
         .material-icons,
         td {
             color: $palette-color-darken !important;
@@ -139,14 +112,12 @@
     }
 }
 
-
 .fancytree-disabled>.fancytree-node .fancytree-title {
     color: $color-neutral-light !important;
     cursor: not-allowed; // background-color: $palette-color-median !important;
 }
 
 .fancytree-disabled {
-
     // .fancytree-title {
     //     color: $color-neutral-light !important;
     //     cursor: not-allowed; // background-color: $palette-color-median !important;
@@ -173,9 +144,9 @@
     border-bottom: $border-slim solid $color-grass;
 }
 
+// TODO: verify implement 
 .fancytree-node.fancytree-drop-after,
 .fancytree-node.fancytree-drop-before,
 .fancytree-node.fancytree-drop-target {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
-
 }

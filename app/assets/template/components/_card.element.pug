@@ -17,19 +17,19 @@
 
         .grid-x
             .medium-3.cell
-                .form--input-text
+                .form--input-select
                     .switch.tiny
                             label.switch-value(for='switchA-1')
-                                | Show
+                                | Show:
                             input#switchA-1.switch-input(type='checkbox', name='switchA-1')
                             label.switch-paddle(for='switchA-1')
                                 span.show-for-sr Edit Mode
                                 span.switch-active(aria-hidden='true')
-                                    i.material-icons.md-14(aria-hidden='true') visibility
+                                   | yes
                                 span.switch-inactive(aria-hidden='true')
-                                    i.material-icons.md-14(aria-hidden='true') visibility_off
+                                   | no
             .medium-3.cell
-                .form--input-text
+                .form--input-select
                     .switch.tiny
                             label.switch-value(for='switchA-2')
                                 | Show
@@ -44,7 +44,7 @@
             .medium-3.cell
                 .form--input-select
                     label
-                        | Options
+                        | Options:
                     select(required='')
                         option(value='volvo') One
                         option(value='saab') Two
@@ -52,7 +52,7 @@
             .medium-3.cell
                 .form--input-select
                     label
-                        | Options
+                        | Options:
                     select(required='')
                         option(value='volvo') One
                         option(value='saab') Two
@@ -76,19 +76,19 @@
     .card-section.-is-expanded
         .grid-x
             .medium-3.cell
-                .form--input-text
+                .form--input-select
                     .switch.tiny
-                            label.switch-value(for='switchB-1')
+                            label.switch-value(for='switchB-12')
                                 | Show
-                            input#switchB-1.switch-input(type='checkbox', name='switchB-1')
-                            label.switch-paddle(for='switchB-1')
+                            input#switchB-12.switch-input(type='checkbox', name='switchB-12')
+                            label.switch-paddle(for='switchB-12')
                                 span.show-for-sr Edit Mode
                                 span.switch-active(aria-hidden='true')
                                     i.material-icons.md-14(aria-hidden='true') visibility
                                 span.switch-inactive(aria-hidden='true')
                                     i.material-icons.md-14(aria-hidden='true') visibility_off
             .medium-3.cell
-                .form--input-text
+                .form--input-select
                     .switch.tiny
                             label.switch-value(for='switchB-2')
                                 | Show
@@ -155,7 +155,7 @@
             .cell
                 p It has an easy to override visual style, and is appropriately subdued.
             .medium-3.cell
-                .form--input-text
+                .form--input-select
                     .switch.tiny
                             label.switch-value(for='switchB-1')
                                 | Show
@@ -206,7 +206,7 @@
     .card-section.-is-expanded
         .grid-x
             .medium-3.cell
-                .form--input-text
+                .form--input-select
                     .switch.tiny
                             label.switch-value(for='switchC-1')
                                 | Show
@@ -250,7 +250,7 @@
                 .card-section.-is-expanded
                     .grid-x
                         .medium-3.cell
-                            .form--input-text
+                            .form--input-select
                                 .switch.tiny
                                         label.switch-value(for='switchC-1')
                                             | Show
@@ -279,7 +279,7 @@
                 .card-section.-is-expanded
                     .grid-x
                         .medium-3.cell
-                            .form--input-text
+                            .form--input-select
                                 .switch.tiny
                                         label.switch-value(for='switchC-1')
                                             | Show

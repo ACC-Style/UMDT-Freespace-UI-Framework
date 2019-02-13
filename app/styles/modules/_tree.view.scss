@@ -73,9 +73,21 @@ table[role="treegrid"] {
 
 
 // table view
+// TODO: style for expanded chidlren
 .fancytree-container tr[role="row"] {
 
+    .fancytree-level-2,
+    .fancytree-level-3,
+    .fancytree-level-4,
+    .fancytree-level-5,
+    .fancytree-level-6 {
+        .fancytree-title {
+            width: 80% !important;
+        }
+    }
+
     &.fancytree-has-children {
+
         // background-color: rgba($palette-color-median, 0.055);
         font-weight: bold;
 
@@ -85,11 +97,20 @@ table[role="treegrid"] {
         }
 
         &[aria-expanded="true"] {
-            background-color: rgba($color-twinkle, 0.25);
+            // background-color: rgba($color-twinkle, 0.25);
 
             &+tr {
-                background-color: rgba($color-twinkle, 0.25);
+                // background-color: rgba($color-twinkle, 0.25);
 
+            }
+
+            .fancytree-level-2,
+            .fancytree-level-3,
+            .fancytree-level-4,
+            .fancytree-level-5,
+            .fancytree-level-6 {
+                // display: none;
+                // background-color: rgba($color-twinkle, 0.25);
             }
         }
 
@@ -105,6 +126,8 @@ table[role="treegrid"] {
 
     td[role="gridcell"] {
         span.fancytree-node {
+            display: block;
+            // border: green 1px dashed;
             width: 100%;
 
             span[role="button"] {
@@ -118,7 +141,11 @@ table[role="treegrid"] {
 
             span[role="presentation"] {
                 display: inline-block;
-                float: right;
+                // float: right;
+                left: 11.70rem;
+                // position: absolute;
+                width: 15px;
+                // overflow: hidden;
             }
 
             span[role="checkbox"] {
@@ -127,13 +154,23 @@ table[role="treegrid"] {
                 width: 10%;
             }
 
+            span.fancytree-expander {
+                // display: none;
+                // position: absolute;
+            }
+
             span.fancytree-title {
                 display: inline-block;
-                width: 77%;
+                // border: cyan 1px dashed;
+                width: 88%;
 
                 b {
                     display: inline-block;
                     width: 75%;
+                }
+
+                small {
+                    color: $color-morning;
                 }
             }
 
