@@ -18,4 +18,44 @@
         border-right: none;
 
     }
+
+    .grid-x {
+        margin-bottom: .25em;
+
+        .-with-8-columns {
+            // border: 1px solid red;
+            width: 12.5% !important;
+        }
+
+        .-with-7-columns {
+            // border: 1px solid red;
+            width: 14.27% !important;
+        }
+
+        .-with-6-columns {
+            // border: 1px solid red;
+            width: 16.666% !important;
+        }
+
+        .-with-5-columns {
+            // border: 1px solid red;
+            width: 20% !important;
+        }
+
+        .-with-4-columns {
+            // border: 1px solid red;
+            width: 25% !important;
+        }
+
+        .-with-3-columns {
+            // border: 1px solid red;
+            width: 33.33333% !important;
+        }
+
+        .-with-2-columns {
+            // border: 1px solid red;
+            width: 50% !important;
+        }
+    }
+
 }

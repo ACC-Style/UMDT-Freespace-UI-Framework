@@ -6,7 +6,7 @@ console.groupCollapsed(`//Vendor: Context Menu`);
 
 $.contextMenu({
     // define which elements trigger this menu
-    selector: ".quib",
+    selector: "#example-tabs",
     // define the elements of the menu
     items: {
         edit: {

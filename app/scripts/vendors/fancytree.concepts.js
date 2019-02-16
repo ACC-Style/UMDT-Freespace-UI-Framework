@@ -196,7 +196,7 @@ $("#data-table-concepts").fancytree({
     }
   },
   source: {
-    url: "../data/tree.json"
+    url: "https://tools.stage.acc.org/UMDT/Templates/data/tree.json"
   },
   activate: function (event, data) {
     $("#statusLine").text(event.type + ": " + data.node);
@@ -315,7 +315,7 @@ $("#data-list-concepts").fancytree({
     }
   },
   source: {
-    url: "../data/tree.json"
+    url: "https://tools.stage.acc.org/UMDT/Templates/data/tree.json"
   },
   activate: function (event, data) {
     $("#statusLine").text(event.type + ": " + data.node);
@@ -432,7 +432,7 @@ $("#data-table-population").fancytree({
     }
   },
   source: {
-    url: "../data/tree.json"
+    url: "https://tools.stage.acc.org/UMDT/Templates/data/tree.json"
   },
   activate: function (event, data) {
     $("#statusLine").text(event.type + ": " + data.node);
