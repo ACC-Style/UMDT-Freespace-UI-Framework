@@ -35,6 +35,135 @@
     }
 }
 
+.card--element-node {
+
+    &.success {
+
+        .card-divider {
+            border: $border-thin solid $color-grass;
+            background: rgba($color-grass, 0.095);
+        }
+
+        .card-section {
+            background-color: $color-grass;
+            border-color: $color-grass;
+
+        }
+
+
+    }
+
+    &.alert {
+        .card-divider {
+            border: $border-thin solid $palette-color-accent;
+            background: rgba($palette-color-accent, 0.095);
+
+            .card-title {
+                .text {
+                    color: $palette-color-accent;
+                }
+
+                .icon {
+                    color: $palette-color-accent;
+                }
+            }
+        }
+
+        .card-section {
+            background-color: $palette-color-accent;
+            border-color: $palette-color-accent;
+
+        }
+    }
+
+
+    &.error {
+        .card-divider {
+            border: $border-thin solid $color-heat;
+            background: rgba($color-heat, 0.095);
+
+            .card-title {
+                .text {
+                    color: $color-heat;
+                }
+
+                .icon {
+                    color: $color-heat;
+                }
+            }
+        }
+
+        .card-section {
+            background-color: $color-heat;
+            border-color: $color-heat;
+
+        }
+    }
+
+    &.primary {
+        .card-divider {
+            border: $border-thin solid $palette-color-darken;
+            background: rgba($palette-color-darken, 0.095);
+
+            .card-title {
+                .text {
+                    color: $palette-color-darken;
+                }
+
+                .icon {
+                    color: $palette-color-darken;
+                }
+            }
+        }
+
+        .card-section {
+            background-color: $palette-color-darken;
+            border-color: $palette-color-darken;
+
+        }
+    }
+
+    &.secondary {
+        .card-divider {
+            border: $border-thin solid $color-morning;
+            background: rgba($color-morning, 0.095);
+
+            .card-title {
+                .text {
+                    color: $color-morning;
+                }
+
+                .icon {
+                    color: $color-morning;
+                }
+            }
+        }
+
+        .card-section {
+            background-color: $color-morning;
+            border-color: $color-morning;
+
+        }
+    }
+
+
+    .card-section {
+        background: $palette-color-median;
+        color: $palette-color-base;
+
+        .form--input-select,
+        .form--input-text {
+            label {
+                color: $palette-color-lightens;
+            }
+
+            input:checked~.switch-paddle {
+                background: $color-grass;
+            }
+        }
+    }
+}
+
 .card--element-node,
 .card--element-group {
     .card-options {
@@ -56,6 +185,16 @@
 
     &.-is-indented-2 {
         width: 60%;
+        float: right; // margin-left: 28%;
+    }
+
+    &.-is-indented-3 {
+        width: 40%;
+        float: right; // margin-left: 18%;
+    }
+
+    &.-is-indented-4 {
+        width: 20%;
         float: right; // margin-left: 28%;
     }
 }

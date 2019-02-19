@@ -1,304 +1,596 @@
-#card-id-1.card--element-node.card(data-micro-interaction="card")
-    .card-divider
-        .grid-x
-            .car-title.cell.small-10
-                .icon
-                    i.material-icons.md-18 change_history
-                .text
-                    | Element Name Here
-            .card-options.small-2
-                button.button-option-setting(data-micro-interaction="option")
-                    span.icon
-                        i.material-icons.md-18 settings
-                button.button-option-drag(data-micro-interaction="card")
-                    span.icon
-                        i.material-icons.md-18 drag_handle
-    .card-section.-is-expanded
+.composer--holder-elements
 
-        .grid-x
-            .medium-3.cell
-                .form--input-select
-                    .switch.tiny
-                            label.switch-value(for='switchA-1')
-                                | Show:
-                            input#switchA-1.switch-input(type='checkbox', name='switchA-1')
-                            label.switch-paddle(for='switchA-1')
-                                span.show-for-sr Edit Mode
-                                span.switch-active(aria-hidden='true')
-                                   | yes
-                                span.switch-inactive(aria-hidden='true')
-                                   | no
-            .medium-3.cell
-                .form--input-select
-                    .switch.tiny
-                            label.switch-value(for='switchA-2')
-                                | Show
-                            input#switchA-2.switch-input(type='checkbox', name='switchA-2')
-                            label.switch-paddle(for='switchA-2')
-                                span.show-for-sr Edit Mode
-                                span.switch-active(aria-hidden='true')
-                                    i.material-icons.md-14(aria-hidden='true') visibility
-                                span.switch-inactive(aria-hidden='true')
-                                    i.material-icons.md-14(aria-hidden='true') visibility_off
-
-            .medium-3.cell
-                .form--input-select
-                    label
-                        | Options:
-                    select(required='')
-                        option(value='volvo') One
-                        option(value='saab') Two
-                        option(value='mercedes') Three
-            .medium-3.cell
-                .form--input-select
-                    label
-                        | Options:
-                    select(required='')
-                        option(value='volvo') One
-                        option(value='saab') Two
-                        option(value='mercedes') Three
-
-#card-id-2.card--element-node.-is-selected.-is-indented-1.card(data-micro-interaction="card")
-    .card-divider
-        .grid-x
-            .car-title.cell.small-10
-                .icon
-                    i.material-icons.md-18 change_history
-                .text
-                    | Element Name Here
-            .card-options.small-2
-                button.button-option-setting(data-micro-interaction="option")
-                    span.icon
-                        i.material-icons.md-18 settings
-                button.button-option-drag(data-micro-interaction="card")
-                    span.icon
-                        i.material-icons.md-18 drag_handle
-    .card-section.-is-expanded
-        .grid-x
-            .medium-3.cell
-                .form--input-select
-                    .switch.tiny
-                            label.switch-value(for='switchB-12')
-                                | Show
-                            input#switchB-12.switch-input(type='checkbox', name='switchB-12')
-                            label.switch-paddle(for='switchB-12')
-                                span.show-for-sr Edit Mode
-                                span.switch-active(aria-hidden='true')
-                                    i.material-icons.md-14(aria-hidden='true') visibility
-                                span.switch-inactive(aria-hidden='true')
-                                    i.material-icons.md-14(aria-hidden='true') visibility_off
-            .medium-3.cell
-                .form--input-select
-                    .switch.tiny
-                            label.switch-value(for='switchB-2')
-                                | Show
-                            input#switchB-2.switch-input(type='checkbox', name='switchB-2')
-                            label.switch-paddle(for='switchB-2')
-                                span.show-for-sr Edit Mode
-                                span.switch-active(aria-hidden='true')
-                                    i.material-icons.md-14(aria-hidden='true') visibility
-                                span.switch-inactive(aria-hidden='true')
-                                    i.material-icons.md-14(aria-hidden='true') visibility_off
-            .medium-3.cell
-                .form--input-select
-                    label
-                        | Options
-                    select(required='')
-                        option(value='volvo') One
-                        option(value='saab') Two
-                        option(value='mercedes') Three
-            .medium-3.cell
-                .form--input-select
-                    label
-                        | Options
-                    select(required='')
-                        option(value='volvo') One
-                        option(value='saab') Two
-                        option(value='mercedes') Three
-
-#card-id-3.card--element-operator.-is-selected.card(data-micro-interaction="card")
-    .card-divider
-        .grid-x
-            .car-title.cell.small-10
-                .icon
-                    i.material-icons.md-18 mode_edit
-                .text
-                    | Operator
-            .card-options.small-2
-                button.button-option-setting(data-micro-interaction="option")
-                    span.icon
-                        i.material-icons.md-18 settings
-                button.button-option-drag(data-micro-interaction="card")
-                    span.icon
-                        i.material-icons.md-18 drag_handle
-    .card-section.-is-collapsed
-        //- h4 This is a card.
-        p It has an easy to override visual style, and is appropriately subdued.
-
-#card-id-5.card--element-node.card(data-micro-interaction="card")
-    .card-divider
-        .grid-x
-            .car-title.cell.small-10
-                .icon
-                    i.material-icons.md-18 change_history
-                .text
-                    | Element Name Here
-            .card-options.small-2
-                button.button-option-setting.-is-expanded(data-micro-interaction="option")
-                    span.icon
-                        i.material-icons.md-18 settings
-                button.button-option-drag(data-micro-interaction="card")
-                    span.icon
-                        i.material-icons.md-18 drag_handle
-    .card-section.-is-expanded
-        .grid-x
-            .cell
-                p It has an easy to override visual style, and is appropriately subdued.
-            .medium-3.cell
-                .form--input-select
-                    .switch.tiny
-                            label.switch-value(for='switchB-1')
-                                | Show
-                            input#switchB-1.switch-input(type='checkbox', name='switchB-1')
-                            label.switch-paddle(for='switchB-1')
-                                span.show-for-sr Edit Mode
-                                span.switch-active(aria-hidden='true')
-                                    i.material-icons.md-14(aria-hidden='true') visibility
-                                span.switch-inactive(aria-hidden='true')
-                                    i.material-icons.md-14(aria-hidden='true') visibility_off
+    #card-id-1.card--element-node.card(data-micro-interaction="card")
+        .card-divider
+            .grid-x
+                .card-title.cell.small-10
+                    .icon
+                        i.material-icons.md-18 change_history
+                    .text
+                        | Element Name Here
+                .card-options.small-2
+                    button.button-option-setting(data-micro-interaction="option")
+                        span.icon
+                            i.material-icons.md-18 settings
+                    button.button-option-drag(data-micro-interaction="card")
+                        span.icon
+                            i.material-icons.md-18 drag_handle
+        .card-section.-is-expanded
+            .grid-x
+                .medium-3.cell
+                    .form--input-select
+                        .switch.tiny
+                                label.switch-value(for='switchA-1')
+                                    | Show:
+                                input#switchA-1.switch-input(type='checkbox', name='switchA-1')
+                                label.switch-paddle(for='switchA-1')
+                                    span.show-for-sr Edit Mode
+                                    span.switch-active(aria-hidden='true')
+                                        | yes
+                                    span.switch-inactive(aria-hidden='true')
+                                        | no
+                .medium-3.cell
+                    .form--input-select
+                        .switch.tiny
+                                label.switch-value(for='switchA-2')
+                                    | Show
+                                input#switchA-2.switch-input(type='checkbox', name='switchA-2')
+                                label.switch-paddle(for='switchA-2')
+                                    span.show-for-sr Edit Mode
+                                    span.switch-active(aria-hidden='true')
+                                        i.material-icons.md-14(aria-hidden='true') visibility
+                                    span.switch-inactive(aria-hidden='true')
+                                        i.material-icons.md-14(aria-hidden='true') visibility_off
+                .medium-3.cell
+                    .form--input-select
+                        label
+                            | Options
+                        select(required='')
+                            option(value='volvo') One
+                            option(value='saab') Two
+                            option(value='mercedes') Three
+                .medium-3.cell
+                    .form--input-select
+                        label
+                            | Options
+                        select(required='')
+                            option(value='volvo') One
+                            option(value='saab') Two
+                            option(value='mercedes') Three
 
 
-#card-id-6.card--element-operator.-is-selected.card(data-micro-interaction="card")
-    .card-divider
-        .grid-x
-            .car-title.cell.small-10
-                .icon
-                    i.material-icons.md-18 mode_edit
-                .text
-                    | Operator
-            .card-options.small-2
-                button.button-option-setting(data-micro-interaction="option")
-                    span.icon
-                        i.material-icons.md-18 settings
-                button.button-option-drag(data-micro-interaction="card")
-                    span.icon
-                        i.material-icons.md-18 drag_handle
-    .card-section.-is-collapsed
-        .grid-x
-            .cell
-                p It has an easy to override visual style, and is appropriately subdued.
+    #card-id-1.card--element-node.card.-is-selected.-is-indented-1(data-micro-interaction="card")
+        .card-divider
+            .grid-x
+                .card-title.cell.small-10
+                    .icon
+                        i.material-icons.md-18 change_history
+                    .text
+                        | Element Name Here
+                .card-options.small-2
+                    button.button-option-setting(data-micro-interaction="option")
+                        span.icon
+                            i.material-icons.md-18 settings
+                    button.button-option-drag(data-micro-interaction="card")
+                        span.icon
+                            i.material-icons.md-18 drag_handle
+        .card-section.-is-expanded
 
-#card-id-4.card--element-node.-is-indented-2.card(data-micro-interaction="card")
-    .card-divider
-        .grid-x
-            .car-title.cell.small-10
-                .icon
-                    i.material-icons.md-18 change_history
-                .text
-                    | Element Name Here
-            .card-options.small-2
-                button.button-option-setting.-is-expanded(data-micro-interaction="option")
-                    span.icon
-                        i.material-icons.md-18 settings
-                button.button-option-drag(data-micro-interaction="card")
-                    span.icon
-                        i.material-icons.md-18 drag_handle
-    .card-section.-is-expanded
-        .grid-x
-            .medium-3.cell
-                .form--input-select
-                    .switch.tiny
-                            label.switch-value(for='switchC-1')
-                                | Show
-                            input#switchC-1.switch-input(type='checkbox', name='switchC-1')
-                            label.switch-paddle(for='switchC-1')
-                                span.show-for-sr Edit Mode
-                                span.switch-active(aria-hidden='true')
-                                    i.material-icons.md-14(aria-hidden='true') visibility
-                                span.switch-inactive(aria-hidden='true')
-                                    i.material-icons.md-14(aria-hidden='true') visibility_off
+            .grid-x
+                .medium-3.cell
+                    .form--input-select
+                        .switch.tiny
+                                label.switch-value(for='switchA-1')
+                                    | Show:
+                                input#switchA-1.switch-input(type='checkbox', name='switchA-1')
+                                label.switch-paddle(for='switchA-1')
+                                    span.show-for-sr Edit Mode
+                                    span.switch-active(aria-hidden='true')
+                                        | yes
+                                    span.switch-inactive(aria-hidden='true')
+                                        | no
+                .medium-3.cell
+                    .form--input-select
+                        .switch.tiny
+                                label.switch-value(for='switchA-2')
+                                    | Show
+                                input#switchA-2.switch-input(type='checkbox', name='switchA-2')
+                                label.switch-paddle(for='switchA-2')
+                                    span.show-for-sr Edit Mode
+                                    span.switch-active(aria-hidden='true')
+                                        i.material-icons.md-14(aria-hidden='true') visibility
+                                    span.switch-inactive(aria-hidden='true')
+                                        i.material-icons.md-14(aria-hidden='true') visibility_off
+                .medium-3.cell
+                    .form--input-select
+                        label
+                            | Options
+                        select(required='')
+                            option(value='volvo') One
+                            option(value='saab') Two
+                            option(value='mercedes') Three
+                .medium-3.cell
+                    .form--input-select
+                        label
+                            | Options
+                        select(required='')
+                            option(value='volvo') One
+                            option(value='saab') Two
+                            option(value='mercedes') Three
 
-#composer-a.composer--grid
-    .grid-x
-        .composer--grid-cell.cell.small-1.-with-8-columns
-            | 1
-        .composer--grid-cell.cell.small-1.-with-8-columns.-is-hovered
-            | 2
-        .composer--grid-cell.cell.small-1.-with-8-columns
-            | 3
-        .composer--grid-cell.cell.small-1.-with-8-columns
-            | 4
-        .composer--grid-cell.cell.small-1.-with-8-columns
-            | 5
-        .composer--grid-cell.cell.small-1.-with-8-columns
-            | 6
-        .composer--grid-cell.cell.small-1.-with-8-columns
-            | 7
-        .composer--grid-cell.cell.small-1.-with-8-columns
-            | 8
-    .grid-x
-        .composer--grid-cell.cell.small-1.-with-7-columns
-            | 1
-        .composer--grid-cell.cell.small-1.-with-7-columns.-is-hovered
-            | 2
-        .composer--grid-cell.cell.small-1.-with-7-columns
-            | 3
-        .composer--grid-cell.cell.small-1.-with-7-columns
-            | 4
-        .composer--grid-cell.cell.small-1.-with-7-columns
-            | 5
-        .composer--grid-cell.cell.small-1.-with-7-columns
-            | 6
-        .composer--grid-cell.cell.small-1.-with-7-columns
-            | 7
-    .grid-x
-        .composer--grid-cell.cell.small-1.-with-5-columns
-            | 1
-        .composer--grid-cell.cell.small-1.-with-5-columns.-is-hovered
-            | 2
-        .composer--grid-cell.cell.small-1.-with-5-columns
-            | 3
-        .composer--grid-cell.cell.small-1.-with-5-columns
-            | 4
-        .composer--grid-cell.cell.small-1.-with-5-columns
-            | 5
 
-            //- #card-id-8.card--element-node.-is-indented-1.card(data-micro-interaction="card")
+//- table#composer-c.composer--grid-table(role='presentation')
+    //- tr
+        th Month
+        th Savings
+    tr
+        td
+        td
+    tr
+        td
+        td
+    tr
+        td
+        td
+    tr
+        td(colspan='2')
+
+    tr  
+        td(colspan='2')
+            #card-id-143.card--element-node.card(data-micro-interaction="card")
                 .card-divider
                     .grid-x
-                        .car-title.cell.small-10
+                        .card-title.cell.small-10
                             .icon
                                 i.material-icons.md-18 change_history
                             .text
                                 | Element Name Here
                         .card-options.small-2
-                            button.button-option-setting.-is-expanded(data-micro-interaction="option")
-                                span.icon
-                                    i.material-icons.md-18 settings
-                            button.button-option-drag(data-micro-interaction="card")
-                                span.icon
-                                    i.material-icons.md-18 drag_handle
-#composer-a.composer--grid.-is-selected
-    .grid-x
-        .composer--grid-cell.cell.small-4
-            | 1
-        .composer--grid-cell.cell.small-4.-is-selected
-            #card-id-7.card--element-node.card(data-micro-interaction="card")
-                .card-divider
-                    .grid-x
-                        .car-title.cell.small-10
-                            .icon
-                                i.material-icons.md-18 change_history
-                            .text
-                                | Element Name Here
-                        .card-options.small-2
-                            button.button-option-setting.-is-expanded(data-micro-interaction="option")
+                            button.button-option-setting(data-micro-interaction="option")
                                 span.icon
                                     i.material-icons.md-18 settings
                             button.button-option-drag(data-micro-interaction="card")
                                 span.icon
                                     i.material-icons.md-18 drag_handle
                 .card-section.-is-expanded
+
+                    .grid-x
+                        .medium-3.cell
+                            .form--input-select
+                                .switch.tiny
+                                        label.switch-value(for='switchA-1')
+                                            | Show
+                                        input#switchA-1.switch-input(type='checkbox', name='switchA-1')
+                                        label.switch-paddle(for='switchA-1')
+                                            span.show-for-sr Edit Mode
+                                            span.switch-active(aria-hidden='true')
+                                                | yes   
+                                            span.switch-inactive(aria-hidden='true')
+                                                | no
+                        .medium-3.cell
+                            .form--input-select
+                                .switch.tiny
+                                        label.switch-value(for='switchA-2')
+                                            | Show
+                                        input#switchA-2.switch-input(type='checkbox', name='switchA-2')
+                                        label.switch-paddle(for='switchA-2')
+                                            span.show-for-sr Edit Mode
+                                            span.switch-active(aria-hidden='true')
+                                                i.material-icons.md-14(aria-hidden='true') visibility
+                                            span.switch-inactive(aria-hidden='true')
+                                                i.material-icons.md-14(aria-hidden='true') visibility_off
+
+                        .medium-3.cell
+                            .form--input-select
+                                label
+                                    | Options:
+                                select(required='')
+                                    option(value='volvo') One
+                                    option(value='saab') Two
+                                    option(value='mercedes') Three
+                        .medium-3.cell
+                            .form--input-select
+                                label
+                                    | Options:
+                                select(required='')
+                                    option(value='volvo') One
+                                    option(value='saab') Two
+                                    option(value='mercedes') Three
+            #card-id-143.card--element-node.card.-is-indented-2(data-micro-interaction="card")
+                .card-divider
+                    .grid-x
+                        .card-title.cell.small-10
+                            .icon
+                                i.material-icons.md-18 change_history
+                            .text
+                                | Element Name Here
+                        .card-options.small-2
+                            button.button-option-setting(data-micro-interaction="option")
+                                span.icon
+                                    i.material-icons.md-18 settings
+                            button.button-option-drag(data-micro-interaction="card")
+                                span.icon
+                                    i.material-icons.md-18 drag_handle
+                .card-section.-is-expanded
+
+                    .grid-x
+                        .medium-3.cell
+                            .form--input-select
+                                .switch.tiny
+                                        label.switch-value(for='switchA-1')
+                                            | Show
+                                        input#switchA-1.switch-input(type='checkbox', name='switchA-1')
+                                        label.switch-paddle(for='switchA-1')
+                                            span.show-for-sr Edit Mode
+                                            span.switch-active(aria-hidden='true')
+                                                | yes   
+                                            span.switch-inactive(aria-hidden='true')
+                                                | no
+                        .medium-3.cell
+                            .form--input-select
+                                .switch.tiny
+                                        label.switch-value(for='switchA-2')
+                                            | Show
+                                        input#switchA-2.switch-input(type='checkbox', name='switchA-2')
+                                        label.switch-paddle(for='switchA-2')
+                                            span.show-for-sr Edit Mode
+                                            span.switch-active(aria-hidden='true')
+                                                i.material-icons.md-14(aria-hidden='true') visibility
+                                            span.switch-inactive(aria-hidden='true')
+                                                i.material-icons.md-14(aria-hidden='true') visibility_off
+
+                        .medium-3.cell
+                            .form--input-select
+                                label
+                                    | Options:
+                                select(required='')
+                                    option(value='volvo') One
+                                    option(value='saab') Two
+                                    option(value='mercedes') Three
+                        .medium-3.cell
+                            .form--input-select
+                                label
+                                    | Options:
+                                select(required='')
+                                    option(value='volvo') One
+                                    option(value='saab') Two
+                                    option(value='mercedes') Three
+            #card-id-143.card--element-node.card.-is-indented-1(data-micro-interaction="card")
+                .card-divider
+                    .grid-x
+                        .card-title.cell.small-10
+                            .icon
+                                i.material-icons.md-18 change_history
+                            .text
+                                | Element Name Here
+                        .card-options.small-2
+                            button.button-option-setting(data-micro-interaction="option")
+                                span.icon
+                                    i.material-icons.md-18 settings
+                            button.button-option-drag(data-micro-interaction="card")
+                                span.icon
+                                    i.material-icons.md-18 drag_handle
+                .card-section.-is-expanded
+
+                    .grid-x
+                        .medium-3.cell
+                            .form--input-select
+                                .switch.tiny
+                                        label.switch-value(for='switchA-1')
+                                            | Show
+                                        input#switchA-1.switch-input(type='checkbox', name='switchA-1')
+                                        label.switch-paddle(for='switchA-1')
+                                            span.show-for-sr Edit Mode
+                                            span.switch-active(aria-hidden='true')
+                                                | yes   
+                                            span.switch-inactive(aria-hidden='true')
+                                                | no
+                        .medium-3.cell
+                            .form--input-select
+                                .switch.tiny
+                                        label.switch-value(for='switchA-2')
+                                            | Show
+                                        input#switchA-2.switch-input(type='checkbox', name='switchA-2')
+                                        label.switch-paddle(for='switchA-2')
+                                            span.show-for-sr Edit Mode
+                                            span.switch-active(aria-hidden='true')
+                                                i.material-icons.md-14(aria-hidden='true') visibility
+                                            span.switch-inactive(aria-hidden='true')
+                                                i.material-icons.md-14(aria-hidden='true') visibility_off
+
+                        .medium-3.cell
+                            .form--input-select
+                                label
+                                    | Options:
+                                select(required='')
+                                    option(value='volvo') One
+                                    option(value='saab') Two
+                                    option(value='mercedes') Three
+                        .medium-3.cell
+                            .form--input-select
+                                label
+                                    | Options:
+                                select(required='')
+                                    option(value='volvo') One
+                                    option(value='saab') Two
+                                    option(value='mercedes') Three
+
+        
+        
+//- #card-id-1.card--element-node.card(data-micro-interaction="card")
+//-     .card-divider
+//-         .grid-x
+//-             .card-title.cell.small-10
+//-                 .icon
+//-                     i.material-icons.md-18 change_history
+//-                 .text
+//-                     | Element Name Here
+//-             .card-options.small-2
+//-                 button.button-option-setting(data-micro-interaction="option")
+//-                     span.icon
+//-                         i.material-icons.md-18 settings
+//-                 button.button-option-drag(data-micro-interaction="card")
+//-                     span.icon
+//-                         i.material-icons.md-18 drag_handle
+//-     .card-section.-is-expanded
+
+//-         .grid-x
+//-             .medium-3.cell
+//-                 .form--input-select
+//-                     .switch.tiny
+//-                             label.switch-value(for='switchA-1')
+//-                                 | Show:
+//-                             input#switchA-1.switch-input(type='checkbox', name='switchA-1')
+//-                             label.switch-paddle(for='switchA-1')
+//-                                 span.show-for-sr Edit Mode
+//-                                 span.switch-active(aria-hidden='true')
+//-                                    | yes
+//-                                 span.switch-inactive(aria-hidden='true')
+//-                                    | no
+//-             .medium-3.cell
+//-                 .form--input-select
+//-                     .switch.tiny
+//-                             label.switch-value(for='switchA-2')
+//-                                 | Show
+//-                             input#switchA-2.switch-input(type='checkbox', name='switchA-2')
+//-                             label.switch-paddle(for='switchA-2')
+//-                                 span.show-for-sr Edit Mode
+//-                                 span.switch-active(aria-hidden='true')
+//-                                     i.material-icons.md-14(aria-hidden='true') visibility
+//-                                 span.switch-inactive(aria-hidden='true')
+//-                                     i.material-icons.md-14(aria-hidden='true') visibility_off
+
+//-             .medium-3.cell
+//-                 .form--input-select
+//-                     label
+//-                         | Options:
+//-                     select(required='')
+//-                         option(value='volvo') One
+//-                         option(value='saab') Two
+//-                         option(value='mercedes') Three
+//-             .medium-3.cell
+//-                 .form--input-select
+//-                     label
+//-                         | Options:
+//-                     select(required='')
+//-                         option(value='volvo') One
+//-                         option(value='saab') Two
+//-                         option(value='mercedes') Three
+
+//- #card-id-2.card--element-node.-is-selected.-is-indented-1.card(data-micro-interaction="card")
+//-     .card-divider
+//-         .grid-x
+//-             .card-title.cell.small-10
+//-                 .icon
+//-                     i.material-icons.md-18 change_history
+//-                 .text
+//-                     | Element Name Here
+//-             .card-options.small-2
+//-                 button.button-option-setting(data-micro-interaction="option")
+//-                     span.icon
+//-                         i.material-icons.md-18 settings
+//-                 button.button-option-drag(data-micro-interaction="card")
+//-                     span.icon
+//-                         i.material-icons.md-18 drag_handle
+//-     .card-section.-is-expanded
+//-         .grid-x
+//-             .medium-3.cell
+//-                 .form--input-select
+//-                     .switch.tiny
+//-                             label.switch-value(for='switchB-12')
+//-                                 | Show
+//-                             input#switchB-12.switch-input(type='checkbox', name='switchB-12')
+//-                             label.switch-paddle(for='switchB-12')
+//-                                 span.show-for-sr Edit Mode
+//-                                 span.switch-active(aria-hidden='true')
+//-                                     i.material-icons.md-14(aria-hidden='true') visibility
+//-                                 span.switch-inactive(aria-hidden='true')
+//-                                     i.material-icons.md-14(aria-hidden='true') visibility_off
+//-             .medium-3.cell
+//-                 .form--input-select
+//-                     .switch.tiny
+//-                             label.switch-value(for='switchB-2')
+//-                                 | Show
+//-                             input#switchB-2.switch-input(type='checkbox', name='switchB-2')
+//-                             label.switch-paddle(for='switchB-2')
+//-                                 span.show-for-sr Edit Mode
+//-                                 span.switch-active(aria-hidden='true')
+//-                                     i.material-icons.md-14(aria-hidden='true') visibility
+//-                                 span.switch-inactive(aria-hidden='true')
+//-                                     i.material-icons.md-14(aria-hidden='true') visibility_off
+//-             .medium-3.cell
+//-                 .form--input-select
+//-                     label
+//-                         | Options
+//-                     select(required='')
+//-                         option(value='volvo') One
+//-                         option(value='saab') Two
+//-                         option(value='mercedes') Three
+//-             .medium-3.cell
+//-                 .form--input-select
+//-                     label
+//-                         | Options
+//-                     select(required='')
+//-                         option(value='volvo') One
+//-                         option(value='saab') Two
+//-                         option(value='mercedes') Three
+
+//- #card-id-3.card--element-operator.-is-selected.card(data-micro-interaction="card")
+//-     .card-divider
+//-         .grid-x
+//-             .card-title.cell.small-10
+//-                 .icon
+//-                     i.material-icons.md-18 mode_edit
+//-                 .text
+//-                     | Operator
+//-             .card-options.small-2
+//-                 button.button-option-setting(data-micro-interaction="option")
+//-                     span.icon
+//-                         i.material-icons.md-18 settings
+//-                 button.button-option-drag(data-micro-interaction="card")
+//-                     span.icon
+//-                         i.material-icons.md-18 drag_handle
+//-     .card-section.-is-collapsed
+//-         //- h4 This is a card.
+//-         p It has an easy to override visual style, and is appropriately subdued.
+
+//- #card-id-5.card--element-node.card(data-micro-interaction="card")
+//-     .card-divider
+//-         .grid-x
+//-             .card-title.cell.small-10
+//-                 .icon
+//-                     i.material-icons.md-18 change_history
+//-                 .text
+//-                     | Element Name Here
+//-             .card-options.small-2
+//-                 button.button-option-setting.-is-expanded(data-micro-interaction="option")
+//-                     span.icon
+//-                         i.material-icons.md-18 settings
+//-                 button.button-option-drag(data-micro-interaction="card")
+//-                     span.icon
+//-                         i.material-icons.md-18 drag_handle
+//-     .card-section.-is-expanded
+//-         .grid-x
+//-             .cell
+//-                 p It has an easy to override visual style, and is appropriately subdued.
+//-             .medium-3.cell
+//-                 .form--input-select
+//-                     .switch.tiny
+//-                             label.switch-value(for='switchB-1')
+//-                                 | Show
+//-                             input#switchB-1.switch-input(type='checkbox', name='switchB-1')
+//-                             label.switch-paddle(for='switchB-1')
+//-                                 span.show-for-sr Edit Mode
+//-                                 span.switch-active(aria-hidden='true')
+//-                                     i.material-icons.md-14(aria-hidden='true') visibility
+//-                                 span.switch-inactive(aria-hidden='true')
+//-                                     i.material-icons.md-14(aria-hidden='true') visibility_off
+
+
+//- #card-id-6.card--element-operator.-is-selected.card(data-micro-interaction="card")
+//-     .card-divider
+//-         .grid-x
+//-             .card-title.cell.small-10
+//-                 .icon
+//-                     i.material-icons.md-18 mode_edit
+//-                 .text
+//-                     | Operator
+//-             .card-options.small-2
+//-                 button.button-option-setting(data-micro-interaction="option")
+//-                     span.icon
+//-                         i.material-icons.md-18 settings
+//-                 button.button-option-drag(data-micro-interaction="card")
+//-                     span.icon
+//-                         i.material-icons.md-18 drag_handle
+//-     .card-section.-is-collapsed
+//-         .grid-x
+//-             .cell
+//-                 p It has an easy to override visual style, and is appropriately subdued.
+
+//- #card-id-4.card--element-node.-is-indented-2.card(data-micro-interaction="card")
+//-     .card-divider
+//-         .grid-x
+//-             .card-title.cell.small-10
+//-                 .icon
+//-                     i.material-icons.md-18 change_history
+//-                 .text
+//-                     | Element Name Here
+//-             .card-options.small-2
+//-                 button.button-option-setting.-is-expanded(data-micro-interaction="option")
+//-                     span.icon
+//-                         i.material-icons.md-18 settings
+//-                 button.button-option-drag(data-micro-interaction="card")
+//-                     span.icon
+//-                         i.material-icons.md-18 drag_handle
+//-     .card-section.-is-expanded
+//-         .grid-x
+//-             .medium-3.cell
+//-                 .form--input-select
+//-                     .switch.tiny
+//-                             label.switch-value(for='switchC-1')
+//-                                 | Show
+//-                             input#switchC-1.switch-input(type='checkbox', name='switchC-1')
+//-                             label.switch-paddle(for='switchC-1')
+//-                                 span.show-for-sr Edit Mode
+//-                                 span.switch-active(aria-hidden='true')
+//-                                     i.material-icons.md-14(aria-hidden='true') visibility
+//-                                 span.switch-inactive(aria-hidden='true')
+//-                                     i.material-icons.md-14(aria-hidden='true') visibility_off
+
+
+#composer-a.composer--grid
+    .grid-x
+        .composer--grid-cell.cell.small-2
+            | 1
+        .composer--grid-cell.cell.small-2.-is-hovered
+            | 2
+        .composer--grid-cell.cell.small-2
+            | 3
+        .composer--grid-cell.cell.small-2
+            | 4
+        .composer--grid-cell.cell.small-2
+            | 5
+        .composer--grid-cell.cell.small-2
+            | 6
+    .grid-x
+        .composer--grid-cell.cell.small-2
+            | 1
+        .composer--grid-cell.cell.small-2
+            | 2
+        .composer--grid-cell.cell.small-2
+            | 3
+        .composer--grid-cell.cell.small-2
+            | 4
+        .composer--grid-cell.cell.small-2
+            | 5
+        .composer--grid-cell.cell.small-2
+            | 6
+    .grid-x
+        .composer--grid-cell.cell.small-4
+            | 1
+        .composer--grid-cell.cell.small-4
+            | 2
+        .composer--grid-cell.cell.small-4.-is-selected
+            | 3
+        .composer--grid-cell.cell.small-4
+            | 4
+        .composer--grid-cell.cell.small-4
+            #card-id-7.card--element-node.card(data-micro-interaction="card")
+                .card-divider
+                    .grid-x
+                        .card-title.cell.small-12.medium-11.large-11
+                            .icon
+                                i.material-icons.md-18 change_history
+                            .text
+                                | Element Name Here
+                        .card-options.small-12.medium-1.large-1
+                            button.button-option-setting.-is-expanded(data-micro-interaction="option")
+                                span.icon
+                                    i.material-icons.md-18 settings
+                            button.button-option-drag(data-micro-interaction="card")
+                                span.icon
+                                    i.material-icons.md-18 drag_handle
+                .card-section.-is-collapsed
                     .grid-x
                         .medium-3.cell
                             .form--input-select
@@ -315,7 +607,7 @@
             #card-id-8.card--element-node.-is-indented-1.card(data-micro-interaction="card")
                 .card-divider
                     .grid-x
-                        .car-title.cell.small-10
+                        .card-title.cell.small-10
                             .icon
                                 i.material-icons.md-18 change_history
                             .text
@@ -327,7 +619,7 @@
                             button.button-option-drag(data-micro-interaction="card")
                                 span.icon
                                     i.material-icons.md-18 drag_handle
-                .card-section.-is-expanded
+                .card-section.-is-collapsed
                     .grid-x
                         .medium-3.cell
                             .form--input-select
@@ -342,4 +634,4 @@
                                             span.switch-inactive(aria-hidden='true')
                                                 i.material-icons.md-14(aria-hidden='true') visibility_off
         .composer--grid-cell.cell.small-4
-            | 3
+            | 6

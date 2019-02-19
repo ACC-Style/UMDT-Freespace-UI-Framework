@@ -13,6 +13,7 @@
 a.code-link {
     color: lightgrey;
     font-size: small;
+
     &:hover {
         text-decoration: underline;
     }
@@ -30,13 +31,37 @@ a.code-link {
 .sample--code {
     font-size: small;
     width: 80%;
+
     pre {
         padding: 1em;
         background-color: #e6e6e6;
         overflow-x: scroll;
     }
+
     code {
         background: none;
         border: none; // border: 1px solid #cacaca;
+    }
+}
+
+.kitchen-menu {
+    display: table;
+    width: 90%;
+    margin-bottom: 2em;
+
+    a {
+        display: inline-block;
+        float: left;
+        margin-top: 1em;
+        margin-right: 1em;
+    }
+
+}
+
+hr.kitchen-divider {
+    button {
+        float: right;
+        margin: -3em 0 0 0;
+        display: block;
     }
 }

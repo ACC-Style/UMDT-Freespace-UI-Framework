@@ -2,25 +2,28 @@
     padding: 1em;
     display: block;
     clear: both;
-    margin: 0 .25em 0 .25em;
-    // border: $border-thin solid $color-light;
+    margin: 0 0.25em 0 0.25em; // border: $border-thin solid $color-light;
 
     .composer--grid-cell {
         // background: $palette-color-base;
-        background-color: $palette-color-base;
+        // background-color: $palette-color-base;
         padding: 1em;
         text-align: center;
-        border-right: $border-thin solid $color-light;
+        // border-right: $border-thin solid $color-light; 
+        border: $border-skinny dashed $color-neutral-medium;
         // border-right: $border-thin solid $palette-color-median;
     }
 
-    .composer--grid-cell:last-child {
-        border-right: none;
+    .composer--grid-cell {
+        // border-right: none;
+    }
 
+    .composer--grid-cell:last-child {
+        // border-right: $border-thin dashed $color-neutral-medium;
     }
 
     .grid-x {
-        margin-bottom: .25em;
+        // margin-bottom: 0.25em;
 
         .-with-8-columns {
             // border: 1px solid red;
@@ -57,5 +60,43 @@
             width: 50% !important;
         }
     }
+}
 
+table.composer--grid-table {
+    width: 98%;
+    background: none;
+    margin: 1em 0 2rem 1%;
+
+    td {
+        // background: $palette-color-base;
+        background-color: $color-white;
+        border: $border-thin dashed $color-neutral-medium;
+        // border: $border-skinny solid transparent;
+        padding: 1em;
+        text-align: center;
+    }
+
+    td:hover {
+        // margin: 1em;
+        // background: rgba($color-neutral-medium, .25);
+        border: $border-skinny dashed $color-twinkle;
+        border-top: $border-skinny dashed $color-twinkle;
+        // background: $color-twinkle;
+
+    }
+
+
+}
+
+.composer--holder-elements {
+    display: inline-block;
+    text-align: left;
+    width: 100%;
+    padding: .5em 0 0 0;
+
+    .card--element-node {
+        // width: 24rem;
+    }
+
+    // border: 1px solid red;
 }

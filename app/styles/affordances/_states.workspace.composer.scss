@@ -9,10 +9,18 @@
 .composer--grid {
     .composer--grid-cell.-is-selected {
         background-color: $color-light;
-        border: solid $color-grass; // background-color: $palette-color-median;
+        border-color: $color-grass; // background-color: $palette-color-median;
     }
 
-    .composer--grid-cell.-is-hovered {
-        border: solid $palette-color-median;
+    .composer--grid-cell:hover {
+        border: $border-skinny dashed $color-twinkle;
+        background: rgba($color-neutral-medium, .25);
+        // border-right: none;
+
+        &.-is-selected {
+            border: $border-skinny dashed $color-twinkle;
+
+            background: $color-twinkle;
+        }
     }
 }
