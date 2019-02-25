@@ -1,0 +1,276 @@
+.switch.switch-disable input[disabled]+label:before,
+input[readonly]+label:before {
+    content: """";
+}
+
+.switch.switch-disable {
+    cursor: auto;
+}
+
+.form--input-select.-is-required label:after {
+    position: relative;
+}
+
+.linked-pane-container {
+    overflow-y: auto;
+}
+
+.linked-pane-container .title {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+
+.linked-pane-container .form--input-text [type='text'],
+.linked-pane-container .form--input-text [type='password'],
+.linked-pane-container .form--input-text [type='date'],
+.linked-pane-container .form--input-text [type='datetime'],
+.linked-pane-container .form--input-text [type='datetime-local'],
+.linked-pane-container .form--input-text [type='month'],
+.linked-pane-container .form--input-text [type='week'],
+.linked-pane-container .form--input-text [type='email'],
+.linked-pane-container .form--input-text [type='number'],
+.linked-pane-container .form--input-text [type='search'],
+.linked-pane-container .form--input-text [type='tel'],
+.linked-pane-container .form--input-text [type='time'],
+.linked-pane-container .form--input-text [type='url'],
+.linked-pane-container .form--input-text [type='color'],
+.linked-pane-container .form--input-text textarea {
+    background: transparent;
+}
+
+#userSearchCell {
+    padding-top: 1.5em;
+}
+
+.form--input-radio input[type="radio"]+label:before {
+    margin-top: -.15em;
+}
+
+#page--directory .dashboard---panel-project .feature--tabs-list .tabs-content li {
+    width: auto;
+}
+
+.panel--update .panel--update-item .panel--tooltip,
+.panel--update .panel--update-item .panel--tooltip :hover {
+    color: #F0F3F8;
+}
+
+.panel--update .panel--update-item.-is-read .panel--tooltip,
+.panel--update .panel--update-item.-is-read .panel--tooltip :hover {
+    color: #627BBE;
+}
+
+.panel--update .panel--update-item .panel--tooltip i {
+    text-decoration: none;
+    vertical-align: text-bottom;
+}
+
+.workspace-tree table {
+    font-size: 85%;
+    margin: 0 0 0 0;
+}
+
+.workspace-tree table tbody th,
+.workspace-tree table tbody td {
+    padding: .25em 0 .25em 0;
+    border: none;
+}
+
+.workspace-tree table tbody {
+    border: none;
+}
+
+.workspace-tree table tbody tr>td {
+    padding: 0 0 0 .25em;
+}
+
+.workspace-tree table thead tr th {
+    color: #627BBE;
+    text-align: center;
+}
+
+.workspace-tree table tr {
+    border-top: 1px solid #F0F3F8;
+    background-color: #fff;
+}
+
+.workspace-tree table thead {
+    background: #fff;
+    text-align: left;
+}
+
+.workspace-tree table thead th,
+.workspace-tree table thead td,
+.workspace-tree table tfoot th,
+.workspace-tree table tfoot td {
+    padding: 0 .25rem 0 0;
+    font-weight: lighter;
+    text-align: left;
+}
+
+.workspace-tree table .material-icons {
+    font-size: 17px;
+}
+
+.workspace-tree table span[role="presentation"] {
+    margin-right: 3px;
+    float: right;
+    color: #F0F3F8;
+}
+
+.column--list {
+    border: 0.5em solid #F0F3F8;
+    border-left: 1px solid #F0F3F8;
+    border-right: none;
+}
+
+.column--list-data {
+    height: 33.5em;
+}
+
+.column--list-counter {
+    color: #cacaca;
+    padding-right: 1em;
+    text-align: right;
+}
+
+.column--list-counter .icon {
+    padding: 1em 0.25em 0 0.5em;
+}
+
+.column--list-counter .total {
+    font-size: 75%;
+}
+
+.column--list-counter .total-selected {
+    font-size: 75%;
+}
+
+.column--list-counter .counter-selected {
+    padding-left: 1em;
+    text-align: left;
+}
+
+.column--list.darker {
+    background-color: #F0F3F8;
+}
+
+.column--list.darker .column--list-counter {
+    color: #8FA4BF;
+}
+
+.column--list.-is-collapsed-column {
+    width: 2em !important;
+}
+
+.column--list.-is-collapsed-column h6.panel--center-column-title-text.h7 {
+    transform: rotate(90deg);
+    transform-origin: top left;
+    margin: 2em 0 0 0;
+    width: 20em;
+}
+
+.column--list.-is-collapsed-column .tree-button-container:last-child button {
+    position: absolute;
+    margin-top: 0.5em;
+    margin-left: -1.5em;
+}
+
+.workspace-tree {
+    overflow-x: hidden;
+}
+
+.workspace--controls .blurb {
+    float: left;
+    color: #8a8a8a;
+    padding-left: 1em;
+}
+
+#page--workspace {
+    height: auto;
+    height: initial;
+}
+
+.workspace--options button {
+    border: none;
+}
+
+.node-action .button {
+    height: 1.25em;
+    width: 1.25em;
+    text-align: center;
+    padding: 0;
+    margin: 0.25em;
+}
+
+.context-menu-list .context-menu-item .material-icons {
+    margin-right: .5em;
+    float: left;
+}
+
+.dataTable-dynamic-size-container th .form--input-checkbox input[type='checkbox']:checked+label {
+    font-weight: normal;
+}
+
+.dataTables_scrollBody th .form--input-checkbox input[type="checkbox"]+label:before {
+    content: '';
+}
+
+.left-switch-container .switch {
+    text-align: left;
+}
+
+.center-switch-container .switch {
+    text-align: center;
+}
+
+.reveal .close-button {
+    height: 1em;
+    width: 1em;
+    padding: 0 0 0 0;
+    border: none;
+}
+
+.reveal-overlay~.ui-autocomplete {
+    z-index: 1006;
+}
+
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover {
+    border: 1px solid #002B59;
+    background: #002B59;
+    font-weight: normal;
+    color: #ffffff;
+}
+
+.device-maintenance-table-body tr {
+    vertical-align: top;
+}
+
+.device-maintenance-table-body .switch {
+    margin-bottom: 0;
+}
+
+.device-maintenance-table-body .switch-paddle {
+    margin-top: 0;
+    margin-left: 0;
+}
+
+.device-maintenance-table-body .expiration-date-view-container,
+.device-maintenance-table-body .expiration-date-edit-container {
+    white-space: nowrap;
+}
+
+.form--input-text textarea.taller {
+    height: 13.5em;
+}
+
+.uom-value-sets-collection .switch {
+    text-align: left;
+    margin-bottom: 3rem;
+}
