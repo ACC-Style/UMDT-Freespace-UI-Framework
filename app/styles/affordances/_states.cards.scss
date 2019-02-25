@@ -8,6 +8,22 @@
     .card-section.-is-collapsed {
         display: none;
     }
+
+    .card-section {
+        // background: $palette-color-median;
+        // color: $palette-color-base;
+
+        .form--input-select,
+        .form--input-text {
+            label {
+                // color: $palette-color-lightens;
+            }
+
+            input:checked~.switch-paddle {
+                background: $palette-color-median !important;
+            }
+        }
+    }
 }
 
 .card--element-node.-is-selected,
@@ -29,7 +45,9 @@
             }
 
             input:checked~.switch-paddle {
-                background: $color-grass;
+                background: $palette-color-darken !important;
+                // color: $palette-color-median !important;
+
             }
         }
     }
@@ -47,6 +65,18 @@
         .card-section {
             background-color: $color-grass;
             border-color: $color-grass;
+
+            .form--input-select,
+            .form--input-text {
+                label {
+                    color: $palette-color-lightens;
+                }
+
+                input:checked~.switch-paddle {
+                    background: $palette-color-median;
+
+                }
+            }
 
         }
 
@@ -73,6 +103,19 @@
             background-color: $palette-color-accent;
             border-color: $palette-color-accent;
 
+
+            .form--input-select,
+            .form--input-text {
+                label {
+                    color: $palette-color-lightens;
+                }
+
+                input:checked~.switch-paddle {
+                    // background: $palette-color-median;
+
+                }
+            }
+
         }
     }
 
@@ -97,6 +140,18 @@
             background-color: $color-heat;
             border-color: $color-heat;
 
+            .form--input-select,
+            .form--input-text {
+                label {
+                    color: $palette-color-lightens;
+                }
+
+                input:checked~.switch-paddle {
+                    // background: $palette-color-median;
+
+                }
+            }
+
         }
     }
 
@@ -119,6 +174,18 @@
         .card-section {
             background-color: $palette-color-darken;
             border-color: $palette-color-darken;
+
+            .form--input-select,
+            .form--input-text {
+                label {
+                    color: $palette-color-lightens;
+                }
+
+                input:checked~.switch-paddle {
+                    // background: $palette-color-median;
+
+                }
+            }
 
         }
     }
@@ -143,18 +210,30 @@
             background-color: $color-morning;
             border-color: $color-morning;
 
+            .form--input-select,
+            .form--input-text {
+                label {
+                    color: $palette-color-lightens;
+                }
+
+                input:checked~.switch-paddle {
+                    // background: $palette-color-median;
+
+                }
+            }
+
         }
     }
 
 
     .card-section {
-        background: $palette-color-median;
-        color: $palette-color-base;
+        // background: $palette-color-median;
+        // color: $palette-color-base;
 
         .form--input-select,
         .form--input-text {
             label {
-                color: $palette-color-lightens;
+                // color: $palette-color-lightens;
             }
 
             input:checked~.switch-paddle {

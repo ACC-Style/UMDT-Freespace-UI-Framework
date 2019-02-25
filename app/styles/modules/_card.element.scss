@@ -7,8 +7,6 @@
         margin: .25em 1em 1em 1em; // background-color: $color-heat;
         background: transparent;
 
-
-
         // width: 100%;
         .card-divider {
             padding: .25em .25em .25em 1em;
@@ -274,5 +272,12 @@
         }
 
 
+    }
+}
+
+/* response grid */
+@media only screen and (max-width: 900px) and (min-width: 100px) {
+    .card-title .icon {
+        display: none;
     }
 }
