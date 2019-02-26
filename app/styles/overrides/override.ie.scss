@@ -1,0 +1,55 @@
+.form--input-radio input[type="radio"]+label:before,
+.form--input-radio input[type="radio"]:checked+label:before,
+.form--input-checkbox input[type="checkbox"]+label:before,
+.form--input-checkbox input[type="checkbox"]:checked+label:before,
+[type='text']:focus:focus:after,
+[type='password']:focus:focus:after,
+[type='date']:focus:focus:after,
+[type='datetime']:focus:focus:after,
+[type='datetime-local']:focus:focus:after,
+[type='month']:focus:focus:after,
+[type='week']:focus:focus:after,
+[type='email']:focus:focus:after,
+[type='number']:focus:focus:after,
+[type='search']:focus:focus:after,
+[type='tel']:focus:focus:after,
+[type='time']:focus:focus:after,
+[type='url']:focus:focus:after,
+[type='color']:focus:focus:after,
+textarea:focus:focus:after,
+input[disabled]+label:before,
+input[readonly]+label:before,
+.form--input-text input.disabled:after,
+.accordion-item .accordion-title::before,
+.form--input-text.-is-required label:after,
+.form--input-select.-is-required label:after,
+.form--input-checkbox.-is-required legend:after,
+.form--input-radio.-is-required legend:after,
+.help-text.-has-error p:after {
+    font-feature-settings: 'liga';
+}
+
+@media all and (-ms-high-contrast: none) {
+    .form--input-checkbox input[type='checkbox'] {
+        display: none;
+    }
+}
+
+select::-ms-expand {
+    display: block;
+    transform: translateX(1.03093rem);
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.-edit-mode-off select:disabled::-ms-expand {
+    display: none;
+}
+
+.feature--filter-input:-ms-input-placeholder {
+    color: #cacaca !important;
+}
+
+.feature--filter-input::-ms-clear {
+    display: none;
+}
