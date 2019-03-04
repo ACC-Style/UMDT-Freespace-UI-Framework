@@ -84,6 +84,11 @@
                 }
             }
         }
+
+        .form--input-text input::placeholder {
+            color: $palette-color-lightens;
+        }
+
     }
 }
 
@@ -131,4 +136,8 @@
     }
 }
 
-// $offcanvas-sizes: ( small: 250px, medium: 350px, );
+.off-canvas {
+    .form--input-text input::placeholder {
+        color: rgba($palette-color-median, 0.5);
+    }
+}

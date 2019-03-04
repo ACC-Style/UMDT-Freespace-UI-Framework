@@ -147,22 +147,33 @@ textarea {
     &:focus {
         border-bottom: 1px solid $palette-color-darken;
     }
+
+    &:hover {
+        background-color: rgba($palette-color-median, 0.050);
+        transition: background-color 0.5s ease;
+    }
 }
 
 textarea {
-    border-top: 1px solid transparent;
-    border-left: 1px solid transparent;
-    border-bottom: 1px solid $color-neutral-light !important;
+    // margin-top: .25em;
+    // border-top: 1px solid transparent;
+    // border-left: 1px solid transparent;
+    // border-bottom: 1px solid $color-neutral-light !important;
     border-right: 1px solid $color-neutral-light !important;
 
     &:hover {
-        border: 1px solid rgba($color-neutral-light, 0.5);
+        background-color: rgba($palette-color-median, 0.050);
+        transition: background-color 0.5s ease;
+
+
+        // border: 1px solid rgba($color-neutral-light, 0.5);
     }
 
-    &::focus {
-        border-top: 1px solid transparent !important;
-        border-bottom: 1px solid transparent !important;
-        border-left: 1px solid transparent !important;
+    &:focus {
+        background-color: rgba($color-neutral-light, 0.5);
+        // border-top: 1px solid transparent !important;
+        // border-bottom: 1px solid transparent !important;
+        // border-left: 1px solid transparent !important;
     }
 }
 
@@ -364,12 +375,6 @@ input[readonly]:focus {
 
 .form--input-text input::placeholder {
     color: $palette-color-lightens;
-}
-
-div[id*='content--offcanvas-'] {
-    .form--input-text input::placeholder {
-        color: $palette-color-median;
-    }
 }
 
 span.form-error.is-visible {

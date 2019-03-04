@@ -148,7 +148,7 @@
             }
 
             &:hover {
-                border-color: $palette-color-darken !important;
+                border-color: $color-neutral !important;
             }
         }
     }
@@ -256,6 +256,23 @@ select {
     }
 
     &:hover {
-        border-color: $color-neutral !important;
+        border-color: $palette-color-median !important;
+        background-color: rgba($palette-color-median, 0.050);
+        transition: background-color 0.5s ease;
+        // background-color: rgba($color-neutral-light, 0.15);
+    }
+}
+
+.off-canvas {
+    select {
+        background-color: rgba($palette-color-darken, 1.0);
+        color: rgba($color-white, 1.0);
+
+        &:hover {
+            border-color: $color-twinkle !important;
+            // background-color: rgba($color-white, 1.0);
+            transition: background-color 0.5s ease;
+            // background-color: rgba($color-neutral-light, 0.15);
+        }
     }
 }
