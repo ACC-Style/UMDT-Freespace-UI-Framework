@@ -10,6 +10,15 @@
 
                     .cell
                         .comment---project
+                            .form--input-text.-with-input-button
+                                label
+                                    | Testing Txt
+                                input(type='text', placeholder='1234', aria-describedby='exampleHelpText', required='', pattern='number', value="1212")
+                                button.button.button-appended
+                                        span.icon
+                                            i.material-icons.md-16(aria-hidden='true') send
+                    .cell
+                        .comment---project
                             .form--input-text
                                 label
                                     | comments
