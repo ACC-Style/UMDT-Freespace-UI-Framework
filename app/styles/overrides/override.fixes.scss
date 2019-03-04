@@ -105,8 +105,9 @@
 }
 
 /* Don't use fixed tab content size */
+// TODO: toggle for tab hight debuging
 .content--tab {
-    height: auto;
+    // height: auto;
 }
 
 /* Allow using .taller for textareas throughout the site */

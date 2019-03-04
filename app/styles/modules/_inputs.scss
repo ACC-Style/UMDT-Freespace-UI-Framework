@@ -166,6 +166,19 @@ textarea {
     }
 }
 
+select {
+
+    // box-sizing: initial;
+    // width: auto;
+    // height: 1.25rem;
+    padding: 0 2rem 0 .5rem;
+
+    option {
+        // width: auto;
+
+    }
+}
+
 input[disabled],
 input[readonly] {
     background: transparent;
@@ -262,17 +275,6 @@ input[readonly]:focus {
     position: relative; // border: 1px solid red;
     font-size: 1.35em; // &:after {
 
-    //     font-family: 'Material Icons';
-    //     font-size: 2em;
-    //     margin-top: -.5em;
-    //     content: "arrow_drop_down_circle";
-    //     color: $palette-color-darken;
-    //     -webkit-font-feature-settings: 'liga';
-    //     position: absolute;
-    //     top: 2.85rem;
-    //     right: 1rem;
-    //     z-index: 5;
-    // }
     &:hover {
         &:after {
             // color: $palette-color-darken;
@@ -280,28 +282,12 @@ input[readonly]:focus {
     }
 
     select {
-
-        // padding: 10px 40px 10px 10px;
+        line-height: 1.5;
         -webkit-appearance: none;
         -ms-appearance: none;
         -moz-appearance: none;
         appearance: none;
-        // background-image: none;
-        // border: 1px solid $palette-color-lightens;
-        // background-color: transparent;
-        // border-radius: 0;
-        // position: relative;
-        // cursor: pointer;
-        // z-index: 10;
-        // option {
-        //     color: $palette-color-median;
-        //     background: $color-light;
-        //     border: none;
-        //     &:hover {
-        //         color: $palette-color-lightens;
-        //         background: $palette-color-darken;
-        //     }
-        // }
+
     }
 }
 
