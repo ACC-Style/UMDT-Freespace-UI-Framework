@@ -23,7 +23,7 @@ form(data-abide='7v3wyo-abide', novalidate='')
                         input(type='text', placeholder='phrase', aria-describedby='exampleHelpText', value="55555")
                         //- span.form-error
                             | Tags are useful for stuff
-        //- .cell.small-1
+        .cell.small-1
                 .cell
                     .form--input-text
                         .switch.tiny
@@ -36,14 +36,14 @@ form(data-abide='7v3wyo-abide', novalidate='')
                                         i.material-icons.md-16(aria-hidden='true') visibility
                                     span.switch-inactive(aria-hidden='true')
                                         i.material-icons.md-16(aria-hidden='true') visibility_off
-        //- .cell.small-1
+        .cell.small-11
                 .cell
                     .form--input-text
                         .switch.tiny
-                                label.switch-value(for='swtich-active')
+                                label.switch-value(for='s2w')
                                     | Active
-                                input#swtich-active.switch-input(type='checkbox', name='exampleSwitch')
-                                label.switch-paddle(for='swtich-active')
+                                input#s2w.switch-input(type='checkbox', name='exampleSwitch')
+                                label.switch-paddle(for='s2w')
                                     span.show-for-sr Edit Mode
                                     span.switch-active(aria-hidden='true')
                                         i.material-icons.md-16(aria-hidden='true') alarm_on
@@ -57,18 +57,9 @@ form(data-abide='7v3wyo-abide', novalidate='')
                             | Name:
                         input(type='text', placeholder='phrase', aria-describedby='exampleHelpText', value="DDD")
                         span.form-error
-                            | Tags are useful for stuff
-        .cell.small-6
-            .grid-y
-                .cell
-                    .form--input-text.-is-required
-                        label
-                            | Shortname:
-                        input(type='text', placeholder='phrase', aria-describedby='exampleHelpText', value="CCC")
-                        span.form-error
-                            | Tags are useful for stuff
+                            | Tags are useful for stuff                       
 
-        //- .cell.small-6
+        .cell.small-6
             .grid-y
                 .cell
                     .form--input-text
@@ -77,12 +68,20 @@ form(data-abide='7v3wyo-abide', novalidate='')
                         input(type='text', disabled, placeholder='phrase', aria-describedby='exampleHelpText', required='', pattern='date', value="10/5/2017").disabled
                         span.form-error
                             | Date is required
+        .cell.small-12
+            .grid-y
+                .cell
+                    .form--input-text.-is-required
+                        label
+                            | Description:
+                        textarea(type='text', placeholder='phrase', aria-describedby='exampleHelpText', value="CCC").taller
 
-        //- .cezll
-            .form--input-text.-is-required
+        .cell
+            .form--input-select.-is-required
                 label
-                    | Symnomyms:
-                input(type='text', placeholder='1234', aria-describedby='exampleHelpText', required='', pattern='number', value="like, this, here")
-                span.form-error
-                    | A description of the new create is required.
-                p#exampleHelpText.help-text.-has-error Multi symnoyms can be entered serpeate by a commna
+                    | European Cars, Choose One, it can't be the blank option.
+                select(required='')
+                    option(value='volvo') Volvo Car
+                    option(value='saab') Saab
+                    option(value='mercedes') Mercedes Longer
+                    option(value='audi') Audi

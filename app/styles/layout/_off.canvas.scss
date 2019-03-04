@@ -87,4 +87,48 @@
     }
 }
 
+.off-canvas {
+
+    .form--input-text,
+    .form--input-switch {
+
+        label {
+            // color: $palette-color-lightens;
+        }
+
+        .switch .switch-value {
+            text-align: left;
+            margin: 0 0 0 0;
+            width: auto !important;
+        }
+
+        .switch-paddle {
+            background: $color-midnight;
+
+        }
+
+        input:checked~.switch-paddle {
+            background: $palette-color-median;
+
+        }
+
+        .switch label.switch-paddle {
+            width: 4rem;
+        }
+
+        .switch.tiny label.switch-paddle {
+            width: 3rem;
+        }
+
+        .switch.small label.switch-paddle {
+            width: 3.5rem;
+        }
+
+        .switch.large label.switch-paddle {
+            width: 5rem;
+        }
+
+    }
+}
+
 // $offcanvas-sizes: ( small: 250px, medium: 350px, );

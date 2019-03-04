@@ -16,6 +16,21 @@
                             option(value='type3') Data Elements
                             //- option(value='type4') Parent Child
 
+                    .small-1.cell
+                        .form--input-text
+                            .switch
+                                    label.switch-value(for='s2w')
+                                        | Swtich Test
+                                    input#s2w.switch-input(type='checkbox', name='exampleSwitch')
+                                    label.switch-paddle(for='s2w')
+                                        span.show-for-sr Edit Mode
+                                        span.switch-active(aria-hidden='true')
+                                            | yes
+                                            //- i.material-icons.md-16(aria-hidden='true') alarm_on
+                                        span.switch-inactive(aria-hidden='true')
+                                            | no
+                                            //- i.material-icons.md-16(aria-hidden='true') alarm_off
+
                     .small-1
                         .form--input-text
                             label

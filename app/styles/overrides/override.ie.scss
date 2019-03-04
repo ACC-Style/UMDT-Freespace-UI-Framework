@@ -1,3 +1,10 @@
+
+
+/*********************************\
+|   FIXES FOR INTERNET EXPLODER   |
+\*********************************/
+
+/* Ligatures: app.css has each one of these selectors with the webkit-specific attribute, and not the one that IE needs. */
 .form--input-radio input[type="radio"]+label:before,
 .form--input-radio input[type="radio"]:checked+label:before,
 .form--input-checkbox input[type="checkbox"]+label:before,
@@ -29,27 +36,33 @@ input[readonly]+label:before,
     font-feature-settings: 'liga';
 }
 
+/* Make sure native checkboxes don't show up */
 @media all and (-ms-high-contrast: none) {
     .form--input-checkbox input[type='checkbox'] {
         display: none;
     }
 }
 
-select::-ms-expand {
+/* Add dropdown arrow back for IE */
+/*select::-ms-expand {
     display: block;
     transform: translateX(1.03093rem);
     background-color: transparent;
     border-color: transparent;
-}
-
-.-edit-mode-off select:disabled::-ms-expand {
+}*/
+/* Remove dropdown arrow again for fields with edit mode off */
+/*.-edit-mode-off select:disabled::-ms-expand {
     display: none;
-}
+}*/
 
+/* Workspace tree filter field: should be gray, not bright green */
 .feature--filter-input:-ms-input-placeholder {
     color: #cacaca !important;
 }
 
+/* Workspace tree filter field: remove IE's clear button in favor of our own */
 .feature--filter-input::-ms-clear {
     display: none;
 }
+
+// TODO: add icon fixes for IE on new fancy tree states

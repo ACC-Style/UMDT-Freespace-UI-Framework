@@ -222,6 +222,10 @@
         }
     }
 
+
+    &-linked-pane-container{
+    // TODO: change naming to linked-pane-container (darker is use to color it)
+    }
     &-properties {
         border: 0.5em solid $palette-color-lightens;
         border-left: 1px solid $palette-color-lightens;

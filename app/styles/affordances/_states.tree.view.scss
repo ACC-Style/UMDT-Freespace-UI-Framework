@@ -1,65 +1,109 @@
 // tree view list (fancy tree)
 .fancytree-container li[aria-selected="true"][role="treeitem"],
 .fancytree-container tr[aria-selected="true"].fancytree-selected,
-.fancytree-container tr[aria-selected="true"].fancytree-active {
+.fancytree-container tr[role="row"].fancytree-active,
+.fancytree-container tr[role="row"].fancytree-focus {
     background-color: $palette-color-median !important;
+
     .fancytree-title {
         color: $color-light !important;
     }
+
     .material-icons,
     td {
         color: $color-light !important;
     }
+
     &.success {
         background-color: $color-grass !important;
+
         .fancytree-title {
             color: $color-light !important;
+
+            small {
+                color: rgba($color-light, 0.75) !important;
+
+            }
         }
+
         .material-icons,
         td {
             color: $color-light !important;
         }
     }
+
     &.alert {
         background-color: $palette-color-accent !important;
+
         .fancytree-title {
             color: $color-light !important;
+
+            small {
+                color: rgba($color-light, 0.75) !important;
+
+            }
         }
+
         .material-icons,
         td {
             color: $color-light !important;
         }
     }
+
     &.warning {
         background-color: $color-heat !important;
+
         .fancytree-title {
             color: $color-light !important;
+
+            small {
+                color: rgba($color-light, 0.75) !important;
+
+            }
         }
+
         .material-icons,
         td {
             color: $color-light !important;
         }
     }
+
     &.primary {
         background-color: $palette-color-median !important;
+
         .fancytree-title {
             color: $color-light !important;
+
+            small {
+                color: rgba($color-light, 0.75) !important;
+
+            }
         }
+
         .material-icons,
         td {
             color: $color-light !important;
         }
     }
+
     &.secondary {
         background-color: $color-neutral !important;
+
         .fancytree-title {
             color: $color-light !important;
+
+            small {
+                color: rgba($color-light, 0.75) !important;
+
+            }
         }
+
         .material-icons,
         td {
             color: $color-light !important;
         }
     }
+
     &.-is-new {
         span.fancytree-title::after {
             margin-left: .25em;
@@ -69,6 +113,7 @@
             -webkit-font-feature-settings: 'liga';
         }
     }
+
     &.-is-touched {
         span.fancytree-title::after {
             margin-left: .25em;
@@ -91,6 +136,7 @@
             -webkit-font-feature-settings: 'liga';
         }
     }
+
     &.-is-touched {
         span.fancytree-title::after {
             margin-left: .25em;
@@ -100,11 +146,14 @@
             -webkit-font-feature-settings: 'liga';
         }
     }
+
     &.-was-selected {
         background-color: rgba($palette-color-median, 0.15) !important;
+
         .fancytree-title {
             color: $palette-color-darken !important;
         }
+
         .material-icons,
         td {
             color: $palette-color-darken !important;
@@ -118,6 +167,7 @@
 }
 
 .fancytree-disabled {
+
     // .fancytree-title {
     //     color: $color-neutral-light !important;
     //     cursor: not-allowed; // background-color: $palette-color-median !important;

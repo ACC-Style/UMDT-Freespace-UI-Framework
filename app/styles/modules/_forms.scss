@@ -30,7 +30,7 @@
     }
 
     &-controls {
-        padding: .65em .5em 0 0;
+        padding: 1em .5em .57 1em;
         border-top: 1px solid $palette-color-lightens;
         text-align: right; // background-color: $palette-color-lightens;
 
@@ -41,7 +41,7 @@
     }
 
     &-options {
-        padding: .65em .5em 0 0;
+        padding: .5em .5em 0 1em;
         border-bottom: 1px solid $palette-color-lightens;
 
         button {
@@ -55,6 +55,40 @@
             float: left;
             color: $palette-color-median;
             padding-left: 1em;
+        }
+
+        // margin-left: 1em;
+
+        .inline {
+            display: inline-block;
+            border: 1px solid red;
+        }
+
+        option {
+            min-height: 1.5em;
+        }
+
+        // switches
+
+
+        .form--input-select {
+            width: auto !important;
+
+            label {
+                margin: .80rem 0 0 0;
+            }
+
+            .switch {
+                margin-bottom: 1em;
+
+                // label,
+                label.switch-value {
+                    // font-size: 85%;
+                    font-weight: normal;
+                    // color: $palette-color-median;
+                }
+
+            }
         }
     }
 }
