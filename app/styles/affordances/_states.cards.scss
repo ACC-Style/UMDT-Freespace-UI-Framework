@@ -24,6 +24,64 @@
             }
         }
     }
+
+    &.-is-comfortable {
+        .card-title .text {
+            // border: 1px solid green;
+        }
+    }
+
+    &.-is-squeezed {
+
+        .card-divider {
+            .grid-x {
+                .card-title {
+                    width: 75%;
+
+                }
+            }
+        }
+
+        .card-title .text {
+            // border: 1px solid red;
+            width: 75%;
+
+
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+
+
+
+        }
+
+        .card-title:hover {
+            .text {
+                pointer-events: none;
+                // display: none;
+                position: absolute;
+                margin: .70rem 0 0 1.45rem;
+                /*     border:1px solid red; */
+                width: auto !important;
+                height: 20px;
+                overflow: visible;
+                background: $color-white;
+
+            }
+        }
+
+        .card-section.-is-expanded .grid-x {
+            .cell {
+                display: block;
+                float: left;
+                clear: both;
+                // border: 1px solid green;
+                width: 100% !important;
+                margin-bottom: .25rem;
+            }
+        }
+    }
 }
 
 .card--element-node.-is-selected,

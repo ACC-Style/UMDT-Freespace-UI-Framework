@@ -1,7 +1,7 @@
 var $ = require('jquery');
 var dt = require('datatables.net')();
 
-console.group(`//Vendor: Datatable`);
+console.groupCollapsed(`//Vendor: Datatable`);
 
 console.log($.fn.dataTable.version);
 

@@ -1,4 +1,4 @@
-console.group(`//Vendor: FancyTree - Elements`);
+console.groupCollapsed(`//Vendor: FancyTree - Elements`);
 
 // Import LESS or CSS:
 // import 'jquery.fancytree/dist/skin-lion/ui.fancytree.less';

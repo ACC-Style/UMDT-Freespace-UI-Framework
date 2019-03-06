@@ -1,4 +1,4 @@
-console.group(`// Micro-Interactions: Quick Filter`);
+console.groupCollapsed(`// Micro-Interactions: Quick Filter`);
 
 let all_inputs = $('.feature--filter-input'),
     all_input_clear_btns = $(".panel--center-column-features .icon-clear"),

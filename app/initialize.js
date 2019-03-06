@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   require('./scripts/vendors/fancytree.concepts');
   require('./scripts/vendors/fancytree.elements');
   require('./scripts/vendors/datatables');
+  require('./scripts/controls/micro.composer.grid.js');
 
 
   console.log('initialized...');
