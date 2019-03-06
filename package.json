@@ -12,7 +12,7 @@
   "dependencies": {
     "datatables.net": "^1.10.19",
     "eslint": "^4.7.1",
-    "foundation-sites": "^6.4.2",
+    "foundation-sites": "^6.5.3",
     "jquery": "3.2.1",
     "jquery-contextmenu": "^3.0.0-beta.1",
     "jquery.fancytree": "^2.27.0",

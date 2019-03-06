@@ -641,6 +641,33 @@ h2#reveal.docs-heading(data-magellan-target='reveal')
 .docs-code-live
   p
     a(data-open='exampleModal1', aria-controls='exampleModal1', aria-haspopup='true', tabindex='0') Click me for a modal
+
+  #exampleModal1.reveal(data-reveal='')
+    .grid-y.content--tab 
+    .cell.small-12.modal--header
+      h1 Title Name Here
+      button.close-button(data-close='', aria-label='Close modal', type='button')
+        span(aria-hidden='true') ×
+    .cell.small-12.modal--content
+      p.lead So you did something or wish to do it. ok:
+      .modal--content-subject
+        p Blurb: Maybe you should consider this before you do this thing. Maybe.
+          .callout.secondary
+            h5 Because it optional
+            p Item(s) - Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          .callout.warning
+            h5 Because it is optional but comes with a warning
+            p Item(s) - Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          .callout.alert
+            h5 Because you may break things!
+            p Items(s) - Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
+        
+    .cell.small-12.modal--controls.text-center
+        button.button.success(data-micro-interaction="toggle")
+            | Save
+        button.button.alert(data-micro-interaction="toggle")
+            | Cancel
+
 hr
 a(name="Slider")
 h2#slider.docs-heading(data-magellan-target='slider')

@@ -257,6 +257,11 @@
         }
     }
 
+    &.-is-indented-0 {
+        width: 100%;
+        float: right; // margin-left: 18%;
+    }
+
     &.-is-indented-1 {
         width: 80%;
         float: right; // margin-left: 18%;

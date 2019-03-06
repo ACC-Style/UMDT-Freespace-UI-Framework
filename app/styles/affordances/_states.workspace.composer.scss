@@ -15,7 +15,9 @@
     .composer--grid-cell:hover {
         border: $border-skinny dashed $color-twinkle;
         background: rgba($color-neutral-medium, .25);
-        // border-right: none;
+        background-size: 20% 100%;
+
+        // background-image: linear-gradient(to right, $color-white $border-skinny, transparent $border-skinny);
 
         &.-is-selected {
             border: $border-skinny dashed $color-twinkle;
