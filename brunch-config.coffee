@@ -59,7 +59,7 @@ exports.config =
       # Foundation: 'foundation-sites'
     # use to include js that will be untouched
     static:
-      ['node_modules/jquery-contextmenu/dist/jquery.contextMenu.js']
+      ['node_modules/jquery-contextmenu/dist/jquery.contextMenu.js', 'node_modules/jquery-ui-dist/jquery-ui.min.js']
 
   modules:
     enabled: true

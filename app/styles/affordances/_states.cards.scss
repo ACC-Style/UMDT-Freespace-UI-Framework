@@ -117,7 +117,7 @@
 
         .card-divider {
             border: $border-thin solid $color-grass;
-            background: rgba($color-grass, 0.095);
+            // background: rgba($color-grass, 0.095);
         }
 
         .card-section {
@@ -144,7 +144,7 @@
     &.alert {
         .card-divider {
             border: $border-thin solid $palette-color-accent;
-            background: rgba($palette-color-accent, 0.095);
+            // background: rgba($palette-color-accent, 0.095);
 
             .card-title {
                 .text {
@@ -181,7 +181,7 @@
     &.error {
         .card-divider {
             border: $border-thin solid $color-heat;
-            background: rgba($color-heat, 0.095);
+            // background: rgba($color-heat, 0.095);
 
             .card-title {
                 .text {
@@ -216,7 +216,7 @@
     &.primary {
         .card-divider {
             border: $border-thin solid $palette-color-darken;
-            background: rgba($palette-color-darken, 0.095);
+            // background: rgba($palette-color-darken, 0.095);
 
             .card-title {
                 .text {
@@ -251,7 +251,7 @@
     &.secondary {
         .card-divider {
             border: $border-thin solid $color-morning;
-            background: rgba($color-morning, 0.095);
+            // background: rgba($color-morning, 0.095);
 
             .card-title {
                 .text {

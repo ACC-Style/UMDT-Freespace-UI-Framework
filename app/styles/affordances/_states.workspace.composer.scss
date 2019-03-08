@@ -9,7 +9,8 @@
 .composer--grid {
     .composer--grid-cell.-is-selected {
         background-color: $color-light;
-        border-color: $color-grass; // background-color: $palette-color-median;
+        border-width: $border-thin;
+        border-color: $color-twinkle; // background-color: $palette-color-median;
     }
 
     .composer--grid-cell:hover {

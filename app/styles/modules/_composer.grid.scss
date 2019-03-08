@@ -6,6 +6,7 @@
 
     .composer--grid-cell {
         padding: .25em;
+        min-height: 2em;
         text-align: center;
         border: $border-skinny dashed $color-neutral-medium;
     }

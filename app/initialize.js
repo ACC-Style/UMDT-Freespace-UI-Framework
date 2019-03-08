@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   require('./scripts/vendors/vendor.chardinjs.js');
   require('./scripts/vendors/fancytree.concepts');
   require('./scripts/vendors/fancytree.elements');
+  require('./scripts/vendors/vendor.jquery.ui.draggable.js');
   require('./scripts/vendors/datatables');
   require('./scripts/controls/micro.composer.grid.js');
 

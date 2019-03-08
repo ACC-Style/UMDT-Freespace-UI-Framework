@@ -8,7 +8,7 @@
 var $ = require('jquery');
 
 
-console.group(`// Micro-Interactions: COmposer Grid`);
+console.groupCollapsed(`// Micro-Interactions: COmposer Grid`);
 
 var allCards = $(".composer--grid .card--element-node"),
     activeTab = $(".tabs-panel.is-active .content--tab");
