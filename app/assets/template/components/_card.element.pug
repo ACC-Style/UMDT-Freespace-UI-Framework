@@ -17,11 +17,11 @@
                             i.material-icons.md-18 drag_handle
         .card-section.-is-expanded
             .grid-x
-                .medium-3.cell
+                .medium-6.cell
                     .form--input-select
                         .switch.tiny
                                 label.switch-value(for='switchA-1')
-                                    | Show:
+                                    | Label Top Align:
                                 input#switchA-1.switch-input(type='checkbox', name='switchA-1')
                                 label.switch-paddle(for='switchA-1')
                                     span.show-for-sr Edit Mode
@@ -29,11 +29,11 @@
                                         | yes
                                     span.switch-inactive(aria-hidden='true')
                                         | no
-                .medium-3.cell
+                .medium-6.cell
                     .form--input-select
                         .switch.tiny
                                 label.switch-value(for='switchA-2')
-                                    | Show
+                                    | Disabled
                                 input#switchA-2.switch-input(type='checkbox', name='switchA-2')
                                 label.switch-paddle(for='switchA-2')
                                     span.show-for-sr Edit Mode
@@ -41,18 +41,34 @@
                                         i.material-icons.md-14(aria-hidden='true') visibility
                                     span.switch-inactive(aria-hidden='true')
                                         i.material-icons.md-14(aria-hidden='true') visibility_off
-                .medium-3.cell
+                .medium-6.cell
+                    .form--input-select
+                        .switch.tiny
+                                label.switch-value(for='switchA-2e')
+                                    | Always Hidden
+                                input#switchA-2e.switch-input(type='checkbox', name='switchA-2e')
+                                label.switch-paddle(for='switchA-2e')
+                                    span.show-for-sr Edit Mode
+                                    span.switch-active(aria-hidden='true')
+                                        i.material-icons.md-14(aria-hidden='true') visibility
+                                    span.switch-inactive(aria-hidden='true')
+                                        i.material-icons.md-14(aria-hidden='true') visibility_off
+                .medium-6.cell
+                    .form--input-select
+                        .switch.tiny
+                                label.switch-value(for='switchA-2q')
+                                    | Hidden Based Parent
+                                input#switchA-2q.switch-input(type='checkbox', name='switchA-2q')
+                                label.switch-paddle(for='switchA-2q')
+                                    span.show-for-sr Edit Mode
+                                    span.switch-active(aria-hidden='true')
+                                        i.material-icons.md-14(aria-hidden='true') visibility
+                                    span.switch-inactive(aria-hidden='true')
+                                        i.material-icons.md-14(aria-hidden='true') visibility_off
+                .medium-6.cell
                     .form--input-select
                         label
-                            | Options
-                        select(required='')
-                            option(value='volvo') One
-                            option(value='saab') Two
-                            option(value='mercedes') Three
-                .medium-3.cell
-                    .form--input-select
-                        label
-                            | Options
+                            | Label Position 
                         select(required='')
                             option(value='volvo') One
                             option(value='saab') Two
@@ -73,25 +89,24 @@
                         span.icon
                             i.material-icons.md-18 drag_handle
         .card-section.-is-expanded
-
             .grid-x
-                .medium-3.cell
+                .medium-6.cell
                     .form--input-select
                         .switch.tiny
-                                label.switch-value(for='aswitchA-1')
-                                    | Show:
-                                input#aswitchA-1.switch-input(type='checkbox', name='aswitchA-1')
-                                label.switch-paddle(for='aswitchA-1')
+                                label.switch-value(for='switchA-1')
+                                    | Label Top Align:
+                                input#switchA-1.switch-input(type='checkbox', name='switchA-1')
+                                label.switch-paddle(for='switchA-1')
                                     span.show-for-sr Edit Mode
                                     span.switch-active(aria-hidden='true')
                                         | yes
                                     span.switch-inactive(aria-hidden='true')
                                         | no
-                .medium-3.cell
+                .medium-6.cell
                     .form--input-select
                         .switch.tiny
                                 label.switch-value(for='switchA-2')
-                                    | Show
+                                    | Disabled
                                 input#switchA-2.switch-input(type='checkbox', name='switchA-2')
                                 label.switch-paddle(for='switchA-2')
                                     span.show-for-sr Edit Mode
@@ -99,18 +114,34 @@
                                         i.material-icons.md-14(aria-hidden='true') visibility
                                     span.switch-inactive(aria-hidden='true')
                                         i.material-icons.md-14(aria-hidden='true') visibility_off
-                .medium-3.cell
+                .medium-6.cell
+                    .form--input-select
+                        .switch.tiny
+                                label.switch-value(for='switchA-2e')
+                                    | Always Hidden
+                                input#switchA-2e.switch-input(type='checkbox', name='switchA-2e')
+                                label.switch-paddle(for='switchA-2e')
+                                    span.show-for-sr Edit Mode
+                                    span.switch-active(aria-hidden='true')
+                                        i.material-icons.md-14(aria-hidden='true') visibility
+                                    span.switch-inactive(aria-hidden='true')
+                                        i.material-icons.md-14(aria-hidden='true') visibility_off
+                .medium-6.cell
+                    .form--input-select
+                        .switch.tiny
+                                label.switch-value(for='switchA-2q')
+                                    | Hidden Based Parent
+                                input#switchA-2q.switch-input(type='checkbox', name='switchA-2q')
+                                label.switch-paddle(for='switchA-2q')
+                                    span.show-for-sr Edit Mode
+                                    span.switch-active(aria-hidden='true')
+                                        i.material-icons.md-14(aria-hidden='true') visibility
+                                    span.switch-inactive(aria-hidden='true')
+                                        i.material-icons.md-14(aria-hidden='true') visibility_off
+                .medium-6.cell
                     .form--input-select
                         label
-                            | Options
-                        select(required='')
-                            option(value='volvo') One
-                            option(value='saab') Two
-                            option(value='mercedes') Three
-                .medium-3.cell
-                    .form--input-select
-                        label
-                            | Options
+                            | Label Position 
                         select(required='')
                             option(value='volvo') One
                             option(value='saab') Two
@@ -151,56 +182,64 @@
                             button.button-option-drag(data-micro-interaction="card")
                                 div.icon
                                     i.material-icons.md-18 delete
-                .card-section.-is-collapsed
+                .card-section.-is-expanded
                     .grid-x
-                        .cell.small-12.medium-3.large-3
+                        .medium-6.cell
                             .form--input-select
                                 .switch.tiny
-                                        label.switch-value(for='switchC-1')
-                                            | Show
-                                        input#switchC-1.switch-input(type='checkbox', name='switchC-1')
-                                        label.switch-paddle(for='switchC-1')
+                                        label.switch-value(for='switchA-1')
+                                            | Label Top Align:
+                                        input#switchA-1.switch-input(type='checkbox', name='switchA-1')
+                                        label.switch-paddle(for='switchA-1')
+                                            span.show-for-sr Edit Mode
+                                            span.switch-active(aria-hidden='true')
+                                                | yes
+                                            span.switch-inactive(aria-hidden='true')
+                                                | no
+                        .medium-6.cell
+                            .form--input-select
+                                .switch.tiny
+                                        label.switch-value(for='switchA-2')
+                                            | Disabled
+                                        input#switchA-2.switch-input(type='checkbox', name='switchA-2')
+                                        label.switch-paddle(for='switchA-2')
                                             span.show-for-sr Edit Mode
                                             span.switch-active(aria-hidden='true')
                                                 i.material-icons.md-14(aria-hidden='true') visibility
                                             span.switch-inactive(aria-hidden='true')
                                                 i.material-icons.md-14(aria-hidden='true') visibility_off
-                        .cell.small-12.medium-3.large-3
+                        .medium-6.cell
                             .form--input-select
                                 .switch.tiny
-                                        label.switch-value(for='switchC-2')
-                                            | Show
-                                        input#switchC-2.switch-input(type='checkbox', name='switchC-2')
-                                        label.switch-paddle(for='switchC-2')
+                                        label.switch-value(for='switchA-2e')
+                                            | Always Hidden
+                                        input#switchA-2e.switch-input(type='checkbox', name='switchA-2e')
+                                        label.switch-paddle(for='switchA-2e')
                                             span.show-for-sr Edit Mode
                                             span.switch-active(aria-hidden='true')
                                                 i.material-icons.md-14(aria-hidden='true') visibility
                                             span.switch-inactive(aria-hidden='true')
                                                 i.material-icons.md-14(aria-hidden='true') visibility_off
-                        .cell.small-12.medium-3.large-3
+                        .medium-6.cell
                             .form--input-select
                                 .switch.tiny
-                                        label.switch-value(for='switchC-3')
-                                            | Show
-                                        input#switchC-3.switch-input(type='checkbox', name='switchC-3')
-                                        label.switch-paddle(for='switchC-3')
+                                        label.switch-value(for='switchA-2q')
+                                            | Hidden Based Parent
+                                        input#switchA-2q.switch-input(type='checkbox', name='switchA-2q')
+                                        label.switch-paddle(for='switchA-2q')
                                             span.show-for-sr Edit Mode
                                             span.switch-active(aria-hidden='true')
                                                 i.material-icons.md-14(aria-hidden='true') visibility
                                             span.switch-inactive(aria-hidden='true')
                                                 i.material-icons.md-14(aria-hidden='true') visibility_off
-                        .cell.small-12.medium-3.large-3
+                        .medium-6.cell
                             .form--input-select
-                                .switch.tiny
-                                        label.switch-value(for='switchC-4')
-                                            | Show
-                                        input#switchC-4.switch-input(type='checkbox', name='switchC-4')
-                                        label.switch-paddle(for='switchC-4')
-                                            span.show-for-sr Edit Mode
-                                            span.switch-active(aria-hidden='true')
-                                                i.material-icons.md-14(aria-hidden='true') visibility
-                                            span.switch-inactive(aria-hidden='true')
-                                                i.material-icons.md-14(aria-hidden='true') visibility_off
+                                label
+                                    | Label Position 
+                                select(required='')
+                                    option(value='volvo') One
+                                    option(value='saab') Two
+                                    option(value='mercedes') Three
                                                 
         .composer--grid-cell.cell.small-6
 
@@ -220,20 +259,64 @@
                                 button.button-option-drag(data-micro-interaction="card")
                                     div.icon
                                         i.material-icons.md-18 delete
-                .card-section.-is-collapsed
+                .card-section.-is-expanded
                     .grid-x
-                        .medium-3.cell
+                        .medium-6.cell
                             .form--input-select
                                 .switch.tiny
-                                        label.switch-value(for='switchC-1')
-                                            | Show
-                                        input#switchC-1.switch-input(type='checkbox', name='switchC-1')
-                                        label.switch-paddle(for='switchC-1')
+                                        label.switch-value(for='switchA-1')
+                                            | Label Top Align:
+                                        input#switchA-1.switch-input(type='checkbox', name='switchA-1')
+                                        label.switch-paddle(for='switchA-1')
+                                            span.show-for-sr Edit Mode
+                                            span.switch-active(aria-hidden='true')
+                                                | yes
+                                            span.switch-inactive(aria-hidden='true')
+                                                | no
+                        .medium-6.cell
+                            .form--input-select
+                                .switch.tiny
+                                        label.switch-value(for='switchA-2')
+                                            | Disabled
+                                        input#switchA-2.switch-input(type='checkbox', name='switchA-2')
+                                        label.switch-paddle(for='switchA-2')
                                             span.show-for-sr Edit Mode
                                             span.switch-active(aria-hidden='true')
                                                 i.material-icons.md-14(aria-hidden='true') visibility
                                             span.switch-inactive(aria-hidden='true')
                                                 i.material-icons.md-14(aria-hidden='true') visibility_off
+                        .medium-6.cell
+                            .form--input-select
+                                .switch.tiny
+                                        label.switch-value(for='switchA-2e')
+                                            | Always Hidden
+                                        input#switchA-2e.switch-input(type='checkbox', name='switchA-2e')
+                                        label.switch-paddle(for='switchA-2e')
+                                            span.show-for-sr Edit Mode
+                                            span.switch-active(aria-hidden='true')
+                                                i.material-icons.md-14(aria-hidden='true') visibility
+                                            span.switch-inactive(aria-hidden='true')
+                                                i.material-icons.md-14(aria-hidden='true') visibility_off
+                        .medium-6.cell
+                            .form--input-select
+                                .switch.tiny
+                                        label.switch-value(for='switchA-2q')
+                                            | Hidden Based Parent
+                                        input#switchA-2q.switch-input(type='checkbox', name='switchA-2q')
+                                        label.switch-paddle(for='switchA-2q')
+                                            span.show-for-sr Edit Mode
+                                            span.switch-active(aria-hidden='true')
+                                                i.material-icons.md-14(aria-hidden='true') visibility
+                                            span.switch-inactive(aria-hidden='true')
+                                                i.material-icons.md-14(aria-hidden='true') visibility_off
+                        .medium-6.cell
+                            .form--input-select
+                                label
+                                    | Label Position 
+                                select(required='')
+                                    option(value='volvo') One
+                                    option(value='saab') Two
+                                    option(value='mercedes') Three
         
         .composer--grid-cell.cell.small-2
             | 1

@@ -43,7 +43,7 @@ function dragElements(elements) {
 
         },
         drop: function (evt, ui) {
-            // $(this).append(ui.draggable);
+            $(this).append(ui.draggable);
             // $(this).find(".card--element-node").css("position", "inherit");
             // $(this).find(".card--element-node").removeAttr("style");
             // $(this).find(".card--element-node").addClass("success");
