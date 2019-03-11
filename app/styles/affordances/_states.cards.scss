@@ -42,9 +42,11 @@
         }
 
         .card-divider {
+            padding-left: 3px;
+
             .grid-x {
                 .card-title {
-                    width: 80%;
+                    // width: 68%;
 
                 }
             }
@@ -52,25 +54,20 @@
 
         .card-title .text {
             // border: 1px solid red;
-            width: 75%;
-
-
+            // width: 45%;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
-
-
-
-
         }
 
         .card-title:hover {
-
             .text {
                 pointer-events: none;
                 // display: none;
+                z-index: 99999999999999;
                 position: absolute;
-                margin: .70rem 0 0 1.45rem;
+                margin-top: .69rem;
+                margin-left: 1.55rem;
                 /*     border:1px solid red; */
                 width: auto !important;
                 height: 20px;

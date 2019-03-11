@@ -26,11 +26,17 @@
 
             .text {
                 display: flex;
+                overflow: hidden;
                 align-items: center;
                 font-weight: bold;
                 height: 100%;
-                float: left; // margin-top: -12px;
-                // border: 1px solid red;
+                // float: left;
+                text-align: left;
+                white-space: nowrap;
+                // position: absolute;
+                // margin-top: -.47rem;
+                // padding-left: 1.5rem;
+
             }
         }
 
@@ -209,7 +215,8 @@
                 align-items: center;
                 font-weight: bold;
                 height: 100%;
-                float: left; // margin-top: -12px;
+                float: left;
+                // margin-top: -12px;
                 // border: 1px solid red;
             }
 

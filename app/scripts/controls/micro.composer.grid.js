@@ -19,18 +19,45 @@ function checkWidth(array) {
     // check width of each
     array.each(function (index) {
         let element = $(this),
-            elementWidth = element.width();
-        // elementTextWidth = element.find(".card-title .text").width(),
-        // actveTabWidth = activeTab.width();
+            elementWidth = element.width(),
+            elementTextWidth = element.find(".card-title").width();
 
-        console.log(`name - ${element.find(".card-title .text").text()}, width: ${elementWidth}`);
-        // console.log(`elementTextWidth:${elementTextWidth} vs elementWidth:${elementWidth}`);
+        // switch (elementWidth) {
+        //     case 200:
+        //         console.log(`elementWidth (old):${element.width()}`);
+
+        //         // element.find(".card-title").width(newWidth + "%").addClass('mod');
+        //         element.removeClass("-is-comfortable");
+        //         element.addClass("-is-squeezed");
+
+        //         console.log(`elementWidth (new): ${newWidth}`);
+        //         break;
+        //     case 150:
+        //         console.log(`elementWidth (new): ${newWidth}`);
+
+        //         break;
+        //     case 75:
+        //         console.log(`elementWidth (new): ${newWidth}`);
+
+        //         break;
+        //         // default:
+        // }
 
         if (elementWidth < 200) {
+            console.log(`elementWidth:${element.width()}`);
+
+            // element.find(".card-title").width(newWidth + "%").addClass('mod');
             element.removeClass("-is-comfortable");
             element.addClass("-is-squeezed");
 
+        } else if (elementWidth < 80) {
+            console.log(`elementWidth:${element.width()}`);
+            element.find(".card-title").width("23px").addClass('mod');
+            element.removeClass("-is-comfortable");
+            element.addClass("-is-squeezed");
+            console.log(element.find(".card-title").width())
         } else {
+            console.log(`elementWidth - :${element.width()}`);
             element.removeClass("-is-squeezed");
             element.addClass("-is-comfortable");
 
