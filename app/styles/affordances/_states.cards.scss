@@ -33,10 +33,18 @@
 
     &.-is-squeezed {
 
+        .-is-expanded {
+            width: 85% !important;
+        }
+
+        &.card--element-node {
+            overflow: visible;
+        }
+
         .card-divider {
             .grid-x {
                 .card-title {
-                    width: 75%;
+                    width: 80%;
 
                 }
             }
@@ -57,6 +65,7 @@
         }
 
         .card-title:hover {
+
             .text {
                 pointer-events: none;
                 // display: none;
@@ -304,7 +313,14 @@
 .card--element-node,
 .card--element-group {
     .card-options {
+        div.button-option {
+            float: right;
+
+        }
+
         button.button-option {
+            float: right;
+
             &-setting.-is-expanded .icon i {
                 color: $palette-color-median !important;
             }

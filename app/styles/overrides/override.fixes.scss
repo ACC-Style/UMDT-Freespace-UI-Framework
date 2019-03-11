@@ -3,6 +3,7 @@
 \*************************/
 
 /* Fixes for opening panels moving buttons weirdly */
+
 #content--page.is-open-right {
     position: static;
     margin-left: 250px;
@@ -13,21 +14,25 @@
 }
 
 /* Smoothly open panels */
+
 .off-canvas-content {
     transition: transform 0.5s ease, margin 0.5s ease;
 }
 
 /* Progress bar: hide when not in use */
+
 .content--progress {
     background-color: transparent;
 }
 
 /* Progress bar: show when in use */
+
 .content--progress.is-active {
-    background-color: #F0F3F8;
+    background-color: #f0f3f8;
 }
 
 /* Progress bar: Move percentage to stay at the right of the bar */
+
 .content--progress .progress-bar .progress-bar-number {
     padding-right: 1em;
     font-size: 80%;
@@ -36,6 +41,7 @@
 }
 
 /* Progress bar: When at 0%, move text to center of bar */
+
 .content--progress .progress-bar-no-number {
     text-align: center;
     position: absolute;
@@ -43,18 +49,21 @@
 }
 
 /* Progress bar: create some separation between page content and bar */
+
 .content--page {
     padding: 0 0 0.5em 0;
 }
 
 /* Progress bar: reduce separation between bar and bottom of page to match the above */
+
 .content--progress {
     margin: 0 0 0.5em 0;
 }
 
 /* Mitigate visual issue with header/footer when resizing tables (such as when opening/closing panels) */
+
 .dataTable-dynamic-size-container .dataTables_scrollHead {
-    background: #F0F3F8;
+    background: #f0f3f8;
 }
 
 .dataTable-dynamic-size-container .dataTables_scrollFoot {
@@ -62,20 +71,23 @@
 }
 
 /* Checkbox fixes */
+
 .form--input-checkbox input[type="checkbox"]+label:before {
-    margin-top: -.15em;
+    margin-top: -0.15em;
     /* Align checkbox with text */
     content: "check_box_outline_blank";
     /* Fix weird whitespace issue in app.css */
 }
 
 /* Radio button fixes */
+
 .form--input-radio input[type="radio"]+label:before {
-    margin-top: -.15em;
+    margin-top: -0.15em;
     /* Align radio button with text */
 }
 
 /* Fix for the Project Search panel having horizontal scrolling */
+
 .off-canvas .form--input-checkbox input+label {
     width: auto;
     margin-right: 0;
@@ -85,38 +97,42 @@
 // .off-canvas label.switch-paddle {
 //     width: 4rem;
 // }
-
 // /* Also fix other sizes of switches inside panels */
 // .off-canvas .switch.tiny label.switch-paddle {
 //     width: 3rem;
 // }
-
 // .off-canvas .switch.small label.switch-paddle {
 //     width: 3.5rem;
 // }
-
 // .off-canvas .switch.large label.switch-paddle {
 //     width: 5rem;
 // }
-
 /* All tab contents need a bit of padding */
+
 .tabs-content {
     padding: 1em;
+    // TODO: toggle 'height' for tab hight debuging dev environment
+    height: 544px;
 }
 
+
+
 /* Don't use fixed tab content size */
-// TODO: toggle for tab hight debuging
+
 .content--tab {
-    // height: 22rem;
-    height: auto;
+    // TODO: toggle 'height' for tab hight debuging dev environment
+    height: 433px;
+    // height: auto;
+
 }
 
 /* Allow using .taller for textareas throughout the site */
+
 // .form--input-text textarea.taller {
 //     height: 13.5em;
 // }
-
 /* Fix close buttons in popups */
+
 .reveal .close-button {
     height: 1em;
     width: 1em;
@@ -125,6 +141,7 @@
 }
 
 /* Utility classes to allow overriding toggle switch alignment */
+
 .left-switch-container .switch {
     text-align: left;
 }
@@ -135,7 +152,8 @@
 
 /* Making the label for a checked checkbox bolder actually changes the sizing,
     which can wind up breaking the scrollbars in IE  */
-.dataTable-dynamic-size-container th .form--input-checkbox input[type='checkbox']:checked+label {
+
+.dataTable-dynamic-size-container th .form--input-checkbox input[type="checkbox"]:checked+label {
     font-weight: normal;
 }
 
@@ -144,83 +162,83 @@
     that's also using the Fixed Headers extension, the custom icon doesn't show up duplicated
     and floating weirdly in the table body.
 */
+
 .dataTables_scrollBody th .form--input-checkbox input[type="checkbox"]+label:before {
-    content: '';
+    content: "";
 }
 
 /* Fix jQuery UI elements to use our colors */
+
 .ui-state-active,
 .ui-widget-content .ui-state-active,
 .ui-widget-header .ui-state-active,
 a.ui-button:active,
 .ui-button:active,
 .ui-button.ui-state-active:hover {
-    border: 1px solid #002B59;
-    background: #002B59;
+    border: 1px solid #002b59;
+    background: #002b59;
     font-weight: normal;
     color: #ffffff;
 }
 
 /* When using an autocomplete inside a popup, make sure the autocomplete dropdown is visible */
+
 .reveal-overlay~.ui-autocomplete {
     z-index: 1006;
 }
 
 /* Remove lock icon from disabled switches */
+
 .switch.switch-disable input[disabled]+label:before,
 .switch.switch-disable input[readonly]+label:before {
     content: "";
 }
 
 /* Make sure cursor still shows up near a locked switch. On top of the switch, other styles set it to not-allowed. */
+
 .switch.switch-disable {
     cursor: auto;
 }
 
 /* Make required dropdown stars match textboxes for position */
+
 // REMOVED!
 // .form--input-select.-is-required label:after {
 //     position: relative;
 // }
-
 /*************************\
 |   WORKSPACE FRAMEWORK   |
 \*************************/
+
 /* app.css has equivalents of these that are ID-specific instead of using classes. */
+
 // .workspace-tree table {
 //     font-size: 85%;
 //     margin: 0 0 0 0;
 // }
-
 // .workspace-tree table tbody th,
 // .workspace-tree table tbody td {
 //     padding: .25em 0 .25em 0;
 //     border: none;
 // }
-
 // .workspace-tree table tbody {
 //     border: none;
 // }
-
 // .workspace-tree table tbody tr>td {
 //     padding: 0 0 0 .25em;
 // }
-
 // .workspace-tree table thead tr th {
 //     color: #627BBE;
 //     text-align: center;
 // }
-
 // .workspace-tree table tr {
 //     border-top: 1px solid #F0F3F8;
 //     background-color: #fff;
 // }
-
 // .workspace-tree table thead {
 //     background: #fff;
 //     text-align: left;
 // }
-
 // .workspace-tree table thead th,
 // .workspace-tree table thead td,
 // .workspace-tree table tfoot th,
@@ -229,21 +247,19 @@ a.ui-button:active,
 //     font-weight: lighter;
 //     text-align: left;
 // }
-
 // .workspace-tree table .material-icons {
 //     font-size: 17px;
 // }
-
 // .workspace-tree table span[role="presentation"] {
 //     margin-right: 3px;
 //     float: right;
 //     color: #F0F3F8;
 // }
-
 /* app.css has equivalents of these with classes named specifically for a CDD workspace, instead of a general class name. Replicated here. */
+
 .column--list {
-    border: 0.5em solid #F0F3F8;
-    border-left: 1px solid #F0F3F8;
+    border: 0.5em solid #f0f3f8;
+    border-left: 1px solid #f0f3f8;
     border-right: none;
 }
 
@@ -292,21 +308,24 @@ a.ui-button:active,
 }
 
 /* Styles for darkening the last tree/linked pane column */
+
 .column--list.darker {
-    background-color: #F0F3F8;
+    background-color: #f0f3f8;
 }
 
 .column--list.darker .column--list-counter {
-    color: #8FA4BF;
+    color: #8fa4bf;
 }
 
 /* Allow Workspace to expand and fill full page height */
+
 #page--workspace {
     height: auto;
     height: initial;
 }
 
 /* Move and style the "Last edited by/datetime" display */
+
 .workspace--controls .blurb {
     float: left;
     color: #8a8a8a;
@@ -314,16 +333,19 @@ a.ui-button:active,
 }
 
 /* Remove horizontal scroll bar in trees */
+
 .workspace-tree {
     overflow-x: hidden;
 }
 
 /* Remove dotted underline from expand/collapse tab content buttons */
+
 .workspace--options button {
     border: none;
 }
 
 /* Styling for in-tree buttons */
+
 .node-action .button {
     height: 1.25em;
     width: 1.25em;
@@ -333,12 +355,14 @@ a.ui-button:active,
 }
 
 /* Styling for context menus on tree items */
+
 .context-menu-list .context-menu-item .material-icons {
-    margin-right: .5em;
+    margin-right: 0.5em;
     float: left;
 }
 
 /* Styling for tab-lined panes */
+
 .linked-pane-container {
     overflow-y: auto;
 }
@@ -349,20 +373,20 @@ a.ui-button:active,
     margin-bottom: 1em;
 }
 
-.linked-pane-container .form--input-text [type='text'],
-.linked-pane-container .form--input-text [type='password'],
-.linked-pane-container .form--input-text [type='date'],
-.linked-pane-container .form--input-text [type='datetime'],
-.linked-pane-container .form--input-text [type='datetime-local'],
-.linked-pane-container .form--input-text [type='month'],
-.linked-pane-container .form--input-text [type='week'],
-.linked-pane-container .form--input-text [type='email'],
-.linked-pane-container .form--input-text [type='number'],
-.linked-pane-container .form--input-text [type='search'],
-.linked-pane-container .form--input-text [type='tel'],
-.linked-pane-container .form--input-text [type='time'],
-.linked-pane-container .form--input-text [type='url'],
-.linked-pane-container .form--input-text [type='color'],
+.linked-pane-container .form--input-text [type="text"],
+.linked-pane-container .form--input-text [type="password"],
+.linked-pane-container .form--input-text [type="date"],
+.linked-pane-container .form--input-text [type="datetime"],
+.linked-pane-container .form--input-text [type="datetime-local"],
+.linked-pane-container .form--input-text [type="month"],
+.linked-pane-container .form--input-text [type="week"],
+.linked-pane-container .form--input-text [type="email"],
+.linked-pane-container .form--input-text [type="number"],
+.linked-pane-container .form--input-text [type="search"],
+.linked-pane-container .form--input-text [type="tel"],
+.linked-pane-container .form--input-text [type="time"],
+.linked-pane-container .form--input-text [type="url"],
+.linked-pane-container .form--input-text [type="color"],
 .linked-pane-container .form--input-text textarea {
     background: transparent;
 }
@@ -377,43 +401,53 @@ a.ui-button:active,
 \**************************/
 
 /*** Project Home - Profile tab ***/
+
 /* Adjust tab widths to accommodate an extra tab  */
+
 #page--directory .dashboard---panel-project .feature--tabs-list li {
     width: 16.66%;
 }
 
 /* Tweak margins for tab contents */
+
 #page--directory .feature--edit-mode {
     margin-top: -0.5em;
 }
 
 /* Hide required stars when tab is not in edit mode */
+
 .-edit-mode-off .form--input-text.-is-required label:after {
     color: transparent;
 }
 
 /* Remove dropdown arrow when tab is not in edit mode */
+
 .-edit-mode-off select:disabled {
     background-image: none;
 }
 
 /* Remove dropdown hover effect when tab is not in edit mode */
+
 .-edit-mode-off select:disabled:hover {
     border: 1px solid transparent !important;
 }
 
 /* Remove background from textarea when tab is not in edit mode */
+
 .-edit-mode-off textarea:disabled {
     background-color: transparent;
 }
 
 /* Fix tab content border when in edit mode */
+
 .-edit-mode-on .tabs-content {
-    border-right: 3px solid #627BBE;
+    border-right: 3px solid #627bbe;
 }
 
 /*** Project Home - Users tab ***/
+
 /* User Role dropdown fixes */
+
 .data--table td select {
     font-size: 0.85em;
     /* Same text size as the rest of the table */
@@ -424,76 +458,93 @@ a.ui-button:active,
 }
 
 /* Center User Role dropdowns inside table rows */
+
 .data--table td .form--input-select {
     margin-bottom: 0;
 }
 
 /* Increase spacing between table and search field */
+
 #userSearchCell {
     padding-top: 1.5em;
 }
 
 /*** Project Home - TDD & Publish tabs ***/
+
 /* Fix for TDD Snapshots and Publish History being too narrow */
+
 #page--directory .dashboard---panel-project .feature--tabs-list .tabs-content li {
     width: auto;
 }
 
 /*** Project Updates panel ***/
+
 /* Updates by someone other than the current user should be near-white */
+
 .panel--update .panel--update-item .panel--tooltip,
 .panel--update .panel--update-item .panel--tooltip :hover {
-    color: #F0F3F8;
+    color: #f0f3f8;
 }
 
 /* Updates by current user should be dimmer */
+
 .panel--update .panel--update-item.-is-read .panel--tooltip,
 .panel--update .panel--update-item.-is-read .panel--tooltip :hover {
-    color: #627BBE;
+    color: #627bbe;
 }
 
 /* Tweak update object-kind icon */
+
 .panel--update .panel--update-item .panel--tooltip i {
     text-decoration: none;
     vertical-align: text-bottom;
 }
 
 /*** Units of Measure Workspace ***/
+
 /* Tweak alignment of Yes/No switches REMOVED!*/
+
 // .uom-value-sets-collection .switch {
 //     text-align: left;
 //     margin-bottom: 3rem;
 // }
-
 /*** Reports ***/
+
 /* Move multi-tab report subtitles down a bit */
+
 .sub-report-title h3 {
     margin-top: 1em;
 }
 
 /* Reduce gap between header line and report table (or tabs for multi-tab report) */
+
 #page--reports #excelDownload .button {
     margin-bottom: 1em;
 }
 
 /*** Device Maintenance workspace ***/
+
 /* Align all table contents to top so that different VS inclusion switches always line up */
+
 .device-maintenance-table-body tr {
     vertical-align: top;
 }
 
 /* Reduce gap between VS inclusion switch and expiration display */
+
 .device-maintenance-table-body .switch {
     margin-bottom: 0;
 }
 
 /* Reduce gap between top of cell and VS inclusion switch, and line up left edges of inclusion switch and expiration display */
+
 .device-maintenance-table-body .switch-paddle {
     margin-top: 0;
     margin-left: 0;
 }
 
 /* Make sure expiration date doesn't wrap */
+
 .device-maintenance-table-body .expiration-date-view-container,
 .device-maintenance-table-body .expiration-date-edit-container {
     white-space: nowrap;

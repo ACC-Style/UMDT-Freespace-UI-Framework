@@ -17,7 +17,7 @@ function dragElements(elements) {
     // make elements draggable
     $(allElements).draggable({
         // axis: "x",
-        // handle: ".button-option-drag i.icon",
+        // handle: ".button-option-drag",
         // revert: true,
     });
 

@@ -118,16 +118,24 @@
 
 #composer-a.composer--grid
     .grid-x
-        .composer--grid-cell.cell.small-4
-        .composer--grid-cell.cell.small-4
-        .composer--grid-cell.cell.small-4
-    .grid-x
-        .composer--grid-cell.cell.small-4
-        .composer--grid-cell.cell.small-4
-        .composer--grid-cell.cell.small-4
-    .grid-x
-        .composer--grid-cell.cell.small-4
-        .composer--grid-cell.cell.small-4
+        .composer--grid-cell.cell.small-2
+            | 1
+        .composer--grid-cell.cell.small-2
+            | 2
+        .composer--grid-cell.cell.small-2
+            | 3
+        .composer--grid-cell.cell.small-2
+            | 4
+        .composer--grid-cell.cell.small-2
+            | 5
+        .composer--grid-cell.cell.small-2
+            | 6
+        .composer--grid-cell.cell.small-2
+            | 1
+        .composer--grid-cell.cell.small-2
+            | 2
+        .composer--grid-cell.cell.small-2
+
             #card-id-7.card--element-node.card(data-micro-interaction="card").-is-indented-1
                 .card-divider
                     .grid-x
@@ -141,8 +149,8 @@
                                 span.icon
                                     i.material-icons.md-18 settings
                             button.button-option-drag(data-micro-interaction="card")
-                                span.icon
-                                    i.material-icons.md-18 drag_handle
+                                div.icon
+                                    i.material-icons.md-18 delete
                 .card-section.-is-collapsed
                     .grid-x
                         .cell.small-12.medium-3.large-3
@@ -193,6 +201,9 @@
                                                 i.material-icons.md-14(aria-hidden='true') visibility
                                             span.switch-inactive(aria-hidden='true')
                                                 i.material-icons.md-14(aria-hidden='true') visibility_off
+                                                
+        .composer--grid-cell.cell.small-6
+
             #card-id-8.card--element-node.-is-indented-0.card(data-micro-interaction="card")
                 .card-divider
                     .grid-x
@@ -200,14 +211,15 @@
                             .icon.hide-for-small
                                 i.material-icons.md-18 change_history
                             .text
-                                | Long Long Name Here If You Like
+                                | Long Long Name Here If You Like 20340 029 3029 032 038 
                         .card-options.small-12.medium-2.large-2
                             button.button-option-setting.-is-expanded(data-micro-interaction="option")
                                 span.icon
                                     i.material-icons.md-18 settings
-                            button.button-option-drag(data-micro-interaction="card")
-                                span.icon
-                                    i.material-icons.md-18 drag_handle
+                            div.option-drag-handle
+                                button.button-option-drag(data-micro-interaction="card")
+                                    div.icon
+                                        i.material-icons.md-18 delete
                 .card-section.-is-collapsed
                     .grid-x
                         .medium-3.cell
@@ -222,7 +234,6 @@
                                                 i.material-icons.md-14(aria-hidden='true') visibility
                                             span.switch-inactive(aria-hidden='true')
                                                 i.material-icons.md-14(aria-hidden='true') visibility_off
-        .composer--grid-cell.cell.small-4
         
 
 
