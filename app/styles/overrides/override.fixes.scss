@@ -112,7 +112,8 @@
 .tabs-content {
     padding: 1em;
     // TODO: toggle 'height' for tab hight debuging dev environment
-    // height: 544px;
+    height: 544px;
+    // height: 80vh;
 }
 
 
@@ -121,8 +122,9 @@
 
 .content--tab {
     // TODO: toggle 'height' for tab hight debuging dev environment
-    // height: 433px;
-    height: auto;
+    // height: 80vh;
+    height: 433px;
+    // height: auto;
 
 }
 

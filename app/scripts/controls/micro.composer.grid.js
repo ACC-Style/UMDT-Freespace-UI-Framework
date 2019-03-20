@@ -20,7 +20,20 @@ function checkWidth(array) {
     array.each(function (index) {
         let element = $(this),
             elementWidth = element.width(),
-            elementTextWidth = element.find(".card-title").width();
+            elementTitleWidthContainer = element.find(".card-title").width(),
+            elementTitleWidth = element.find(".card-title .text").width() + element.find(".card-title .icon").width();
+
+
+        if (elementTitleWidthContainer < elementTitleWidth) {
+            console.log('text is shorter', elementTitleWidthContainer, elementTitleWidth);
+            element.removeClass("-is-comfortable");
+            element.addClass("-is-squeezed");
+        } else {
+            console.log('text is longer', elementTitleWidthContainer, elementTitleWidth)
+            element.removeClass("-is-squeezed");
+            element.addClass("-is-comfortable");
+
+        }
 
         // switch (elementWidth) {
         //     case 200:
@@ -43,25 +56,25 @@ function checkWidth(array) {
         //         // default:
         // }
 
-        if (elementWidth < 200) {
-            console.log(`elementWidth:${element.width()}`);
+        // if (elementWidth < 200) {
+        //     console.log(`elementWidth:${element.width()}`);
 
-            // element.find(".card-title").width(newWidth + "%").addClass('mod');
-            element.removeClass("-is-comfortable");
-            element.addClass("-is-squeezed");
+        //     // element.find(".card-title").width(newWidth + "%").addClass('mod');
+        //     element.removeClass("-is-comfortable");
+        //     element.addClass("-is-squeezed");
 
-        } else if (elementWidth < 80) {
-            console.log(`elementWidth:${element.width()}`);
-            element.find(".card-title").width("23px").addClass('mod');
-            element.removeClass("-is-comfortable");
-            element.addClass("-is-squeezed");
-            console.log(element.find(".card-title").width())
-        } else {
-            console.log(`elementWidth - :${element.width()}`);
-            element.removeClass("-is-squeezed");
-            element.addClass("-is-comfortable");
+        // } else if (elementWidth < 80) {
+        //     console.log(`elementWidth:${element.width()}`);
+        //     element.find(".card-title").width("23px").addClass('mod');
+        //     element.removeClass("-is-comfortable");
+        //     element.addClass("-is-squeezed");
+        //     console.log(element.find(".card-title").width())
+        // } else {
+        //     console.log(`elementWidth - :${element.width()}`);
+        //     element.removeClass("-is-squeezed");
+        //     element.addClass("-is-comfortable");
 
-        }
+        // }
     });
 }
 checkWidth(allCards);
