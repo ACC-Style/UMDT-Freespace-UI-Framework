@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
   require('./scripts/vendors/vendor.jquery.ui.draggable.js');
   require('./scripts/vendors/datatables');
   require('./scripts/controls/micro.composer.grid.js');
+  require('./scripts/controls/micro.interaction.fullscreen.js');
 
 
   console.log('initialized...');
