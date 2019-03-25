@@ -2,87 +2,79 @@ body {
     &.-is-fullscreen {
         padding-top: 0em;
         overflow: hidden;
-
         .content--banner,
         .content--breadcrumb,
         .panel--left,
         .panel--right {
             display: none;
         }
-
         .panel--center {
             width: 100vw;
             height: 100vw;
         }
-
         .panel--center-container.grid-y.medium-grid-frame,
         .column--list,
         .column--list-properties-data,
         .panel--center-container {
             height: 100vw;
-            border-top: none;
-            // width: 10%;
+            border-top: none; // width: 10%;
         }
-
         .column--list:not(.column--list-properties) {
             width: 12vw;
         }
-
         .content--tab,
         .tabs-content,
         .feature--tabs-list {
             height: 79vh;
             border: none;
         }
-
         .workspace--controls {
             height: 10vh;
-
         }
-
         li.tabs-title:not(.is-active) {
             display: none;
-
         }
-
         li.tabs-title.is-active {
             border: none !important;
             width: 100% !important;
         }
-
         button[data-micro-interaction*="fullscreen"] {
-            z-index: 99999999999999999999999999;
-            position: absolute;
-            bottom: 99%;
+            // z-index: 99999999999999999999999999;
+            // position: absolute;
+            // bottom: 99%;
             // bottom: 0px;
             // left: 50%;
             // border: 1px solid red;
-            background-color: red;
-
+            // background-color: red;
             i {
                 color: white !important;
-
             }
-
             &:hover {
                 // margin-top: 1em;
             }
         }
     }
-
     &.-is-not-fullscreen {}
-
     button[data-micro-interaction*="fullscreen"] {
         &.-is-on {
             .icon i.material-icons {
                 color: $color-grass !important;
             }
         }
-
         &.-is-off {
             .icon i.material-icons {
                 color: $palette-color-darken;
             }
+        }
+    }
+}
+
+button[data-micro-interaction="fullscreen"] {
+    // -webkit-appearance: button;
+    cursor: pointer;
+    &:hover {
+        .icon i.material-icons {
+            color: $palette-color-darken;
         }
     }
 }
