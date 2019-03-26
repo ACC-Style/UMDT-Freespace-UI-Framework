@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Space Foundation6 NCDR | home</title>
+    <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/zf/dt-1.10.16/af-2.2.2/fc-3.2.3/fh-3.1.3/r-2.2.0/sc-1.4.3/sl-1.2.3/datatables.min.css">
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+    <div class="off-canvas-content" id="content--page" data-off-canvas-content="">
+      <header class="content--banner">
+        <div class="grid-x">
+          <div class="banner--logo small-4 medium-2 large-1 cell"><img class="banner--logo-acc" src="https://tools.stage.acc.org/UMDT/Templates/graphics/logo_acc_md.png"></div>
+          <div class="banner--title small-6 medium-6 large-6 cell">
+            <h1 class="banner--title-text">Unified MetaData Tool <i class="material-icons md-18">crop</i></h1>
+          </div>
+          <div class="banner--users small-12 medium-4 large-4 cell">
+            <nav class="menu--nav"><a class="menu--nav-link button" data-micro-interaction="popup"><span class="text">User-anme</span><span class="icon"><i class="material-icons md-18">account_box</i></span></a><a class="menu--nav-link button" data-micro-interaction="popup"><span class="text">Logout </span><span class="icon"><i class="material-icons md-18">exit_to_app</i></span></a><a class="menu--nav-link chardin-btn-help button warning" data-micro-interaction="popup"><span class="text">HELP! </span><span class="icon"><i class="material-icons md-18">help</i></span></a></nav>
+          </div>
+        </div>
+      </header>
+      <div class="content--prompt callout success" data-closable>
+        <div class="grid-x grid-padding-x">
+          <div class="icon cell small-1"><i class="material-icons md-24">new_releases</i></div>
+          <div class="text cell small-10">
+            <ul class="small"> 
+              <li><a href="kitchensink.html#Forms">FIX: IE/Edge select dropdown (no icon arrow) - 1/07/19</a></li>
+              <li><a href="workspace-author.html#panelA">FIX: tree view children alignment and selection styling - 1/07/19</a></li>
+              <li><a href="workspace-author.html#panelA">ADDED: styling for tree items that are disabled - 1/07/19</a></li>
+              <li><a href="workspace-author.html#panelA">ADDED: button in section divider - 1/07/19</a></li>
+              <li><a href="kitchensink.html#Prompts">OVERHUAL: Project Page (with Quick Ations, Tab Action Menu) - 10/25/18</a></li>
+              <li><a href="kitchensink.html#Prompts">ADDED: 'Form Composer' HTML Screen - 10/25/18</a></li>
+              <li><a href="kitchensink.html#Prompts">ADDED: 'Metric Authoring Tool' HTML Screen - 10/27/18</a></li>
+            </ul>
+          </div>
+          <div class="btn cell small-1">
+            <button class="close-button" aria-label="Dismiss alert" type="button" data-close=""><i class="material-icons md-18">close</i></button>
+          </div>
+        </div>
+      </div>
+      <div class="content--breadcrumb">
+        <div class="grid-x hide-for-small-only">
+          <div class="cell small-1"></div>
+          <div class="cell small-10">
+            <nav aria-label="You are here:" role="navigation">
+              <ul class="breadcrumbs--nav-list breadcrumbs">
+                <li class="breadcrumbs--nav-item"><a class="breadcrumbs--nav-link" href="index.html"><span class="icon"><i class="material-icons md-18">crop</i></span><span class="text">UMDT</span></a></li>
+                <li class="breadcrumbs--nav-item"><a class="breadcrumbs--nav-link" href="index.html"><span class="icon"><i class="material-icons md-18">layers</i></span><span class="text">Templates</span></a></li>
+                <li class="breadcrumbs--nav-item"><span class="icon"><i class="material-icons md-18">grid_on</i></span><span class="text"><strong>Kitchen Sink</strong></span></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="content--page">
+        <div class="grid-x">
+          <div class="panel--left cell small-1"></div>
+          <div class="panel--center cell small-10 medium-10 large-10"><a name="top"></a>
+            <h1 class="docs-page-title">Kitchen Sink</h1>
+            <div class="kitchen-menu"><a href="#States">States</a><a href="#Forms">Forms</a><a href="#Accordion">Accordion</a><a href="#Accordion">Accordion</a><a href="#Badge">Badge</a><a href="#Breadcrumbs">Breadcrumbs</a><a href="#Button">Button</a><a href="#Callout">Callout</a><a href="#Close">Close</a><a href="#Drilldown">Drilldown</a><a href="#Dropdown">Dropdown</a><a href="#Dropdown">Dropdown</a><a href="#Label">Label</a><a href="#Media">Media</a><a href="#Menu">Menu</a><a href="#Pagination">Pagination</a><a href="#Progress">Progress</a><a href="#Reveal">Reveal</a><a href="#Slider">Slider</a><a href="#Sticky">Sticky</a><a href="#Switch">Switch</a><a href="#Table">Table</a><a href="#Tabs">Tabs</a><a href="#Thumbnail">Thumbnail</a><a href="#Toggler">Toggler</a><a href="#Tooltip">Tooltip</a><a href="#ComposerGrid">ComposerGrid</a><a href="#Cards">Cards</a><a href="#Prompts">Prompts</a></div>
+            <p class="docs-description lead">Paragraph</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo nec libero vitae porttitor. Suspendisse ac sapien et ante condimentum iaculis. Ut dapibus ex vestibulum erat pellentesque suscipit quis sed nisl. Sed lobortis neque sit amet ligula pharetra, ac hendrerit nulla laoreet. Cras in vulputate nulla. Donec vel blandit lectus. Duis fermentum sit amet mauris id iaculis. Praesent a sollicitudin enim. Curabitur quis sagittis sapien, sed tempus sapien. Nam non dictum sapien, in varius odio. Sed eu condimentum orci, nec mollis nulla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce quis elit non nisi pellentesque fermentum et in nibh.</p>
+            <p></p><a>Linke test Longer</a>
+            <p></p>
+            <hr><a name="States"></a>
+            <h2 class="docs-heading" id="forms" data-magellan-target="forms">Buttons States</h2>
+            <div class="grid-x"><a class="button primary">Primary</a><a class="button secondary">Secondary</a><a class="button success">Success</a><a class="button alert">Alert</a><a class="button warning">Warning</a></div>
+            <hr><a name="Forms"></a>
+            <h2 class="docs-heading" id="forms" data-magellan-target="forms">Forms<a class="docs-heading-icon" href="#forms"></a></h2>
+            <div class="docs-code-live">
+              <form data-abide="7v3wyo-abide" novalidate="">
+                <div class="grid-x">
+                  <div class="cell">
+                    <div class="alert callout" data-abide-error="" style="display: none;">
+                      <p><i class="fi-alert"></i> There are some errors in your form.</p>
+                    </div>
+                  </div>
+                  <div class="cell">
+                    <div class="form--input-text -is-required">
+                      <label>Number Required Quib</label>
+                      <input type="text" placeholder="1234" aria-describedby="exampleHelpText" required="" pattern="number"><span class="form-error">Yo, you had better fill this out, it's required.</span>
+                      <p class="help-text -has-error" id="exampleHelpText">Here's how you use this input field!</p>
+                    </div>
+                  </div>
+                  <div class="cell">
+                    <div class="form--input-text -is-required">
+                      <label>Nothing Required!</label>
+                      <input type="text" placeholder="Use me, or don't" aria-describedby="exampleHelpTex" data-abide-ignore="">
+                      <p class="help-text" id="exampleHelpTex">This input is ignored by Abide using `data-abide-ignore`</p>
+                    </div>
+                  </div>
+                  <div class="cell">
+                    <div class="form--input-text">
+                      <label>Password Required
+                        <input id="password" type="password" placeholder="yeti4preZ" aria-describedby="exampleHelpText" required=""><span class="form-error">I'm required!</span>
+                      </label>
+                      <p class="help-text" id="exampleHelpText">Enter a password please.</p>
+                    </div>
+                  </div>
+                  <div class="cell">
+                    <div class="form--input-text -is-required">
+                      <label>Description:</label>
+                      <textarea class="taller" rows="4" cols="50"></textarea><span class="form-error">A description of the new create is required.</span>
+                      <p class="help-text -has-error" id="exampleHelpText">Any help information (what is restricted or allow with description input)</p>
+                    </div>
+                  </div>
+                  <div class="cell">
+                    <div class="form--input-text">
+                      <label>Re-enter Password
+                        <input type="password" placeholder="yeti4preZ" aria-describedby="exampleHelpText2" required="" pattern="alpha_numeric" data-equalto="password"><span class="form-error">Hey, passwords are supposed to match!</span>
+                      </label>
+                      <p class="help-text" id="exampleHelpText2">This field is using the `data-equalto="password"` attribute, causing it to match the password field above.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="grid-x">
+                  <div class="medium-6 cell">
+                    <div class="form--input-text">
+                      <label>URL Pattern, not required, but throws error if it doesn't match the Regular Expression for a valid URL.
+                        <input type="text" placeholder="http://foundation.zurb.com" pattern="url">
+                      </label>
+                    </div>
+                  </div>
+                  <div class="medium-6 cell">
+                    <div class="form--input-select -is-required">
+                      <label>European Cars, Choose One, it can't be the blank option.</label>
+                      <select required="">
+                        <option value="volvo">Volvo Car</option>
+                        <option value="saab">Saab</option>
+                        <option value="mercedes">Mercedes Longer</option>
+                        <option value="audi">Audi</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="grid-x">
+                  <div class="medium-6 cell">
+                    <div class="form--input-radio">
+                      <fieldset>
+                        <legend>Select one:</legend>
+                        <input id="quibRed" type="radio" name="quib" value="Red">
+                        <label for="quibRed">Dark Red Redder</label>
+                        <input id="quibBlue" type="radio" name="quib" value="Blue" required="">
+                        <label for="quibBlue">Blue Darker AS Blue</label>
+                        <input id="quibYellow" type="radio" name="quib" value="Yellow">
+                        <label for="quibYellow">Yellow</label>
+                      </fieldset>
+                    </div>
+                  </div>
+                  <div class="medium-6 cell">
+                    <div class="form--input-radio -is-required">
+                      <fieldset>
+                        <legend> Select one:</legend>
+                        <input id="pocketsRed" type="radio" name="pockets" value="Red">
+                        <label for="pocketsRed">Red</label>
+                        <input id="pocketsBlue" type="radio" name="pockets" value="Blue">
+                        <label for="pocketsBlue">Blue</label>
+                        <input id="pocketsYellow" type="radio" name="pockets" value="Yellow">
+                        <label for="pocketsYellow">Yellow</label>
+                      </fieldset>
+                    </div>
+                  </div>
+                  <div class="medium-6 cell">
+                    <div class="form--input-checkbox -is-required">
+                      <fieldset>
+                        <legend>Check the following:</legend>
+                        <input id="checkbox1" type="checkbox">
+                        <label for="checkbox1">Checkbox 1</label>
+                        <input id="checkbox2" type="checkbox" required="">
+                        <label for="checkbox2">Checkbox 2</label>
+                        <input id="checkbox3" type="checkbox">
+                        <label for="checkbox3">Checkbox 3</label>
+                      </fieldset>
+                    </div>
+                  </div>
+                </div>
+                <div class="grid-x">
+                  <fieldset class="medium-6 cell">
+                    <button class="button success" type="submit" value="Submit">Submit</button>
+                  </fieldset>
+                  <fieldset class="medium-6 columns">
+                    <button class="button secondary" type="reset" value="Reset">Reset</button>
+                  </fieldset>
+                </div>
+              </form>
+            </div>
+            <hr class="kitchen-divider">
+            <button href="#top"><span class="icon"><i class="material-icons md-18">vertical_align_top</i></span></button><a name="Accordion"></a>
+            <h2 class="docs-heading" id="accordion" data-magellan-target="accordion">Accordion  </h2>
+            <div class="docs-code-live">
+              <ul class="accordion" data-accordion="tp8eet-accordion" role="tablist">
+                <li class="accordion-item is-active" data-accordion-item=""><a class="accordion-title" id="0rmnx1-accordion-label" href="#" aria-controls="0rmnx1-accordion" role="tab" aria-expanded="true" aria-selected="true"> 
+                    <div class="text">ACC Accordion 1</div></a>
+                  <div class="accordion-content" id="0rmnx1-accordion" data-tab-content="" role="tabpanel" aria-labelledby="0rmnx1-accordion-label" aria-hidden="false" style="display: block;">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo nec libero vitae porttitor. Suspendisse ac sapien et ante condimentum iaculis. Ut dapibus ex vestibulum erat pellentesque suscipit quis sed nisl. Sed lobortis neque sit amet ligula pharetra, ac hendrerit nulla laoreet. Cras in vulputate nulla. Donec vel blandit lectus. Duis fermentum sit amet mauris id iaculis. Praesent a sollicitudin enim. Curabitur quis sagittis sapien, sed tempus sapien. Nam non dictum sapien, in varius odio. Sed eu condimentum orci, nec mollis nulla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce quis elit non nisi pellentesque fermentum et in nibh.</p><a href="#">Link Here</a>
+                  </div>
+                </li>
+                <li class="accordion-item" data-accordion-item=""><a class="accordion-title" id="ec5u7s-accordion-label" href="#" aria-controls="ec5u7s-accordion" role="tab" aria-expanded="false" aria-selected="false"> 
+                    <div class="text">ACC Accordion 2</div></a>
+                  <div class="accordion-content" id="ec5u7s-accordion" data-tab-content="" role="tabpanel" aria-labelledby="ec5u7s-accordion-label" aria-hidden="true">
+                    <div class="form--input-text">
+                      <textarea>Lorem ipsum dolor sis nulla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce quis elit non nisi pellentesque fermentum et in nibh.</textarea>
+                    </div>
+                    <button class="button">I do nothing!</button>
+                  </div>
+                </li>
+                <li class="accordion-item" data-accordion-item=""><a class="accordion-title" id="x20pz9-accordion-label" href="#" aria-controls="x20pz9-accordion" role="tab" aria-expanded="false" aria-selected="false"> 
+                    <div class="text">ACC Accordion 3</div></a>
+                  <div class="accordion-content" id="x20pz9-accordion" data-tab-content="" role="tabpanel" aria-labelledby="x20pz9-accordion-label" aria-hidden="true">
+                    <div class="form--input-text">
+                      <label>Type your name!
+                        <input type="text">
+                      </label>
+                      <p class="help-text" id="exampleHelpText2">Please put your full name here</p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <hr><a name="Accordion"></a>
+            <h2 class="docs-heading" id="accordion-menu" data-magellan-target="accordion-menu">Accordion Menu<a class="docs-heading-icon" href="#accordion-menu"></a></h2>
+            <div class="docs-code kitchen-sink" data-docs-code="" style="display: none;">
+              <button class="docs-code-copy" id="copy-btn-2">Copy</button>
+              <pre></pre>
+            </div>
+            <div class="docs-code-live">
+              <ul class="vertical menu" data-accordion-menu="ogp90c-accordion-menu" role="tree" aria-multiselectable="true">
+                <li class="is-accordion-submenu-parent" id="nhsber-acc-menu-link" role="treeitem" aria-controls="jwy403-acc-menu" aria-expanded="true"><a href="#0">Item 1</a>
+                  <ul class="menu vertical nested is-active submenu is-accordion-submenu" id="jwy403-acc-menu" data-submenu="" role="group" aria-labelledby="nhsber-acc-menu-link" aria-hidden="false">
+                    <li class="is-accordion-submenu-parent is-submenu-item is-accordion-submenu-item" id="p3zg19-acc-menu-link" role="treeitem" aria-controls="z94v6t-acc-menu" aria-expanded="false"><a href="#0">Item 1A</a>
+                      <ul class="menu vertical nested submenu is-accordion-submenu" id="z94v6t-acc-menu" data-submenu="" role="group" aria-labelledby="p3zg19-acc-menu-link" aria-hidden="true" style="display: none;">
+                        <li class="is-submenu-item is-accordion-submenu-item" role="treeitem"><a href="#0">Item 1Ai</a></li>
+                        <li class="is-submenu-item is-accordion-submenu-item" role="treeitem"><a href="#0">Item 1Aii</a></li>
+                        <li class="is-submenu-item is-accordion-submenu-item" role="treeitem"><a href="#0">Item 1Aiii</a></li>
+                      </ul>
+                    </li>
+                    <li class="is-submenu-item is-accordion-submenu-item" role="treeitem"><a href="#0">Item 1B</a></li>
+                    <li class="is-submenu-item is-accordion-submenu-item" role="treeitem"><a href="#0">Item 1C</a></li>
+                  </ul>
+                </li>
+                <li class="is-accordion-submenu-parent" id="9r9389-acc-menu-link" role="treeitem" aria-controls="97erc5-acc-menu" aria-expanded="false"><a href="#0">Item 2</a>
+                  <ul class="menu vertical nested submenu is-accordion-submenu" id="97erc5-acc-menu" data-submenu="" role="group" aria-labelledby="9r9389-acc-menu-link" aria-hidden="true" style="display: none;">
+                    <li class="is-submenu-item is-accordion-submenu-item" role="treeitem"><a href="#0">Item 2A</a></li>
+                    <li class="is-submenu-item is-accordion-submenu-item" role="treeitem"><a href="#0">Item 2B</a></li>
+                  </ul>
+                </li>
+                <li role="treeitem"><a href="#0">Item 3</a></li>
+              </ul>
+            </div>
+            <hr><a name="Badge"></a>
+            <h2 class="docs-heading" id="badge" data-magellan-target="badge">Badge<a class="docs-heading-icon" href="#badge"></a></h2>
+            <div class="docs-code kitchen-sink" data-docs-code="" style="display: none;">
+              <button class="docs-code-copy" id="copy-btn-3">Copy</button>
+              <pre></pre>
+            </div>
+            <div class="docs-code-live"><span class="primary badge">1</span><span class="secondary badge">2</span><span class="success badge">3</span><span class="alert badge">A</span><span class="warning badge">B</span></div>
+            <hr><a name="Breadcrumbs"></a>
+            <h2 class="docs-heading" id="breadcrumbs" data-magellan-target="breadcrumbs">Breadcrumbs<a class="docs-heading-icon" href="#breadcrumbs"></a></h2>
+            <div class="docs-code-live">
+              <nav aria-label="You are here:" role="navigation">
+                <ul class="breadcrumbs">
+                  <li><a href="#0">Home</a></li>
+                  <li><a href="#0">Features</a></li>
+                  <li class="disabled">Gene Splicing</li>
+                  <li><span class="show-for-sr">Current: </span> Cloning</li>
+                </ul>
+              </nav>
+            </div>
+            <hr><a name="Button"></a>
+            <h2 class="docs-heading" id="button" data-magellan-target="button">Button<a class="docs-heading-icon" href="#button"></a></h2>
+            <div class="docs-code-live">
+              <!-- Anchors (links)--><a class="button" href="#0">Learn More</a><a class="button" href="#features">View All Features</a>
+              <!-- Buttons (actions)-->
+              <button class="success button" type="button">Save</button>
+              <button class="alert button" type="button">Delete</button><a class="tiny button" href="#0">So Tiny</a><a class="small button" href="#0">So Small</a><a class="large button" href="#0">So Large</a><a class="expanded button" href="#0">Such Expand</a>
+              <div class="button-group"><a class="button">One</a><a class="button">Two</a><a class="button">Three</a></div>
+            </div>
+            <hr><a name="Callout"></a>
+            <h2 class="docs-heading" id="callout" data-magellan-target="callout">Callout<a class="docs-heading-icon" href="#callout"></a></h2><a class="docs-code-toggle">Toggle Code</a>
+            <div class="docs-codepen-container kitchen-sink" data-ks-codepen="" style="display: none;"><a class="codepen-logo-link" href="https://codepen.io/IamManchanda/pen/XRqjxj?editors=1000" target="_blank"><img src="assets/img/logos/edit-in-browser.svg" height="" width="" alt="edit on codepen button"></a></div>
+            <div class="docs-code kitchen-sink" data-docs-code="" style="display: none;">
+              <button class="docs-code-copy" id="copy-btn-6">Copy</button>
+              <pre></pre>
+            </div>
+            <div class="docs-code-live">
+              <div class="callout">
+                <h5>This is a callout.</h5>
+                <p>It has an easy to override visual style, and is appropriately subdued.</p><a href="#0">It's dangerous to go alone, take this.</a>
+              </div>
+              <div class="callout primary">
+                <h5>This is a primary callout.</h5>
+                <p>It has an easy to override visual style, and is appropriately subdued.</p><a href="#0">It's dangerous to go alone, take this.</a>
+              </div>
+              <div class="callout secondary">
+                <h5>This is a secondary callout</h5>
+                <p>It has an easy to override visual style, and is appropriately subdued.</p><a href="#0">It's dangerous to go alone, take this.</a>
+              </div>
+              <div class="callout success">
+                <h5>This is a success callout</h5>
+                <p>It has an easy to override visual style, and is appropriately subdued.</p><a href="#0">It's dangerous to go alone, take this.</a>
+              </div>
+              <div class="callout warning">
+                <h5>This is a warning callout</h5>
+                <p>It has an easy to override visual style, and is appropriately subdued.</p><a href="#0">It's dangerous to go alone, take this.</a>
+              </div>
+              <div class="callout alert">
+                <h5>This is an alert callout</h5>
+                <p>It has an easy to override visual style, and is appropriately subdued.</p><a href="#0">It's dangerous to go alone, take this.</a>
+              </div>
+            </div>
+            <hr><a name="Close"></a>
+            <h2 class="docs-heading" id="close-button" data-magellan-target="close-button">Close Button<a class="docs-heading-icon" href="#close-button"></a></h2>
+            <div class="docs-code-live">
+              <div class="callout">
+                <button class="close-button" aria-label="Close alert" type="button"><i class="material-icons md-18" aria-hidden="true">close</i></button>
+                <p>This is a static close button example.</p>
+              </div>
+            </div>
+            <hr><a name="Drilldown"></a>
+            <h2 class="docs-heading" id="drilldown-menu" data-magellan-target="drilldown-menu">Drilldown Menu<a class="docs-heading-icon" href="#drilldown-menu"></a></h2>
+            <div class="docs-code kitchen-sink" data-docs-code="" style="display: none;">
+              <button class="docs-code-copy" id="copy-btn-8">Copy</button>
+              <pre></pre>
+            </div>
+            <div class="docs-code-live">
+              <div class="is-drilldown" style="min-height: 230.4px; max-width: 200px;">
+                <ul class="vertical menu drilldown" id="m1" data-drilldown="x8lnsk-drilldown" style="width: 200px;" role="tree" aria-multiselectable="false" data-mutate="fh78py-drilldown">
+                  <li class="is-drilldown-submenu-parent" role="treeitem" aria-haspopup="true" aria-label="Item 1" aria-expanded="false"><a tabindex="0">Item 1</a>
+                    <ul class="vertical menu submenu is-drilldown-submenu invisible drilldown-submenu-cover-previous" id="m2" data-submenu="" role="group" aria-hidden="true">
+                      <li class="js-drilldown-back"><a tabindex="0">Back</a></li>
+                      <li class="is-drilldown-submenu-parent is-submenu-item is-drilldown-submenu-item" role="treeitem" aria-haspopup="true" aria-label="Item 1A" aria-expanded="false"><a tabindex="0">Item 1A</a>
+                        <ul class="vertical menu submenu is-drilldown-submenu invisible drilldown-submenu-cover-previous" id="m3" data-submenu="" role="group" aria-hidden="true">
+                          <li class="js-drilldown-back"><a tabindex="0">Back</a></li>
+                          <li class="is-submenu-item is-drilldown-submenu-item" role="treeitem"><a href="#0">Item 1Aa</a></li>
+                          <li class="is-submenu-item is-drilldown-submenu-item" role="treeitem"><a href="#0">Item 1Ba</a></li>
+                          <li class="is-submenu-item is-drilldown-submenu-item" role="treeitem"><a href="#0">Item 1Ca</a></li>
+                          <li class="is-submenu-item is-drilldown-submenu-item" role="treeitem"><a href="#0">Item 1Da</a></li>
+                          <li class="is-submenu-item is-drilldown-submenu-item" role="treeitem"><a href="#0">Item 1Ea</a></li>
+                        </ul>
+                      </li>
+                      <li class="is-submenu-item is-drilldown-submenu-item" role="treeitem"><a href="#0">Item 1B</a></li>
+                      <li class="is-submenu-item is-drilldown-submenu-item" role="treeitem"><a href="#0">Item 1C</a></li>
+                      <li class="is-submenu-item is-drilldown-submenu-item" role="treeitem"><a href="#0">Item 1D</a></li>
+                      <li class="is-submenu-item is-drilldown-submenu-item" role="treeitem"><a href="#0">Item 1E</a></li>
+                    </ul>
+                  </li>
+                  <li class="is-drilldown-submenu-parent" role="treeitem" aria-haspopup="true" aria-label="Item 2" aria-expanded="false"><a tabindex="0">Item 2</a>
+                    <ul class="vertical menu submenu is-drilldown-submenu invisible drilldown-submenu-cover-previous" data-submenu="" role="group" aria-hidden="true">
+                      <li class="js-drilldown-back"><a tabindex="0">Back</a></li>
+                      <li class="is-submenu-item is-drilldown-submenu-item" role="treeitem"><a href="#0">Item 2A</a></li>
+                      <li class="is-submenu-item is-drilldown-submenu-item" role="treeitem"><a href="#0">Item 2B</a></li>
+                      <li class="is-submenu-item is-drilldown-submenu-item" role="treeitem"><a href="#0">Item 2C</a></li>
+                      <li class="is-submenu-item is-drilldown-submenu-item" role="treeitem"><a href="#0">Item 2D</a></li>
+                      <li class="is-submenu-item is-drilldown-submenu-item" role="treeitem"><a href="#0">Item 2E</a></li>
+                    </ul>
+                  </li>
+                  <li class="is-drilldown-submenu-parent" role="treeitem" aria-haspopup="true" aria-label="Item 3" aria-expanded="false"><a tabindex="0">Item 3</a>
+                    <ul class="vertical menu submenu is-drilldown-submenu invisible drilldown-submenu-cover-previous" data-submenu="" role="group" aria-hidden="true">
+                      <li class="js-drilldown-back"><a tabindex="0">Back</a></li>
+                      <li class="is-submenu-item is-drilldown-submenu-item" role="treeitem"><a href="#0">Item 3A</a></li>
+                      <li class="is-submenu-item is-drilldown-submenu-item" role="treeitem"><a href="#0">Item 3B</a></li>
+                      <li class="is-submenu-item is-drilldown-submenu-item" role="treeitem"><a href="#0">Item 3C</a></li>
+                      <li class="is-submenu-item is-drilldown-submenu-item" role="treeitem"><a href="#0">Item 3D</a></li>
+                      <li class="is-submenu-item is-drilldown-submenu-item" role="treeitem"><a href="#0">Item 3E</a></li>
+                    </ul>
+                  </li>
+                  <li role="treeitem"><a href="#0"> Item 4</a></li>
+                </ul>
+              </div>
+            </div>
+            <hr><a name="Dropdown"></a>
+            <h2 class="docs-heading" id="dropdown-menu" data-magellan-target="dropdown-menu">Dropdown Menu<a class="docs-heading-icon" href="#dropdown-menu"></a></h2>
+            <div class="docs-code kitchen-sink" data-docs-code="" style="display: none;">
+              <button class="docs-code-copy" id="copy-btn-9">Copy</button>
+              <pre></pre>
+            </div>
+            <div class="docs-code-live">
+              <ul class="dropdown menu" data-dropdown-menu="epqyvi-dropdown-menu" role="menubar">
+                <li class="is-dropdown-submenu-parent opens-right" role="menuitem" aria-haspopup="true" aria-label="Item 1"><a>Item 1</a>
+                  <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" role="menu">
+                    <li class="is-submenu-item is-dropdown-submenu-item" role="menuitem"><a href="#0">Item 1A Loooong</a></li>
+                    <li class="is-dropdown-submenu-parent is-submenu-item is-dropdown-submenu-item opens-right" role="menuitem" aria-haspopup="true" aria-label=" Item 1 sub"><a href="#0"> Item 1 sub</a>
+                      <ul class="menu submenu is-dropdown-submenu vertical" data-submenu="" role="menu">
+                        <li class="is-submenu-item is-dropdown-submenu-item" role="menuitem"><a href="#0">Item 1 subA</a></li>
+                        <li class="is-submenu-item is-dropdown-submenu-item" role="menuitem"><a href="#0">Item 1 subB</a></li>
+                        <li class="is-dropdown-submenu-parent is-submenu-item is-dropdown-submenu-item opens-right" role="menuitem" aria-haspopup="true" aria-label=" Item 1 sub"><a href="#0"> Item 1 sub</a>
+                          <ul class="menu submenu is-dropdown-submenu vertical" data-submenu="" role="menu">
+                            <li class="is-submenu-item is-dropdown-submenu-item" role="menuitem"><a href="#0">Item 1 subA</a></li>
+                            <li class="is-submenu-item is-dropdown-submenu-item" role="menuitem"><a href="#0">Item 1 subB</a></li>
+                          </ul>
+                        </li>
+                        <li class="is-dropdown-submenu-parent is-submenu-item is-dropdown-submenu-item opens-right" role="menuitem" aria-haspopup="true" aria-label=" Item 1 sub"><a href="#0"> Item 1 sub</a>
+                          <ul class="menu submenu is-dropdown-submenu vertical" data-submenu="" role="menu">
+                            <li class="is-submenu-item is-dropdown-submenu-item" role="menuitem"><a href="#0">Item 1 subA</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="is-submenu-item is-dropdown-submenu-item" role="menuitem"><a href="#0">Item 1B</a></li>
+                  </ul>
+                </li>
+                <li class="is-dropdown-submenu-parent opens-right" role="menuitem" aria-haspopup="true" aria-label="Item 2"><a href="#0">Item 2</a>
+                  <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" role="menu">
+                    <li class="is-submenu-item is-dropdown-submenu-item" role="menuitem"><a href="#0">Item 2A</a></li>
+                    <li class="is-submenu-item is-dropdown-submenu-item" role="menuitem"><a href="#0">Item 2B</a></li>
+                  </ul>
+                </li>
+                <li role="menuitem"><a href="#0">Item 3</a></li>
+                <li role="menuitem"><a href="#0">Item 4</a></li>
+              </ul>
+            </div>
+            <hr><a name="Dropdown"></a>
+            <h2 class="docs-heading" id="dropdown-pane" data-magellan-target="dropdown-pane">Dropdown Pane<a class="docs-heading-icon" href="#dropdown-pane"></a></h2>
+            <div class="docs-code kitchen-sink" data-docs-code="" style="display: none;">
+              <button class="docs-code-copy" id="copy-btn-10">Copy</button>
+              <pre></pre>
+            </div>
+            <div class="docs-code-live">
+              <button class="button" type="button" data-toggle="example-dropdown" aria-controls="example-dropdown" data-is-focus="false" data-yeti-box="example-dropdown" aria-haspopup="true" aria-expanded="false">Toggle Dropdown</button>
+              <div class="dropdown-pane" id="example-dropdown" data-dropdown="ho911k-dropdown" aria-hidden="true" data-yeti-box="example-dropdown" data-resize="example-dropdown" aria-labelledby="l1njay-dd-anchor" data-events="resize">Just some junk that needs to be said. Or not. Your choice.</div>
+            </div>
+            <hr><a name="Label"></a>
+            <h2 class="docs-heading" id="label" data-magellan-target="label">Label<a class="docs-heading-icon" href="#label"></a></h2><a class="docs-code-toggle">Toggle Code</a>
+            <div class="docs-codepen-container kitchen-sink" data-ks-codepen="" style="display: none;"><a class="codepen-logo-link" href="https://codepen.io/IamManchanda/pen/VbxMXq?editors=1000" target="_blank"><img src="assets/img/logos/edit-in-browser.svg" height="" width="" alt="edit on codepen button"></a></div>
+            <div class="docs-code kitchen-sink" data-docs-code="" style="display: none;">
+              <button class="docs-code-copy" id="copy-btn-18">Copy</button>
+              <pre></pre>
+            </div>
+            <div class="docs-code-live"><span class="primary label">Primary Label</span><span class="secondary label">Secondary Label</span><span class="success label">Success Label</span><span class="alert label">Alert Label</span><span class="warning label">Warning Label</span></div>
+            <hr><a name="Media"></a>
+            <h2 class="docs-heading" id="media-object" data-magellan-target="media-object">Media Object<a class="docs-heading-icon" href="#media-object"></a></h2>
+            <div class="docs-code-live">
+              <div class="media-object">
+                <div class="media-object-section"><img src="http://via.placeholder.com/150x150"></div>
+                <div class="media-object-section">
+                  <h4>Dreams feel real while we're in them.</h4>
+                  <p>I'm going to improvise. Listen, there's something you should know about me... about inception. An idea is like a virus, resilient, highly contagious. The smallest seed of an idea can grow. It can grow to define or destroy you.</p>
+                </div>
+              </div>
+            </div>
+            <hr><a name="Menu"></a>
+            <h2 class="docs-heading" id="menu" data-magellan-target="menu">Menu<a class="docs-heading-icon" href="#menu"></a></h2>
+            <div class="docs-code-live">
+              <ul class="menu">
+                <li><a href="#0"><i class="fi-list"></i><span>One</span></a></li>
+                <li><a href="#0"><i class="fi-list"></i><span>Two</span></a></li>
+                <li><a href="#0"><i class="fi-list"></i><span>Three</span></a></li>
+                <li><a href="#0"><i class="fi-list"></i><span>Four   </span></a></li>
+              </ul>
+            </div>
+            <hr><a name="Pagination"></a>
+            <h2 class="docs-heading" id="pagination" data-magellan-target="pagination">Pagination<a class="docs-heading-icon" href="#pagination"></a></h2>
+            <div class="docs-code-live">
+              <ul class="pagination" role="navigation" aria-label="Pagination">
+                <li class="disabled">Previous <span class="show-for-sr">page</span></li>
+                <li class="current"><span class="show-for-sr">You're on page</span> 1</li>
+                <li><a href="#0" aria-label="Page 2">2</a></li>
+                <li><a href="#0" aria-label="Page 3">3</a></li>
+                <li><a href="#0" aria-label="Page 4">4</a></li>
+                <li class="ellipsis" aria-hidden="true"></li>
+                <li><a href="#0" aria-label="Page 12">12</a></li>
+                <li><a href="#0" aria-label="Page 13">13</a></li>
+                <li><a href="#0" aria-label="Next page">Next <span class="show-for-sr">page</span></a></li>
+              </ul>
+            </div>
+            <hr><a name="Progress"></a>
+            <h2 class="docs-heading" id="progress-bar" data-magellan-target="progress-bar">Progress Bar<a class="docs-heading-icon" href="#progress-bar"></a></h2>
+            <div class="docs-code-live">
+              <div class="primary progress" role="progressbar" tabindex="0" aria-valuenow="25" aria-valuemin="0" aria-valuetext="25 percent" aria-valuemax="100">
+                <div class="progress-meter" style="width: 25%;">
+                  <p class="progress-meter-text">25%</p>
+                </div>
+              </div>
+              <div class="warning progress">
+                <div class="progress-meter" style="width: 50%;">
+                  <p class="progress-meter-text">50%</p>
+                </div>
+              </div>
+              <div class="alert progress">
+                <div class="progress-meter" style="width: 75%;">
+                  <p class="progress-meter-text">75%</p>
+                </div>
+              </div>
+              <div class="success progress" role="progressbar" tabindex="0" aria-valuenow="100" aria-valuemin="0" aria-valuetext="100 percent" aria-valuemax="100">
+                <div class="progress-meter" style="width: 100%;">
+                  <p class="progress-meter-text">100%</p>
+                </div>
+              </div>
+            </div>
+            <hr><a name="Reveal"></a>
+            <h2 class="docs-heading" id="reveal" data-magellan-target="reveal">Reveal<a class="docs-heading-icon" href="#reveal"></a></h2>
+            <div class="docs-code-live">
+              <p><a data-open="exampleModal1" aria-controls="exampleModal1" aria-haspopup="true" tabindex="0">Click me for a modal</a></p>
+              <div class="reveal" id="exampleModal1" data-reveal="">
+                <div class="grid-y content--tab"> </div>
+                <div class="cell small-12 modal--header">
+                  <h1>Title Name Here</h1>
+                  <button class="close-button" data-close="" aria-label="Close modal" type="button"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="cell small-12 modal--content">
+                  <p class="lead">So you did something or wish to do it. ok:</p>
+                  <div class="modal--content-subject">
+                    <p>Blurb: Maybe you should consider this before you do this thing. Maybe.
+                      <div class="callout secondary">
+                        <h5>Because it optional</h5>
+                        <p>Item(s) - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                      </div>
+                      <div class="callout warning">
+                        <h5>Because it is optional but comes with a warning</h5>
+                        <p>Item(s) - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                      </div>
+                      <div class="callout alert">
+                        <h5>Because you may break things!</h5>
+                        <p>Items(s) - Lorem ipsum dolor sit amet, consectetur adipiscing elit.  </p>
+                      </div>
+                    </p>
+                  </div>
+                </div>
+                <div class="cell small-12 modal--controls text-center">
+                  <button class="button success" data-micro-interaction="toggle">Save</button>
+                  <button class="button alert" data-micro-interaction="toggle">Cancel</button>
+                </div>
+              </div>
+            </div>
+            <hr><a name="Slider"></a>
+            <h2 class="docs-heading" id="slider" data-magellan-target="slider">Slider<a class="docs-heading-icon" href="#slider"></a></h2>
+            <div class="docs-code-live">
+              <div class="slider" data-slider="gt1jfz-slider" data-initial-start="50" data-end="200"><span class="slider-handle" data-slider-handle="" role="slider" tabindex="0" aria-controls="ahzyv4-slider" aria-valuemax="200" aria-valuemin="0" aria-valuenow="50" aria-orientation="horizontal" style="left: 24.34%;"></span><span class="slider-fill" data-slider-fill="" style="width: 25%;"></span>
+                <input id="ahzyv4-slider" type="hidden" max="200" min="0" step="1" value="50">
+              </div>
+              <div class="slider vertical" data-slider="woe2r0-slider" data-initial-start="25" data-end="200" data-vertical="true"><span class="slider-handle" data-slider-handle="" role="slider" tabindex="0" aria-controls="er70ey-slider" aria-valuemax="200" aria-valuemin="0" aria-valuenow="25" aria-orientation="vertical" style="top: 11.54%;"></span><span class="slider-fill" data-slider-fill="" style="height: 13%;"></span>
+                <input id="er70ey-slider" type="hidden" max="200" min="0" step="1" value="25">
+              </div>
+              <div class="slider" data-slider="9hi6jv-slider" data-initial-start="25" data-initial-end="75"><span class="slider-handle" data-slider-handle="" role="slider" tabindex="0" aria-controls="1jjanv-slider" aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" aria-orientation="horizontal" style="left: 24.34%;"></span><span class="slider-fill" data-slider-fill="" style="width: 0px; min-width: 50.02%; left: 24.34%;"></span><span class="slider-handle" data-slider-handle="" role="slider" tabindex="0" aria-controls="3suku5-slider" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" aria-orientation="horizontal" style="left: 73.02%;"></span>
+                <input id="1jjanv-slider" type="hidden" max="100" min="0" step="1" value="25">
+                <input id="3suku5-slider" type="hidden" max="100" min="0" step="1" value="75">
+              </div>
+            </div>
+            <hr><a name="Sticky"></a>
+            <h2 class="docs-heading" id="sticky" data-magellan-target="sticky">Sticky<a class="docs-heading-icon" href="#sticky"></a></h2>
+            <div class="docs-code-live">
+              <div class="grid-x">
+                <div class="columns small-6" id="example1" data-something="" data-mutate="30qjxh-sticky">
+                  <p id="doodle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div class="columns small-6 right sticky-container" data-sticky-container="" style="height: 192.387px;">
+                  <div class="sticky is-anchored is-at-top" data-sticky="575kj8-sticky" data-margin-top="6" data-anchor="example1" data-resize="30qjxh-sticky" data-mutate="30qjxh-sticky" data-events="mutate" style="max-width: 336.8px; margin-top: 0px; bottom: auto; top: 0px;"><img class="thumbnail" src="http://via.placeholder.com/150x150"></div>
+                </div>
+              </div>
+            </div>
+            <hr><a name="Switch"></a>
+            <h2 class="docs-heading" id="switch" data-magellan-target="switch">Switch<a class="docs-heading-icon" href="#switch"></a></h2>
+            <div class="docs-code-live">
+              <div class="switch tiny">
+                <input class="switch-input" id="tinySwitch" type="checkbox" name="exampleSwitch">
+                <label class="switch-paddle" for="tinySwitch"><span class="show-for-sr">Tiny Sandwiches Enabled</span></label>
+              </div>
+              <div class="switch small">
+                <input class="switch-input" id="smallSwitch" type="checkbox" name="exampleSwitch">
+                <label class="switch-paddle" for="smallSwitch"><span class="show-for-sr">Small Portions Only</span></label>
+              </div>
+              <div class="switch large">
+                <input class="switch-input" id="largeSwitch" type="checkbox" name="exampleSwitch">
+                <label class="switch-paddle" for="largeSwitch"><span class="show-for-sr">Show Large Elephants</span></label>
+              </div>
+            </div>
+            <hr><a name="Table"></a>
+            <h2 class="docs-heading" id="table" data-magellan-target="table">Table<a class="docs-heading-icon" href="#table"></a></h2>
+            <div class="docs-code-live">
+              <table>
+                <thead>
+                  <tr>
+                    <th width="200">Table Header</th>
+                    <th>Table Header</th>
+                    <th width="150">Table Header</th>
+                    <th width="150">Table Header</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Content Goes Here</td>
+                    <td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
+                    <td>Content Goes Here</td>
+                    <td>Content Goes Here</td>
+                  </tr>
+                  <tr>
+                    <td>Content Goes Here</td>
+                    <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+                    <td>Content Goes Here</td>
+                    <td>Content Goes Here</td>
+                  </tr>
+                  <tr>
+                    <td>Content Goes Here</td>
+                    <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+                    <td>Content Goes Here</td>
+                    <td>Content Goes Here</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <hr><a name="Tabs"></a>
+            <h2 class="docs-heading" id="tabs" data-magellan-target="tabs">Tabs<a class="docs-heading-icon" href="#tabs"></a></h2>
+            <div class="docs-code-live">
+              <ul class="tabs" id="example-tabs" data-tabs="wxe6l9-tabs" role="tablist">
+                <li class="tabs-title is-active" role="presentation"><a id="panel1-label" href="#panel1" aria-selected="true" role="tab" aria-controls="panel1" tabindex="0">Tab 1</a></li>
+                <li class="tabs-title" role="presentation"><a id="panel2-label" href="#panel2" role="tab" aria-controls="panel2" aria-selected="false" tabindex="-1">Tab 2</a></li>
+                <li class="tabs-title" role="presentation"><a id="panel3-label" href="#panel3" role="tab" aria-controls="panel3" aria-selected="false" tabindex="-1">Tab 3</a></li>
+                <li class="tabs-title" role="presentation"><a id="panel4-label" href="#panel4" role="tab" aria-controls="panel4" aria-selected="false" tabindex="-1">Tab 4</a></li>
+                <li class="tabs-title" role="presentation"><a id="panel5-label" href="#panel5" role="tab" aria-controls="panel5" aria-selected="false" tabindex="-1">Tab 5</a></li>
+                <li class="tabs-title" role="presentation"><a id="panel6-label" href="#panel6" role="tab" aria-controls="panel6" aria-selected="false" tabindex="-1">Tab 6</a></li>
+              </ul>
+              <div class="tabs-content" data-tabs-content="example-tabs">
+                <div class="tabs-panel is-active" id="panel1" role="tabpanel" aria-labelledby="panel1-label">
+                  <p>One</p>
+                  <p>Check me out! I'm a super cool Tab panel with text content!</p>
+                </div>
+                <div class="tabs-panel" id="panel2" role="tabpanel" aria-labelledby="panel2-label" aria-hidden="true">
+                  <p>Two</p><img class="thumbnail" src="assets/img/generic/rectangle-7.jpg">
+                </div>
+                <div class="tabs-panel" id="panel3" role="tabpanel" aria-labelledby="panel3-label" aria-hidden="true">
+                  <p>Three</p>
+                  <p>Check me out! I'm a super cool Tab panel with text content!</p>
+                </div>
+                <div class="tabs-panel" id="panel4" role="tabpanel" aria-labelledby="panel4-label" aria-hidden="true">
+                  <p>Four</p><img class="thumbnail" src="assets/img/generic/rectangle-2.jpg">
+                </div>
+                <div class="tabs-panel" id="panel5" role="tabpanel" aria-labelledby="panel5-label" aria-hidden="true">
+                  <p>Five</p>
+                  <p>Check me out! I'm a super cool Tab panel with text content!</p>
+                </div>
+                <div class="tabs-panel" id="panel6" role="tabpanel" aria-labelledby="panel6-label" aria-hidden="true">
+                  <p>Six</p><img class="thumbnail" src="assets/img/generic/rectangle-8.jpg">
+                </div>
+              </div>
+            </div>
+            <hr><a name="Thumbnail"></a>
+            <h2 class="docs-heading" id="thumbnail" data-magellan-target="thumbnail">Thumbnail<a class="docs-heading-icon" href="#thumbnail"></a></h2>
+            <div class="docs-code-live">
+              <div class="grid-x">
+                <div class="small-4 columns"><img class="thumbnail" src="http://via.placeholder.com/150x150" alt="Photo of Uranus."></div>
+                <div class="small-4 columns"><img class="thumbnail" src="http://via.placeholder.com/150x150" alt="Photo of Neptune."></div>
+                <div class="small-4 columns"><img class="thumbnail" src="http://via.placeholder.com/150x150" alt="Photo of Pluto."></div>
+              </div>
+            </div>
+            <hr><a name="Toggler"></a>
+            <h2 class="docs-heading" id="toggler" data-magellan-target="toggler">Toggler<a class="docs-heading-icon" href="#toggler"></a></h2>
+            <div class="docs-code-live">
+              <p><a data-toggle="menuBar" aria-controls="menuBar">Expand!</a></p>
+              <ul class="menu" id="menuBar" data-toggler=".expanded" aria-expanded="true">
+                <li><a href="#0"><i class="fi-list"></i><span>One</span></a></li>
+                <li><a href="#0"><i class="fi-list"></i><span>Two</span></a></li>
+                <li><a href="#0"><i class="fi-list"></i><span>Three</span></a></li>
+                <li><a href="#0"><i class="fi-list"></i><span>Four</span></a></li>
+              </ul>
+            </div>
+            <hr><a name="Tooltip"></a>
+            <h2 class="docs-heading" id="tooltip" data-magellan-target="tooltip">Tooltip<a class="docs-heading-icon" href="#tooltip"></a></h2>
+            <div class="docs-code-live">
+              <p>The <span class="has-tip" data-tooltip="spnzz1-tooltip" aria-haspopup="true" data-disable-hover="false" tabindex="1" title="" aria-describedby="lhggm4-tooltip" data-yeti-box="lhggm4-tooltip" data-toggle="lhggm4-tooltip" data-resize="lhggm4-tooltip" data-events="resize">scarabaeus</span> hung quite clear of any branches, and, if allowed to fall, would have fallen at our feet. Legrand immediately took the scythe, and cleared with it a circular space, three or four yards in diameter, just beneath the insect, and, having accomplished this, ordered Jupiter to let go the string and come down from the tree.</p>
+            </div>
+            <hr><a name="ComposerGrid"></a>
+            <h2 class="docs-heading" id="tooltip" data-magellan-target="tooltip">Composer Grid<a class="docs-heading-icon" href="#tooltip"></a></h2>
+            <div class="docs-code-live"></div>
+            <div class="composer--grid" id="composer-a">
+              <div class="grid-x">
+                <div class="composer--grid-cell cell small-2">1</div>
+                <div class="composer--grid-cell cell small-2 -is-hovered">2</div>
+                <div class="composer--grid-cell cell small-2">3</div>
+                <div class="composer--grid-cell cell small-2">4</div>
+                <div class="composer--grid-cell cell small-2">5</div>
+                <div class="composer--grid-cell cell small-2">6</div>
+              </div>
+            </div>
+            <hr><a name="Cards"></a>
+            <h2 class="docs-heading" id="tooltip" data-magellan-target="tooltip">Cards (normal, selected)<a class="docs-heading-icon" href="#tooltip"></a></h2>
+            <div class="docs-code-live"></div>
+            <div class="card--element-node card" id="card-id-12" data-micro-interaction="card">
+              <div class="card-divider">
+                <div class="grid-x">
+                  <div class="card-title cell small-10">
+                    <div class="icon"><i class="material-icons md-18">change_history</i></div>
+                    <div class="text">Element Name Here</div>
+                  </div>
+                  <div class="card-options small-2">
+                    <button class="button-option-setting" data-micro-interaction="option"><span class="icon"><i class="material-icons md-18">settings</i></span></button>
+                    <button class="button-option-drag" data-micro-interaction="card"><span class="icon"><i class="material-icons md-18">drag_handle</i></span></button>
+                  </div>
+                </div>
+              </div>
+              <div class="card-section -is-collapsed">
+                <div class="grid-x">
+                  <div class="medium-3 cell">
+                    <div class="form--input-select">
+                      <div class="switch tiny">
+                        <label class="switch-value" for="switchA-1">Show:</label>
+                        <input class="switch-input" id="switchA-1" type="checkbox" name="switchA-1">
+                        <label class="switch-paddle" for="switchA-1"><span class="show-for-sr">Edit Mode</span><span class="switch-active" aria-hidden="true">yes</span><span class="switch-inactive" aria-hidden="true">no</span></label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="medium-3 cell">
+                    <div class="form--input-select">
+                      <div class="switch tiny">
+                        <label class="switch-value" for="switchA-2">Show</label>
+                        <input class="switch-input" id="switchA-2" type="checkbox" name="switchA-2">
+                        <label class="switch-paddle" for="switchA-2"><span class="show-for-sr">Edit Mode</span><span class="switch-active" aria-hidden="true"><i class="material-icons md-14" aria-hidden="true">visibility</i></span><span class="switch-inactive" aria-hidden="true"><i class="material-icons md-14" aria-hidden="true">visibility_off</i></span></label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="medium-3 cell">
+                    <div class="form--input-select">
+                      <label>Options</label>
+                      <select required="">
+                        <option value="volvo">One</option>
+                        <option value="saab">Two</option>
+                        <option value="mercedes">Three</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="medium-3 cell">
+                    <div class="form--input-select">
+                      <label>Options</label>
+                      <select required="">
+                        <option value="volvo">One</option>
+                        <option value="saab">Two</option>
+                        <option value="mercedes">Three</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card--element-node card -is-selected" id="card-id-13" data-micro-interaction="card">
+              <div class="card-divider">
+                <div class="grid-x">
+                  <div class="card-title cell small-10">
+                    <div class="icon"><i class="material-icons md-18">change_history</i></div>
+                    <div class="text">Element Name Here</div>
+                  </div>
+                  <div class="card-options small-2">
+                    <button class="button-option-setting" data-micro-interaction="option"><span class="icon"><i class="material-icons md-18">settings</i></span></button>
+                    <button class="button-option-drag" data-micro-interaction="card"><span class="icon"><i class="material-icons md-18">drag_handle</i></span></button>
+                  </div>
+                </div>
+              </div>
+              <div class="card-section -is-collapsed">
+                <div class="grid-x">
+                  <div class="medium-3 cell">
+                    <div class="form--input-select">
+                      <div class="switch tiny">
+                        <label class="switch-value" for="switchA-1">Show:</label>
+                        <input class="switch-input" id="switchA-1" type="checkbox" name="switchA-1">
+                        <label class="switch-paddle" for="switchA-1"><span class="show-for-sr">Edit Mode</span><span class="switch-active" aria-hidden="true">yes</span><span class="switch-inactive" aria-hidden="true">no</span></label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="medium-3 cell">
+                    <div class="form--input-select">
+                      <div class="switch tiny">
+                        <label class="switch-value" for="switchA-2">Show</label>
+                        <input class="switch-input" id="switchA-2" type="checkbox" name="switchA-2">
+                        <label class="switch-paddle" for="switchA-2"><span class="show-for-sr">Edit Mode</span><span class="switch-active" aria-hidden="true"><i class="material-icons md-14" aria-hidden="true">visibility</i></span><span class="switch-inactive" aria-hidden="true"><i class="material-icons md-14" aria-hidden="true">visibility_off</i></span></label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="medium-3 cell">
+                    <div class="form--input-select">
+                      <label>Options</label>
+                      <select required="">
+                        <option value="volvo">One</option>
+                        <option value="saab">Two</option>
+                        <option value="mercedes">Three</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="medium-3 cell">
+                    <div class="form--input-select">
+                      <label>Options</label>
+                      <select required="">
+                        <option value="volvo">One</option>
+                        <option value="saab">Two</option>
+                        <option value="mercedes">Three</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h5 class="docs-heading" id="tooltip" data-magellan-target="tooltip">Card / States (success, alert, error, secondary, primary)</h5>
+            <div class="card--element-node card success" id="card-id-31" data-micro-interaction="card">
+              <div class="card-divider">
+                <div class="grid-x">
+                  <div class="card-title cell small-10">
+                    <div class="icon"><i class="material-icons md-18">change_history</i></div>
+                    <div class="text">Element Name Here</div>
+                  </div>
+                  <div class="card-options small-2">
+                    <button class="button-option-setting" data-micro-interaction="option"><span class="icon"><i class="material-icons md-18">settings</i></span></button>
+                    <button class="button-option-drag" data-micro-interaction="card"><span class="icon"><i class="material-icons md-18">drag_handle</i></span></button>
+                  </div>
+                </div>
+              </div>
+              <div class="card-section -is-collapsed">
+                <div class="grid-x">
+                  <div class="medium-3 cell">
+                    <div class="form--input-select">
+                      <div class="switch tiny">
+                        <label class="switch-value" for="asswitchA-1">Show:</label>
+                        <input class="switch-input" id="asswitchA-1" type="checkbox" name="asswitchA-1">
+                        <label class="switch-paddle" for="asswitchA-1"><span class="show-for-sr">Edit Mode</span><span class="switch-active" aria-hidden="true">yes</span><span class="switch-inactive" aria-hidden="true">no</span></label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card--element-node card alert" id="card-id-221" data-micro-interaction="card">
+              <div class="card-divider">
+                <div class="grid-x">
+                  <div class="card-title cell small-10">
+                    <div class="icon"><i class="material-icons md-18">change_history</i></div>
+                    <div class="text">Element Name Here</div>
+                  </div>
+                  <div class="card-options small-2">
+                    <button class="button-option-setting" data-micro-interaction="option"><span class="icon"><i class="material-icons md-18">settings</i></span></button>
+                    <button class="button-option-drag" data-micro-interaction="card"><span class="icon"><i class="material-icons md-18">drag_handle</i></span></button>
+                  </div>
+                </div>
+              </div>
+              <div class="card-section -is-collapsed">
+                <div class="grid-x">
+                  <div class="medium-3 cell">
+                    <div class="form--input-select">
+                      <div class="switch tiny">
+                        <label class="switch-value" for="switchA-1">Show:</label>
+                        <input class="switch-input" id="switchA-1" type="checkbox" name="switchA-1">
+                        <label class="switch-paddle" for="switchA-1"><span class="show-for-sr">Edit Mode</span><span class="switch-active" aria-hidden="true">yes</span><span class="switch-inactive" aria-hidden="true">no</span></label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card--element-node card error" id="card-id-111" data-micro-interaction="card">
+              <div class="card-divider">
+                <div class="grid-x">
+                  <div class="card-title cell small-10">
+                    <div class="icon"><i class="material-icons md-18">change_history</i></div>
+                    <div class="text">Element Name Here</div>
+                  </div>
+                  <div class="card-options small-2">
+                    <button class="button-option-setting" data-micro-interaction="option"><span class="icon"><i class="material-icons md-18">settings</i></span></button>
+                    <button class="button-option-drag" data-micro-interaction="card"><span class="icon"><i class="material-icons md-18">drag_handle</i></span></button>
+                  </div>
+                </div>
+              </div>
+              <div class="card-section -is-collapsed">
+                <div class="grid-x">
+                  <div class="medium-3 cell">
+                    <div class="form--input-select">
+                      <div class="switch tiny">
+                        <label class="switch-value" for="switchA-1">Show:</label>
+                        <input class="switch-input" id="switchA-1" type="checkbox" name="switchA-1">
+                        <label class="switch-paddle" for="switchA-1"><span class="show-for-sr">Edit Mode</span><span class="switch-active" aria-hidden="true">yes</span><span class="switch-inactive" aria-hidden="true">no</span></label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card--element-node card secondary" id="card-id-121" data-micro-interaction="card">
+              <div class="card-divider">
+                <div class="grid-x">
+                  <div class="card-title cell small-10">
+                    <div class="icon"><i class="material-icons md-18">change_history</i></div>
+                    <div class="text">Element Name Here</div>
+                  </div>
+                  <div class="card-options small-2">
+                    <button class="button-option-setting" data-micro-interaction="option"><span class="icon"><i class="material-icons md-18">settings</i></span></button>
+                    <button class="button-option-drag" data-micro-interaction="card"><span class="icon"><i class="material-icons md-18">drag_handle</i></span></button>
+                  </div>
+                </div>
+              </div>
+              <div class="card-section -is-collapsed">
+                <div class="grid-x">
+                  <div class="medium-3 cell">
+                    <div class="form--input-select">
+                      <div class="switch tiny">
+                        <label class="switch-value" for="switchA-1">Show:</label>
+                        <input class="switch-input" id="switchA-1" type="checkbox" name="switchA-1">
+                        <label class="switch-paddle" for="switchA-1"><span class="show-for-sr">Edit Mode</span><span class="switch-active" aria-hidden="true">yes</span><span class="switch-inactive" aria-hidden="true">no</span></label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card--element-node card primary" id="card-id-421" data-micro-interaction="card">
+              <div class="card-divider">
+                <div class="grid-x">
+                  <div class="card-title cell small-10">
+                    <div class="icon"><i class="material-icons md-18">change_history</i></div>
+                    <div class="text">Element Name Here</div>
+                  </div>
+                  <div class="card-options small-2">
+                    <button class="button-option-setting" data-micro-interaction="option"><span class="icon"><i class="material-icons md-18">settings</i></span></button>
+                    <button class="button-option-drag" data-micro-interaction="card"><span class="icon"><i class="material-icons md-18">drag_handle</i></span></button>
+                  </div>
+                </div>
+              </div>
+              <div class="card-section -is-collapsed">
+                <div class="grid-x">
+                  <div class="medium-3 cell">
+                    <div class="form--input-select">
+                      <div class="switch tiny">
+                        <label class="switch-value" for="switchA-1as">Show:</label>
+                        <input class="switch-input" id="switchA-1as" type="checkbox" name="switchA-1as">
+                        <label class="switch-paddle" for="switchA-1as"><span class="show-for-sr">Edit Mode</span><span class="switch-active" aria-hidden="true">yes</span><span class="switch-inactive" aria-hidden="true">no</span></label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr><a name="Prompts"></a>
+            <h2 class="docs-heading" id="tooltip" data-magellan-target="tooltip">Prompts<a class="docs-heading-icon" href="#tooltip"></a></h2>
+            <div class="docs-code-live">
+              <div class="content--prompt callout alert" data-closable="">
+                <div class="grid-x grid-padding-x">
+                  <div class="icon cell small-1"><i class="material-icons md-24">error</i></div>
+                  <div class="text cell small-10"><span class="text">Lorem ipsum dolor sit amet, consectetur</span></div>
+                  <div class="btn cell small-1">
+                    <button class="close-button" aria-label="Dismiss alert" type="button" data-close=""><i class="material-icons md-18">close</i></button>
+                  </div>
+                </div>
+              </div>
+              <div class="content--prompt callout primary" data-closable="">
+                <div class="grid-x grid-padding-x">
+                  <div class="icon cell small-1"><i class="material-icons md-24">warning</i></div>
+                  <div class="text cell small-10"><span class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo nec libero vitae porttitor. Suspendisse ac sapien et ante condimentum iaculis. Ut dapibus ex vestibulum era.</span></div>
+                  <div class="btn cell small-1">
+                    <button class="close-button" aria-label="Dismiss alert" type="button" data-close=""><i class="material-icons md-18">close</i></button>
+                  </div>
+                </div>
+              </div>
+              <div class="content--prompt callout secondary" data-closable="">
+                <div class="grid-x grid-padding-x">
+                  <div class="icon cell small-1"><i class="material-icons md-24">priority_high</i></div>
+                  <div class="text cell small-10"><span class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo nec libero vitae porttitor. Suspendisse ac sapien et ante condimentum iaculis. Ut dapibus ex vestibulum erat pellentesque suscipit quis sed nisl. Sed lobortis neque sit amet ligula pharetra, ac hendrerit nulla laoreet. Cras in vulputate nulla. Donec vel blandit lectus. Duis fermentum sit amet mauris id iaculis. Praesent a sollicitudin enim. Curabitur quis sagittis sapien, sed tempus sapien. Nam non dictum sapien, in varius odio. Sed eu condimentum orci, nec mollis nulla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce quis elit non nisi pellentesque fermentum et in nibh.</span></div>
+                  <div class="btn cell small-1">
+                    <button class="close-button" aria-label="Dismiss alert" type="button" data-close=""><i class="material-icons md-18">close</i></button>
+                  </div>
+                </div>
+              </div>
+              <div class="content--prompt callout success" data-closable="">
+                <div class="grid-x grid-padding-x">
+                  <div class="icon cell small-1"><i class="material-icons md-24">thumb_up</i></div>
+                  <div class="text cell small-10"><span class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo nec libero vitae porttitor. Suspendisse ac sapien et ante condimentum iaculis. Ut dapibus ex vestibulum erat pellentesque suscipit quis sed nisl. Sed lobortis neque sit amet ligula pharetra, ac hendrerit nulla laoreet. Cras in vulputate nulla. Donec vel blandit lectus. Duis fermentum sit amet mauris id iaculis. Praesent a sollicitudin enim. Curabitur quis sagittis sapien, sed tempus sapien. Nam non dictum sapien, in varius odio. Sed eu condimentum orci, nec mollis nulla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce quis elit non nisi pellentesque fermentum et in nibh.</span></div>
+                  <div class="btn cell small-1">
+                    <button class="close-button" aria-label="Dismiss alert" type="button" data-close=""><i class="material-icons md-18">close</i></button>
+                  </div>
+                </div>
+              </div>
+              <div class="content--prompt callout warning" data-closable="">
+                <div class="grid-x grid-padding-x">
+                  <div class="icon cell small-1"><i class="material-icons md-24">error_outline</i></div>
+                  <div class="text cell small-10"><span class="text"> 
+                      <ul>
+                        <li>test 1</li>
+                        <li>test 1</li>
+                        <li>test 1</li>
+                        <li>test 1 test test longer</li>
+                      </ul></span></div>
+                  <div class="btn cell small-1">
+                    <button class="close-button" aria-label="Dismiss alert" type="button" data-close=""><i class="material-icons md-18">close</i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="panel--right cell small-1"></div>
+        </div>
+      </div>
+      <script src="js/app.js"></script>
+      <script>require('initialize');</script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+    </div>
+  </body>
+</html>

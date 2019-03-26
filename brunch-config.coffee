@@ -14,7 +14,7 @@ exports.config =
         'css/app.css' 
   
   paths:
-    public: 'build'
+    public: 'docs'
     watched: [ 'app' ]
   
   plugins: 

@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Space Foundation6 NCDR | home</title>
+    <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/zf/dt-1.10.16/af-2.2.2/fc-3.2.3/fh-3.1.3/r-2.2.0/sc-1.4.3/sl-1.2.3/datatables.min.css">
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+    <div class="off-canvas position-left" id="content--offcanvas-left-search" data-off-canvas data-transition="push" data-content-overlay="false">
+      <div class="grid-container">
+        <div class="grid-y">
+          <div class="small-1 cell">
+            <h2>Search Concepts</h2>
+            <button class="close-button button" aria-label="Close menu" type="button" data-close><span class="icon"><i class="material-icons md-18">close</i></span></button>
+          </div>
+          <div class="small-1 cell">
+            <div class="form--input-select">
+              <label>Option Selection</label>
+              <select required="">
+                <option value="type1">qgyjp</option>
+                <option value="type2">Concepts</option>
+                <option value="type3">Data Elements</option>
+              </select>
+            </div>
+          </div>
+          <div class="small-1 cell">
+            <div class="form--input-text">
+              <div class="switch">
+                <label class="switch-value" for="s2w">Swtich Test</label>
+                <input class="switch-input" id="s2w" type="checkbox" name="exampleSwitch">
+                <label class="switch-paddle" for="s2w"><span class="show-for-sr">Edit Mode</span><span class="switch-active" aria-hidden="true">yes</span><span class="switch-inactive" aria-hidden="true">no</span></label>
+              </div>
+            </div>
+          </div>
+          <div class="small-1">
+            <div class="form--input-text">
+              <label>Code</label>
+              <input type="text" placeholder="example here" aria-describedby="text-search" required="" pattern="number"><span class="form-error">enter search term</span>
+            </div>
+          </div>
+          <div class="small-1">
+            <div class="form--input-text">
+              <label>Concept ID</label>
+              <input type="text" placeholder="example here" aria-describedby="text-search" required="" pattern="number"><span class="form-error">enter search term</span>
+            </div>
+          </div>
+          <div class="small-1">
+            <div class="form--input-text">
+              <label>External References</label>
+              <input type="text" placeholder="example here" aria-describedby="text-search" required="" pattern="number"><span class="form-error">enter search term</span>
+            </div>
+          </div>
+          <div class="small-1">
+            <div class="form--input-text">
+              <label>Domain Concept</label>
+              <input type="text" placeholder="example here" aria-describedby="text-search" required="" pattern="number"><span class="form-error">enter search term</span>
+            </div>
+          </div><br>
+          <div class="small-1">
+            <button class="button button-off-canvas expanded success" type="submit" value="Submit">Apply<span class="icon"></span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="off-canvas position-right" id="content--offcanvas-right-updates" data-off-canvas data-transition="push" data-content-overlay="false">
+      <div class="grid-container">
+        <div class="grid-y">
+          <div class="small-1">
+            <h2>Updates</h2>
+            <button class="close-button button" aria-label="Close menu" type="button" data-close><span class="icon"><i class="material-icons md-18">close</i></span></button>
+          </div>
+          <div class="small-2">
+            <ul class="list--notification-items no-bullets">
+              <li><i class="material-icons md-12 has-tip" aria-hidden="true" data-tooltip="" aria-haspopup="true" data-disable-hover="false" tabindex="1" title="change by {username}">mode_edit</i><a> {element name} changed</a></li>
+              <li> <i class="material-icons md-12 has-tip" aria-hidden="true" data-tooltip="" aria-haspopup="true" data-disable-hover="false" tabindex="1" title="change by {username}">remove</i><a> {element name} removed</a></li>
+              <li> <i class="material-icons md-12 has-tip" aria-hidden="true" data-tooltip="" aria-haspopup="true" data-disable-hover="false" tabindex="1" title="change by {username}">add</i><a> {element name} added</a></li>
+              <li> <i class="material-icons md-12 has-tip" aria-hidden="true" data-tooltip="" aria-haspopup="true" data-disable-hover="false" tabindex="1" title="change by {username}">link</i><a> {element name} linked</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="off-canvas position-right" id="content--offcanvas-right-comments" data-off-canvas data-transition="push" data-content-overlay="false">
+      <div class="grid-container">
+        <div class="grid-y" data-sticky-container>
+          <div class="small-1">
+            <div class="sticky" data-sticky>
+              <h2>Comments</h2>
+              <button class="close-button button" aria-label="Close menu" type="button" data-close><span class="icon"><i class="material-icons md-18">close</i></span></button>
+            </div>
+          </div>
+          <div class="cell">
+            <div class="comment---project">
+              <div class="form--input-text -with-input-button">
+                <label>Testing Txt</label>
+                <input type="text" placeholder="1234" aria-describedby="exampleHelpText" required="" pattern="number" value="1212">
+                <button class="button button-appended"><span class="icon"><i class="material-icons md-16" aria-hidden="true">send</i></span></button>
+              </div>
+            </div>
+          </div>
+          <div class="cell">
+            <div class="comment---project">
+              <div class="form--input-text">
+                <label>comments</label>
+                <input type="text" placeholder="add comments" pattern="url">
+                <button class="button button-reply"><i class="material-icons md-18" aria-hidden="true">send</i></button>
+              </div>
+            </div>
+            <div class="comment---project"><small><span class="date">#/##/#### </span><span class="time">##:##PM</span></small>
+              <blockquote class="text--comment">Logic will get you from A to Z. Imagination will get you everywhere.
+                <cite>Albert Eintens </cite>
+                <button class="button button-off-canvas expanded success button-show" type="submit" value="Submit"> <span class="text">View </span><span class="counter">4 </span><span class="text">Replies </span></button>
+                <div class="comment---reply"><small><span class="date">#/##/#### </span><span class="time">##:##PM</span></small>
+                  <blockquote class="text--comment">If you cannot measure it, you cannot improve it.
+                    <cite>Lord Kelvin</cite>
+                  </blockquote>
+                </div>
+                <div class="comment---reply"><small><span class="date">#/##/#### </span><span class="time">##:##PM</span></small>
+                  <blockquote class="text--comment">If you want things to be different, perhaps the answer is to become different yourself.
+                    <cite>Norman Peale</cite>
+                  </blockquote>
+                </div>
+                <div class="comment---reply"><small><span class="date">#/##/#### </span><span class="time">##:##PM</span></small>
+                  <blockquote class="text--comment">Pay attention to what users do, not what they say
+                    <cite>Jakob Nielsen</cite>
+                  </blockquote>
+                </div>
+                <div class="form--input-text">
+                  <label>reply</label>
+                  <input type="text" placeholder="reply here" pattern="url">
+                  <button class="button button-reply"><i class="material-icons md-18" aria-hidden="true">reply</i></button>
+                </div>
+              </blockquote>
+            </div>
+            <div class="comment---project">
+              <blockquote class="text--comment">Usability testing shows you if something is usable. Beta testing shows you if people will actually use it.
+                <cite> Rachel Decker</cite>
+              </blockquote>
+              <div class="form--input-text">
+                <label>reply</label>
+                <input type="text" value="test value" placeholder="reply here" pattern="url">
+                <button class="button button-reply"><i class="material-icons md-18" aria-hidden="true">reply</i></button>
+              </div>
+            </div>
+            <div class="comment---project">
+              <blockquote class="text--comment">It always seems impossible until its done.
+                <cite>Nelson Mandela</cite>
+              </blockquote>
+              <div class="form--input-text">
+                <label>reply</label>
+                <input type="text" placeholder="reply here" pattern="url">
+                <button class="button button-reply"><i class="material-icons md-18" aria-hidden="true">reply</i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="off-canvas position-right" id="content--offcanvas-right-references" data-off-canvas data-transition="push" data-content-overlay="false">
+      <div class="grid-container">
+        <div class="grid-y">
+          <div class="small-1">
+            <h2>Cross References</h2>
+            <button class="close-button button" aria-label="Close menu" type="button" data-close><span class="icon"><i class="material-icons md-18">close</i></span></button>
+          </div>
+          <div class="small-2">
+            <div class="notification---project" data-closable>
+              <ul class="list--notification-items no-bullets">
+                <li><i class="material-icons md-12 has-tip" aria-hidden="true" data-tooltip="" aria-haspopup="true" data-disable-hover="false" tabindex="1" title="change by {username}">mode_edit</i><a> {element name} changed</a></li>
+                <li> <i class="material-icons md-12 has-tip" aria-hidden="true" data-tooltip="" aria-haspopup="true" data-disable-hover="false" tabindex="1" title="change by {username}">remove</i><a> {element name} removed</a></li>
+                <li> <i class="material-icons md-12 has-tip" aria-hidden="true" data-tooltip="" aria-haspopup="true" data-disable-hover="false" tabindex="1" title="change by {username}">add</i><a> {element name} added</a></li>
+                <li> <i class="material-icons md-12 has-tip" aria-hidden="true" data-tooltip="" aria-haspopup="true" data-disable-hover="false" tabindex="1" title="change by {username}">link</i><a> {element name} linked</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="off-canvas-content" id="content--page" data-off-canvas-content="">
+      <header class="content--banner">
+        <div class="grid-x">
+          <div class="banner--logo small-4 medium-2 large-1 cell"><img class="banner--logo-acc" src="https://tools.stage.acc.org/UMDT/Templates/graphics/logo_acc_md.png"></div>
+          <div class="banner--title small-6 medium-6 large-6 cell">
+            <h1 class="banner--title-text">Unified MetaData Tool <i class="material-icons md-18">crop</i></h1>
+          </div>
+          <div class="banner--users small-12 medium-4 large-4 cell">
+            <nav class="menu--nav"><a class="menu--nav-link button" data-micro-interaction="popup"><span class="text">User-anme</span><span class="icon"><i class="material-icons md-18">account_box</i></span></a><a class="menu--nav-link button" data-micro-interaction="popup"><span class="text">Logout </span><span class="icon"><i class="material-icons md-18">exit_to_app</i></span></a><a class="menu--nav-link chardin-btn-help button warning" data-micro-interaction="popup"><span class="text">HELP! </span><span class="icon"><i class="material-icons md-18">help</i></span></a></nav>
+          </div>
+        </div>
+      </header>
+      <div class="content--breadcrumb">
+        <div class="grid-x hide-for-small-only">
+          <div class="cell small-1"></div>
+          <div class="cell small-10">
+            <nav aria-label="You are here:" role="navigation">
+              <ul class="breadcrumbs--nav-list breadcrumbs">
+                <li class="breadcrumbs--nav-item"><a class="breadcrumbs--nav-link" href="index.html"><span class="icon"><i class="material-icons md-18">layers</i></span><span class="text">Templates</span></a></li>
+                <li class="breadcrumbs--nav-item"><span class="icon"><i class="material-icons md-18">insert_chart_outlined</i></span><span class="text">Reports</span></li>
+                <li class="breadcrumbs--nav-item"><span class="icon"><i class="material-icons md-18">insert_chart</i></span><span class="text">Reports Name Here</span></li>
+                <li class="breadcrumbs--nav-item"><span class="icon"><i class="material-icons md-18">format_line_spacing</i></span><span class="text">Section</span></li>
+                <li class="breadcrumbs--nav-item -is-green"> <span class="icon"><i class="material-icons md-18">bar_chart</i></span><span class="text">Report Line 1</span></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="content--page">
+        <div class="grid-x">
+          <div class="panel--left cell small-1">
+            <div class="grid-y pull-left">
+              <div class="cell small-1">
+                <button class="panel--side-button button" type="button" data-toggle="content--offcanvas-left-search"><span class="icon"><i class="material-icons md-18" aria-hidden="true">search</i></span><span class="counter is-hidden">6</span><span class="text">
+                     Search</span></button>
+              </div>
+              <div class="cell small-1">
+                <button class="panel--side-button button" type="button" data-toggle="content--offcanvas-left-filter"><span class="icon"><i class="material-icons md-18" aria-hidden="true">filter_list</i></span><span class="counter">6</span><span class="text">
+                     Filter</span></button>
+              </div>
+              <div class="cell small-1"><a class="panel--side-button button" href="dashboard.html"><span class="icon"><i class="material-icons md-18" aria-hidden="true">dashboard</i></span><span class="counter is-hidden">6</span><span class="text">
+                     Dashboard</span></a></div>
+              <div class="cell small-1"><a class="panel--side-button button" data-toggle="content--offcanvas-left-reports"><span class="icon"><i class="material-icons md-18" aria-hidden="true">sort</i></span><span class="counter">6</span><span class="text">
+                     Taxonomy</span></a></div>
+              <div class="cell small-1">
+                <ul class="vertical dropdown menu menu--dropdown" data-dropdown-menu>
+                  <li class="dropdown--item"><a class="panel--side-button button button--navigation"><span class="icon"><i class="fa fa-database" aria-hidden="true"></i></span><span class="counter is-hidden">6</span><span class="text">
+                         CCD*</span></a>
+                    <ul class="vertical menu nested">
+                      <li class="dropdown--item-sub"><a href="#"> <i class="material-icons md-18" aria-hidden="true">view_module</i>Concepts & Data Elements    </a></li>
+                      <li class="dropdown--item-sub"><a href="#"> <i class="material-icons md-18" aria-hidden="true">flip_to_back</i>Value Sets</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown--item"><a class="panel--side-button button button--navigation"><span class="icon"><i class="fa fa-database" aria-hidden="true"></i></span><span class="counter is-hidden">6</span><span class="text">
+                         TDD*</span></a>
+                    <ul class="vertical menu nested">
+                      <li class="dropdown--item-sub"><a href="#"> <i class="material-icons md-18" aria-hidden="true">list</i>Registries                            </a></li>
+                      <li class="dropdown--item-sub"><a href="#"> <i class="material-icons md-18" aria-hidden="true">view_module</i>Registries Elements</a></li>
+                      <li class="dropdown--item-sub"><a href="#"> <i class="material-icons md-18" aria-hidden="true">picture_in_picture</i>Registries Contraints</a></li>
+                      <li class="dropdown--item-sub"><a href="#"> <i class="material-icons md-18" aria-hidden="true">flip_to_front</i>Registries DataSets</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel--center cell small-10 medium-10 large-10">
+            <div class="panel--center-container grid-y medium-grid-frame" id="page--worspace">
+              <div class="cell shrink header medium-cell-block-container" id="list--headers">
+                <div class="grid-x">
+                  <div class="column--list column--list-concepts cell medium-2">
+                    <div class="grid-x" data-intro="Column Menus - shows contextual menu and actions items" data-position="right">
+                      <div class="panel--center-column-title small-10 medium-10 large-10 cell">
+                        <h6 class="panel--center-column-title-text h7">Metrix & Reporting</h6>
+                      </div>
+                      <div class="panel--center-column-options small-1 medium-1 large-1 cell">
+                        <button class="option-button button has-tip" data-tooltip="" aria-haspopup="true" data-disable-hover="false" tabindex="1" title="Expand All" , data-micro-interaction="expand"> <i class="material-icons md-14">add_box</i></button>
+                      </div>
+                      <div class="panel--center-column-options small-1 medium-1 large-1 cell">
+                        <button class="option-button button has-tip" data-tooltip="" aria-haspopup="true" data-disable-hover="false" tabindex="1" title="collapse column" data-micro-interaction="collapse"> <i class="material-icons md-14">skip_previous</i></button>
+                      </div>
+                    </div>
+                    <div class="panel--center-column-features cell"><i class="icon material-icons md-14">filter_list</i><i class="icon-clear material-icons md-14">close</i>
+                      <input class="feature--filter-input" id="filter-input" type="text" placeholder="quick a filter">
+                    </div>
+                    <div class="column--list-concepts-data cell medium-cell-block-y">
+                      <div id="data-list-author-metrix"></div>
+                    </div>
+                    <div class="column--list-concepts-counter cell" data-intro="Column View Conunter - shows what current view based on filter" data-position="right">
+                      <div class="grid-x">
+                        <div class="counter-selected small-6 medium-6 large-6 cell"><span class="icon"><i class="material-icons md-12">check</i></span><span class="total-selected">1   </span></div>
+                        <div class="counter-viewing small-6 medium-6 large-6 cell"><span class="icon"><i class="material-icons md-12">remove_red_eye</i></span><span class="total">1/2     </span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column--list column--list-concepts cell medium-2">
+                    <div class="grid-x">
+                      <div class="panel--center-column-title small-9 medium-9 large-9 cell">
+                        <h6 class="panel--center-column-title-text h7">Executive Report</h6>
+                      </div>
+                      <div class="panel--center-column-options small-1 medium-1 large-1 cell">
+                        <button class="option-button button has-tip" data-tooltip="" aria-haspopup="true" data-disable-hover="false" tabindex="1" title="Clone" data-micro-interaction="copy"> <i class="material-icons md-14">add_box</i></button>
+                      </div>
+                      <div class="panel--center-column-options small-1 medium-1 large-1 cell">
+                        <button class="option-button button has-tip" data-tooltip="" aria-haspopup="true" data-disable-hover="false" tabindex="1" title="Expand All" , data-micro-interaction="expand"> <i class="material-icons md-14">content_copy</i></button>
+                      </div>
+                      <div class="panel--center-column-options small-1 medium-1 large-1 cell">
+                        <button class="option-button button has-tip" data-tooltip="" aria-haspopup="true" data-disable-hover="false" tabindex="1" title="collapse column" data-micro-interaction="collapse"> <i class="material-icons md-14">skip_previous</i></button>
+                      </div>
+                    </div>
+                    <div class="panel--center-column-features cell"><i class="icon material-icons md-14">filter_list</i><i class="icon-clear material-icons md-14">close</i>
+                      <input class="feature--filter-input" type="text" placeholder="quick a filter">
+                    </div>
+                    <div class="column--list-concepts-data cell medium-cell-block-y">
+                      <div id="data-list-author-executive"></div>
+                    </div>
+                    <div class="column--list-concepts-counter cell">
+                      <div class="grid-x">
+                        <div class="counter-selected small-6 medium-6 large-6 cell"><span class="icon"><i class="material-icons md-12">check</i></span><span class="total-selected">1   </span></div>
+                        <div class="counter-viewing small-6 medium-6 large-6 cell"><span class="icon"><i class="material-icons md-12">remove_red_eye</i></span><span class="total">1/2         </span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column--list column--list-properties cell medium-2">
+                    <div class="grid-x">
+                      <div class="panel--center-column-title small-8 medium-8 large-8 cell">
+                        <h6 class="panel--center-column-title-text h7">Properties<span class="text-item">Item-Name</span></h6>
+                      </div>
+                      <div class="panel--center-column-options small-1 medium-2 large-1 cell"></div>
+                      <div class="panel--center-column-options small-1 medium-2 large-1 cell"></div>
+                      <div class="panel--center-column-options small-1 medium-2 large-1 cell"></div>
+                      <div class="panel--center-column-options small-1 medium-2 large-1 cell">
+                        <button class="option-button button has-tip" data-tooltip="" aria-haspopup="true" data-disable-hover="false" tabindex="1" title="collapse column" data-micro-interaction="collapse"> <i class="material-icons md-14">skip_previous</i></button>
+                      </div>
+                    </div>
+                    <div class="column--list-properties-data cell medium-cell-block-y">
+                      <form data-abide="7v3wyo-abide" novalidate=""></form>
+                      <div class="grid-x">
+                        <div class="cell small-6">
+                          <div class="form--input-text -is-required">
+                            <label>ID</label>
+                            <input type="text" placeholder="1234" value="78788" aria-describedby="exampleHelpText" required="" pattern="number"><span class="form-error">Yo, you had better fill this out, it's required.</span>
+                          </div>
+                        </div>
+                        <div class="cell small-6">
+                          <div class="form--input-text">
+                            <label>Internal Code</label>
+                            <input type="text" placeholder="Use me, or don't" value="78788" aria-describedby="exampleHelpTex" data-abide-ignore="">
+                          </div>
+                        </div>
+                        <div class="cell">
+                          <div class="form--input-text">
+                            <label>Title</label>
+                            <input type="text" placeholder="Use me, or don't" aria-describedby="exampleHelpTex" data-abide-ignore="">
+                          </div>
+                        </div>
+                      </div>
+                      <h7 class="title-properties">Major Categories</h7>
+                      <form data-abide="7v3wyo-abide" novalidate="">
+                        <div class="cell">
+                          <div class="form--input-text -is-required">
+                            <label>Name</label>
+                            <input type="text" placeholder="1234" aria-describedby="exampleHelpText" required="" pattern="number"><span class="form-error">Yo, you had better fill this out, it's required.</span>
+                          </div>
+                        </div>
+                        <div class="cell">
+                          <div class="form--input-text">
+                            <label>Shortname</label>
+                            <input type="text" placeholder="Use me, or don't" aria-describedby="exampleHelpTex" data-abide-ignore="">
+                          </div>
+                        </div>
+                      </form>
+                      <h7 class="title-properties">Minor Categories</h7>
+                      <form data-abide="7v3wyo-abide" novalidate="">
+                        <div class="cell">
+                          <div class="form--input-text -is-required">
+                            <label>Name</label>
+                            <input type="text" placeholder="1234" aria-describedby="exampleHelpText" required="" pattern="number"><span class="form-error">Yo, you had better fill this out, it's required.</span>
+                          </div>
+                        </div>
+                        <div class="cell">
+                          <div class="form--input-text">
+                            <label>Shortname</label>
+                            <input type="text" placeholder="Use me, or don't" aria-describedby="exampleHelpTex" data-abide-ignore="">
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="column--list-elements-counter cell">
+                      <div class="grid-x"></div>
+                    </div>
+                  </div>
+                  <div class="column--list-workspace cell medium-auto medium-cell-block-container">
+                    <div class="feature--tabs grid collapse">
+                      <div class="feature--tabs-list medium-3 cell">
+                        <ul class="tabs" id="example-tabs" data-tabs="" data-deep-link="true">
+                          <li class="tabs-title -is-editable is-active -is-locked">
+                            <div class="tab-icons"><span class="item-icon"><i class="material-icons md-14" aria-hidden="true">wifi</i></span><span class="item-id">555</span><span class="status-icon"><i class="material-icons md-14" aria-hidden="true">mode_edit </i></span><span class="tab-icon-close"><i class="material-icons md-14" aria-hidden="true">close </i></span></div><a href="#panelA" aria-selected="true"> <span class="text">Report Line 1</span></a>
+                          </li>
+                          <li class="tabs-title -is-broken">
+                            <div class="tab-icons"><span class="item-icon"><i class="material-icons md-14" aria-hidden="true">history</i></span><span class="item-id">555</span><span class="status-icon"><i class="material-icons md-14" aria-hidden="true">mode_edit </i></span><span class="tab-icon-close"><i class="material-icons md-14" aria-hidden="true">close </i></span></div><a href="#panelB" aria-selected="true"> <span class="text">Header Text</span></a>
+                          </li>
+                        </ul>
+                        <div class="tabs-content -is-editable" data-tabs-content="example-tabs">
+                          <div class="tabs-panel is-active" id="panelA">
+                            <div class="grid-y content--tab"> 
+                              <div class="cell small-1 workspace--options feature--edit-mode">
+                                <button>
+                                  <div class="icon"><i class="material-icons md-18">zoom_out_map</i></div>
+                                </button>
+                              </div>
+                              <div class="cell small-10 medium-cell-block-y workspace--form">
+                                <form data-abide="7v3wyo-abide" novalidate="">
+                                  <div class="grid-x grid-padding-x">
+                                    <div class="cell small-4">
+                                      <div class="form--input-text -is-required">
+                                        <label>Major Categories</label>
+                                        <input type="text" placeholder="1234" readonly aria-describedby="exampleHelpText" required="" pattern="number" value="1212"><span class="form-error">A name of the new create is required.</span>
+                                      </div>
+                                    </div>
+                                    <div class="cell small-4">
+                                      <div class="form--input-text -is-required">
+                                        <label>Minor Categories</label>
+                                        <input type="text" placeholder="1234" aria-describedby="exampleHelpText" required="" pattern="number" value="1212"><span class="form-error">A name of the new create is required.</span>
+                                      </div>
+                                    </div>
+                                    <div class="cell small-2">
+                                      <div class="form--input-text">
+                                        <div class="switch tiny switch-disable">
+                                          <label class="switch-value" for="swtich-active-s">Supressed</label>
+                                          <input class="switch-input" id="swtich-active-s" type="checkbox" name="exampleSwitch">
+                                          <label class="switch-paddle" for="swtich-active-s"><span class="show-for-sr">Edit Mode</span><span class="switch-active" aria-hidden="true"><i class="material-icons md-16" aria-hidden="true">visibility</i></span><span class="switch-inactive" aria-hidden="true"><i class="material-icons md-16" aria-hidden="true">visibility_off</i></span></label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="cell small-2">
+                                      <div class="form--input-text -is-required">
+                                        <label>ID</label>
+                                        <input type="text" placeholder="1234" aria-describedby="exampleHelpText" required="" pattern="number" value="1212"><span class="form-error">A name of the new create is required.</span>
+                                      </div>
+                                    </div>
+                                    <div class="cell small-8">
+                                      <div class="grid-y">
+                                        <div class="cell">
+                                          <div class="form--input-text -is-required -with-help-text -with-input-button">
+                                            <label>Algorithm</label>
+                                            <input type="text" placeholder="1234" aria-describedby="exampleHelpText" required="" pattern="number" value="1212">
+                                            <button class="button button-appended"><span class="icon"><i class="material-icons md-16" aria-hidden="true">exit_to_app</i></span></button><span class="form-error">A name of the new create is required.</span>
+                                            <p class="help-info" id="help3">Month date year timePM</p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="cell small-4">
+                                      <div class="grid-y">
+                                        <div class="cell">
+                                          <div class="form--input-text -is-required -with-help-text">
+                                            <label>Updated:</label>
+                                            <input type="text" placeholder="phrase" aria-describedby="exampleHelpText" value="Matt">
+                                            <p class="help-info" id="help3">Month date year timePM</p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="cell small-6">
+                                      <div class="grid-y">
+                                        <div class="cell">
+                                          <div class="form--input-text -is-required -with-help-text -with-input-button">
+                                            <label>Population</label>
+                                            <input type="text" placeholder="1234" aria-describedby="exampleHelpText" required="" pattern="number" value="Title">
+                                            <button class="button button-appended"><span class="icon"><i class="material-icons md-16" aria-hidden="true">exit_to_app</i></span></button><span class="form-error">A name of the new create is required.</span>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="cell small-6">
+                                      <div class="grid-y">
+                                        <div class="cell">
+                                          <div class="form--input-text -is-required -with-help-text -with-input-button">
+                                            <label>Lines Reported</label>
+                                            <input type="text" placeholder="1234" aria-describedby="exampleHelpText" required="" pattern="number" value="Detailed Selected Line">
+                                            <button class="button button-appended"><span class="icon"><i class="material-icons md-16" aria-hidden="true">exit_to_app</i></span></button><span class="form-error">A name of the new create is required.</span>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="cell small-12">
+                                      <div class="grid-y">
+                                        <div class="cell">
+                                          <div class="form--input-text -is-required">
+                                            <label>Line Text</label>
+                                            <input type="text" placeholder="phrase" aria-describedby="exampleHelpText" value="Matt">
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="cell small-12">
+                                      <div class="grid-y">
+                                        <div class="cell">
+                                          <div class="form--input-text -is-required">
+                                            <label>Line Text</label>
+                                            <input type="text" placeholder="phrase" aria-describedby="exampleHelpText" value="Matt">
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="cell divider-section">
+                                      <h6 class="divider-section-heading h7">Styling </h6>
+                                      <div class="divider-section-options">
+                                        <button>
+                                          <div class="icon"><i class="material-icons md-18">zoom_out_map</i></div>
+                                        </button>
+                                      </div>
+                                    </div>
+                                    <div class="cell small-4">
+                                      <div class="form--input-text -is-required warning">
+                                        <label>Indent</label>
+                                        <input type="text" placeholder="1234" aria-describedby="exampleHelpText" required="" pattern="number" value="1212"><span class="form-error">A name of the new create is required.</span>
+                                      </div>
+                                    </div>
+                                    <div class="cell small-4">
+                                      <div class="form--input-radio">
+                                        <fieldset>
+                                          <legend>Grey Background
+                                            <input id="quibRed" type="radio" name="quib" value="Red">
+                                          </legend>
+                                        </fieldset>
+                                      </div>
+                                    </div>
+                                    <div class="cell small-4">
+                                      <div class="form--input-text">
+                                        <div class="switch tiny">
+                                          <label class="switch-value" for="swtich-active-dd">Bold</label>
+                                          <input class="switch-input" id="swtich-active-dd" type="checkbox" name="exampleSwitch">
+                                          <label class="switch-paddle" for="swtich-active-dd"><span class="show-for-sr">Edit Mode</span><span class="switch-active" aria-hidden="true"><i class="material-icons md-16" aria-hidden="true">format_bold</i></span><span class="switch-inactive" aria-hidden="true"><i class="material-icons md-16" aria-hidden="true">format_italic</i></span></label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="cell divider-section">
+                                      <h6 class="divider-section-heading h7">Samples Inputs</h6>
+                                      <div class="divider-section-options">
+                                        <button>
+                                          <div class="icon"><i class="material-icons md-18">build</i></div>
+                                        </button>
+                                      </div>
+                                    </div>
+                                    <div class="cell small-4">
+                                      <div class="form--input-select warning">
+                                        <label>Population</label>
+                                        <select required="">
+                                          <option value="volvo">Volvo Car</option>
+                                          <option value="saab">Saab</option>
+                                          <option value="mercedes">Mercedes Longer</option>
+                                          <option value="audi">Audi</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                    <div class="cell small-4">
+                                      <div class="form--input-text -is-required warning">
+                                        <label>Test<span class="text">tetx</span><span class="icon"> <i class="material-icons md-16" aria-hidden="true">format_bold</i></span><span class="link"> <a>tetx</a></span></label>
+                                        <input type="text" placeholder="1234" aria-describedby="exampleHelpText" required="" pattern="number" value="1212"><span class="form-error">A name of the new create is required.</span>
+                                      </div>
+                                    </div>
+                                    <div class="cell divider-section">
+                                      <h6 class="divider-section-heading h7">Population Groups</h6>
+                                    </div>
+                                    <div class="cell small-12">
+                                      <div class="card--element-node card" id="card-id-1" data-micro-interaction="card">
+                                        <div class="card-divider">
+                                          <div class="grid-x">
+                                            <div class="card-title cell small-10">
+                                              <div class="icon"><i class="material-icons md-18">change_history</i></div>
+                                              <div class="text">Element Name Here</div>
+                                            </div>
+                                            <div class="card-options small-2">
+                                              <button class="button-option-setting" data-micro-interaction="option"><span class="icon"><i class="material-icons md-18">settings</i></span></button>
+                                              <button class="button-option-drag" data-micro-interaction="card"><span class="icon"><i class="material-icons md-18">drag_handle</i></span></button>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="card-section -is-expanded">
+                                          <div class="grid-x">
+                                            <div class="medium-3 cell">
+                                              <div class="form--input-text">
+                                                <div class="switch tiny">
+                                                  <label class="switch-value" for="switchA-1">Show</label>
+                                                  <input class="switch-input" id="switchA-1" type="checkbox" name="switchA-1">
+                                                  <label class="switch-paddle" for="switchA-1"><span class="show-for-sr">Edit Mode</span><span class="switch-active" aria-hidden="true"><i class="material-icons md-14" aria-hidden="true">visibility</i></span><span class="switch-inactive" aria-hidden="true"><i class="material-icons md-14" aria-hidden="true">visibility_off</i></span></label>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="medium-3 cell">
+                                              <div class="form--input-text">
+                                                <div class="switch tiny">
+                                                  <label class="switch-value" for="switchA-2">Show</label>
+                                                  <input class="switch-input" id="switchA-2" type="checkbox" name="switchA-2">
+                                                  <label class="switch-paddle" for="switchA-2"><span class="show-for-sr">Edit Mode</span><span class="switch-active" aria-hidden="true"><i class="material-icons md-14" aria-hidden="true">visibility</i></span><span class="switch-inactive" aria-hidden="true"><i class="material-icons md-14" aria-hidden="true">visibility_off</i></span></label>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="medium-3 cell">
+                                              <div class="form--input-select">
+                                                <label>Options</label>
+                                                <select required="">
+                                                  <option value="volvo">One</option>
+                                                  <option value="saab">Two</option>
+                                                  <option value="mercedes">Three</option>
+                                                </select>
+                                              </div>
+                                            </div>
+                                            <div class="medium-3 cell">
+                                              <div class="form--input-select">
+                                                <label>Options</label>
+                                                <select required="">
+                                                  <option value="volvo">One</option>
+                                                  <option value="saab">Two</option>
+                                                  <option value="mercedes">Three</option>
+                                                </select>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="card--element-group card" id="card-id-3" data-micro-interaction="card">
+                                        <div class="card-divider">
+                                          <div class="grid-x">
+                                            <div class="card-title cell small-10">
+                                              <div class="icon"><i class="material-icons md-18">mode_edit</i></div>
+                                              <div class="text">Group</div>
+                                              <div class="form--input-text">
+                                                <div class="switch tiny">
+                                                  <input class="switch-input" id="group-swi" type="checkbox" name="exampleSwitch">
+                                                  <label class="switch-paddle" for="group-swi"><span class="show-for-sr">Edit Mode</span><span class="switch-active" aria-hidden="true">
+                                                      <div class="text">AND</div></span><span class="switch-inactive" aria-hidden="true">
+                                                      <div class="text">OR</div></span></label>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="card-options small-2">
+                                              <button class="button-option-setting" data-micro-interaction="delete"><span class="icon"><i class="material-icons md-18">delete</i></span></button>
+                                              <button class="button-option-setting" data-micro-interaction="add"><span class="icon"><i class="material-icons md-18">library_add</i></span></button>
+                                              <button class="button-option-drag" data-micro-interaction="card"><span class="icon"><i class="material-icons md-18">drag_handle</i></span></button>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="card-section -is-expanded">
+                                          <div class="grid-x">
+                                            <div class="medium-12 cell">
+                                              <table id="data-table-concepts">
+                                                <colgroup>
+                                                  <col class="col-1">
+                                                  <col class="col-2">
+                                                  <col class="col-3">
+                                                </colgroup>
+                                                <thead>
+                                                  <tr>
+                                                    <th>date element</th>
+                                                    <th>operator</th>
+                                                    <th>value</th>
+                                                    <th> </th>
+                                                  </tr>
+                                                </thead>
+                                                <tbody></tbody>
+                                              </table>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="cell divider-section">
+                                      <h6 class="divider-section-heading h7">Query Sample</h6>
+                                    </div>
+                                  </div>
+                                </form>
+                              </div>
+                              <div class="cell small-1 workspace--controls">
+                                <div class="panel--center-bottom-controls float-right">
+                                  <button class="button success" data-micro-interaction="toggle">Save</button>
+                                  <button class="button alert" data-micro-interaction="toggle">Cancel</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="tabs-panel full" id="panelB">
+                            <div class="grid-y content--tab"> 
+                              <div class="cell small-1 workspace--options feature--edit-mode">
+                                <p class="h7 blurb small">Instructions: Lorem ipsum dolor sit amet, consectetur </p>
+                                <button>
+                                  <div class="icon"><i class="material-icons md-18">open_with</i></div>
+                                </button>
+                              </div>
+                              <div class="cell small-10 medium-cell-block-y workspace--form">
+                                <table class="data--table" id="data--table-sample">
+                                  <thead>
+                                    <tr>
+                                      <th width="200"> 
+                                        <div class="data--table-head" data-tooltip tabindex="1" title="One One One One One One Tou">One One One One One One Tou</div>
+                                      </th>
+                                      <th> 
+                                        <div class="data--table-head">Two Words</div>
+                                      </th>
+                                      <th width="150"> 
+                                        <div class="data--table-head">Three Words</div>
+                                      </th>
+                                      <th width="150"> 
+                                        <div class="data--table-head">Super Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Word Header</div>
+                                      </th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>1 Super Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Word Header</td>
+                                      <td>q</td>
+                                      <td>w</td>
+                                      <td>2</td>
+                                    </tr>
+                                    <tr>
+                                      <td> Super Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Word Header</td>
+                                      <td>T</td>
+                                      <td>Cw</td>
+                                      <td>we</td>
+                                    </tr>
+                                    <tr>
+                                      <td> Super Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Word Header</td>
+                                      <td>Thwus.</td>
+                                      <td>Cwre</td>
+                                      <td>we</td>
+                                    </tr>
+                                    <tr>
+                                      <td>1 Super Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Word Header</td>
+                                      <td>q</td>
+                                      <td>w</td>
+                                      <td>2</td>
+                                    </tr>
+                                    <tr>
+                                      <td>C Super Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Word Header</td>
+                                      <td>T</td>
+                                      <td>Cw</td>
+                                      <td>we</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Cww Super Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Word Header</td>
+                                      <td>Thwus.</td>
+                                      <td>Cwre</td>
+                                      <td>we</td>
+                                    </tr>
+                                    <tr>
+                                      <td>1 Super Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Word Header</td>
+                                      <td>q</td>
+                                      <td>w</td>
+                                      <td>2</td>
+                                    </tr>
+                                    <tr>
+                                      <td>C Super Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Long Word Header</td>
+                                      <td>T</td>
+                                      <td>Cw</td>
+                                      <td>we</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Cww</td>
+                                      <td>Thwus.</td>
+                                      <td>Cwre</td>
+                                      <td>we</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                              <div class="cell small-1 workspace--controls">
+                                <div class="panel--center-bottom-controls float-right">
+                                  <button class="button success" data-micro-interaction="toggle">Save</button>
+                                  <button class="button alert" data-micro-interaction="toggle">Cancel</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cell shrink footer"></div>
+          </div>
+          <div class="panel--right cell small-1">
+            <div class="grid-y">
+              <div class="cell small-1">
+                <button class="panel--side-button button" type="button" data-toggle="content--offcanvas-right-updates"><span class="counter">22</span><span class="text">
+                     Updates</span><span class="icon"><i class="material-icons md-18" aria-hidden="true">update</i></span></button>
+              </div>
+              <div class="cell small-1" data-intro="Off Canvas Side Panel - show context data base on project" data-position="left">
+                <button class="panel--side-button button" type="button" data-toggle="content--offcanvas-right-comments"><span class="counter">600</span><span class="text">
+                     Comments</span><span class="icon"><i class="material-icons md-18" aria-hidden="true">mode_comment</i></span></button>
+              </div>
+              <div class="cell small-1">
+                <button class="panel--side-button button" type="button" data-toggle="content--offcanvas-right-references"><span class="counter">6</span><span class="text">
+                     References</span><span class="icon"><i class="material-icons md-18" aria-hidden="true">merge_type</i></span></button>
+              </div>
+              <div class="cell small-1">
+                <button class="panel--side-button button" type="button" data-toggle="content--offcanvas-left-filter"><span class="counter">99</span><span class="text">Sample</span><span class="icon"><i class="material-icons md-18" aria-hidden="true">pan_tool</i></span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="js/app.js"></script>
+      <script>require('initialize');</script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+    </div>
+  </body>
+</html>

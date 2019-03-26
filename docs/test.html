@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Space Foundation6 NCDR | home</title>
+    <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/zf/dt-1.10.16/af-2.2.2/fc-3.2.3/fh-3.1.3/r-2.2.0/sc-1.4.3/sl-1.2.3/datatables.min.css">
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+    <div class="off-canvas position-left" id="content--offcanvas-left-reports" data-off-canvas data-transition="push" data-content-overlay="false">
+      <div class="grid-container">
+        <div class="grid-y">
+          <div class="small-1 cell">
+            <h2>Reports</h2>
+            <button class="close-button button" aria-label="Close menu" type="button" data-close><span class="icon"><i class="material-icons md-18">close</i></span></button>
+          </div>
+          <div class="small-1 cell">
+            <div class="form--input-dropdown"></div>
+            <label>Chose report type</label>
+            <select required="">
+              <option value="type1">Concepts</option>
+              <option value="type2">Data Elements</option>
+              <option value="type3">Value Sets</option>
+              <option value="type4">Parent Child</option>
+            </select>
+          </div>
+          <div class="small-1 cell">
+            <div class="form--input-dropdown"></div>
+            <label>Registry</label>
+            <select required="">
+              <option value="reg1">Reg1</option>
+              <option value="reg2">Reg2</option>
+              <option value="reg3">Reg2</option>
+              <option value="reg4">Reg4</option>
+            </select>
+          </div>
+          <div class="small-1 cell">
+            <div class="form--input-dropdown"></div>
+            <label>Registery Verison</label>
+            <select required="">
+              <option value="v1">v1</option>
+              <option value="v2">v2</option>
+              <option value="v3">v3</option>
+              <option value="v4">v4</option>
+            </select>
+          </div>
+          <div class="cell">
+            <div class="switch-input-space">
+              <div class="switch expanded">
+                <label class="switch-value" for="yes-no-1">Show Hidden Objects</label>
+                <input class="switch-input" id="yes-no-1" type="checkbox" name="exampleSwitch">
+                <label class="switch-paddle" for="yes-no-1"><span class="show-for-sr">Show Hidden Objects</span><span class="switch-active" aria-hidden="true">Show</span><span class="switch-inactive" aria-hidden="true">Hide</span></label>
+              </div>
+            </div>
+          </div><br>
+          <div class="small-1">
+            <button class="button button-off-canvas expanded success" type="submit" value="Submit">Generate Report<span class="icon"><i class="material-icons md-18" aria-hidden="true">file_download</i></span></button>
+          </div>
+          <div class="small-1">
+            <button class="button button-off-canvas expanded success" type="reset" value="Reset">Export Excel<span class="icon"><i class="material-icons md-18" aria-hidden="true">insert_drive_file</i></span></button>
+          </div>
+          <div class="small-1">
+            <button class="button button-off-canvas expanded success" type="reset" value="Reset">Export PDF<span class="icon"><i class="material-icons md-18" aria-hidden="true">insert_drive_file</i></span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="off-canvas position-left" id="content--offcanvas-left-filter" data-off-canvas data-transition="push" data-content-overlay="false">
+      <div class="grid-container">
+        <div class="grid-y">
+          <div class="small-1">
+            <h2>Filter</h2>
+            <button class="close-button button" aria-label="Close menu" type="button" data-close><span class="icon"><i class="material-icons md-18">close</i></span></button>
+          </div>
+          <div class="small-2">
+            <div class="form--input-checkbox">
+              <fieldset>
+                <legend>Please filter status:</legend>
+                <div class="grid-y">
+                  <div class="small-1">
+                    <input id="checkbox1" type="checkbox">
+                    <label for="checkbox1">Approved For Publish</label>
+                  </div>
+                  <div class="small-1">
+                    <input id="checkbox2" type="checkbox" required="">
+                    <label for="checkbox2">In Progress</label>
+                  </div>
+                  <div class="small-1">
+                    <input id="checkbox3" type="checkbox">
+                    <label for="checkbox3">In Review</label>
+                  </div>
+                  <div class="small-1">
+                    <input id="checkbox4" type="checkbox">
+                    <label for="checkbox4">On Hold</label>
+                  </div>
+                  <div class="small-1">
+                    <input id="checkbox5" type="checkbox">
+                    <label for="checkbox5">Registery Creation</label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+          <div class="small-1">
+            <button class="button button-off-canvas expanded success" type="submit" value="Submit">Search<span class="icon"><i class="material-icons md-18" aria-hidden="true">youtube_searched_for</i></span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="off-canvas position-left" id="content--offcanvas-left-search" data-off-canvas data-transition="push" data-content-overlay="false">
+      <div class="grid-container">
+        <div class="grid-y">
+          <div class="small-1">
+            <h2>Search: Projects</h2>
+            <button class="close-button button" aria-label="Close menu" type="button" data-close><span class="icon"><i class="material-icons md-18">close</i></span></button>
+          </div>
+          <div class="small-1">
+            <div class="form--input-text">
+              <label>search term</label>
+              <input type="text" placeholder="1234" aria-describedby="text-search" required="" pattern="number"><span class="form-error">enter search term</span>
+              <p class="help-text -has-error" id="text-search">Here's how you use this input field!</p>
+            </div>
+          </div>
+          <div class="small-8">
+            <div class="form--input-text">
+              <label>tags</label>
+              <input type="text" placeholder="Use me, or don't" aria-describedby="tag-search" data-abide-ignore="">
+              <p class="help-text" id="tag-search">This input is ignored by Abide using `data-abide-ignore`</p>
+            </div>
+          </div>
+          <div class="cell">
+            <div class="form--input-checkbox">
+              <fieldset>
+                <legend>Project status:</legend>
+                <div class="grid-y">
+                  <div class="small-1">
+                    <input id="checkbox1a" type="checkbox">
+                    <label for="checkbox1a">Approved For Publish</label>
+                  </div>
+                  <div class="small-1">
+                    <input id="checkbox2a" type="checkbox" required="">
+                    <label for="checkbox2a">In Progress</label>
+                  </div>
+                  <div class="small-1">
+                    <input id="checkbox3a" type="checkbox">
+                    <label for="checkbox3a">In Review</label>
+                  </div>
+                  <div class="small-1">
+                    <input id="checkbox4a" type="checkbox">
+                    <label for="checkbox4a">On Hold</label>
+                  </div>
+                  <div class="small-1">
+                    <input id="checkbox5a" type="checkbox">
+                    <label for="checkbox5a">Registery Creation</label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+          <div class="small-1">
+            <button class="button button-off-canvas expanded success" type="submit" value="Submit">Search<span class="icon"><i class="material-icons md-18" aria-hidden="true">youtube_searched_for</i></span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="off-canvas position-right" id="content--offcanvas-right-updates" data-off-canvas data-transition="push" data-content-overlay="false">
+      <div class="grid-container">
+        <div class="grid-y">
+          <div class="small-1">
+            <h2>Updates</h2>
+            <button class="close-button button" aria-label="Close menu" type="button" data-close><span class="icon"><i class="material-icons md-18">close</i></span></button>
+          </div>
+          <div class="small-2">
+            <ul class="list--notification-items no-bullets">
+              <li><i class="material-icons md-12 has-tip" aria-hidden="true" data-tooltip="" aria-haspopup="true" data-disable-hover="false" tabindex="1" title="change by {username}">mode_edit</i><a> {element name} changed</a></li>
+              <li> <i class="material-icons md-12 has-tip" aria-hidden="true" data-tooltip="" aria-haspopup="true" data-disable-hover="false" tabindex="1" title="change by {username}">remove</i><a> {element name} removed</a></li>
+              <li> <i class="material-icons md-12 has-tip" aria-hidden="true" data-tooltip="" aria-haspopup="true" data-disable-hover="false" tabindex="1" title="change by {username}">add</i><a> {element name} added</a></li>
+              <li> <i class="material-icons md-12 has-tip" aria-hidden="true" data-tooltip="" aria-haspopup="true" data-disable-hover="false" tabindex="1" title="change by {username}">link</i><a> {element name} linked</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="off-canvas position-right" id="content--offcanvas-right-comments" data-off-canvas data-transition="push" data-content-overlay="false">
+      <div class="grid-container">
+        <div class="grid-y" data-sticky-container>
+          <div class="small-1">
+            <div class="sticky" data-sticky>
+              <h2>Comments</h2>
+              <button class="close-button button" aria-label="Close menu" type="button" data-close><span class="icon"><i class="material-icons md-18">close</i></span></button>
+            </div>
+          </div>
+          <div class="cell">
+            <div class="comment---project">
+              <div class="form--input-text -with-input-button">
+                <label>Testing Txt</label>
+                <input type="text" placeholder="1234" aria-describedby="exampleHelpText" required="" pattern="number" value="1212">
+                <button class="button button-appended"><span class="icon"><i class="material-icons md-16" aria-hidden="true">send</i></span></button>
+              </div>
+            </div>
+          </div>
+          <div class="cell">
+            <div class="comment---project">
+              <div class="form--input-text">
+                <label>comments</label>
+                <input type="text" placeholder="add comments" pattern="url">
+                <button class="button button-reply"><i class="material-icons md-18" aria-hidden="true">send</i></button>
+              </div>
+            </div>
+            <div class="comment---project"><small><span class="date">#/##/#### </span><span class="time">##:##PM</span></small>
+              <blockquote class="text--comment">Logic will get you from A to Z. Imagination will get you everywhere.
+                <cite>Albert Eintens </cite>
+                <button class="button button-off-canvas expanded success button-show" type="submit" value="Submit"> <span class="text">View </span><span class="counter">4 </span><span class="text">Replies </span></button>
+                <div class="comment---reply"><small><span class="date">#/##/#### </span><span class="time">##:##PM</span></small>
+                  <blockquote class="text--comment">If you cannot measure it, you cannot improve it.
+                    <cite>Lord Kelvin</cite>
+                  </blockquote>
+                </div>
+                <div class="comment---reply"><small><span class="date">#/##/#### </span><span class="time">##:##PM</span></small>
+                  <blockquote class="text--comment">If you want things to be different, perhaps the answer is to become different yourself.
+                    <cite>Norman Peale</cite>
+                  </blockquote>
+                </div>
+                <div class="comment---reply"><small><span class="date">#/##/#### </span><span class="time">##:##PM</span></small>
+                  <blockquote class="text--comment">Pay attention to what users do, not what they say
+                    <cite>Jakob Nielsen</cite>
+                  </blockquote>
+                </div>
+                <div class="form--input-text">
+                  <label>reply</label>
+                  <input type="text" placeholder="reply here" pattern="url">
+                  <button class="button button-reply"><i class="material-icons md-18" aria-hidden="true">reply</i></button>
+                </div>
+              </blockquote>
+            </div>
+            <div class="comment---project">
+              <blockquote class="text--comment">Usability testing shows you if something is usable. Beta testing shows you if people will actually use it.
+                <cite> Rachel Decker</cite>
+              </blockquote>
+              <div class="form--input-text">
+                <label>reply</label>
+                <input type="text" value="test value" placeholder="reply here" pattern="url">
+                <button class="button button-reply"><i class="material-icons md-18" aria-hidden="true">reply</i></button>
+              </div>
+            </div>
+            <div class="comment---project">
+              <blockquote class="text--comment">It always seems impossible until its done.
+                <cite>Nelson Mandela</cite>
+              </blockquote>
+              <div class="form--input-text">
+                <label>reply</label>
+                <input type="text" placeholder="reply here" pattern="url">
+                <button class="button button-reply"><i class="material-icons md-18" aria-hidden="true">reply</i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="off-canvas position-right" id="content--offcanvas-right-references" data-off-canvas data-transition="push" data-content-overlay="false">
+      <div class="grid-container">
+        <div class="grid-y">
+          <div class="small-1">
+            <h2>Cross References</h2>
+            <button class="close-button button" aria-label="Close menu" type="button" data-close><span class="icon"><i class="material-icons md-18">close</i></span></button>
+          </div>
+          <div class="small-2">
+            <div class="notification---project" data-closable>
+              <ul class="list--notification-items no-bullets">
+                <li><i class="material-icons md-12 has-tip" aria-hidden="true" data-tooltip="" aria-haspopup="true" data-disable-hover="false" tabindex="1" title="change by {username}">mode_edit</i><a> {element name} changed</a></li>
+                <li> <i class="material-icons md-12 has-tip" aria-hidden="true" data-tooltip="" aria-haspopup="true" data-disable-hover="false" tabindex="1" title="change by {username}">remove</i><a> {element name} removed</a></li>
+                <li> <i class="material-icons md-12 has-tip" aria-hidden="true" data-tooltip="" aria-haspopup="true" data-disable-hover="false" tabindex="1" title="change by {username}">add</i><a> {element name} added</a></li>
+                <li> <i class="material-icons md-12 has-tip" aria-hidden="true" data-tooltip="" aria-haspopup="true" data-disable-hover="false" tabindex="1" title="change by {username}">link</i><a> {element name} linked</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="off-canvas-content" id="content--page" data-off-canvas-content="">
+      <header class="content--banner">
+        <div class="grid-x">
+          <div class="banner--logo small-4 medium-2 large-1 cell"><img class="banner--logo-acc" src="https://tools.stage.acc.org/UMDT/Templates/graphics/logo_acc_md.png"></div>
+          <div class="banner--title small-6 medium-6 large-6 cell">
+            <h1 class="banner--title-text">Unified MetaData Tool <i class="material-icons md-18">crop</i></h1>
+          </div>
+          <div class="banner--users small-12 medium-4 large-4 cell">
+            <nav class="menu--nav"><a class="menu--nav-link button" data-micro-interaction="popup"><span class="text">User-anme</span><span class="icon"><i class="material-icons md-18">account_box</i></span></a><a class="menu--nav-link button" data-micro-interaction="popup"><span class="text">Logout </span><span class="icon"><i class="material-icons md-18">exit_to_app</i></span></a><a class="menu--nav-link chardin-btn-help button warning" data-micro-interaction="popup"><span class="text">HELP! </span><span class="icon"><i class="material-icons md-18">help</i></span></a></nav>
+          </div>
+        </div>
+      </header>
+      <div class="content--prompt callout success" data-closable>
+        <div class="grid-x grid-padding-x">
+          <div class="icon cell small-1"><i class="material-icons md-24">new_releases</i></div>
+          <div class="text cell small-10">
+            <ul class="small"> 
+              <li><a href="kitchensink.html#Forms">FIX: IE/Edge select dropdown (no icon arrow) - 1/07/19</a></li>
+              <li><a href="workspace-author.html#panelA">FIX: tree view children alignment and selection styling - 1/07/19</a></li>
+              <li><a href="workspace-author.html#panelA">ADDED: styling for tree items that are disabled - 1/07/19</a></li>
+              <li><a href="workspace-author.html#panelA">ADDED: button in section divider - 1/07/19</a></li>
+              <li><a href="kitchensink.html#Prompts">OVERHUAL: Project Page (with Quick Ations, Tab Action Menu) - 10/25/18</a></li>
+              <li><a href="kitchensink.html#Prompts">ADDED: 'Form Composer' HTML Screen - 10/25/18</a></li>
+              <li><a href="kitchensink.html#Prompts">ADDED: 'Metric Authoring Tool' HTML Screen - 10/27/18</a></li>
+            </ul>
+          </div>
+          <div class="btn cell small-1">
+            <button class="close-button" aria-label="Dismiss alert" type="button" data-close=""><i class="material-icons md-18">close</i></button>
+          </div>
+        </div>
+      </div>
+      <div class="content--breadcrumb">
+        <div class="grid-x hide-for-small-only">
+          <div class="cell small-1"></div>
+          <div class="cell small-10">
+            <nav aria-label="You are here:" role="navigation">
+              <ul class="breadcrumbs--nav-list breadcrumbs">
+                <li class="breadcrumbs--nav-item"><a class="breadcrumbs--nav-link" href="#"><span class="icon"><i class="material-icons md-18">folder_special</i></span><span class="text">project</span></a></li>
+                <li class="breadcrumbs--nav-item"><a class="breadcrumbs--nav-link" href="#"> <span class="icon"><i class="material-icons md-18">save</i></span><span class="text">CDD!</span></a></li>
+                <li class="breadcrumbs--nav-item"><a class="breadcrumbs--nav-link" href="#"> <span class="icon"><i class="material-icons md-18">lightbulb_outline</i></span><span class="text">concept</span></a></li>
+                <li class="breadcrumbs--nav-item"><span class="icon"><i class="material-icons md-18">change_history</i></span><span class="text">data element</span></li>
+                <li class="breadcrumbs--nav-item"> <span class="icon"><i class="material-icons md-18">mode_edit</i></span><span class="text">element*</span></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="content--page">
+        <div class="grid-x">
+          <div class="panel--left cell small-1">
+            <div class="grid-y pull-left">
+              <div class="cell small-1"><a class="panel--side-button button" href="dashboard.html"><span class="icon"><i class="material-icons md-18" aria-hidden="true">dashboard</i></span><span class="counter is-hidden">6</span><span class="text">
+                     Dashboard</span></a></div>
+              <div class="cell small-1"><a class="panel--side-button button" data-toggle="content--offcanvas-left-reports"><span class="icon"><i class="material-icons md-18" aria-hidden="true">sort</i></span><span class="counter">6</span><span class="text">
+                     Taxonomy</span></a></div>
+              <div class="cell small-1"><a class="panel--side-button button success"><span class="icon"> <i class="material-icons md-18" aria-hidden="true">folder_special</i></span><span class="counter is-hidden">6</span><span class="text">
+                     Create Project</span></a></div>
+              <div class="cell small-1"><a class="panel--side-button button button--navigation warning"><span class="icon"><i class="fa fa-database" aria-hidden="true"></i></span><span class="counter is-hidden">6</span><span class="text">
+                     TDD</span></a></div>
+              <div class="cell small-1"><a class="panel--side-button button button--navigation warning"><span class="icon"><i class="fa fa-database" aria-hidden="true"></i></span><span class="counter is-hidden">6</span><span class="text">
+                     CCD</span></a></div>
+              <div class="cell small-1">
+                <button class="panel--side-button button" type="button" data-toggle="content--offcanvas-left-search"><span class="icon"><i class="material-icons md-18" aria-hidden="true">search</i></span><span class="counter is-hidden">6</span><span class="text">
+                     Search</span></button>
+              </div>
+              <div class="cell small-1">
+                <button class="panel--side-button button" type="button" data-toggle="content--offcanvas-left-reports"><span class="icon"><i class="material-icons md-18" aria-hidden="true">equalizer</i></span><span class="counter">6</span><span class="text">
+                     Reports</span></button>
+              </div>
+              <div class="cell small-1">
+                <button class="panel--side-button button" type="button" data-toggle="content--offcanvas-left-filter"><span class="icon"><i class="material-icons md-18" aria-hidden="true">filter_list</i></span><span class="counter">6</span><span class="text">
+                     Filter</span></button>
+              </div>
+              <hr>
+              <div class="cell small-1">
+                <button class="panel--side-button button" type="button" data-toggle="content--offcanvas-left-filter"><span class="icon"><i class="material-icons md-18" aria-hidden="true">pan_tool</i></span><span class="counter">6</span><span class="text">Sampler Longer Longer</span></button>
+              </div>
+              <div class="cell small-1">
+                <button class="panel--side-button button" type="button" data-toggle="content--offcanvas-left-filter"><span class="icon"><i class="material-icons md-18" aria-hidden="true">pan_tool</i></span><span class="counter">6</span><span class="text">Sampler</span></button>
+              </div>
+              <div class="cell small-1"><a class="panel--side-button button success"><span class="icon"> <i class="material-icons md-18" aria-hidden="true">folder_special</i></span><span class="counter is-hidden">6</span><span class="text">
+                     Longer Long Text Text</span></a></div>
+            </div>
+          </div>
+          <div class="panel--center cell small-10 medium-10 large-10">
+            <div class="grid-y medium-grid-frame">
+              <div class="cell shrink header medium-cell-block-container">
+                <h1>Grid Frame Header</h1>
+                <div class="grid-x grid-padding-x">
+                  <div class="cell medium-4">A medium 4 cell</div>
+                  <div class="cell medium-4 medium-cell-block">
+                    <p style="width:80vw;">A medium 4 cell block... on medium this content should overflow and let you horizontally scroll across... one might use this for an array of options</p>
+                  </div>
+                  <div class="cell medium-4">A medium 4 cell</div>
+                </div>
+              </div>
+              <div class="cell medium-auto medium-cell-block-container">
+                <div class="grid-x grid-padding-x">
+                  <div class="cell medium-4 medium-cell-block-y">
+                    <h2>Independent scrolling sidebar</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lacus odio, accumsan id ullamcorper eget, varius nec erat. Nulla facilisi. Donec dui felis, euismod nec finibus vitae, dapibus quis arcu. Maecenas tempor et ipsum quis venenatis. Ut posuere sed augue sit amet efficitur. Sed imperdiet, justo id tempus rhoncus, est est viverra turpis, non vulputate magna lectus et nisl. Pellentesque ultrices porttitor vehicula. Ut aliquet efficitur ligula, a consectetur felis. Proin tristique ut augue nec luctus. Curabitur a sapien pretium, auctor elit a, efficitur erat. Donec tincidunt dui vel velit bibendum euismod. Cras vitae nibh dui. Aliquam erat volutpat. Etiam sit amet arcu a erat efficitur facilisis. Ut viverra dapibus turpis, et ornare justo. Integer in dui cursus, dignissim tortor a, hendrerit risus.</p>
+                    <p>Suspendisse pulvinar, massa iaculis feugiat lobortis, dolor sapien vestibulum nulla, vel cursus tellus leo in lorem. Aliquam eu placerat urna. Suspendisse sed viverra orci, ut mattis neque. Fusce non ultrices nisi. In sagittis varius mollis. Quisque dolor quam, consectetur eu lacinia ac, ullamcorper vel arcu. Nullam mattis imperdiet nulla sed ornare. Praesent tristique, est id eleifend vestibulum, neque nibh condimentum ex, nec lobortis purus justo a libero. Phasellus id ex ac nunc hendrerit hendrerit. Nullam urna ipsum, rutrum at fringilla vel, venenatis non purus. Maecenas egestas ex vitae venenatis molestie. Ut et odio egestas, accumsan neque et, viverra nisl. Sed faucibus nec nulla sed imperdiet. Fusce quis sem ac urna semper tempor a id elit. Nulla fringilla vitae sapien a vehicula.</p>
+                  </div>
+                  <div class="cell medium-8 medium-cell-block-y">
+                    <h2>Independent scrolling body</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lacus odio, accumsan id ullamcorper eget, varius nec erat. Nulla facilisi. Donec dui felis, euismod nec finibus vitae, dapibus quis arcu. Maecenas tempor et ipsum quis venenatis. Ut posuere sed augue sit amet efficitur. Sed imperdiet, justo id tempus rhoncus, est est viverra turpis, non vulputate magna lectus et nisl. Pellentesque ultrices porttitor vehicula. Ut aliquet efficitur ligula, a consectetur felis. Proin tristique ut augue nec luctus. Curabitur a sapien pretium, auctor elit a, efficitur erat. Donec tincidunt dui vel velit bibendum euismod. Cras vitae nibh dui. Aliquam erat volutpat. Etiam sit amet arcu a erat efficitur facilisis. Ut viverra dapibus turpis, et ornare justo. Integer in dui cursus, dignissim tortor a, hendrerit risus.</p>
+                    <p>Suspendisse pulvinar, massa iaculis feugiat lobortis, dolor sapien vestibulum nulla, vel cursus tellus leo in lorem. Aliquam eu placerat urna. Suspendisse sed viverra orci, ut mattis neque. Fusce non ultrices nisi. In sagittis varius mollis. Quisque dolor quam, consectetur eu lacinia ac, ullamcorper vel arcu. Nullam mattis imperdiet nulla sed ornare. Praesent tristique, est id eleifend vestibulum, neque nibh condimentum ex, nec lobortis purus justo a libero. Phasellus id ex ac nunc hendrerit hendrerit. Nullam urna ipsum, rutrum at fringilla vel, venenatis non purus. Maecenas egestas ex vitae venenatis molestie. Ut et odio egestas, accumsan neque et, viverra nisl. Sed faucibus nec nulla sed imperdiet. Fusce quis sem ac urna semper tempor a id elit. Nulla fringilla vitae sapien a vehicula.</p>
+                    <p>Nullam vestibulum lorem nec lectus egestas, nec ullamcorper diam maximus. Maecenas condimentum, nibh at blandit semper, ex erat tempus magna, id maximus neque velit accumsan nibh. Aenean dignissim lorem eu nisl laoreet vestibulum. Vivamus efficitur et augue vitae tincidunt. Etiam et magna felis. Integer mattis, nisi aliquet scelerisque blandit, ex mi sodales ante, eget accumsan quam magna et ligula. Curabitur id tristique leo. Proin rutrum mi vitae enim rhoncus, at cursus neque eleifend. Integer ultrices volutpat tellus ac porta. Fusce sollicitudin venenatis lacinia. Fusce ante lorem, gravida semper varius non, pharetra non erat. Sed dapibus arcu turpis, ac sollicitudin nibh lacinia vel. Nullam at enim porta, luctus metus sit amet, rutrum odio. Cras tempor enim vel pellentesque sollicitudin. Maecenas ullamcorper, sem non accumsan volutpat, neque tortor pulvinar orci, ut ultrices ligula lorem ut risus.</p>
+                    <p>Aliquam facilisis, nibh eget posuere suscipit, arcu sapien iaculis odio, in molestie dolor lectus vitae sem. Cras id nunc mollis mi rutrum dapibus. Quisque rutrum a augue at scelerisque. Praesent faucibus ac enim vitae gravida. Sed et sodales elit. Duis magna lectus, interdum sit amet metus a, sagittis varius magna. Proin nibh lectus, egestas a luctus ut, dapibus et enim. Curabitur fringilla ipsum vitae nunc imperdiet consectetur eget non neque. Suspendisse ultricies odio quis lorem vulputate, ac vulputate turpis feugiat. Maecenas posuere rhoncus orci, in ornare velit suscipit tempor. Curabitur pretium nisl id lorem placerat consequat. In quis quam eros. Nam mattis elit eu quam sagittis, in varius erat tempor.</p>
+                    <p>Fusce felis magna, pellentesque eget mollis a, rutrum id eros. Curabitur auctor varius arcu a consequat. Phasellus quis pulvinar enim, eu ultricies justo. Pellentesque risus libero, dapibus at erat ultricies, gravida varius erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla tempus, justo ut laoreet mollis, nunc tellus convallis urna, vel pretium dui velit eget ligula. Aliquam semper sed nulla a molestie. Maecenas at egestas massa, vitae aliquam mi. Fusce nec sem egestas, pretium lacus non, tincidunt sapien. Sed tristique odio at ultricies vulputate. Integer et convallis augue, eu aliquam enim. Mauris ut faucibus diam. Donec vulputate nunc sed congue accumsan. Etiam lobortis nisi quis lacinia pharetra.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="cell shrink footer">
+                <h3>Here's my footer</h3>
+              </div>
+            </div>
+          </div>
+          <div class="panel--right cell small-1">
+            <div class="grid-y">
+              <div class="cell small-1">
+                <button class="panel--side-button button" type="button" data-toggle="content--offcanvas-right-updates"><span class="counter">22</span><span class="text">
+                     Updates</span><span class="icon"><i class="material-icons md-18" aria-hidden="true">update</i></span></button>
+              </div>
+              <div class="cell small-1" data-intro="Off Canvas Side Panel - show context data base on project" data-position="left">
+                <button class="panel--side-button button" type="button" data-toggle="content--offcanvas-right-comments"><span class="counter">600</span><span class="text">
+                     Comments</span><span class="icon"><i class="material-icons md-18" aria-hidden="true">mode_comment</i></span></button>
+              </div>
+              <div class="cell small-1">
+                <button class="panel--side-button button" type="button" data-toggle="content--offcanvas-right-references"><span class="counter">6</span><span class="text">
+                     References</span><span class="icon"><i class="material-icons md-18" aria-hidden="true">merge_type</i></span></button>
+              </div>
+              <div class="cell small-1">
+                <button class="panel--side-button button" type="button" data-toggle="content--offcanvas-left-filter"><span class="counter">99</span><span class="text">Sample</span><span class="icon"><i class="material-icons md-18" aria-hidden="true">pan_tool</i></span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="js/app.js"></script>
+      <script>require('initialize');</script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+    </div>
+  </body>
+</html>

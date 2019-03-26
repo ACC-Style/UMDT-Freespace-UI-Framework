@@ -1,0 +1,1831 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Space Foundation6 NCDR | home</title>
+    <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/zf/dt-1.10.16/af-2.2.2/fc-3.2.3/fh-3.1.3/r-2.2.0/sc-1.4.3/sl-1.2.3/datatables.min.css">
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body class="-is-not-fullscreen">
+    <div class="off-canvas position-left" id="content--offcanvas-left-search" data-off-canvas data-transition="push" data-content-overlay="false">
+      <div class="grid-container">
+        <div class="grid-y">
+          <div class="small-1 cell">
+            <h2>Search Concepts</h2>
+            <button class="close-button button" aria-label="Close menu" type="button" data-close><span class="icon"><i class="material-icons md-18">close</i></span></button>
+          </div>
+          <div class="small-1 cell">
+            <div class="form--input-select">
+              <label>Option Selection</label>
+              <select required="">
+                <option value="type1">qgyjp</option>
+                <option value="type2">Concepts</option>
+                <option value="type3">Data Elements</option>
+              </select>
+            </div>
+          </div>
+          <div class="small-1 cell">
+            <div class="form--input-text">
+              <div class="switch">
+                <label class="switch-value" for="s2w">Swtich Test</label>
+                <input class="switch-input" id="s2w" type="checkbox" name="exampleSwitch">
+                <label class="switch-paddle" for="s2w"><span class="show-for-sr">Edit Mode</span><span class="switch-active" aria-hidden="true">yes</span><span class="switch-inactive" aria-hidden="true">no</span></label>
+              </div>
+            </div>
+          </div>
+          <div class="small-1">
+            <div class="form--input-text">
+              <label>Code</label>
+              <input type="text" placeholder="example here" aria-describedby="text-search" required="" pattern="number"><span class="form-error">enter search term</span>
+            </div>
+          </div>
+          <div class="small-1">
+            <div class="form--input-text">
+              <label>Concept ID</label>
+              <input type="text" placeholder="example here" aria-describedby="text-search" required="" pattern="number"><span class="form-error">enter search term</span>
+            </div>
+          </div>
+          <div class="small-1">
+            <div class="form--input-text">
+              <label>External References</label>
+              <input type="text" placeholder="example here" aria-describedby="text-search" required="" pattern="number"><span class="form-error">enter search term</span>
+            </div>
+          </div>
+          <div class="small-1">
+            <div class="form--input-text">
+              <label>Domain Concept</label>
+              <input type="text" placeholder="example here" aria-describedby="text-search" required="" pattern="number"><span class="form-error">enter search term</span>
+            </div>
+          </div><br>
+          <div class="small-1">
+            <button class="button button-off-canvas expanded success" type="submit" value="Submit">Apply<span class="icon"></span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="off-canvas position-right" id="content--offcanvas-right-updates" data-off-canvas data-transition="push" data-content-overlay="false">
+      <div class="grid-container">
+        <div class="grid-y">
+          <div class="small-1">
+            <h2>Updates</h2>
+            <button class="close-button button" aria-label="Close menu" type="button" data-close><span class="icon"><i class="material-icons md-18">close</i></span></button>
+          </div>
+          <div class="small-2">
+            <ul class="list--notification-items no-bullets">
+              <li><i class="material-icons md-12 has-tip" aria-hidden="true" data-tooltip="" aria-haspopup="true" data-disable-hover="false" tabindex="1" title="change by {username}">mode_edit</i><a> {element name} changed</a></li>
+              <li> <i class="material-icons md-12 has-tip" aria-hidden="true" data-tooltip="" aria-haspopup="true" data-disable-hover="false" tabindex="1" title="change by {username}">remove</i><a> {element name} removed</a></li>
+              <li> <i class="material-icons md-12 has-tip" aria-hidden="true" data-tooltip="" aria-haspopup="true" data-disable-hover="false" tabindex="1" title="change by {username}">add</i><a> {element name} added</a></li>
+              <li> <i class="material-icons md-12 has-tip" aria-hidden="true" data-tooltip="" aria-haspopup="true" data-disable-hover="false" tabindex="1" title="change by {username}">link</i><a> {element name} linked</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="off-canvas position-right" id="content--offcanvas-right-comments" data-off-canvas data-transition="push" data-content-overlay="false">
+      <div class="grid-container">
+        <div class="grid-y" data-sticky-container>
+          <div class="small-1">
+            <div class="sticky" data-sticky>
+              <h2>Comments</h2>
+              <button class="close-button button" aria-label="Close menu" type="button" data-close><span class="icon"><i class="material-icons md-18">close</i></span></button>
+            </div>
+          </div>
+          <div class="cell">
+            <div class="comment---project">
+              <div class="form--input-text -with-input-button">
+                <label>Testing Txt</label>
+                <input type="text" placeholder="1234" aria-describedby="exampleHelpText" required="" pattern="number" value="1212">
+                <button class="button button-appended"><span class="icon"><i class="material-icons md-16" aria-hidden="true">send</i></span></button>
+              </div>
+            </div>
+          </div>
+          <div class="cell">
+            <div class="comment---project">
+              <div class="form--input-text">
+                <label>comments</label>
+                <input type="text" placeholder="add comments" pattern="url">
+                <button class="button button-reply"><i class="material-icons md-18" aria-hidden="true">send</i></button>
+              </div>
+            </div>
+            <div class="comment---project"><small><span class="date">#/##/#### </span><span class="time">##:##PM</span></small>
+              <blockquote class="text--comment">Logic will get you from A to Z. Imagination will get you everywhere.
+                <cite>Albert Eintens </cite>
+                <button class="button button-off-canvas expanded success button-show" type="submit" value="Submit"> <span class="text">View </span><span class="counter">4 </span><span class="text">Replies </span></button>
+                <div class="comment---reply"><small><span class="date">#/##/#### </span><span class="time">##:##PM</span></small>
+                  <blockquote class="text--comment">If you cannot measure it, you cannot improve it.
+                    <cite>Lord Kelvin</cite>
+                  </blockquote>
+                </div>
+                <div class="comment---reply"><small><span class="date">#/##/#### </span><span class="time">##:##PM</span></small>
+                  <blockquote class="text--comment">If you want things to be different, perhaps the answer is to become different yourself.
+                    <cite>Norman Peale</cite>
+                  </blockquote>
+                </div>
+                <div class="comment---reply"><small><span class="date">#/##/#### </span><span class="time">##:##PM</span></small>
+                  <blockquote class="text--comment">Pay attention to what users do, not what they say
+                    <cite>Jakob Nielsen</cite>
+                  </blockquote>
+                </div>
+                <div class="form--input-text">
+                  <label>reply</label>
+                  <input type="text" placeholder="reply here" pattern="url">
+                  <button class="button button-reply"><i class="material-icons md-18" aria-hidden="true">reply</i></button>
+                </div>
+              </blockquote>
+            </div>
+            <div class="comment---project">
+              <blockquote class="text--comment">Usability testing shows you if something is usable. Beta testing shows you if people will actually use it.
+                <cite> Rachel Decker</cite>
+              </blockquote>
+              <div class="form--input-text">
+                <label>reply</label>
+                <input type="text" value="test value" placeholder="reply here" pattern="url">
+                <button class="button button-reply"><i class="material-icons md-18" aria-hidden="true">reply</i></button>
+              </div>
+            </div>
+            <div class="comment---project">
+              <blockquote class="text--comment">It always seems impossible until its done.
+                <cite>Nelson Mandela</cite>
+              </blockquote>
+              <div class="form--input-text">
+                <label>reply</label>
+                <input type="text" placeholder="reply here" pattern="url">
+                <button class="button button-reply"><i class="material-icons md-18" aria-hidden="true">reply</i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="off-canvas position-right" id="content--offcanvas-right-references" data-off-canvas data-transition="push" data-content-overlay="false">
+      <div class="grid-container">
+        <div class="grid-y">
+          <div class="small-1">
+            <h2>Cross References</h2>
+            <button class="close-button button" aria-label="Close menu" type="button" data-close><span class="icon"><i class="material-icons md-18">close</i></span></button>
+          </div>
+          <div class="small-2">
+            <div class="notification---project" data-closable>
+              <ul class="list--notification-items no-bullets">
+                <li><i class="material-icons md-12 has-tip" aria-hidden="true" data-tooltip="" aria-haspopup="true" data-disable-hover="false" tabindex="1" title="change by {username}">mode_edit</i><a> {element name} changed</a></li>
+                <li> <i class="material-icons md-12 has-tip" aria-hidden="true" data-tooltip="" aria-haspopup="true" data-disable-hover="false" tabindex="1" title="change by {username}">remove</i><a> {element name} removed</a></li>
+                <li> <i class="material-icons md-12 has-tip" aria-hidden="true" data-tooltip="" aria-haspopup="true" data-disable-hover="false" tabindex="1" title="change by {username}">add</i><a> {element name} added</a></li>
+                <li> <i class="material-icons md-12 has-tip" aria-hidden="true" data-tooltip="" aria-haspopup="true" data-disable-hover="false" tabindex="1" title="change by {username}">link</i><a> {element name} linked</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="off-canvas-content" id="content--page" data-off-canvas-content="">
+      <header class="content--banner">
+        <div class="grid-x">
+          <div class="banner--logo small-4 medium-2 large-1 cell"><img class="banner--logo-acc" src="https://tools.stage.acc.org/UMDT/Templates/graphics/logo_acc_md.png"></div>
+          <div class="banner--title small-6 medium-6 large-6 cell">
+            <h1 class="banner--title-text">Unified MetaData Tool <i class="material-icons md-18">crop</i></h1>
+          </div>
+          <div class="banner--users small-12 medium-4 large-4 cell">
+            <nav class="menu--nav"><a class="menu--nav-link button" data-micro-interaction="popup"><span class="text">User-anme</span><span class="icon"><i class="material-icons md-18">account_box</i></span></a><a class="menu--nav-link button" data-micro-interaction="popup"><span class="text">Logout </span><span class="icon"><i class="material-icons md-18">exit_to_app</i></span></a><a class="menu--nav-link chardin-btn-help button warning" data-micro-interaction="popup"><span class="text">HELP! </span><span class="icon"><i class="material-icons md-18">help</i></span></a></nav>
+          </div>
+        </div>
+      </header>
+      <div class="content--breadcrumb">
+        <div class="grid-x hide-for-small-only">
+          <div class="cell small-1"></div>
+          <div class="cell small-10">
+            <nav aria-label="You are here:" role="navigation">
+              <ul class="breadcrumbs--nav-list breadcrumbs">
+                <li class="breadcrumbs--nav-item"><a class="breadcrumbs--nav-link" href="index.html"><span class="icon"><i class="material-icons md-18">layers</i></span><span class="text">Templates</span></a></li>
+                <li class="breadcrumbs--nav-item"><span class="icon"><i class="material-icons md-18">folder_special</i></span><span class="text">project</span></li>
+                <li class="breadcrumbs--nav-item"><span class="icon"><i class="fa fa-database" aria-hidden="true"></i><span class="text">CDD</span></span></li>
+                <li class="breadcrumbs--nav-item" data-intro="Breabcrumbs uses Material Icons &lt;a href='http://localhost:3333/kitchensink.html'&gt; (view icon glossary)&lt;/a&gt;" data-position="right"><span class="icon"><i class="material-icons md-18">view_module</i></span><span class="text">Concepts & Data Elements</span></li>
+                <li class="breadcrumbs--nav-item"><span class="icon"><i class="material-icons md-18">flip_to_back</i></span><span class="text">Value Sets</span></li>
+                <li class="breadcrumbs--nav-item"> <span class="icon"><i class="material-icons md-18">change_history</i></span><span class="text">data element</span></li>
+                <li class="breadcrumbs--nav-item"> <span class="icon"><i class="material-icons md-18">mode_edit</i></span><span class="text">element name*</span></li>
+                <li class="breadcrumbs--nav-item -is-green"> <a class="breadcrumbs--nav-link" href="#panel2">                             <span class="icon"><i class="material-icons md-18">tab</i></span><span class="text">editing*</span></a></li>
+                <li class="breadcrumbs--nav-item"> <span class="icon"><i class="material-icons md-18">lock_outline</i></span><span class="text">locked*</span></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="content--page">
+        <div class="grid-x">
+          <div class="panel--left cell small-1">
+            <div class="grid-y pull-left">
+              <div class="cell small-1">
+                <button class="panel--side-button button" type="button" data-toggle="content--offcanvas-left-search"><span class="icon"><i class="material-icons md-18" aria-hidden="true">search</i></span><span class="counter is-hidden">6</span><span class="text">
+                     Search</span></button>
+              </div>
+              <div class="cell small-1">
+                <button class="panel--side-button button" type="button" data-toggle="content--offcanvas-left-filter"><span class="icon"><i class="material-icons md-18" aria-hidden="true">filter_list</i></span><span class="counter">6</span><span class="text">
+                     Filter</span></button>
+              </div>
+              <div class="cell small-1"><a class="panel--side-button button" href="dashboard.html"><span class="icon"><i class="material-icons md-18" aria-hidden="true">dashboard</i></span><span class="counter is-hidden">6</span><span class="text">
+                     Dashboard</span></a></div>
+              <div class="cell small-1"><a class="panel--side-button button" data-toggle="content--offcanvas-left-reports"><span class="icon"><i class="material-icons md-18" aria-hidden="true">sort</i></span><span class="counter">6</span><span class="text">
+                     Taxonomy</span></a></div>
+              <div class="cell small-1">
+                <ul class="vertical dropdown menu menu--dropdown" data-dropdown-menu>
+                  <li class="dropdown--item"><a class="panel--side-button button button--navigation"><span class="icon"><i class="fa fa-database" aria-hidden="true"></i></span><span class="counter is-hidden">6</span><span class="text">
+                         CCD*</span></a>
+                    <ul class="vertical menu nested">
+                      <li class="dropdown--item-sub"><a href="#"> <i class="material-icons md-18" aria-hidden="true">view_module</i>Concepts & Data Elements    </a></li>
+                      <li class="dropdown--item-sub"><a href="#"> <i class="material-icons md-18" aria-hidden="true">flip_to_back</i>Value Sets</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown--item"><a class="panel--side-button button button--navigation"><span class="icon"><i class="fa fa-database" aria-hidden="true"></i></span><span class="counter is-hidden">6</span><span class="text">
+                         TDD*</span></a>
+                    <ul class="vertical menu nested">
+                      <li class="dropdown--item-sub"><a href="#"> <i class="material-icons md-18" aria-hidden="true">list</i>Registries                            </a></li>
+                      <li class="dropdown--item-sub"><a href="#"> <i class="material-icons md-18" aria-hidden="true">view_module</i>Registries Elements</a></li>
+                      <li class="dropdown--item-sub"><a href="#"> <i class="material-icons md-18" aria-hidden="true">picture_in_picture</i>Registries Contraints</a></li>
+                      <li class="dropdown--item-sub"><a href="#"> <i class="material-icons md-18" aria-hidden="true">flip_to_front</i>Registries DataSets</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel--center cell small-10 medium-10 large-10">
+            <div class="panel--center-container grid-y medium-grid-frame" id="page--worspace">
+              <div class="cell shrink header medium-cell-block-container" id="list--headers">
+                <div class="grid-x">
+                  <div class="column--list column--list-concepts cell medium-2">
+                    <div class="grid-x" data-intro="Column Menus - shows contextual menu and actions items" data-position="right">
+                      <div class="panel--center-column-title small-8 medium-8 large-8 cell">
+                        <h6 class="panel--center-column-title-text h7">Registery</h6>
+                      </div>
+                      <div class="panel--center-column-options small-1 medium-2 large-1 cell">
+                        <button class="option-button button has-tip" data-tooltip="" aria-haspopup="true" data-disable-hover="false" tabindex="1" title="New " data-micro-interaction="clone"> <i class="material-icons md-14">add_box</i></button>
+                      </div>
+                      <div class="panel--center-column-options small-1 medium-2 large-1 cell">
+                        <button class="option-button button has-tip" data-tooltip="" aria-haspopup="true" data-disable-hover="false" tabindex="1" title="Clone" data-micro-interaction="copy"> <i class="material-icons md-14">content_copy</i></button>
+                      </div>
+                      <div class="panel--center-column-options small-1 medium-2 large-1 cell">
+                        <button class="option-button button has-tip" data-tooltip="" aria-haspopup="true" data-disable-hover="false" tabindex="1" title="Expand All" , data-micro-interaction="expand"> <i class="material-icons md-14">zoom_out_map</i></button>
+                      </div>
+                      <div class="panel--center-column-options small-1 medium-2 large-1 cell">
+                        <button class="option-button button has-tip" data-tooltip="" aria-haspopup="true" data-disable-hover="false" tabindex="1" title="collapse column" data-micro-interaction="collapse"> <i class="material-icons md-14">skip_previous</i></button>
+                      </div>
+                    </div>
+                    <div class="panel--center-column-features cell"><i class="icon material-icons md-14">filter_list</i><i class="icon-clear material-icons md-14">close</i>
+                      <input class="feature--filter-input" id="filter-input" type="text" placeholder="quick a filter">
+                    </div>
+                    <div class="column--list-concepts-data cell medium-cell-block-y">
+                      <table id="data-table-concepts">
+                        <colgroup>
+                          <col class="col-1">
+                          <col class="col-2">
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th></th>
+                          </tr>
+                        </thead>
+                        <tbody></tbody>
+                      </table>
+                    </div>
+                    <div class="column--list-concepts-counter cell" data-intro="Column View Conunter - shows what current view based on filter" data-position="right">
+                      <div class="grid-x">
+                        <div class="counter-selected small-6 medium-6 large-6 cell"><span class="icon"><i class="material-icons md-12">check</i></span><span class="total-selected">1   </span></div>
+                        <div class="counter-viewing small-6 medium-6 large-6 cell"><span class="icon"><i class="material-icons md-12">remove_red_eye</i></span><span class="total">1/2     </span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column--list column--list-concepts cell medium-2">
+                    <div class="grid-x">
+                      <div class="panel--center-column-title small-8 medium-8 large-8 cell">
+                        <h6 class="panel--center-column-title-text h7">Concepts</h6>
+                      </div>
+                      <div class="panel--center-column-options small-1 medium-2 large-1 cell">
+                        <button class="option-button button has-tip" data-tooltip="" aria-haspopup="true" data-disable-hover="false" tabindex="1" title="New " data-micro-interaction="clone"> <i class="material-icons md-14">add_box</i></button>
+                      </div>
+                      <div class="panel--center-column-options small-1 medium-2 large-1 cell">
+                        <button class="option-button button has-tip" data-tooltip="" aria-haspopup="true" data-disable-hover="false" tabindex="1" title="Clone" data-micro-interaction="copy"> <i class="material-icons md-14">content_copy</i></button>
+                      </div>
+                      <div class="panel--center-column-options small-1 medium-2 large-1 cell">
+                        <button class="option-button button has-tip" data-tooltip="" aria-haspopup="true" data-disable-hover="false" tabindex="1" title="Expand All" , data-micro-interaction="expand"> <i class="material-icons md-14">zoom_out_map</i></button>
+                      </div>
+                      <div class="panel--center-column-options small-1 medium-2 large-1 cell">
+                        <button class="option-button button has-tip" data-tooltip="" aria-haspopup="true" data-disable-hover="false" tabindex="1" title="collapse column" data-micro-interaction="collapse"> <i class="material-icons md-14">skip_previous</i></button>
+                      </div>
+                    </div>
+                    <div class="panel--center-column-features cell"><i class="icon material-icons md-14">filter_list</i><i class="icon-clear material-icons md-14">close</i>
+                      <input class="feature--filter-input" type="text" placeholder="quick a filter">
+                    </div>
+                    <div class="column--list-concepts-data cell medium-cell-block-y">
+                      <table id="data-list-concepts">
+                        <colgroup>
+                          <col class="col-1">
+                          <col class="col-2">
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th></th>
+                          </tr>
+                        </thead>
+                        <tbody></tbody>
+                      </table>
+                    </div>
+                    <div class="column--list-concepts-counter cell">
+                      <div class="grid-x">
+                        <div class="counter-selected small-6 medium-6 large-6 cell"><span class="icon"><i class="material-icons md-12">check</i></span><span class="total-selected">1   </span></div>
+                        <div class="counter-viewing small-6 medium-6 large-6 cell"><span class="icon"><i class="material-icons md-12">remove_red_eye</i></span><span class="total">1/2         </span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column--list column--list-properties cell medium-2">
+                    <div class="grid-x">
+                      <div class="panel--center-column-title small-8 medium-8 large-8 cell">
+                        <h6 class="panel--center-column-title-text h7">Properties<span class="text-item">Item-Name</span></h6>
+                      </div>
+                      <div class="panel--center-column-options small-1 medium-2 large-1 cell"></div>
+                      <div class="panel--center-column-options small-1 medium-2 large-1 cell"></div>
+                      <div class="panel--center-column-options small-1 medium-2 large-1 cell"></div>
+                      <div class="panel--center-column-options small-1 medium-2 large-1 cell">
+                        <button class="option-button button has-tip" data-tooltip="" aria-haspopup="true" data-disable-hover="false" tabindex="1" title="collapse column" data-micro-interaction="collapse"> <i class="material-icons md-14">skip_previous</i></button>
+                      </div>
+                    </div>
+                    <div class="column--list-properties-data cell medium-cell-block-y">
+                      <h7 class="title-properties">Table</h7>
+                      <form data-abide="7v3wyo-abide" novalidate="">
+                        <div class="cell">
+                          <div class="form--input-text">
+                            <label>ID:</label>
+                            <input type="text" placeholder="1234" aria-describedby="exampleHelpText" required="" pattern="number"><span class="form-error">Yo, you had better fill this out, it's required.</span>
+                          </div>
+                        </div>
+                        <div class="cell">
+                          <div class="form--input-text inline">
+                            <label>Input 2</label>
+                            <input type="text" placeholder="Use me, or don't" aria-describedby="exampleHelpTex" data-abide-ignore="">
+                          </div>
+                        </div>
+                        <div class="cell">
+                          <h7 class="title-properties">Visibility</h7>
+                        </div>
+                        <div class="cell">
+                          <div class="form--input-text inline">
+                            <div class="switch tiny">
+                              <label class="switch-value" for="swtich-active">Show as Navigation</label>
+                              <input class="switch-input" id="swtich-active" type="checkbox" name="exampleSwitch">
+                              <label class="switch-paddle" for="swtich-active"><span class="show-for-sr">Edit Mode</span><span class="switch-active" aria-hidden="true">yes</span><span class="switch-inactive" aria-hidden="true">no</span></label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="cell">
+                          <div class="form--input-text inline">
+                            <div class="switch tiny">
+                              <label class="switch-value" for="swtich-active2">Show as Tab</label>
+                              <input class="switch-input" id="swtich-active2" type="checkbox" name="exampleSwitch2">
+                              <label class="switch-paddle" for="swtich-active2"><span class="show-for-sr">Edit Mode</span><span class="switch-active" aria-hidden="true">yes</span><span class="switch-inactive" aria-hidden="true">no</span></label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="cell">
+                          <div class="form--input-select -is-required">
+                            <label>Cars:</label>
+                            <select required="">
+                              <option value="volvo">Volvo</option>
+                              <option value="saab">Saab</option>
+                              <option value="mercedes">Mercedes </option>
+                              <option value="audi">Audi</option>
+                            </select>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="column--list-elements-counter cell">
+                      <div class="grid-x"></div>
+                    </div>
+                  </div>
+                  <div class="column--list-workspace cell medium-auto medium-cell-block-container">
+                    <div class="feature--tabs grid collapse">
+                      <div class="feature--tabs-list medium-3 cell">
+                        <ul class="tabs" id="example-tabs" data-tabs="" data-deep-link="true">
+                          <li class="tabs-title -is-editable is-active -is-locked" data-tooltip tabindex="1" title="parent: section name">
+                            <div class="tab-icons"><span class="item-icon"><i class="material-icons md-14" aria-hidden="true">wifi</i></span><span class="item-id">555</span><span class="status-icon"><i class="material-icons md-14" aria-hidden="true">mode_edit </i></span><span class="tab-icon-close"><i class="material-icons md-14" aria-hidden="true">close </i></span></div><a href="#panelA" aria-selected="true"> <span class="text">Forms Inputs</span></a>
+                          </li>
+                          <li class="tabs-title -is-broken">
+                            <div class="tab-icons"><span class="item-icon"><i class="material-icons md-14" aria-hidden="true">history</i></span><span class="item-id">555</span><span class="status-icon"><i class="material-icons md-14" aria-hidden="true">mode_edit </i></span><span class="tab-icon-close"><i class="material-icons md-14" aria-hidden="true">close </i></span></div><a href="#panelB" aria-selected="true"><span class="text">Buttons</span></a>
+                          </li>
+                          <li class="tabs-title -is-saved">
+                            <div class="tab-icons"><span class="item-icon"><i class="material-icons md-14" aria-hidden="true">history</i></span><span class="item-id">555</span><span class="tab-icon-close"><i class="material-icons md-14" aria-hidden="true">close </i></span></div><a href="#panelC" aria-selected="true"> <span class="text">Layout Grid</span></a>
+                          </li>
+                          <li class="tabs-title">
+                            <div class="tab-icons"><span class="item-icon"><i class="material-icons md-14" aria-hidden="true">history</i></span><span class="item-id">555</span><span class="status-icon"><i class="material-icons md-14" aria-hidden="true">error </i></span><span class="tab-icon-close"><i class="material-icons md-14" aria-hidden="true">close </i></span></div><a href="#panelD" aria-selected="true"> <span class="text">Drag Elements</span></a>
+                          </li>
+                        </ul>
+                        <div class="tabs-content -is-editable" data-tabs-content="example-tabs">
+                          <div class="tabs-panel is-active" id="panelA">
+                            <div class="grid-y content--tab"> 
+                              <div class="cell small-1 workspace--options feature--edit-mode">
+                                <button class="-is-off" data-micro-interaction="fullscreen" data-tooltip tabindex="1" title="enter fullscreen">
+                                  <div class="icon"><i class="material-icons md-18">fullscreen</i></div>
+                                </button>
+                              </div>
+                              <div class="cell small-10 medium-cell-block-y workspace--form">
+                                <form data-abide="7v3wyo-abide" novalidate="">
+                                  <div class="grid-x grid-padding-x">
+                                    <div class="cell small-6">
+                                      <div class="grid-y">
+                                        <div class="cell">
+                                          <div class="form--input-text -is-required inline">
+                                            <label>ID:</label>
+                                            <input type="text" placeholder="1234" aria-describedby="exampleHelpText" required="" pattern="number" value="1212"><span class="form-error">A name of the new create is required.</span>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="cell small-6">
+                                      <div class="grid-y">
+                                        <div class="cell">
+                                          <div class="form--input-text -is-required inline">
+                                            <label>Product ID:</label>
+                                            <input type="text" placeholder="phrase" aria-describedby="exampleHelpText" value="55555">
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="cell small-1">
+                                      <div class="cell">
+                                        <div class="form--input-text">
+                                          <div class="switch tiny">
+                                            <label class="switch-value" for="swtich-active-s">Show</label>
+                                            <input class="switch-input" id="swtich-active-s" type="checkbox" name="exampleSwitch">
+                                            <label class="switch-paddle" for="swtich-active-s"><span class="show-for-sr">Edit Mode</span><span class="switch-active" aria-hidden="true"><i class="material-icons md-16" aria-hidden="true">visibility</i></span><span class="switch-inactive" aria-hidden="true"><i class="material-icons md-16" aria-hidden="true">visibility_off</i></span></label>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="cell small-11">
+                                      <div class="cell">
+                                        <div class="form--input-text">
+                                          <div class="switch tiny">
+                                            <label class="switch-value" for="s2w">Active</label>
+                                            <input class="switch-input" id="s2w" type="checkbox" name="exampleSwitch">
+                                            <label class="switch-paddle" for="s2w"><span class="show-for-sr">Edit Mode</span><span class="switch-active" aria-hidden="true"><i class="material-icons md-16" aria-hidden="true">alarm_on</i></span><span class="switch-inactive" aria-hidden="true"><i class="material-icons md-16" aria-hidden="true">alarm_off</i></span></label>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="cell small-6">
+                                      <div class="grid-y">
+                                        <div class="cell">
+                                          <div class="form--input-text -is-required">
+                                            <label>Name:</label>
+                                            <input type="text" placeholder="phrase" aria-describedby="exampleHelpText" value="DDD"><span class="form-error">Tags are useful for stuff                       </span>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="cell small-6">
+                                      <div class="grid-y">
+                                        <div class="cell">
+                                          <div class="form--input-text">
+                                            <label>Start Date:</label>
+                                            <input class="disabled" type="text" disabled placeholder="phrase" aria-describedby="exampleHelpText" required="" pattern="date" value="10/5/2017"><span class="form-error">Date is required</span>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="cell small-12">
+                                      <div class="grid-y">
+                                        <div class="cell">
+                                          <div class="form--input-text -is-required">
+                                            <label>Description:</label>
+                                            <textarea class="taller" type="text" placeholder="phrase" aria-describedby="exampleHelpText" value="CCC"></textarea>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="cell">
+                                      <div class="form--input-select -is-required">
+                                        <label>European Cars, Choose One, it can't be the blank option.</label>
+                                        <select required="">
+                                          <option value="volvo">Volvo Car</option>
+                                          <option value="saab">Saab</option>
+                                          <option value="mercedes">Mercedes Longer</option>
+                                          <option value="audi">Audi</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </form>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo nec libero vitae porttitor. Suspendisse ac sapien et ante condimentum iaculis. Ut dapibus ex vestibulum erat pellentesque suscipit quis sed nisl. Sed lobortis neque sit amet ligula pharetra, ac hendrerit nulla laoreet. Cras in vulputate nulla. Donec vel blandit lectus. Duis fermentum sit amet mauris id iaculis. Praesent a sollicitudin enim. Curabitur quis sagittis sapien, sed tempus sapien. Nam non dictum sapien, in varius odio. Sed eu condimentum orci, nec mollis nulla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce quis elit non nisi pellentesque fermentum et in nibh.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo nec libero vitae porttitor. Suspendisse ac sapien et ante condimentum iaculis. Ut dapibus ex vestibulum erat pellentesque suscipit quis sed nisl. Sed lobortis neque sit amet ligula pharetra, ac hendrerit nulla laoreet. Cras in vulputate nulla. Donec vel blandit lectus. Duis fermentum sit amet mauris id iaculis. Praesent a sollicitudin enim. Curabitur quis sagittis sapien, sed tempus sapien. Nam non dictum sapien, in varius odio. Sed eu condimentum orci, nec mollis nulla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce quis elit non nisi pellentesque fermentum et in nibh.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo nec libero vitae porttitor. Suspendisse ac sapien et ante condimentum iaculis. Ut dapibus ex vestibulum erat pellentesque suscipit quis sed nisl. Sed lobortis neque sit amet ligula pharetra, ac hendrerit nulla laoreet. Cras in vulputate nulla. Donec vel blandit lectus. Duis fermentum sit amet mauris id iaculis. Praesent a sollicitudin enim. Curabitur quis sagittis sapien, sed tempus sapien. Nam non dictum sapien, in varius odio. Sed eu condimentum orci, nec mollis nulla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce quis elit non nisi pellentesque fermentum et in nibh.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo nec libero vitae porttitor. Suspendisse ac sapien et ante condimentum iaculis. Ut dapibus ex vestibulum erat pellentesque suscipit quis sed nisl. Sed lobortis neque sit amet ligula pharetra, ac hendrerit nulla laoreet. Cras in vulputate nulla. Donec vel blandit lectus. Duis fermentum sit amet mauris id iaculis. Praesent a sollicitudin enim. Curabitur quis sagittis sapien, sed tempus sapien. Nam non dictum sapien, in varius odio. Sed eu condimentum orci, nec mollis nulla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce quis elit non nisi pellentesque fermentum et in nibh.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo nec libero vitae porttitor. Suspendisse ac sapien et ante condimentum iaculis. Ut dapibus ex vestibulum erat pellentesque suscipit quis sed nisl. Sed lobortis neque sit amet ligula pharetra, ac hendrerit nulla laoreet. Cras in vulputate nulla. Donec vel blandit lectus. Duis fermentum sit amet mauris id iaculis. Praesent a sollicitudin enim. Curabitur quis sagittis sapien, sed tempus sapien. Nam non dictum sapien, in varius odio. Sed eu condimentum orci, nec mollis nulla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce quis elit non nisi pellentesque fermentum et in nibh.</p>
+                              </div>
+                              <div class="cell small-1 workspace--controls">
+                                <div class="panel--center-bottom-controls float-right">
+                                  <button class="button success" data-micro-interaction="toggle">Save</button>
+                                  <button class="button alert" data-micro-interaction="toggle">Cancel</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="tabs-panel full" id="panelB">
+                            <div class="grid-y content--tab"> 
+                              <div class="cell small-1 workspace--options feature--edit-mode">
+                                <p class="h7 blurb small">Instructions: Lorem ipsum dolor sit amet, consectetur </p>
+                                <button class="-is-off" data-micro-interaction="fullscreen" data-tooltip tabindex="1" title="enter fullscreen">
+                                  <div class="icon"><i class="material-icons md-18">fullscreen</i></div>
+                                </button>
+                              </div>
+                              <div class="cell small-10 medium-cell-block-y workspace--form flush">
+                                <ul class="accordion" data-accordion="tp8seet-accordion" role="tablist">
+                                  <li class="accordion-item is-active" data-accordion-item=""><a class="accordion-title" id="0rmnx1-accordion-label" href="#" aria-controls="0rmnx1-accordion" role="tab" aria-expanded="true" aria-selected="true"> 
+                                      <div class="text">Concept
+                                        <button class="option-button button has-tip" data-tooltip="" aria-haspopup="true" data-disable-hover="false" tabindex="1" title="New Concept"> <i class="material-icons md-18">add_box</i></button>
+                                      </div></a>
+                                    <div class="accordion-content" id="0rmnx1-accordion" data-tab-content="" role="tabpanel" aria-labelledby="0rmnx1-accordion-label" aria-hidden="false" style="display: block;">
+                                      <form data-abide="7v3wyo-abide" novalidate="">
+                                        <div class="grid-x grid-padding-x">
+                                          <div class="cell">
+                                            <div class="grid-y">
+                                              <div class="cell">
+                                                <div class="form--input-text -is-required">
+                                                  <label>Name:</label>
+                                                  <textarea class="shorter" rows="4" cols="50">Guideline directed medical therapy maximum dose at least 3 months for Ischemic Cardiomyopathy</textarea><span class="form-error">A description of the new create is required.</span>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="cell small-6">
+                                            <div class="grid-y">
+                                              <div class="cell">
+                                                <div class="form--input-text inline">
+                                                  <label>ID:</label>
+                                                  <input type="text" placeholder="phrase" aria-describedby="exampleHelpText" value="55555">
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="cell small-1">
+                                            <div class="cell">
+                                              <div class="form--input-text">
+                                                <div class="switch tiny">
+                                                  <label class="switch-value" for="swtich-active-s">Show</label>
+                                                  <input class="switch-input" id="swtich-active-s" type="checkbox" name="exampleSwitch">
+                                                  <label class="switch-paddle" for="swtich-active-s"><span class="show-for-sr">Edit Mode</span><span class="switch-active" aria-hidden="true"><i class="material-icons md-16" aria-hidden="true">visibility</i></span><span class="switch-inactive" aria-hidden="true"><i class="material-icons md-16" aria-hidden="true">visibility_off</i></span></label>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="cell small-1">
+                                            <div class="cell">
+                                              <div class="form--input-text">
+                                                <div class="switch tiny">
+                                                  <label class="switch-value" for="swtich-active">Active</label>
+                                                  <input class="switch-input" id="swtich-active" type="checkbox" name="exampleSwitch">
+                                                  <label class="switch-paddle" for="swtich-active"><span class="show-for-sr">Edit Mode</span><span class="switch-active" aria-hidden="true"><i class="material-icons md-16" aria-hidden="true">alarm_on</i></span><span class="switch-inactive" aria-hidden="true"><i class="material-icons md-16" aria-hidden="true">alarm_off</i></span></label>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="cell small-6">
+                                            <div class="grid-y">
+                                              <div class="cell">
+                                                <div class="form--input-text">
+                                                  <label>Domain Concept:</label>
+                                                  <input type="text" placeholder="phrase" aria-describedby="exampleHelpText" value="Care Provider"><span class="form-error">Tags are useful for stuff</span>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="cell small-6">
+                                            <div class="grid-y">
+                                              <div class="cell">
+                                                <div class="form--input-text">
+                                                  <label>Start Date:</label>
+                                                  <input class="disabled" type="text" disabled placeholder="phrase" aria-describedby="exampleHelpText" required="" pattern="date" value="10/5/2017"><span class="form-error">Date is required</span>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="cell">
+                                            <div class="form--input-text -is-required">
+                                              <label>Symnomyms:</label>
+                                              <input type="text" placeholder="1234" aria-describedby="exampleHelpText" required="" pattern="number" value="like, this, here"><span class="form-error">A description of the new create is required.</span>
+                                              <p class="help-text -has-error" id="exampleHelpText">Multi symnoyms can be entered serpeate by a commna</p>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </form>
+                                    </div>
+                                  </li>
+                                  <li class="accordion-item -is-broken" data-accordion-item=""><a class="accordion-title" id="ec5u7s-accordion-label" href="#" aria-controls="ec5u7s-accordion" role="tab" aria-expanded="false" aria-selected="false"> 
+                                      <div class="text">Definitions   
+                                        <button class="option-button button has-tip" data-tooltip="" aria-haspopup="true" data-disable-hover="false" tabindex="1" title="New Definition"> <i class="material-icons md-18">add_box</i></button>
+                                      </div></a>
+                                    <div class="accordion-content" id="ec5u7s-accordion" data-tab-content="" role="tabpanel" aria-labelledby="ec5u7s-accordion-label" aria-hidden="true">
+                                      <form data-abide="7v3wyo-abide" novalidate="">
+                                        <div class="grid-x">
+                                          <div class="cell">
+                                            <ul class="tabs" id="tab--definitions" data-tabs="">
+                                              <li class="tabs-title is-active"><a href="#panel1v" aria-selected="true">01</a></li>
+                                              <li class="tabs-title"><a href="#panel2v">02</a></li>
+                                              <li class="tabs-title"><a href="#panel3v">03</a></li>
+                                              <li class="tabs-title"><a href="#panel4v">04</a></li>
+                                              <li class="tabs-title"><a href="#panel5v">05</a></li>
+                                              <li class="tabs-title"><a href="#panel6v">06</a></li>
+                                            </ul>
+                                          </div>
+                                          <div class="cell definitions--details tabs-content" data-tabs-content="tab--definitions">
+                                            <div class="tabs-panel is-active" id="panel1v">
+                                              <div class="grid-x">
+                                                <div class="cell">
+                                                  <div class="form--input-text -is-required">
+                                                    <label>Type:1</label>
+                                                    <input type="text" placeholder="1234" aria-describedby="exampleHelpText" required="" pattern="number" value="Guideline directed Ischemic Cardiomyopathy"><span class="form-error">A name of the new create is required.</span>
+                                                  </div>
+                                                </div>
+                                                <div class="cell">
+                                                  <div class="grid-y">
+                                                    <div class="cell">
+                                                      <div class="form--input-text">
+                                                        <label>Title:</label>
+                                                        <input type="text" placeholder="phrase" aria-describedby="exampleHelpText" value="Longer Longer Longer Longer Longer Title">
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="cell small-6">
+                                                  <div class="grid-y">
+                                                    <div class="cell">
+                                                      <div class="form--input-text -is-required">
+                                                        <label>Definition:</label>
+                                                        <textarea class="taller" rows="4" cols="50">A black hole is a region of spacetime exhibiting such strong gravitational effects that nothing—not even particles and electromagnetic radiation such as light—can escape from inside it. The theory of general relativity predicts that a sufficiently compact mass can deform spacetime to form a black hole.")</textarea><span class="form-error">A description of the new create is required.</span>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="cell small-6">
+                                                  <div class="grid-y">
+                                                    <div class="cell">
+                                                      <div class="form--input-text">
+                                                        <label>Definition Source:</label>
+                                                        <textarea class="taller" rows="4" cols="50">1) O’Gara PT, Kushner FG, Ascheim DD, et al. 2013 ACCF/AHA guideline for the management of ST-elevation myocardial infarction: a report of the American College of Cardiology Foundation/American Heart Association Task Force on Practice Guidelines. J Am Coll Cardiol 2013;61 2) Russo AM, Stainback RF, Bailey SR, et al. ACCF/HRS/AHA/ASE/HFSA/SCAI/SCCT/SCMR 2013 appropriate use criteria for implantable cardioverter-defibrillators and cardiac resynchronization therapy. J Am Coll Cardiol 2013;61:1318-68. doi: 10.1016/j.jacc.2012.12.017</textarea><span class="form-error">A description of the new create is required.</span>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="cell small-12">
+                                                  <div class="grid-y">
+                                                    <div class="cell">
+                                                      <div class="form--input-text">
+                                                        <label>Start Date:</label>
+                                                        <input class="disabled" type="text" disabled placeholder="phrase" aria-describedby="exampleHelpText" required="" pattern="date" value="10/5/2017"><span class="form-error">Date is required</span>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="tabs-panel" id="panel2v">
+                                              <div class="grid-x">
+                                                <div class="cell small-6">
+                                                  <div class="form--input-text -is-required">
+                                                    <label>Type:3</label>
+                                                    <input type="text" placeholder="1234" aria-describedby="exampleHelpText" required="" pattern="number" value="AquibConcept"><span class="form-error">A name of the new create is required.</span>
+                                                  </div>
+                                                </div>
+                                                <div class="cell small-6">
+                                                  <div class="grid-y">
+                                                    <div class="cell">
+                                                      <div class="form--input-text">
+                                                        <label>Title:</label>
+                                                        <input type="text" placeholder="phrase" aria-describedby="exampleHelpText" value="55555">
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="cell small-6">
+                                                  <div class="grid-y">
+                                                    <div class="cell">
+                                                      <div class="form--input-text">
+                                                        <label>Definition:</label>
+                                                        <input type="text" placeholder="phrase" aria-describedby="exampleHelpText" value="Care Provider"><span class="form-error">Tags are useful for stuff</span>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="cell small-6">
+                                                  <div class="grid-y">
+                                                    <div class="cell">
+                                                      <div class="form--input-text">
+                                                        <label>Definition Source:</label>
+                                                        <input type="text" placeholder="phrase" aria-describedby="exampleHelpText" value="Care Provider"><span class="form-error">Tags are useful for stuff</span>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="cell small-12">
+                                                  <div class="grid-y">
+                                                    <div class="cell">
+                                                      <div class="form--input-text">
+                                                        <label>Start Date:</label>
+                                                        <input class="disabled" type="text" disabled placeholder="phrase" aria-describedby="exampleHelpText" required="" pattern="date" value="10/5/2017"><span class="form-error">Date is required</span>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="tabs-panel" id="panel3v">
+                                              <div class="grid-x">
+                                                <div class="cell small-6">
+                                                  <div class="form--input-text -is-required">
+                                                    <label>Type:</label>
+                                                    <input type="text" placeholder="1234" aria-describedby="exampleHelpText" required="" pattern="number" value="AquibConcept"><span class="form-error">A name of the new create is required.</span>
+                                                  </div>
+                                                </div>
+                                                <div class="cell small-6">
+                                                  <div class="grid-y">
+                                                    <div class="cell">
+                                                      <div class="form--input-text">
+                                                        <label>Title:</label>
+                                                        <input type="text" placeholder="phrase" aria-describedby="exampleHelpText" value="55555">
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="cell small-6">
+                                                  <div class="grid-y">
+                                                    <div class="cell">
+                                                      <div class="form--input-text">
+                                                        <label>Definition:</label>
+                                                        <input type="text" placeholder="phrase" aria-describedby="exampleHelpText" value="Care Provider"><span class="form-error">Tags are useful for stuff</span>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="cell small-6">
+                                                  <div class="grid-y">
+                                                    <div class="cell">
+                                                      <div class="form--input-text">
+                                                        <label>Definition Source:</label>
+                                                        <input type="text" placeholder="phrase" aria-describedby="exampleHelpText" value="Care Provider"><span class="form-error">Tags are useful for stuff</span>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="cell small-12">
+                                                  <div class="grid-y">
+                                                    <div class="cell">
+                                                      <div class="form--input-text">
+                                                        <label>Start Date:</label>
+                                                        <input class="disabled" type="text" disabled placeholder="phrase" aria-describedby="exampleHelpText" required="" pattern="date" value="10/5/2017"><span class="form-error">Date is required</span>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="tabs-panel" id="panel4v">
+                                              <div class="grid-x">
+                                                <div class="cell small-6">
+                                                  <div class="form--input-text -is-required">
+                                                    <label>Type:</label>
+                                                    <input type="text" placeholder="1234" aria-describedby="exampleHelpText" required="" pattern="number" value="AquibConcept"><span class="form-error">A name of the new create is required.</span>
+                                                  </div>
+                                                </div>
+                                                <div class="cell small-6">
+                                                  <div class="grid-y">
+                                                    <div class="cell">
+                                                      <div class="form--input-text">
+                                                        <label>Title:</label>
+                                                        <input type="text" placeholder="phrase" aria-describedby="exampleHelpText" value="55555">
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="cell small-6">
+                                                  <div class="grid-y">
+                                                    <div class="cell">
+                                                      <div class="form--input-text">
+                                                        <label>Definition:</label>
+                                                        <input type="text" placeholder="phrase" aria-describedby="exampleHelpText" value="Care Provider"><span class="form-error">Tags are useful for stuff</span>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="cell small-6">
+                                                  <div class="grid-y">
+                                                    <div class="cell">
+                                                      <div class="form--input-text">
+                                                        <label>Definition Source:</label>
+                                                        <input type="text" placeholder="phrase" aria-describedby="exampleHelpText" value="Care Provider"><span class="form-error">Tags are useful for stuff</span>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="cell small-12">
+                                                  <div class="grid-y">
+                                                    <div class="cell">
+                                                      <div class="form--input-text">
+                                                        <label>Start Date:</label>
+                                                        <input class="disabled" type="text" disabled placeholder="phrase" aria-describedby="exampleHelpText" required="" pattern="date" value="10/5/2017"><span class="form-error">Date is required</span>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="tabs-panel" id="panel5v">
+                                              <div class="grid-x">
+                                                <div class="cell small-6">
+                                                  <div class="form--input-text -is-required">
+                                                    <label>Type:</label>
+                                                    <input type="text" placeholder="1234" aria-describedby="exampleHelpText" required="" pattern="number" value="AquibConcept"><span class="form-error">A name of the new create is required.</span>
+                                                  </div>
+                                                </div>
+                                                <div class="cell small-6">
+                                                  <div class="grid-y">
+                                                    <div class="cell">
+                                                      <div class="form--input-text">
+                                                        <label>Title:</label>
+                                                        <input type="text" placeholder="phrase" aria-describedby="exampleHelpText" value="55555">
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="cell small-6">
+                                                  <div class="grid-y">
+                                                    <div class="cell">
+                                                      <div class="form--input-text">
+                                                        <label>Definition:</label>
+                                                        <input type="text" placeholder="phrase" aria-describedby="exampleHelpText" value="Care Provider"><span class="form-error">Tags are useful for stuff</span>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="cell small-6">
+                                                  <div class="grid-y">
+                                                    <div class="cell">
+                                                      <div class="form--input-text">
+                                                        <label>Definition Source:</label>
+                                                        <input type="text" placeholder="phrase" aria-describedby="exampleHelpText" value="Care Provider"><span class="form-error">Tags are useful for stuff</span>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="cell small-12">
+                                                  <div class="grid-y">
+                                                    <div class="cell">
+                                                      <div class="form--input-text">
+                                                        <label>Start Date:</label>
+                                                        <input class="disabled" type="text" disabled placeholder="phrase" aria-describedby="exampleHelpText" required="" pattern="date" value="10/5/2017"><span class="form-error">Date is required</span>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="tabs-panel" id="panel6v"></div>
+                                          </div>
+                                        </div>
+                                      </form>
+                                    </div>
+                                  </li>
+                                  <li class="accordion-item" data-accordion-item=""><a class="accordion-title" id="x20pz9-accordion-label" href="#" aria-controls="x20pz9-accordion" role="tab" aria-expanded="false" aria-selected="false"> 
+                                      <div class="text">Code System Binding
+                                        <button class="option-button button has-tip" data-tooltip="" aria-haspopup="true" data-disable-hover="false" tabindex="1" title="New Code System Binding"> <i class="material-icons md-18">add_box</i></button>
+                                      </div></a>
+                                    <div class="accordion-content" id="x20pz9-accordion" data-tab-content="" role="tabpanel" aria-labelledby="x20pz9-accordion-label" aria-hidden="true">
+                                      <form data-abide="7v3wyo-abide" novalidate="">
+                                        <div class="grid-x">
+                                          <div class="cell">
+                                            <ul class="tabs" id="tab--definitions" data-tabs="">
+                                              <li class="tabs-title is-active"><a href="#panel1v" aria-selected="true">01</a></li>
+                                              <li class="tabs-title"><a href="#panel2v">02</a></li>
+                                            </ul>
+                                          </div>
+                                          <div class="cell definitions--details tabs-content" data-tabs-content="tab--definitions">
+                                            <div class="tabs-panel is-active" id="panel1v">
+                                              <div class="grid-x">
+                                                <div class="cell small-10">
+                                                  <div class="form--input-text -is-required">
+                                                    <label>Name:</label>
+                                                    <input type="text" placeholder="1234" aria-describedby="exampleHelpText" required="" pattern="number" value="AquibConcept"><span class="form-error">A name of the new create is required.</span>
+                                                  </div>
+                                                </div>
+                                                <div class="cell small-2">
+                                                  <div class="cell">
+                                                    <div class="form--input-text">
+                                                      <div class="switch tiny">
+                                                        <label class="switch-value" for="p1">Perffered</label>
+                                                        <input class="switch-input" id="p1" type="checkbox" name="exampleSwitch">
+                                                        <label class="switch-paddle" for="p1"><span class="show-for-sr">Edit Mode</span><span class="switch-active" aria-hidden="true">Yes</span><span class="switch-inactive" aria-hidden="true">No</span></label>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="cell small-6">
+                                                  <div class="grid-y">
+                                                    <div class="cell">
+                                                      <div class="form--input-text">
+                                                        <label>Code:</label>
+                                                        <input type="text" placeholder="phrase" aria-describedby="exampleHelpText" value="55555">
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="cell small-6">
+                                                  <div class="grid-y">
+                                                    <div class="cell">
+                                                      <div class="form--input-text">
+                                                        <label>Code System:</label>
+                                                        <input type="text" placeholder="phrase" aria-describedby="exampleHelpText" value="Care Provider"><span class="form-error">Tags are useful for stuff</span>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="tabs-panel" id="panel2v">
+                                              <div class="grid-x">
+                                                <div class="cell small-10">
+                                                  <div class="form--input-text -is-required">
+                                                    <label>Name:</label>
+                                                    <input type="text" placeholder="1234" aria-describedby="exampleHelpText" required="" pattern="number" value="AquibConcept"><span class="form-error">A name of the new create is required.</span>
+                                                  </div>
+                                                </div>
+                                                <div class="cell small-2">
+                                                  <div class="cell">
+                                                    <div class="form--input-text">
+                                                      <div class="switch tiny">
+                                                        <label class="switch-value" for="p1">Perffered</label>
+                                                        <input class="switch-input" id="p1" type="checkbox" name="exampleSwitch">
+                                                        <label class="switch-paddle" for="p1"><span class="show-for-sr">Edit Mode</span><span class="switch-active" aria-hidden="true">Yes</span><span class="switch-inactive" aria-hidden="true">No</span></label>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="cell small-6">
+                                                  <div class="grid-y">
+                                                    <div class="cell">
+                                                      <div class="form--input-text">
+                                                        <label>Code:</label>
+                                                        <input type="text" placeholder="phrase" aria-describedby="exampleHelpText" value="55555">
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="cell small-6">
+                                                  <div class="grid-y">
+                                                    <div class="cell">
+                                                      <div class="form--input-text">
+                                                        <label>Code System:</label>
+                                                        <input type="text" placeholder="phrase" aria-describedby="exampleHelpText" value="Care Provider"><span class="form-error">Tags are useful for stuff</span>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </form>
+                                    </div>
+                                  </li>
+                                  <li class="accordion-item" data-accordion-item=""><a class="accordion-title" id="x11pz9-accordion-label" href="#" aria-controls="x20pz9-accordion" role="tab" aria-expanded="false" aria-selected="false"> 
+                                      <div class="text">Taxon
+                                        <button class="option-button button has-tip" data-tooltip="" aria-haspopup="true" data-disable-hover="false" tabindex="1" title="New Taxon"> <i class="material-icons md-18">add_box</i></button>
+                                      </div></a>
+                                    <div class="accordion-content" id="x20pz9-accordion" data-tab-content="" role="tabpanel" aria-labelledby="x20pz9-accordion-label" aria-hidden="true">
+                                      <table class="data--table" id="data--table-taxon">
+                                        <thead>
+                                          <tr>
+                                            <th width="90%"> Name</th>
+                                            <th>| s</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td>
+                                               Test</td>
+                                            <td><a class="button alert delete"> <i class="material-icons md-18">delete</i></a></td>
+                                          </tr>
+                                          <tr>
+                                            <td>
+                                               Test 2</td>
+                                            <td><a class="button alert delete"><i class="material-icons md-18">delete</i></a></td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="cell small-1 workspace--controls">
+                                <div class="panel--center-bottom-controls float-right">
+                                  <button class="button success" data-micro-interaction="toggle">Save</button>
+                                  <button class="button alert" data-micro-interaction="toggle">Cancel</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="tabs-panel" id="panelC">
+                            <div class="grid-y content--tab"> 
+                              <div class="cell small-1 workspace--options feature--edit-mode">
+                                <p class="h7 blurb small">Instructions: Lorem ipsum dolor sit amet, consectetur </p>
+                                <button class="-is-off" data-micro-interaction="fullscreen" data-tooltip tabindex="1" title="enter fullscreen">
+                                  <div class="icon"><i class="material-icons md-18">fullscreen</i></div>
+                                </button>
+                              </div>
+                              <div class="cell small-10 medium-cell-block-y workspace--form flush">
+                                <ul class="accordion" data-accordion="tp8eet-accordion" role="tablist">
+                                  <li class="accordion-item is-active" data-accordion-item=""><a class="accordion-title" id="0rmnx1-accordion-label" href="#" aria-controls="0rmnx1-accordion" role="tab" aria-expanded="true" aria-selected="true"> 
+                                      <div class="text">Concept Association
+                                        <button class="option-button button has-tip" data-tooltip="" aria-haspopup="true" data-disable-hover="false" tabindex="1" title="New Concept"> <i class="material-icons md-18">add_box</i></button>
+                                      </div></a>
+                                    <div class="accordion-content" id="0rmnx1-accordion" data-tab-content="" role="tabpanel" aria-labelledby="0rmnx1-accordion-label" aria-hidden="false" style="display: block;">
+                                      <form data-abide="7v3wyo-abide" novalidate="">
+                                        <div class="grid-x grid-padding-x">
+                                          <div class="cell">
+                                            <div class="grid-y">
+                                              <div class="cell">
+                                                <div class="form--input-text -is-required">
+                                                  <label>Name:</label>
+                                                  <textarea class="shorter" rows="4" cols="50">Guideline directed medical therapy maximum dose at least 3 months for Ischemic Cardiomyopathy</textarea><span class="form-error">A description of the new create is required.</span>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="cell small-6">
+                                            <div class="grid-y">
+                                              <div class="cell">
+                                                <div class="form--input-text inline">
+                                                  <label>ID:</label>
+                                                  <input type="text" placeholder="phrase" aria-describedby="exampleHelpText" value="55555">
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="cell small-1">
+                                            <div class="cell">
+                                              <div class="form--input-text">
+                                                <div class="switch tiny">
+                                                  <label class="switch-value" for="swtich-active-s">Show</label>
+                                                  <input class="switch-input" id="swtich-active-s" type="checkbox" name="exampleSwitch">
+                                                  <label class="switch-paddle" for="swtich-active-s"><span class="show-for-sr">Edit Mode</span><span class="switch-active" aria-hidden="true"><i class="material-icons md-16" aria-hidden="true">visibility</i></span><span class="switch-inactive" aria-hidden="true"><i class="material-icons md-16" aria-hidden="true">visibility_off</i></span></label>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="cell small-1">
+                                            <div class="cell">
+                                              <div class="form--input-text">
+                                                <div class="switch tiny">
+                                                  <label class="switch-value" for="swtich-active">Active</label>
+                                                  <input class="switch-input" id="swtich-active" type="checkbox" name="exampleSwitch">
+                                                  <label class="switch-paddle" for="swtich-active"><span class="show-for-sr">Edit Mode</span><span class="switch-active" aria-hidden="true"><i class="material-icons md-16" aria-hidden="true">alarm_on</i></span><span class="switch-inactive" aria-hidden="true"><i class="material-icons md-16" aria-hidden="true">alarm_off</i></span></label>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="cell small-6">
+                                            <div class="grid-y">
+                                              <div class="cell">
+                                                <div class="form--input-text">
+                                                  <label>Domain Concept:</label>
+                                                  <input type="text" placeholder="phrase" aria-describedby="exampleHelpText" value="Care Provider"><span class="form-error">Tags are useful for stuff</span>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="cell small-6">
+                                            <div class="grid-y">
+                                              <div class="cell">
+                                                <div class="form--input-text">
+                                                  <label>Start Date:</label>
+                                                  <input class="disabled" type="text" disabled placeholder="phrase" aria-describedby="exampleHelpText" required="" pattern="date" value="10/5/2017"><span class="form-error">Date is required</span>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="cell">
+                                            <div class="form--input-text -is-required">
+                                              <label>Symnomyms:</label>
+                                              <input type="text" placeholder="1234" aria-describedby="exampleHelpText" required="" pattern="number" value="like, this, here"><span class="form-error">A description of the new create is required.</span>
+                                              <p class="help-text -has-error" id="exampleHelpText">Multi symnoyms can be entered serpeate by a commna</p>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </form>
+                                    </div>
+                                  </li>
+                                  <li class="accordion-item" data-accordion-item=""><a class="accordion-title" id="ec5u7s-accordion-label" href="#" aria-controls="ec5u7s-accordion" role="tab" aria-expanded="false" aria-selected="false"> 
+                                      <div class="text">Code Instruction(s)   
+                                        <button class="option-button button has-tip" data-tooltip="" aria-haspopup="true" data-disable-hover="false" tabindex="1" title="New Definition"> <i class="material-icons md-18">add_box</i></button>
+                                      </div></a>
+                                    <div class="accordion-content" id="ec5u7s-accordion" data-tab-content="" role="tabpanel" aria-labelledby="ec5u7s-accordion-label" aria-hidden="true">
+                                      <form data-abide="7v3wyo-abide" novalidate="">
+                                        <div class="grid-x">
+                                          <div class="cell">
+                                            <ul class="tabs" id="tab--definitions" data-tabs="">
+                                              <li class="tabs-title is-active"><a href="#panel1v" aria-selected="true">01</a></li>
+                                              <li class="tabs-title"><a href="#panel2v">02</a></li>
+                                              <li class="tabs-title"><a href="#panel3v">03</a></li>
+                                              <li class="tabs-title"><a href="#panel4v">04</a></li>
+                                              <li class="tabs-title"><a href="#panel5v">05</a></li>
+                                              <li class="tabs-title"><a href="#panel6v">06</a></li>
+                                            </ul>
+                                          </div>
+                                          <div class="cell definitions--details tabs-content" data-tabs-content="tab--definitions">
+                                            <div class="tabs-panel is-active" id="panel1v">
+                                              <div class="grid-x">
+                                                <div class="cell">
+                                                  <div class="form--input-text -is-required">
+                                                    <label>Type:1</label>
+                                                    <input type="text" placeholder="1234" aria-describedby="exampleHelpText" required="" pattern="number" value="Guideline directed Ischemic Cardiomyopathy"><span class="form-error">A name of the new create is required.</span>
+                                                  </div>
+                                                </div>
+                                                <div class="cell">
+                                                  <div class="grid-y">
+                                                    <div class="cell">
+                                                      <div class="form--input-text">
+                                                        <label>Title:</label>
+                                                        <input type="text" placeholder="phrase" aria-describedby="exampleHelpText" value="Longer Longer Longer Longer Longer Title">
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="cell small-6">
+                                                  <div class="grid-y">
+                                                    <div class="cell">
+                                                      <div class="form--input-text -is-required">
+                                                        <label>Definition:</label>
+                                                        <textarea class="taller" rows="4" cols="50">A black hole is a region of spacetime exhibiting such strong gravitational effects that nothing—not even particles and electromagnetic radiation such as light—can escape from inside it. The theory of general relativity predicts that a sufficiently compact mass can deform spacetime to form a black hole.")</textarea><span class="form-error">A description of the new create is required.</span>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="cell small-6">
+                                                  <div class="grid-y">
+                                                    <div class="cell">
+                                                      <div class="form--input-text">
+                                                        <label>Definition Source:</label>
+                                                        <textarea class="taller" rows="4" cols="50">1) O’Gara PT, Kushner FG, Ascheim DD, et al. 2013 ACCF/AHA guideline for the management of ST-elevation myocardial infarction: a report of the American College of Cardiology Foundation/American Heart Association Task Force on Practice Guidelines. J Am Coll Cardiol 2013;61 2) Russo AM, Stainback RF, Bailey SR, et al. ACCF/HRS/AHA/ASE/HFSA/SCAI/SCCT/SCMR 2013 appropriate use criteria for implantable cardioverter-defibrillators and cardiac resynchronization therapy. J Am Coll Cardiol 2013;61:1318-68. doi: 10.1016/j.jacc.2012.12.017</textarea><span class="form-error">A description of the new create is required.</span>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="cell small-12">
+                                                  <div class="grid-y">
+                                                    <div class="cell">
+                                                      <div class="form--input-text">
+                                                        <label>Start Date:</label>
+                                                        <input class="disabled" type="text" disabled placeholder="phrase" aria-describedby="exampleHelpText" required="" pattern="date" value="10/5/2017"><span class="form-error">Date is required</span>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="tabs-panel" id="panel2v">
+                                              <div class="grid-x">
+                                                <div class="cell small-6">
+                                                  <div class="form--input-text -is-required">
+                                                    <label>Type:3</label>
+                                                    <input type="text" placeholder="1234" aria-describedby="exampleHelpText" required="" pattern="number" value="AquibConcept"><span class="form-error">A name of the new create is required.</span>
+                                                  </div>
+                                                </div>
+                                                <div class="cell small-6">
+                                                  <div class="grid-y">
+                                                    <div class="cell">
+                                                      <div class="form--input-text">
+                                                        <label>Title:</label>
+                                                        <input type="text" placeholder="phrase" aria-describedby="exampleHelpText" value="55555">
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="cell small-6">
+                                                  <div class="grid-y">
+                                                    <div class="cell">
+                                                      <div class="form--input-text">
+                                                        <label>Definition:</label>
+                                                        <input type="text" placeholder="phrase" aria-describedby="exampleHelpText" value="Care Provider"><span class="form-error">Tags are useful for stuff</span>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="cell small-6">
+                                                  <div class="grid-y">
+                                                    <div class="cell">
+                                                      <div class="form--input-text">
+                                                        <label>Definition Source:</label>
+                                                        <input type="text" placeholder="phrase" aria-describedby="exampleHelpText" value="Care Provider"><span class="form-error">Tags are useful for stuff</span>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="cell small-12">
+                                                  <div class="grid-y">
+                                                    <div class="cell">
+                                                      <div class="form--input-text">
+                                                        <label>Start Date:</label>
+                                                        <input class="disabled" type="text" disabled placeholder="phrase" aria-describedby="exampleHelpText" required="" pattern="date" value="10/5/2017"><span class="form-error">Date is required</span>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="tabs-panel" id="panel3v">
+                                              <div class="grid-x">
+                                                <div class="cell small-6">
+                                                  <div class="form--input-text -is-required">
+                                                    <label>Type:</label>
+                                                    <input type="text" placeholder="1234" aria-describedby="exampleHelpText" required="" pattern="number" value="AquibConcept"><span class="form-error">A name of the new create is required.</span>
+                                                  </div>
+                                                </div>
+                                                <div class="cell small-6">
+                                                  <div class="grid-y">
+                                                    <div class="cell">
+                                                      <div class="form--input-text">
+                                                        <label>Title:</label>
+                                                        <input type="text" placeholder="phrase" aria-describedby="exampleHelpText" value="55555">
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="cell small-6">
+                                                  <div class="grid-y">
+                                                    <div class="cell">
+                                                      <div class="form--input-text">
+                                                        <label>Definition:</label>
+                                                        <input type="text" placeholder="phrase" aria-describedby="exampleHelpText" value="Care Provider"><span class="form-error">Tags are useful for stuff</span>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="cell small-6">
+                                                  <div class="grid-y">
+                                                    <div class="cell">
+                                                      <div class="form--input-text">
+                                                        <label>Definition Source:</label>
+                                                        <input type="text" placeholder="phrase" aria-describedby="exampleHelpText" value="Care Provider"><span class="form-error">Tags are useful for stuff</span>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="cell small-12">
+                                                  <div class="grid-y">
+                                                    <div class="cell">
+                                                      <div class="form--input-text">
+                                                        <label>Start Date:</label>
+                                                        <input class="disabled" type="text" disabled placeholder="phrase" aria-describedby="exampleHelpText" required="" pattern="date" value="10/5/2017"><span class="form-error">Date is required</span>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="tabs-panel" id="panel4v">
+                                              <div class="grid-x">
+                                                <div class="cell small-6">
+                                                  <div class="form--input-text -is-required">
+                                                    <label>Type:</label>
+                                                    <input type="text" placeholder="1234" aria-describedby="exampleHelpText" required="" pattern="number" value="AquibConcept"><span class="form-error">A name of the new create is required.</span>
+                                                  </div>
+                                                </div>
+                                                <div class="cell small-6">
+                                                  <div class="grid-y">
+                                                    <div class="cell">
+                                                      <div class="form--input-text">
+                                                        <label>Title:</label>
+                                                        <input type="text" placeholder="phrase" aria-describedby="exampleHelpText" value="55555">
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="cell small-6">
+                                                  <div class="grid-y">
+                                                    <div class="cell">
+                                                      <div class="form--input-text">
+                                                        <label>Definition:</label>
+                                                        <input type="text" placeholder="phrase" aria-describedby="exampleHelpText" value="Care Provider"><span class="form-error">Tags are useful for stuff</span>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="cell small-6">
+                                                  <div class="grid-y">
+                                                    <div class="cell">
+                                                      <div class="form--input-text">
+                                                        <label>Definition Source:</label>
+                                                        <input type="text" placeholder="phrase" aria-describedby="exampleHelpText" value="Care Provider"><span class="form-error">Tags are useful for stuff</span>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="cell small-12">
+                                                  <div class="grid-y">
+                                                    <div class="cell">
+                                                      <div class="form--input-text">
+                                                        <label>Start Date:</label>
+                                                        <input class="disabled" type="text" disabled placeholder="phrase" aria-describedby="exampleHelpText" required="" pattern="date" value="10/5/2017"><span class="form-error">Date is required</span>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="tabs-panel" id="panel5v">
+                                              <div class="grid-x">
+                                                <div class="cell small-6">
+                                                  <div class="form--input-text -is-required">
+                                                    <label>Type:</label>
+                                                    <input type="text" placeholder="1234" aria-describedby="exampleHelpText" required="" pattern="number" value="AquibConcept"><span class="form-error">A name of the new create is required.</span>
+                                                  </div>
+                                                </div>
+                                                <div class="cell small-6">
+                                                  <div class="grid-y">
+                                                    <div class="cell">
+                                                      <div class="form--input-text">
+                                                        <label>Title:</label>
+                                                        <input type="text" placeholder="phrase" aria-describedby="exampleHelpText" value="55555">
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="cell small-6">
+                                                  <div class="grid-y">
+                                                    <div class="cell">
+                                                      <div class="form--input-text">
+                                                        <label>Definition:</label>
+                                                        <input type="text" placeholder="phrase" aria-describedby="exampleHelpText" value="Care Provider"><span class="form-error">Tags are useful for stuff</span>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="cell small-6">
+                                                  <div class="grid-y">
+                                                    <div class="cell">
+                                                      <div class="form--input-text">
+                                                        <label>Definition Source:</label>
+                                                        <input type="text" placeholder="phrase" aria-describedby="exampleHelpText" value="Care Provider"><span class="form-error">Tags are useful for stuff</span>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="cell small-12">
+                                                  <div class="grid-y">
+                                                    <div class="cell">
+                                                      <div class="form--input-text">
+                                                        <label>Start Date:</label>
+                                                        <input class="disabled" type="text" disabled placeholder="phrase" aria-describedby="exampleHelpText" required="" pattern="date" value="10/5/2017"><span class="form-error">Date is required</span>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="tabs-panel" id="panel6v"></div>
+                                          </div>
+                                        </div>
+                                      </form>
+                                    </div>
+                                  </li>
+                                  <li class="accordion-item" data-accordion-item=""><a class="accordion-title" id="x11pz9-accordion-label" href="#" aria-controls="x20pz9-accordion" role="tab" aria-expanded="false" aria-selected="false"> 
+                                      <div class="text">Taxon
+                                        <button class="option-button button has-tip" data-tooltip="" aria-haspopup="true" data-disable-hover="false" tabindex="1" title="New Taxon"> <i class="material-icons md-18">add_box</i></button>
+                                      </div></a>
+                                    <div class="accordion-content" id="x20pz9-accordion" data-tab-content="" role="tabpanel" aria-labelledby="x20pz9-accordion-label" aria-hidden="true">
+                                      <table class="data--table" id="data--table-taxon">
+                                        <thead>
+                                          <tr>
+                                            <th width="90%"> Name</th>
+                                            <th>| s</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td>
+                                               Test</td>
+                                            <td><a class="button alert delete"> <i class="material-icons md-18">delete</i></a></td>
+                                          </tr>
+                                          <tr>
+                                            <td>
+                                               Test 2</td>
+                                            <td><a class="button alert delete"><i class="material-icons md-18">delete</i></a></td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="cell small-1 workspace--controls">
+                                <div class="panel--center-bottom-controls float-right">
+                                  <button class="button warning" data-micro-interaction="toggle">Save & Pin</button>
+                                  <button class="button success" data-micro-interaction="toggle">Save</button>
+                                  <button class="button alert" data-micro-interaction="toggle">Cancel</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="tabs-panel" id="panelD">
+                            <div class="grid-y content--tab"> 
+                              <div class="cell small-1 workspace--options feature--edit-mode">
+                                <p class="h7 blurb small">Instructions: Lorem ipsum dolor sit amet, consectetur </p>
+                                <button class="-is-off" data-micro-interaction="fullscreen" data-tooltip tabindex="1" title="enter fullscreen">
+                                  <div class="icon"><i class="material-icons md-18">fullscreen</i></div>
+                                </button>
+                              </div>
+                              <div class="cell small-1 workspace--options text-right">
+                                <div class="grid-x">
+                                  <div class="cell small-4">
+                                    <div class="form--input-select">
+                                      <div class="grid-x">
+                                        <div class="cell small-6">
+                                          <label>Layout Option:</label>
+                                        </div>
+                                        <div class="cell small-6">
+                                          <select required="">
+                                            <option value="volvo">Single</option>
+                                            <option value="saab">Multi</option>
+                                            <option value="mercedes">Table</option>
+                                            <option value="audi">More</option>
+                                          </select>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="cell small-4">
+                                    <div class="form--input-select">
+                                      <div class="grid-x">
+                                        <div class="cell small-6">
+                                          <label>Row:</label>
+                                        </div>
+                                        <div class="cell small-6">
+                                          <select required="">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                          </select>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="cell small-4">
+                                    <div class="form--input-select">
+                                      <div class="grid-x">
+                                        <div class="cell small-6">
+                                          <label>Column:</label>
+                                        </div>
+                                        <div class="cell small-6">
+                                          <select required="">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                          </select>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="cell small-10 medium-cell-block-y workspace--form flush">
+                                <div class="composer--holder-elements">
+                                  <div class="card--element-node card" id="card-id-1" data-micro-interaction="card">
+                                    <div class="card-divider">
+                                      <div class="grid-x">
+                                        <div class="card-title cell small-12 medium-10 large-10">
+                                          <div class="icon"><i class="material-icons md-18">change_history</i></div>
+                                          <div class="text">Element Name Here</div>
+                                        </div>
+                                        <div class="card-options small-12 medium-2 large-2">
+                                          <button class="button-option-setting" data-micro-interaction="option"><span class="icon"><i class="material-icons md-18">settings</i></span></button>
+                                          <button class="button-option-drag" data-micro-interaction="card"><span class="icon"><i class="material-icons md-18">drag_handle</i></span></button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="card-section -is-expanded">
+                                      <div class="grid-x">
+                                        <div class="medium-6 cell">
+                                          <div class="form--input-select">
+                                            <div class="switch tiny">
+                                              <label class="switch-value" for="switchA-1">Label Top Align:</label>
+                                              <input class="switch-input" id="switchA-1" type="checkbox" name="switchA-1">
+                                              <label class="switch-paddle" for="switchA-1"><span class="show-for-sr">Edit Mode</span><span class="switch-active" aria-hidden="true">yes</span><span class="switch-inactive" aria-hidden="true">no</span></label>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="medium-6 cell">
+                                          <div class="form--input-select">
+                                            <div class="switch tiny">
+                                              <label class="switch-value" for="switchA-2">Disabled</label>
+                                              <input class="switch-input" id="switchA-2" type="checkbox" name="switchA-2">
+                                              <label class="switch-paddle" for="switchA-2"><span class="show-for-sr">Edit Mode</span><span class="switch-active" aria-hidden="true"><i class="material-icons md-14" aria-hidden="true">visibility</i></span><span class="switch-inactive" aria-hidden="true"><i class="material-icons md-14" aria-hidden="true">visibility_off</i></span></label>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="medium-6 cell">
+                                          <div class="form--input-select">
+                                            <div class="switch tiny">
+                                              <label class="switch-value" for="switchA-2e">Always Hidden</label>
+                                              <input class="switch-input" id="switchA-2e" type="checkbox" name="switchA-2e">
+                                              <label class="switch-paddle" for="switchA-2e"><span class="show-for-sr">Edit Mode</span><span class="switch-active" aria-hidden="true"><i class="material-icons md-14" aria-hidden="true">visibility</i></span><span class="switch-inactive" aria-hidden="true"><i class="material-icons md-14" aria-hidden="true">visibility_off</i></span></label>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="medium-6 cell">
+                                          <div class="form--input-select">
+                                            <div class="switch tiny">
+                                              <label class="switch-value" for="switchA-2q">Hidden Based Parent</label>
+                                              <input class="switch-input" id="switchA-2q" type="checkbox" name="switchA-2q">
+                                              <label class="switch-paddle" for="switchA-2q"><span class="show-for-sr">Edit Mode</span><span class="switch-active" aria-hidden="true"><i class="material-icons md-14" aria-hidden="true">visibility</i></span><span class="switch-inactive" aria-hidden="true"><i class="material-icons md-14" aria-hidden="true">visibility_off</i></span></label>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="medium-6 cell">
+                                          <div class="form--input-select">
+                                            <label>Label Position </label>
+                                            <select required="">
+                                              <option value="volvo">One</option>
+                                              <option value="saab">Two</option>
+                                              <option value="mercedes">Three</option>
+                                            </select>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="card--element-node card -is-selected -is-indented-1" id="card-id-1a" data-micro-interaction="card">
+                                    <div class="card-divider">
+                                      <div class="grid-x">
+                                        <div class="card-title cell small-12 medium-10 large-10">
+                                          <div class="icon"><i class="material-icons md-18">change_history</i></div>
+                                          <div class="text">Element Name Here</div>
+                                        </div>
+                                        <div class="card-options small-12 medium-2 large-2 hide-for-small">
+                                          <button class="button-option-setting" data-micro-interaction="option"><span class="icon"><i class="material-icons md-18">settings</i></span></button>
+                                          <button class="button-option-drag" data-micro-interaction="card"><span class="icon"><i class="material-icons md-18">drag_handle</i></span></button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="card-section -is-expanded">
+                                      <div class="grid-x">
+                                        <div class="medium-6 cell">
+                                          <div class="form--input-select">
+                                            <div class="switch tiny">
+                                              <label class="switch-value" for="switchA-1">Label Top Align:</label>
+                                              <input class="switch-input" id="switchA-1" type="checkbox" name="switchA-1">
+                                              <label class="switch-paddle" for="switchA-1"><span class="show-for-sr">Edit Mode</span><span class="switch-active" aria-hidden="true">yes</span><span class="switch-inactive" aria-hidden="true">no</span></label>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="medium-6 cell">
+                                          <div class="form--input-select">
+                                            <div class="switch tiny">
+                                              <label class="switch-value" for="switchA-2">Disabled</label>
+                                              <input class="switch-input" id="switchA-2" type="checkbox" name="switchA-2">
+                                              <label class="switch-paddle" for="switchA-2"><span class="show-for-sr">Edit Mode</span><span class="switch-active" aria-hidden="true"><i class="material-icons md-14" aria-hidden="true">visibility</i></span><span class="switch-inactive" aria-hidden="true"><i class="material-icons md-14" aria-hidden="true">visibility_off</i></span></label>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="medium-6 cell">
+                                          <div class="form--input-select">
+                                            <div class="switch tiny">
+                                              <label class="switch-value" for="switchA-2e">Always Hidden</label>
+                                              <input class="switch-input" id="switchA-2e" type="checkbox" name="switchA-2e">
+                                              <label class="switch-paddle" for="switchA-2e"><span class="show-for-sr">Edit Mode</span><span class="switch-active" aria-hidden="true"><i class="material-icons md-14" aria-hidden="true">visibility</i></span><span class="switch-inactive" aria-hidden="true"><i class="material-icons md-14" aria-hidden="true">visibility_off</i></span></label>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="medium-6 cell">
+                                          <div class="form--input-select">
+                                            <div class="switch tiny">
+                                              <label class="switch-value" for="switchA-2q">Hidden Based Parent</label>
+                                              <input class="switch-input" id="switchA-2q" type="checkbox" name="switchA-2q">
+                                              <label class="switch-paddle" for="switchA-2q"><span class="show-for-sr">Edit Mode</span><span class="switch-active" aria-hidden="true"><i class="material-icons md-14" aria-hidden="true">visibility</i></span><span class="switch-inactive" aria-hidden="true"><i class="material-icons md-14" aria-hidden="true">visibility_off</i></span></label>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="medium-6 cell">
+                                          <div class="form--input-select">
+                                            <label>Label Position </label>
+                                            <select required="">
+                                              <option value="volvo">One</option>
+                                              <option value="saab">Two</option>
+                                              <option value="mercedes">Three</option>
+                                            </select>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="composer--grid" id="composer-a">
+                                  <div class="grid-x">
+                                    <div class="composer--grid-cell cell small-2">1</div>
+                                    <div class="composer--grid-cell cell small-2">2</div>
+                                    <div class="composer--grid-cell cell small-2">3</div>
+                                    <div class="composer--grid-cell cell small-2">4</div>
+                                    <div class="composer--grid-cell cell small-2">5</div>
+                                    <div class="composer--grid-cell cell small-2">6</div>
+                                    <div class="composer--grid-cell cell small-2">1</div>
+                                    <div class="composer--grid-cell cell small-2">2</div>
+                                    <div class="composer--grid-cell cell small-2">
+                                      <div class="card--element-node card -is-indented-1" id="card-id-7" data-micro-interaction="card">
+                                        <div class="card-divider">
+                                          <div class="grid-x">
+                                            <div class="card-title cell small-12 medium-10 large-10">
+                                              <div class="icon"><i class="material-icons md-18">change_history</i></div>
+                                              <div class="text">Quib Element Name Here</div>
+                                            </div>
+                                            <div class="card-options small-12 medium-2 large-2">
+                                              <button class="button-option-setting -is-expanded" data-micro-interaction="option"><span class="icon"><i class="material-icons md-18">settings</i></span></button>
+                                              <button class="button-option-drag" data-micro-interaction="card">
+                                                <div class="icon"><i class="material-icons md-18">delete</i></div>
+                                              </button>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="card-section -is-expanded">
+                                          <div class="grid-x">
+                                            <div class="medium-6 cell">
+                                              <div class="form--input-select">
+                                                <div class="switch tiny">
+                                                  <label class="switch-value" for="switchA-1">Label Top Align:</label>
+                                                  <input class="switch-input" id="switchA-1" type="checkbox" name="switchA-1">
+                                                  <label class="switch-paddle" for="switchA-1"><span class="show-for-sr">Edit Mode</span><span class="switch-active" aria-hidden="true">yes</span><span class="switch-inactive" aria-hidden="true">no</span></label>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="medium-6 cell">
+                                              <div class="form--input-select">
+                                                <div class="switch tiny">
+                                                  <label class="switch-value" for="switchA-2">Disabled</label>
+                                                  <input class="switch-input" id="switchA-2" type="checkbox" name="switchA-2">
+                                                  <label class="switch-paddle" for="switchA-2"><span class="show-for-sr">Edit Mode</span><span class="switch-active" aria-hidden="true"><i class="material-icons md-14" aria-hidden="true">visibility</i></span><span class="switch-inactive" aria-hidden="true"><i class="material-icons md-14" aria-hidden="true">visibility_off</i></span></label>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="medium-6 cell">
+                                              <div class="form--input-select">
+                                                <div class="switch tiny">
+                                                  <label class="switch-value" for="switchA-2e">Always Hidden</label>
+                                                  <input class="switch-input" id="switchA-2e" type="checkbox" name="switchA-2e">
+                                                  <label class="switch-paddle" for="switchA-2e"><span class="show-for-sr">Edit Mode</span><span class="switch-active" aria-hidden="true"><i class="material-icons md-14" aria-hidden="true">visibility</i></span><span class="switch-inactive" aria-hidden="true"><i class="material-icons md-14" aria-hidden="true">visibility_off</i></span></label>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="medium-6 cell">
+                                              <div class="form--input-select">
+                                                <div class="switch tiny">
+                                                  <label class="switch-value" for="switchA-2q">Hidden Based Parent</label>
+                                                  <input class="switch-input" id="switchA-2q" type="checkbox" name="switchA-2q">
+                                                  <label class="switch-paddle" for="switchA-2q"><span class="show-for-sr">Edit Mode</span><span class="switch-active" aria-hidden="true"><i class="material-icons md-14" aria-hidden="true">visibility</i></span><span class="switch-inactive" aria-hidden="true"><i class="material-icons md-14" aria-hidden="true">visibility_off</i></span></label>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="medium-6 cell">
+                                              <div class="form--input-select">
+                                                <label>Label Position </label>
+                                                <select required="">
+                                                  <option value="volvo">One</option>
+                                                  <option value="saab">Two</option>
+                                                  <option value="mercedes">Three</option>
+                                                </select>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="composer--grid-cell cell small-6">
+                                      <div class="card--element-node -is-indented-0 card" id="card-id-8" data-micro-interaction="card">
+                                        <div class="card-divider">
+                                          <div class="grid-x">
+                                            <div class="card-title cell small-12 medium-10 large-10">
+                                              <div class="icon hide-for-small"><i class="material-icons md-18">change_history</i></div>
+                                              <div class="text">Long Long Name Here If You Like 20340 029 3029 032 038 </div>
+                                            </div>
+                                            <div class="card-options small-12 medium-2 large-2">
+                                              <button class="button-option-setting -is-expanded" data-micro-interaction="option"><span class="icon"><i class="material-icons md-18">settings</i></span></button>
+                                              <div class="option-drag-handle">
+                                                <button class="button-option-drag" data-micro-interaction="card">
+                                                  <div class="icon"><i class="material-icons md-18">delete</i></div>
+                                                </button>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="card-section -is-expanded">
+                                          <div class="grid-x">
+                                            <div class="medium-6 cell">
+                                              <div class="form--input-select">
+                                                <div class="switch tiny">
+                                                  <label class="switch-value" for="switchA-1">Label Top Align:</label>
+                                                  <input class="switch-input" id="switchA-1" type="checkbox" name="switchA-1">
+                                                  <label class="switch-paddle" for="switchA-1"><span class="show-for-sr">Edit Mode</span><span class="switch-active" aria-hidden="true">yes</span><span class="switch-inactive" aria-hidden="true">no</span></label>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="medium-6 cell">
+                                              <div class="form--input-select">
+                                                <div class="switch tiny">
+                                                  <label class="switch-value" for="switchA-2">Disabled</label>
+                                                  <input class="switch-input" id="switchA-2" type="checkbox" name="switchA-2">
+                                                  <label class="switch-paddle" for="switchA-2"><span class="show-for-sr">Edit Mode</span><span class="switch-active" aria-hidden="true"><i class="material-icons md-14" aria-hidden="true">visibility</i></span><span class="switch-inactive" aria-hidden="true"><i class="material-icons md-14" aria-hidden="true">visibility_off</i></span></label>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="medium-6 cell">
+                                              <div class="form--input-select">
+                                                <div class="switch tiny">
+                                                  <label class="switch-value" for="switchA-2e">Always Hidden</label>
+                                                  <input class="switch-input" id="switchA-2e" type="checkbox" name="switchA-2e">
+                                                  <label class="switch-paddle" for="switchA-2e"><span class="show-for-sr">Edit Mode</span><span class="switch-active" aria-hidden="true"><i class="material-icons md-14" aria-hidden="true">visibility</i></span><span class="switch-inactive" aria-hidden="true"><i class="material-icons md-14" aria-hidden="true">visibility_off</i></span></label>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="medium-6 cell">
+                                              <div class="form--input-select">
+                                                <div class="switch tiny">
+                                                  <label class="switch-value" for="switchA-2q">Hidden Based Parent</label>
+                                                  <input class="switch-input" id="switchA-2q" type="checkbox" name="switchA-2q">
+                                                  <label class="switch-paddle" for="switchA-2q"><span class="show-for-sr">Edit Mode</span><span class="switch-active" aria-hidden="true"><i class="material-icons md-14" aria-hidden="true">visibility</i></span><span class="switch-inactive" aria-hidden="true"><i class="material-icons md-14" aria-hidden="true">visibility_off</i></span></label>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="medium-6 cell">
+                                              <div class="form--input-select">
+                                                <label>Label Position </label>
+                                                <select required="">
+                                                  <option value="volvo">One</option>
+                                                  <option value="saab">Two</option>
+                                                  <option value="mercedes">Three</option>
+                                                </select>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="composer--grid-cell cell small-2">1</div>
+                                    <div class="composer--grid-cell cell small-2">2</div>
+                                    <div class="composer--grid-cell cell small-2">3</div>
+                                    <div class="composer--grid-cell cell small-2">4</div>
+                                    <div class="composer--grid-cell cell small-2">5</div>
+                                    <div class="composer--grid-cell cell small-2">6</div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="cell small-1 workspace--controls">
+                                <div class="panel--center-bottom-controls float-right">
+                                  <button class="button success" data-intro="Tab Buttons - &lt;em&gt;retricted to tab content&lt;/em&gt;" data-position="left" data-micro-interaction="toggle">Preview</button>
+                                  <button class="button success" data-micro-interaction="toggle">Save</button>
+                                  <button class="button alert" data-micro-interaction="toggle">Cancel</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cell shrink footer"></div>
+          </div>
+          <div class="panel--right cell small-1">
+            <div class="grid-y">
+              <div class="cell small-1">
+                <button class="panel--side-button button" type="button" data-toggle="content--offcanvas-right-updates"><span class="counter">22</span><span class="text">
+                     Updates</span><span class="icon"><i class="material-icons md-18" aria-hidden="true">update</i></span></button>
+              </div>
+              <div class="cell small-1" data-intro="Off Canvas Side Panel - show context data base on project" data-position="left">
+                <button class="panel--side-button button" type="button" data-toggle="content--offcanvas-right-comments"><span class="counter">600</span><span class="text">
+                     Comments</span><span class="icon"><i class="material-icons md-18" aria-hidden="true">mode_comment</i></span></button>
+              </div>
+              <div class="cell small-1">
+                <button class="panel--side-button button" type="button" data-toggle="content--offcanvas-right-references"><span class="counter">6</span><span class="text">
+                     References</span><span class="icon"><i class="material-icons md-18" aria-hidden="true">merge_type</i></span></button>
+              </div>
+              <div class="cell small-1">
+                <button class="panel--side-button button" type="button" data-toggle="content--offcanvas-left-filter"><span class="counter">99</span><span class="text">Sample</span><span class="icon"><i class="material-icons md-18" aria-hidden="true">pan_tool</i></span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="js/app.js"></script>
+      <script>require('initialize');</script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+    </div>
+  </body>
+</html>

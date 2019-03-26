@@ -1,0 +1,75 @@
+[{
+        "title": "Algorithms - Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test",
+        "key": "1",
+        "bookmark": true,
+        "pinned": true,
+        "extraClasses": "-has-children",
+        "children": [{
+                "title": "R",
+                "key": "3"
+            },
+            {
+                "title": "N",
+                "key": "4"
+            }
+        ]
+    },
+    {
+        "title": "Populations",
+        "key": "1",
+        "bookmark": true,
+        "pinned": true,
+        "extraClasses": "-has-children",
+        "children": [{
+                "title": "D",
+                "icon": "warning",
+                "key": "3"
+            },
+            {
+                "title": "B",
+                "key": "4"
+            }
+        ]
+    },
+    {
+        "title": "Graphs",
+        "key": "1",
+        "bookmark": true,
+        "pinned": true,
+        "extraClasses": "-has-children",
+        "children": [{
+                "title": "A",
+                "key": "3"
+            },
+            {
+                "title": "Long name here  It is super long, longer than it needs to be",
+                "key": "4",
+                "extraClasses": "-has-children",
+                "children": [{
+                        "title": "A",
+                        "key": "3"
+                    },
+                    {
+                        "title": "Long name here  It is super long, longer than it needs to be",
+                        "key": "4"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Reports",
+        "key": "2",
+        "folder": true,
+        "extraClasses": "-has-children",
+        "children": [{
+                "title": "R",
+                "key": "3"
+            },
+            {
+                "title": "N",
+                "key": "4"
+            }
+        ]
+    }
+]
