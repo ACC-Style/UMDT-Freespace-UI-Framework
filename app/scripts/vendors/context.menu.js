@@ -76,6 +76,10 @@ $.contextMenu({
         "close": {
             name: "Close",
             icon: "fa-times"
+        },
+        "close_other": {
+            name: "Close Others",
+            icon: "fa-times"
         }
     }
 });

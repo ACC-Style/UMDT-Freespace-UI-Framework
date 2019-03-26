@@ -26,6 +26,7 @@ function changeScreenMode() {
     screen.removeClass("-is-fullscreen");
     screen.addClass("-is-not-fullscreen");
     button.removeClass("-is-on");
+    allButtonCollpase.click();
     button.addClass("-is-off");
     button.attr("title", "enter fullscreen mode");
     button.find(".icon i").text("fullscreen");
