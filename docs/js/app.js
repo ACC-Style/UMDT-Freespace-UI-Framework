@@ -36792,15 +36792,23 @@ function checkWidth(array) {
         elementTitleWidthContainer = element.find(".card-title").width(),
         elementTitleWidth = element.find(".card-title .text").width() + element.find(".card-title .icon").width();
 
-    if (elementWidth < 300) {
-      console.log(element.attr("id") + " with \"" + element.find(".card-title .text").text() + "\" width is " + elementWidth);
+    if (elementWidth < 200) {
+      console.log("-is-super-squeezed");
+      element.removeClass("-is-comfortable");
+      element.removeClass("-is-squeezed");
+      element.addClass("-is-super-squeezed");
+    } else if (elementWidth < 450) {
+      console.log("-is-squeezed");
+      element.removeClass("-is-super-squeezed");
       element.removeClass("-is-comfortable");
       element.addClass("-is-squeezed");
     } else {
-      console.log(element.attr("id") + " with \"" + element.find(".card-title .text").text() + "\" width is " + elementWidth);
+      console.log("-is-comfortable");
       element.removeClass("-is-squeezed");
+      element.removeClass("-is-super-squeezed");
       element.addClass("-is-comfortable");
     }
+    console.log(element.attr("id") + " with \"" + element.find(".card-title .text").text() + "\" width is " + elementWidth);
   });
 }
 checkWidth(allCards);

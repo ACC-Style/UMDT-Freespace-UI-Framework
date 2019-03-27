@@ -142,7 +142,8 @@
             }
 
             .card-section {
-                padding: .25em 1em .25em 1em;
+                padding: 0 0 0 0;
+                // padding: .25em 1em .25em 1em;
                 border: $border-thin solid $palette-color-lightens;
                 border-top: none !important;
                 margin-left: 1em;

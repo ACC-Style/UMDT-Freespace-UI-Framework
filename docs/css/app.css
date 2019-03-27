@@ -5123,7 +5123,7 @@ ul.small {
       height: 100%;
       float: left; }
     .card--element-operator .card-divider .card-section {
-      padding: .25em 1em .25em 1em;
+      padding: 0 0 0 0;
       border: 3px solid #F0F3F8;
       border-top: none !important;
       margin-left: 1em;
@@ -7628,43 +7628,60 @@ header {
 .card--element-group .card-section .form--input-text input:checked ~ .switch-paddle {
   background: #627BBE !important; }
 
-.card--element-node.-is-squeezed .-is-expanded,
+.card--element-node.-is-squeezed .-is-expanded, .card--element-node.-is-super-squeezed .-is-expanded,
 .card--element-operator.-is-squeezed .-is-expanded,
-.card--element-group.-is-squeezed .-is-expanded {
+.card--element-operator.-is-super-squeezed .-is-expanded,
+.card--element-group.-is-squeezed .-is-expanded,
+.card--element-group.-is-super-squeezed .-is-expanded {
   width: 85% !important; }
-  .card--element-node.-is-squeezed .-is-expanded label.switch-paddle,
+  .card--element-node.-is-squeezed .-is-expanded label.switch-paddle, .card--element-node.-is-super-squeezed .-is-expanded label.switch-paddle,
   .card--element-operator.-is-squeezed .-is-expanded label.switch-paddle,
-  .card--element-group.-is-squeezed .-is-expanded label.switch-paddle {
+  .card--element-operator.-is-super-squeezed .-is-expanded label.switch-paddle,
+  .card--element-group.-is-squeezed .-is-expanded label.switch-paddle,
+  .card--element-group.-is-super-squeezed .-is-expanded label.switch-paddle {
     margin-top: .25rem; }
 
 .card--element-node.-is-squeezed .card-section label,
-.card--element-node.-is-squeezed .card-section select,
+.card--element-node.-is-squeezed .card-section select, .card--element-node.-is-super-squeezed .card-section label,
+.card--element-node.-is-super-squeezed .card-section select,
 .card--element-operator.-is-squeezed .card-section label,
 .card--element-operator.-is-squeezed .card-section select,
+.card--element-operator.-is-super-squeezed .card-section label,
+.card--element-operator.-is-super-squeezed .card-section select,
 .card--element-group.-is-squeezed .card-section label,
-.card--element-group.-is-squeezed .card-section select {
+.card--element-group.-is-squeezed .card-section select,
+.card--element-group.-is-super-squeezed .card-section label,
+.card--element-group.-is-super-squeezed .card-section select {
   text-align: left; }
 
-.card--element-node.-is-squeezed.card--element-node,
+.card--element-node.-is-squeezed.card--element-node, .card--element-node.-is-super-squeezed.card--element-node,
 .card--element-operator.-is-squeezed.card--element-node,
-.card--element-group.-is-squeezed.card--element-node {
+.card--element-operator.-is-super-squeezed.card--element-node,
+.card--element-group.-is-squeezed.card--element-node,
+.card--element-group.-is-super-squeezed.card--element-node {
   overflow: visible; }
 
-.card--element-node.-is-squeezed .card-divider,
+.card--element-node.-is-squeezed .card-divider, .card--element-node.-is-super-squeezed .card-divider,
 .card--element-operator.-is-squeezed .card-divider,
-.card--element-group.-is-squeezed .card-divider {
+.card--element-operator.-is-super-squeezed .card-divider,
+.card--element-group.-is-squeezed .card-divider,
+.card--element-group.-is-super-squeezed .card-divider {
   padding-left: 3px; }
 
-.card--element-node.-is-squeezed .card-title .text,
+.card--element-node.-is-squeezed .card-title .text, .card--element-node.-is-super-squeezed .card-title .text,
 .card--element-operator.-is-squeezed .card-title .text,
-.card--element-group.-is-squeezed .card-title .text {
+.card--element-operator.-is-super-squeezed .card-title .text,
+.card--element-group.-is-squeezed .card-title .text,
+.card--element-group.-is-super-squeezed .card-title .text {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis; }
 
-.card--element-node.-is-squeezed .card-title:hover .text,
+.card--element-node.-is-squeezed .card-title:hover .text, .card--element-node.-is-super-squeezed .card-title:hover .text,
 .card--element-operator.-is-squeezed .card-title:hover .text,
-.card--element-group.-is-squeezed .card-title:hover .text {
+.card--element-operator.-is-super-squeezed .card-title:hover .text,
+.card--element-group.-is-squeezed .card-title:hover .text,
+.card--element-group.-is-super-squeezed .card-title:hover .text {
   pointer-events: none;
   z-index: 99999999999999;
   position: absolute;
@@ -7676,14 +7693,30 @@ header {
   overflow: visible;
   background: #fff; }
 
-.card--element-node.-is-squeezed .card-section.-is-expanded .grid-x .cell,
+.card--element-node.-is-squeezed .card-section.-is-expanded .grid-x .cell, .card--element-node.-is-super-squeezed .card-section.-is-expanded .grid-x .cell,
 .card--element-operator.-is-squeezed .card-section.-is-expanded .grid-x .cell,
-.card--element-group.-is-squeezed .card-section.-is-expanded .grid-x .cell {
+.card--element-operator.-is-super-squeezed .card-section.-is-expanded .grid-x .cell,
+.card--element-group.-is-squeezed .card-section.-is-expanded .grid-x .cell,
+.card--element-group.-is-super-squeezed .card-section.-is-expanded .grid-x .cell {
   display: block;
   float: left;
   clear: both;
   width: 100% !important;
   margin-bottom: .25rem; }
+
+.card--element-node.-is-super-squeezed .-is-expanded,
+.card--element-operator.-is-super-squeezed .-is-expanded,
+.card--element-group.-is-super-squeezed .-is-expanded {
+  padding: 0 0 0 0 !important; }
+  .card--element-node.-is-super-squeezed .-is-expanded label.switch-paddle,
+  .card--element-operator.-is-super-squeezed .-is-expanded label.switch-paddle,
+  .card--element-group.-is-super-squeezed .-is-expanded label.switch-paddle {
+    float: left;
+    margin-top: .25rem; }
+  .card--element-node.-is-super-squeezed .-is-expanded select,
+  .card--element-operator.-is-super-squeezed .-is-expanded select,
+  .card--element-group.-is-super-squeezed .-is-expanded select {
+    width: 100%; }
 
 .card--element-node.-is-selected .card-section,
 .card--element-node.-is-selected .card-divider,
